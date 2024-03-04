@@ -9,7 +9,7 @@ const IntroToSolaris = () => {
         <p> Solaris is a Unix-based operating system (OS) developed by Sun Microsystems, which is now owned by Oracle Corporation. Solaris has a long history and has been widely used in enterprise environments for server applications, especially in areas such as data centers and large-scale computing systems.</p>
       </div>
       <div >
-        <iframe className='mt-5 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
       <div className='mt-5'>
         <h2 className='text-2xl'> Key Features </h2>
