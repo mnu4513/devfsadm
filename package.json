@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "tailwind": "npx tailwindcss -i ./src/index.css -o ./src/main.css --watch",
     "prettier": "npx prettier --write ./src/**/*.{js,jsx,ts,tsx}",

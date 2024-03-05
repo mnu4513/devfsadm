@@ -34,6 +34,9 @@ import InterviewPrep from './components/solaris/InetviewPreparation';
 
 import User from './components/user/User';
 import CronJob from './components/solaris/CronJob';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfServices from './components/TermsOfServices';
+import Features from './components/Features';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -137,7 +140,16 @@ const appRouter = createBrowserRouter([
           path: '/course/solaris/interview-preparation',
           element: <InterviewPrep />
         }]
-      },
+      }, {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />
+      }, {
+        path: '/terms-of-services',
+        element: <TermsOfServices />
+      }, {
+        path: '/features',
+        element: <Features />
+      }
     ]
   }
 ])

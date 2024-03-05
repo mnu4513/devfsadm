@@ -1,6 +1,7 @@
 import React from 'react';
 import icon from '../assets/ico/icon.png';
 import logoVp from '../assets/img/logoVP.png';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -19,7 +20,7 @@ const Footer = () => {
                         <h3 className="tracki uppercase dark:text-gray-50">Product</h3>
                         <ul className="space-y-1">
                             <li>
-                                <a rel="noopener noreferrer" href="#">Features</a>
+                                <Link rel="noopener noreferrer" to="/features">Features</Link>
                             </li>
                             <li>
                                 <a rel="noopener noreferrer" href="#">Integrations</a>
@@ -33,13 +34,13 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="tracki uppercase dark:text-gray-50">Company</h3>
+                        <h3 className="tracki uppercase dark:text-gray-50">Platfrom</h3>
                         <ul className="space-y-1">
                             <li>
-                                <a rel="noopener noreferrer" href="#">Privacy</a>
+                                <Link rel="noopener noreferrer" to="/privacy-policy">Privacy</Link>
                             </li>
                             <li>
-                                <a rel="noopener noreferrer" href="#">Terms of Service</a>
+                                <Link rel="noopener noreferrer" to="/terms-of-services">Terms of Service</Link>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +80,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-6 text-sm text-center dark:text-gray-400">© 1968 Company Co. All rights reserved.</div>
+            <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 DevFsAdm. All rights reserved.</div>
         </footer>
     );
 };

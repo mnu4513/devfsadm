@@ -187,7 +187,7 @@ export default function Navbar() {
                                     {({ open }) => (
                                         <>
                                             <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                                                Courses 
+                                                Courses
                                                 <ChevronDownIcon
                                                     className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
                                                     aria-hidden="true"
@@ -195,14 +195,13 @@ export default function Navbar() {
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="mt-2 space-y-2">
                                                 {[...courses, ...callsToAction].map((item) => (
-                                                    <Disclosure.Button
+                                                    <Link
                                                         key={item.name}
-                                                        as="a"
-                                                        href={item.href}
+                                                        to={item.href} // Use "to" instead of "href"
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                                     >
                                                         {item.name}
-                                                    </Disclosure.Button>
+                                                    </Link>
                                                 ))}
                                             </Disclosure.Panel>
                                         </>
