@@ -7,27 +7,27 @@ const ProcessManagement = () => {
     id: 1,
     title: 'To list all process',
     command: ['ps-ef'],
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'yl036nfkbs61pqrnkpd8.png'
   }, {
     id: 2,
     title: 'To search process',
     command: ['ps -ef | grep -i <process_name>', 'ps -ef | grep -i <PID>', 'ps -ef | grep -i <user_name>'],
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'kx9vh4t5dhbwq8g4vczo.png'
   }, {
-    id: 4,
+    id: 3,
     title: 'To kill a process',
     command: ['kill <PID>'],
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'ytcpeag3hr155k7i3guj.png'
   }, {
-    id: 5,
+    id: 4,
     title: 'To kill a process forcefully',
     command: ['kill -9 <PID>'],
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'typui69pg3nbx7eiaqkt.png'
   }, {
-    id: 6,
+    id: 5,
     title: 'To get childern or parenet process of any process',
     command: ['ptree <PID>'],
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'gsjh6knxsp3pcvp19mkd.png'
   }];
 
   return (

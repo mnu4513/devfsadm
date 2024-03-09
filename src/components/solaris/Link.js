@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { img_base_url } from '../Config';
 
 const Link = () => {
   return (
@@ -38,9 +39,13 @@ const Link = () => {
           <p className='ml-7 mt-2'>
             To create a hard link : <span className='font-bold ml-2'> ln source_path hard_link_name</span>
           </p>
+          <img src={`${img_base_url}vthzkqpxfvw94gwqejvc`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+
           <p className='ml-7 mt-2'>
-            To delete or unlink a hard link : <span className='font-bold ml-2'> ln source_path </span>
+            To delete or unlink a hard link : <span className='font-bold ml-2'> unlink link_path </span>
           </p>
+          <img src={`${img_base_url}yyumnvcogn8jnbhslurm`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+
 
 
         <h2 className='text-xl mt-4 ml-2'>2. Soft (Symbolic) Link:
@@ -62,12 +67,15 @@ const Link = () => {
         <p className='ml-7 mt-2'>
             To create a soft link : <span className='font-bold ml-2'> ln -s source_path hard_link_name</span>
           </p>
-          <p className='ml-7 mt-2'>
-            To delete or unlink a soft link : <span className='font-bold ml-2'> ln source_path </span>
-          </p>
+          <img src={`${img_base_url}tyklijzfvadziretv6rr`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
 
-        <p className='text-2xl mt-3 mx-3'> Because of all these fretures, many organizations choose to use Oracle Solaris.
-        </p>
+          <p className='ml-7 mt-2'>
+            To delete or unlink a soft link : <span className='font-bold ml-2'> unlink link_path </span>
+          </p>
+          <img src={`${img_base_url}yyumnvcogn8jnbhslurm`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+
+
+      
       </div>
     </div>
   )

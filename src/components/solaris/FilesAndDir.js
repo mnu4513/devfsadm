@@ -6,7 +6,7 @@ const FilesAndDir = () => {
   return (
     <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
       <div>
-        <h2 className='text-2xl font-bold my-5 ml-4'>Files in Solaris</h2>
+        <h2 className='text-2xl font-bold my-5 ml-4'>Files and Directories in Solaris</h2>
         <p className='ml-4'>
           In Solaris, service management involves the management of services, daemons, and system processes. Solaris uses the Service Management Facility (SMF) to manage system services. SMF replaces traditional init scripts and provides a more sophisticated and flexible mechanism for managing services.
         </p>

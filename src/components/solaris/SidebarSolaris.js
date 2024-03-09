@@ -14,17 +14,23 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Basic Commands',
         link: '/course/solaris/basic-commands'
     }, {
-        name: 'User Management',
-        link: '/course/solaris/user-management'
-    }, {
-        name: 'Group Management',
-        link: '/course/solaris/group-management'
-    }, {
         name: 'Files and Directories',
         link: '/course/solaris/files-and-directories'
     }, {
         name: 'Vi Editor',
         link: '/course/solaris/vi-editor'
+    }, {
+        name: 'Archive',
+        link: '/course/solaris/archive'
+    }, {
+        name: 'Link',
+        link: '/course/solaris/link'
+    }, {
+        name: 'User Management',
+        link: '/course/solaris/user-management'
+    }, {
+        name: 'Group Management',
+        link: '/course/solaris/group-management'
     }, {
         name: 'SSH',
         link: '/course/solaris/ssh'
@@ -40,12 +46,6 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
     }, {
         name: 'System Monitoring',
         link: '/course/solaris/system-monitoring'
-    }, {
-        name: 'Archive',
-        link: '/course/solaris/archive'
-    }, {
-        name: 'Link',
-        link: '/course/solaris/link'
     }, {
         name: 'Nerwork Configuration',
         link: '/course/solaris/network-configuration'

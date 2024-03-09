@@ -7,42 +7,42 @@ const ServiceManagement = () => {
     id: 1,
     title: 'To list all services',
     command: 'svcs -a',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'ra6wmdkxpsx3nhw7inpn.png'
   }, {
     id: 2,
     title: 'To search a service using service name',
     command: 'svcs -a | grep <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'bcpwbll6wdk6xnsocdbb.png'
   }, {
     id: 3,
     title: 'To enable a service',
     command: 'svcs enable <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'vne28rxuhuiwznlmqcod.png'
   }, {
     id: 4,
-    title: 'To kill a process forcefully',
+    title: 'To disable a service',
     command: 'svcadm disable <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'o4aks7hw7gx62nmd98q4.png'
   }, {
     id: 5,
     title: 'To refresh a service',
     command: 'svcadm refresh <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'nxubxlikr1ywtj5obwmo.png'
   }, {
     id: 6,
     title: 'To restart any service',
     command: 'svcadm restart <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'isyosfv78fvu26dxl7q4.png'
   }, {
     id: 7,
     title: 'To list down services',
     command: 'svcs -xv',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'mtwdzptj8eqxmtew8dre.png'
   }, {
     id: 8,
     title: 'To clear any service from the maintinance',
     command: 'svcadm clear <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
+    image: 'dryypmm9oqasshgq1uea.png'
   }];
 
   return (
