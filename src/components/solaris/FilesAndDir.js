@@ -3,48 +3,6 @@ import { img_base_url } from '../Config';
 
 const FilesAndDir = () => {
 
-  const content = [{
-    id: 1,
-    title: 'To list all services',
-    command: 'svcs -a',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 2,
-    title: 'To search a service using service name',
-    command: 'svcs -a | grep <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 3,
-    title: 'To enable a service',
-    command: 'svcs enable <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 4,
-    title: 'To kill a process forcefully',
-    command: 'svcadm disable <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 5,
-    title: 'To refresh a service',
-    command: 'svcadm refresh <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 6,
-    title: 'To restart any service',
-    command: 'svcadm restart <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 7,
-    title: 'To list down services',
-    command: 'svcs -xv',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }, {
-    id: 8,
-    title: 'To clear any service from the maintinance',
-    command: 'svcadm clear <service_name>',
-    image: 'xveulprkb9tc2ki2bfrq.png'
-  }];
-
   return (
     <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
       <div>
