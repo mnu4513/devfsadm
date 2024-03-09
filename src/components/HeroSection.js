@@ -1,6 +1,5 @@
 import React from 'react';
 import business_img from '../assets/img/business.svg';
-import { Link } from 'react-router-dom';
 import iso_icon from '../assets/ico/iso.svg';
 import dev_icon from '../assets/ico/dev.svg';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
@@ -21,7 +20,7 @@ const HeroSection = () => {
     return (
         <section >
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-                <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                <div className="flex flex-col justify-center py-6 md:px-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leadi sm:text-6xl">Learn
                         <span className="dark:text-violet-400"> Unix Administration </span> and                     <span className="dark:text-violet-400"> Development </span>
 
