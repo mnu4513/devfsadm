@@ -21,7 +21,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/solaris/group-management'
     }, {
         name: 'Files and Directories',
-        link: '/course/solaris/files-and-direcories'
+        link: '/course/solaris/files-and-directories'
     }, {
         name: 'Vi Editor',
         link: '/course/solaris/vi-editor'
