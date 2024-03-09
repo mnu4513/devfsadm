@@ -37,6 +37,7 @@ import CronJob from './components/solaris/CronJob';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfServices from './components/TermsOfServices';
 import Features from './components/Features';
+import UploadImage from './components/UploadImage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -49,8 +50,10 @@ const appRouter = createBrowserRouter([
       {
         path: '/',
         element: <Home />
-      },
-      {
+      }, {
+        path: '/image',
+        element: <UploadImage />
+      }, {
         path: '/about',
         element: <About />
       }, {

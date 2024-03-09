@@ -29,10 +29,6 @@ const HeroSection = () => {
                         <br className="hidden md:inline lg:hidden" /> in a easy and intresting way
                     </p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        {/* <Link rel="noopener noreferrer" to='/administration' className="flex flex-row px-8 py-4 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
-                            <img src={iso_icon} alt='' className='mr-3  rounded-full h-8 bg-white' />
-                            Administration
-                        </Link> */}
                         <button className="flex flex-row text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
                             <DropDown icon={iso_icon} name='Administration' content={courses} />
                         </button>
