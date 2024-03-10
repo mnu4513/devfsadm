@@ -20,7 +20,9 @@ const ZFS = () => {
         <p>
           In Solaris, the zpool command is used to manage ZFS storage pools. ZFS (Zettabyte File System) is a combined file system and volume manager that provides features like pooled storage, snapshots, and data integrity. Here are some common zpool commands in Solaris:
         </p>
-
+        <div className='mt-10' >
+          <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div>
         <div className='mb-4'>
           <p className='mt-5'>1. To list down all pools </p>
           <p className=' font-bold ml-5'> {`zpool list`} </p>
@@ -193,7 +195,7 @@ const ZFS = () => {
           <p className=' font-bold ml-5'> {`zfs set mountpoint=/<new_mountpoint_name> <data_set_name>`} </p>
           <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
         </div>
-      
+
       </div>
 
 
@@ -203,11 +205,14 @@ const ZFS = () => {
       <div className='ml-4 mt-5'>
         <h2 className='text-xl font-bold mb-2'> Quota and Reservation</h2>
         <p>
-        In a very simple term quota is a maximum size can be used by a file system and if it has free space then other sibling or patent file system can use it's space too.
+          In a very simple term quota is a maximum size can be used by a file system and if it has free space then other sibling or patent file system can use it's space too.
         </p>
         <p className='mt-2'>
-        Reservation is the reserved space for a particular file system, this file system can use its parent's or sibling's sapce if it is out of sapce, but its parent or siblings can't use its reserved space.
+          Reservation is the reserved space for a particular file system, this file system can use its parent's or sibling's sapce if it is out of sapce, but its parent or siblings can't use its reserved space.
         </p>
+        <div className='mt-10' >
+          <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div>
 
         <div className='mb-4'>
           <p className='mt-5'>1. To check quota details for a file system</p>
@@ -239,7 +244,7 @@ const ZFS = () => {
           <p className=' font-bold ml-5'> {`zfs set reservation=none <data_set_name>`} </p>
           <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
         </div>
-      
+
 
       </div>
 
