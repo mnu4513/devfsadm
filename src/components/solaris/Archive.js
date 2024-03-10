@@ -105,7 +105,7 @@ const Archive = () => {
       <div className='ml-4 mb-4'>
         <p className='mt-5 font-bold'>4. Update a Zip Archive:</p>
         <p className=' font-bold ml-5'> {`zip -r archive.zip new_files_or_directories`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}wi8zls3hmthxe9uqtutn.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
 
