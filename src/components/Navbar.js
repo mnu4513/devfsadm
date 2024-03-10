@@ -2,12 +2,8 @@ import React, { useContext, Fragment, useState } from 'react';
 import ThemeContext from './ThemeContext';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react';
 import {
-    ArrowPathIcon,
     Bars3Icon,
-    ChartPieIcon,
     CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
     SunIcon,
     MoonIcon
@@ -16,13 +12,14 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import { Link } from 'react-router-dom';
 import icon from '../assets/ico/icon.png';
 
+
 const courses = [
-    { name: 'Solaris', description: 'Get a better understanding of your traffic', href: '/course/solaris', icon: ChartPieIcon },
+    { name: 'Solaris', description: 'Get a better understanding of your traffic', href: '/course/solaris', icon: CursorArrowRaysIcon },
     { name: 'Linux', description: 'Speak directly to your customers', href: '/course/solaris', icon: CursorArrowRaysIcon },
-    { name: 'Git', description: 'Your customers’ data will be safe and secure', href: '/course/solaris', icon: FingerPrintIcon },
-    { name: 'HTML', description: 'Connect with third-party tools', href: '/course/solaris', icon: SquaresPlusIcon },
-    { name: 'JavaScript', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: ArrowPathIcon },
-    { name: 'React', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: ArrowPathIcon },
+    { name: 'Git', description: 'Your customers’ data will be safe and secure', href: '/course/solaris', icon: CursorArrowRaysIcon },
+    { name: 'HTML', description: 'Connect with third-party tools', href: '/course/solaris', icon: CursorArrowRaysIcon },
+    { name: 'JavaScript', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
+    { name: 'React', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
 ]
 const callsToAction = [
     { name: 'Watch Videos', href: '/videos', icon: PlayCircleIcon },
