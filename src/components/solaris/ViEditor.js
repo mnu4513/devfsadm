@@ -18,7 +18,7 @@ const ViEditor = () => {
       </div>
       <div className='mt-5'>
         {/* Opening file in vs code */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>1. Opening File </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>1. Opening File </h2>
         <p className='ml-8 my-2'>To create a new file or to open an existing file in VI Editor</p>
         <span className='font-bold ml-8'>
           {`vi <file_name>`}
@@ -27,7 +27,7 @@ const ViEditor = () => {
         <img src={`${img_base_url}asyocz59tvjnuswdvbfx`} alt='' className='mt-5 mb-8 md:w-2xl md:ml-4 lg:max-w-5xl' />
 
         {/* Switching modex - 2 */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>2. Switching Modes </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>2. Switching Modes </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
             Command Mode:
@@ -48,7 +48,7 @@ const ViEditor = () => {
 
 
         {/* Saving and exiting - 3 */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>3. Saving and Exiting </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>3. Saving and Exiting </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
             Save Changes:
@@ -70,7 +70,7 @@ const ViEditor = () => {
 
 
         {/* Navigation - 4 */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>4. Navigation </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>4. Navigation </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
             Moving Cursor:
@@ -98,7 +98,7 @@ const ViEditor = () => {
 
 
         {/* Editing text */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>5. Editing Text </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>5. Editing Text </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
             Delete a Character:
@@ -120,7 +120,7 @@ const ViEditor = () => {
 
 
         {/* Search and Replace */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>6. Search and Replace: </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>6. Search and Replace: </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
             Search Forward:
@@ -141,7 +141,7 @@ const ViEditor = () => {
         </p>
 
         {/* Undo and Redo */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>7. Undo and Redo: </h2>
+        <h2 className='text-xl font-bold mt-8 ml-2'>7. Undo and Redo: </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
             Undo:

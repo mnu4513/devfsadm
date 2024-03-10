@@ -60,12 +60,12 @@ const ServiceManagement = () => {
         {
           content?.map((e) => {
             return (
-              <div key={e.id} className='md:px-24'>
-                <h2 className='ml-4 mr-2 mt-4'> {e.id}. {e.title} :-  </h2>
+              <div key={e.id} className='ml-4'>
+                <h2 className=' mr-2 mt-4 font-bold'> {e.id}. {e.title} :-  </h2>
                 
-                 <p className='ml-4 font-bold'> {e.command} </p>
+                 <p className=' font-bold'> {e.command} </p>
                 
-                <img src={`${img_base_url}${e.image}`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+                <img src={`${img_base_url}${e.image}`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
               </div>
             )
           })
