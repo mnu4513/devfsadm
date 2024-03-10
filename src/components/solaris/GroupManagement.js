@@ -22,7 +22,7 @@ const GroupManagement = () => {
           1. Creating a Group:
         </p>
         <p className=' font-bold ml-5'> {`groupadd <group_name>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4'>
@@ -30,7 +30,7 @@ const GroupManagement = () => {
           2. Creating a Group with Custom Group ID:
         </p>
         <p className=' font-bold ml-5'> {`groupadd -g <GID> <group_name>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}pip8djkh1lsmw5a8unh5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4'>
@@ -38,7 +38,7 @@ const GroupManagement = () => {
           3. To Change the Group Name:
         </p>
         <p className=' font-bold ml-5'> {`groupmod -n <new_group_name> <old_group_name>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}yn1r8hy0ms6h40odhdr8.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4'>
@@ -46,15 +46,15 @@ const GroupManagement = () => {
           4. To Delete a Group:
         </p>
         <p className=' font-bold ml-5'> {`groupdel <group_name>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}vfs8wnpscumxssj46o65.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4'>
         <p className='mt-5 font-bold'>
           4. To Get Detials About all Groups:
         </p>
-        <p className=' font-bold ml-5'> {`cat /etc/groups`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <p className=' font-bold ml-5'> {`cat /etc/group`} </p>
+        <img src={`${img_base_url}eqxxtt0riinnz8goom4y.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
     </div>
   );
