@@ -23,7 +23,7 @@ const BasicCommands = () => {
           1. To do friendly session:
         </p>
         <p className=' font-bold ml-5'> {`bash`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}qfcs2qnw3emi5pxegzx5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4'>
@@ -31,7 +31,7 @@ const BasicCommands = () => {
           2. To check command history:
         </p>
         <p className=' font-bold ml-5'> {`history`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}uomwkaogoici20wqhok5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -39,7 +39,7 @@ const BasicCommands = () => {
           3.To show the date:
         </p>
         <p className=' font-bold ml-5'> {`date`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}zjm0nlqlivbbi5segvik.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -47,7 +47,7 @@ const BasicCommands = () => {
           4. To check the calander:
         </p>
         <p className=' font-bold ml-5'> {`cal`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}qxod4zxgtxwxslqo3cfs.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -55,7 +55,7 @@ const BasicCommands = () => {
           5. To check calander or a particular year :
         </p>
         <p className=' font-bold ml-5'> {`cal 2014`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}qui2ebwukyrr7qhg70w8.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -63,7 +63,7 @@ const BasicCommands = () => {
           6. To Calculate the data:
         </p>
         <p className=' font-bold ml-5'> {`bc`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}rszcduwt4lguirmz1fet.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -71,7 +71,7 @@ const BasicCommands = () => {
           7. To clear the terminal screen:
         </p>
         <p className=' font-bold ml-5'> {`clear`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}jr5zeqv9311aekofr3t3.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -79,7 +79,7 @@ const BasicCommands = () => {
           8. To check present working directory:
         </p>
         <p className=' font-bold ml-5'> {`pwd`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}h4l8dbf41mqraz2j7dvz.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -87,7 +87,7 @@ const BasicCommands = () => {
           9. To change the directory:
         </p>
         <p className=' font-bold ml-5'> {`cd <path_of_dir>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}z4huurxquyhpy7ezcuqn.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -95,7 +95,7 @@ const BasicCommands = () => {
           10. To go to step back directory:
         </p>
         <p className=' font-bold ml-5'> {`cd ..`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}ply5vwn44amkjg9z1wbg.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -103,7 +103,7 @@ const BasicCommands = () => {
           11. To create a new directory:
         </p>
         <p className=' font-bold ml-5'> {`mkdir new-folder`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}mf9knkmemkmf8yjewrpj.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -111,7 +111,7 @@ const BasicCommands = () => {
           12. To remove file or directory:
         </p>
         <p className=' font-bold ml-5'> {`rm -rf <file_or_dir_path>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}dlee5jsa6zj8nrfdux2t.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -119,7 +119,7 @@ const BasicCommands = () => {
           13. To chack the directory recursively:
         </p>
         <p className=' font-bold ml-5'> {`ls -R`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}xp8o4xrishzudhznlb4y.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -127,7 +127,7 @@ const BasicCommands = () => {
           14. To check OS details:
         </p>
         <p className=' font-bold ml-5'> {`uname -a`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}eb7ytarhtqkuwrkbnuri.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -135,7 +135,7 @@ const BasicCommands = () => {
           15. To get memory, cpu information process wise:
         </p>
         <p className=' font-bold ml-5'> {`top`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}xito4bpx68cpjjkv40i1.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -143,7 +143,7 @@ const BasicCommands = () => {
           16. To get memory, cpu info user wise and process wise:
         </p>
         <p className=' font-bold ml-5'> {`prstat -a`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}urieqshyiqu63b9bcuzm.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -151,7 +151,7 @@ const BasicCommands = () => {
           17. To list down the terminal:
         </p>
         <p className=' font-bold ml-5'> {`tty`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}xpiad6kxctron7odcqbf.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -159,7 +159,7 @@ const BasicCommands = () => {
           18. To get the command path:
         </p>
         <p className=' font-bold ml-5'> {`which <command_name>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}xwbhrgqr9tz6zknk4kwx.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -167,7 +167,7 @@ const BasicCommands = () => {
           19. To get the hostname:
         </p>
         <p className=' font-bold ml-5'> {`hostname`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}i4rkwo5pzkernsxsw6kx.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -175,7 +175,7 @@ const BasicCommands = () => {
           20. To change the hostname:
         </p>
         <p className=' font-bold ml-5'> {`hostname <new_name>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}v4onbpvjjts9ud1chr6v.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -183,7 +183,7 @@ const BasicCommands = () => {
           21. To check system uptime:
         </p>
         <p className=' font-bold ml-5'> {`uptime`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}uabrcjjaxzz10ls9nygv.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -191,7 +191,7 @@ const BasicCommands = () => {
           22. To get user info:
         </p>
         <p className=' font-bold ml-5'> {`who am i`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}nysejfjofshj6k2bmime.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -199,7 +199,7 @@ const BasicCommands = () => {
           23. To check host ID:
         </p>
         <p className=' font-bold ml-5'> {`hostid`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}jyrex3e1ixzkgh1unrfb.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -207,7 +207,7 @@ const BasicCommands = () => {
           24. To check physical cpu:
         </p>
         <p className=' font-bold ml-5'> {`psrinfo -p`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}c3yfgumagj1mx9zatp8v.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -215,7 +215,7 @@ const BasicCommands = () => {
           25. To check both (physical and virtual) cpu:
         </p>
         <p className=' font-bold ml-5'> {`psrinfo -vp`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}yil27kggkmmtg4afolgk.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -223,7 +223,7 @@ const BasicCommands = () => {
           26. To get command's full info:
         </p>
         <p className=' font-bold ml-5'> {`man <any_command>`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}wnayfgyiibrz0ggf2qhk.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -231,7 +231,7 @@ const BasicCommands = () => {
           27. To get the number of lines of output
         </p>
         <p className=' font-bold ml-5'> {`<command> | wc -l`} </p>
-        <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}bkwi56lukq9ej9g0jeuh.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
     </div>
   );
