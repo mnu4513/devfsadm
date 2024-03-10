@@ -41,7 +41,7 @@ const Archive = () => {
       <div className='ml-4'>
         <p className='mt-3'>1. To create a tar archive</p>
         <p className=' font-bold ml-5'> {`tar -cvf archive.tar files/directories`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}zyyouq4yq9a30gvpduap.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
         <p className='mt-2'>
           <span className='font-bold ml-5'> -c: </span>
           Create a new archive.
@@ -59,19 +59,19 @@ const Archive = () => {
       <div className='ml-4'>
         <p className='mt-5'>2. To add files to an Exiting Archive</p>
         <p className=' font-bold ml-5'> {`tar -rvf archive.tar new_files`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}jmjb7beyhnw0wgovf7vp.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='ml-4'>
         <p className='mt-5'>3. View Contents of a Tar Archive:</p>
         <p className=' font-bold ml-5'> {`tar -tvf archive.tar`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}ryqeppd2dhszcjvsb26d.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='ml-4 mb-4'>
         <p className='mt-5'>4. Extract Files from a Tar Archive</p>
         <p className=' font-bold ml-5'> {`tar -xvf archive.tar`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}jpn80d3iuom96hytbsol.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       {/* zip */}
@@ -82,7 +82,7 @@ const Archive = () => {
       <div className='ml-4 mb-4'>
         <p className='mt-5'>1. Create a Zip Archive:</p>
         <p className=' font-bold ml-5'> {`zip -r archive.zip files_or_directories`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}wdpxnu6n0cqkxtfppnyb.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
         <p className='mt-2'>
           <span className='font-bold ml-5'> -r: </span>
           Recursively include files in subdirectories.
@@ -93,12 +93,12 @@ const Archive = () => {
       <div className='ml-4 mb-4'>
         <p className='mt-5'>2. Extract Files from a Zip Archive:</p>
         <p className=' font-bold ml-5'> {`unzip archive.zip`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}azdp6uvs1b23ogtv3f2v.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
       <div className='ml-4 mb-4'>
         <p className='mt-5'>3. View Contents of a Zip Archive:</p>
         <p className=' font-bold ml-5'> {`unzip -l archive.zip`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}xqu6ha7ebrytvy1r1v21.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
       <div className='ml-4 mb-4'>
         <p className='mt-5'>4. Update a Zip Archive:</p>
@@ -117,19 +117,19 @@ const Archive = () => {
       <div className='ml-4 mb-4'>
         <p className='mt-5'>1. Compress a File:</p>
         <p className=' font-bold ml-5'> {`gzip filename`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}wsjdrvnwk7mipbhyeewv.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
       </div>
 
 
       <div className='ml-4 mb-4'>
         <p className='mt-5'>2. Decompress a File:</p>
         <p className=' font-bold ml-5'> {`gunzip filename.gz`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}nkwtktf3jm8newjel5co.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
       <div className='ml-4 mb-4'>
         <p className='mt-5'>3. Compress Multiple Files or Directories:</p>
         <p className=' font-bold ml-5'> {`gzip -r directory`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}emmquppeph4wodyhni79.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
       
 
