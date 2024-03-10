@@ -5,22 +5,22 @@ import drive_icon from '../../assets/ico/drive_icon.webp';
 const InstallAndSetup = () => {
   return (
     <div className='flex flex-col px-5 space-y-5 lg:max-w-6xl mx-auto mb-5'>
-      <h3 className='text-3xl my-2'>Installation and setup</h3>
-      <div className='ml-5'>
-        <h2 className='text-2xl'> Tools we required </h2>
-        <p className='pl-4'> Download by visiting official website or on telegram or on google drive </p>
+      <h3 className='text-2xl my-5 font-bold'>Installation and setup</h3>
+      <div className='ml-4'>
+        <h2 className='text-xl font-bold'> Tools we required </h2>
+        <p className='mt-2'> Download by visiting official website or on telegram or on google drive </p>
         <ul className='ml-4 space-y-2 mt-2'>
-          <button className='flex flex-row border-2 px-2 py-1 items-center rounded-md bg-gray-300 text-blue-400'>    <span> Oracle Solaris 11 </span>
+          <button className='flex flex-row w- border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> Oracle Solaris 11 </span>
             <a rel='noreferrer' href='https://t.me/solaris_adm/2' target='_blank' > <img src={telegram_icon} alt='' className='h-5 mx-3' /></a>
-            <a rel='noreferrer' href='https://drive.google.com/file/d/1zOC1PiW2J2lMag35V0DyYd4pNoKPchhQ/view?usp=drivesdk' target='_blank' > <img src={drive_icon} alt='' className='h-5 mx-3' /></a>
+            <a rel='noreferrer' href='https://drive.google.com/file/d/1zOC1PiW2J2lMag35V0DyYd4pNoKPchhQ/view?usp=drivesdk' target='_blank' > <img src={drive_icon} alt='' className='h-5 ' /></a>
           </button>
-          <button className='flex flex-row border-2 px-2 py-1 items-center rounded-md bg-gray-300 text-blue-400'>    <span> VMware 17 pro </span>
+          <button className='flex flex-row w- border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> VMware 17 pro </span>
             <a rel='noreferrer' href='https://t.me/solaris_adm/3' target='_blank' > <img src={telegram_icon} alt='' className='h-5 mx-3' /></a>
-            <a rel='noreferrer' href='https://drive.google.com/file/d/1zPuYdHrvtzbfIf-qcS3wS6XVd6-p4Zn7/view?usp=drivesdk' target='_blank' > <img src={drive_icon} alt='' className='h-5 mx-3' /></a>
+            <a rel='noreferrer' href='https://drive.google.com/file/d/1zPuYdHrvtzbfIf-qcS3wS6XVd6-p4Zn7/view?usp=drivesdk' target='_blank' > <img src={drive_icon} alt='' className='h-5' /></a>
           </button>
-          <button className='flex flex-row border-2 px-2 py-1 items-center rounded-md bg-gray-300 text-blue-400'>    <span> Putty Terminal </span>
+          <button className='flex flex-row w- border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> Putty Terminal </span>
             <a rel='noreferrer' href='https://t.me/solaris_adm/4' target='_blank' > <img src={telegram_icon} alt='' className='h-5 mx-3' /></a>
-            <a rel='noreferrer' href='https://drive.google.com/file/d/1zWYAp65GrlOCbBAkNiVUQDT5-boNcq0h/view?usp=drivesdk' target='_blank' > <img src={drive_icon} alt='' className='h-5 mx-3' /></a>
+            <a rel='noreferrer' href='https://drive.google.com/file/d/1zWYAp65GrlOCbBAkNiVUQDT5-boNcq0h/view?usp=drivesdk' target='_blank' > <img src={drive_icon} alt='' className='h-5' /></a>
           </button>
 
         </ul>
