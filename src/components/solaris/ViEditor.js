@@ -24,7 +24,7 @@ const ViEditor = () => {
           {`vi <file_name>`}
         </span>
 
-        <img src={`${img_base_url}yyumnvcogn8jnbhslurm`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}asyocz59tvjnuswdvbfx`} alt='' className='mt-5 mb-8 md:w-2xl md:ml-4 lg:max-w-5xl' />
 
         {/* Switching modex - 2 */}
         <h2 className='text-xl font-bold mt-4 ml-2'>2. Switching Modes </h2>
@@ -79,83 +79,84 @@ const ViEditor = () => {
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-          Go to the Beginning of Line: 
+            Go to the Beginning of Line:
           </span>
-          To start inserting or editing text, press i in command mode.
+          0 (zero) in command mode.
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Exit without Saving:
+            Go to the End of Line:
           </span>
-          0 (zero) in command mode.
+          $ in command mode.
+        </p>
+        <p className='ml-8 my-2'>
+          <span className='font-bold mr-2'>
+            Go to a Specific Line:
+          </span>
+          {`:<line_number> in command mode.`}
         </p>
 
 
         {/* Editing text */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>3. Saving and Exiting </h2>
+        <h2 className='text-xl font-bold mt-4 ml-2'>5. Editing Text </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Save Changes:
+            Delete a Character:
           </span>
-          In command mode, type :w and press Enter.
+          Press x in command mode.
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Save and Exit:
+            Delete a Line:
           </span>
-          To start inserting or editing text, press i in command mode.
+          Press dd in command mode.
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Exit without Saving:
+            Copy (Yank) and Paste (Put):
           </span>
-          In command mode, type :q! and press Enter.
+          In command mode, use yy to copy a line and p to paste it.
         </p>
 
 
         {/* Search and Replace */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>3. Saving and Exiting </h2>
+        <h2 className='text-xl font-bold mt-4 ml-2'>6. Search and Replace: </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Save Changes:
+            Search Forward:
           </span>
-          In command mode, type :w and press Enter.
+          In command mode, type / followed by the search term and press Enter.
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Save and Exit:
+            Search Backward:
           </span>
-          To start inserting or editing text, press i in command mode.
+          In command mode, type ? followed by the search term and press Enter.
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Exit without Saving:
+            Replace Text:
           </span>
-          In command mode, type :q! and press Enter.
+          In command mode, type :s/old_text/new_text/g to replace all occurrences of old_text with new_text.
         </p>
 
         {/* Undo and Redo */}
-        <h2 className='text-xl font-bold mt-4 ml-2'>3. Saving and Exiting </h2>
+        <h2 className='text-xl font-bold mt-4 ml-2'>7. Undo and Redo: </h2>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Save Changes:
+            Undo:
           </span>
-          In command mode, type :w and press Enter.
+          In command mode, press u.
         </p>
         <p className='ml-8 my-2'>
           <span className='font-bold mr-2'>
-            Save and Exit:
+            Redo:
           </span>
-          To start inserting or editing text, press i in command mode.
+          In command mode, press Ctrl + r.
         </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2'>
-            Exit without Saving:
-          </span>
-          In command mode, type :q! and press Enter.
-        </p>
-
       </div>
+
+        <p className='my-5'>These are just some basic commands to get you started with vi in Solaris. Remember that vi can be powerful once you get used to its modes and commands.</p>
     </div>
   );
 };
