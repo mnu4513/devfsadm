@@ -13,32 +13,35 @@ const Archive = () => {
           The archive file itself can take various formats, and different tools may be used to create, extract, or manipulate archives. Some common archive formats include:
         </p>
         <p className='mt-4 ml-4'>
-          <span className='font-bold ml-5'>1. Tar (Tape Archive): </span>
+          <span className='font-bold '>1. Tar (Tape Archive): </span>
           Originally designed for tape backups, the tar command is commonly used to create uncompressed archives. It bundles files together without compression, and a separate compression tool (like gzip or bzip2) is often used in conjunction with tar to create compressed archives.
         </p>
         <p className='mt-4 ml-4'>
-          <span className='font-bold ml-5'>2. Zip: </span>
+          <span className='font-bold '>2. Zip: </span>
           This is a widely used archive format that supports compression. Zip archives are common in both Windows and Unix-like operating systems. Tools like zip and unzip are used for creating and extracting Zip archives.
         </p>
         <p className='mt-4 ml-4'>
-          <span className='font-bold ml-5'>3. gzip and bzip2: </span>
+          <span className='font-bold'>3. gzip and bzip2: </span>
           While not traditional archive formats, these are compression tools commonly used in conjunction with tar. They compress a single file and are often used to create compressed archives with the .gz or .bz2 extensions.
         </p>
         <p className='mt-4 ml-4'>
-          <span className='font-bold ml-5'>4. 7-Zip:</span>
+          <span className='font-bold '>4. 7-Zip:</span>
           This is a versatile archive format and compression tool that supports various compression algorithms. It is known for its high compression ratio and is widely used on Windows and other platforms.
         </p>
       </div>
-      <div >
+      <div className='mt-10' >
         <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
 
-      {/* files */}
-      <h2 className='ml-4 mr-2 mt-8 font-bold text-xl'> Tar: </h2>
+      {/* Tar */}
+      <h2 className='ml-4 mr-2 mt-10 font-bold text-xl'> Tar: </h2>
+      <p className='ml-5 mt-2 mb-8'>
+        In Solaris, the tar command is commonly used for creating and manipulating tar archives. Here are some basic examples of using the tar command in Solaris:
+      </p>
       <div className='ml-4'>
         <p className='mt-3'>1. To create a tar archive</p>
         <p className=' font-bold ml-5'> {`tar -cvf archive.tar files/directories`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-5 mb-4 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
         <p className='mt-2'>
           <span className='font-bold ml-5'> -c: </span>
           Create a new archive.
@@ -54,18 +57,83 @@ const Archive = () => {
       </div>
 
       <div className='ml-4'>
-        <p className='my-3'>1. To add files to an Exiting Archive</p>
+        <p className='mt-5'>2. To add files to an Exiting Archive</p>
         <p className=' font-bold ml-5'> {`tar -rvf archive.tar new_files`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      {/* files */}
-      <h2 className='ml-4 mr-2 mt-4 font-bold text-xl'> Files </h2>
       <div className='ml-4'>
-        <p className='my-3'>1. To create an empty file</p>
-        <p className=' font-bold ml-5'> {`touch <file_name>`} </p>
-        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-5 mb-8 md:w-2xl lg:max-w-5xl' />
+        <p className='mt-5'>3. View Contents of a Tar Archive:</p>
+        <p className=' font-bold ml-5'> {`tar -tvf archive.tar`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
+
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>4. Extract Files from a Tar Archive</p>
+        <p className=' font-bold ml-5'> {`tar -xvf archive.tar`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      {/* zip */}
+      <h2 className='ml-4 mr-2 mt-10 font-bold text-xl'> Zip </h2>
+      <p className='ml-5 mt-2 mb-4'>
+        In Solaris, you can use the zip command to create and manipulate zip archives. Below are some basic examples of using the zip command:
+      </p>
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>1. Create a Zip Archive:</p>
+        <p className=' font-bold ml-5'> {`zip -r archive.zip files_or_directories`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
+        <p className='mt-2'>
+          <span className='font-bold ml-5'> -r: </span>
+          Recursively include files in subdirectories.
+        </p>
+      </div>
+
+
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>2. Extract Files from a Zip Archive:</p>
+        <p className=' font-bold ml-5'> {`unzip archive.zip`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>3. View Contents of a Zip Archive:</p>
+        <p className=' font-bold ml-5'> {`unzip -l archive.zip`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>4. Update a Zip Archive:</p>
+        <p className=' font-bold ml-5'> {`zip -r archive.zip new_files_or_directories`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+
+      {/* gzip */}
+      <h2 className='ml-4 mr-2 mt-10 font-bold text-xl'> gzip </h2>
+      <p className='ml-5 mt-2 mb-4'>
+        In Solaris, you can use the gzip command to compress and decompress files using the gzip compression algorithm. Here are some basic examples:
+      </p>
+
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>1. Compress a File:</p>
+        <p className=' font-bold ml-5'> {`gzip filename`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>2. Decompress a File:</p>
+        <p className=' font-bold ml-5'> {`gunzip filename.gz`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+      <div className='ml-4 mb-4'>
+        <p className='mt-5'>3. Compress Multiple Files or Directories:</p>
+        <p className=' font-bold ml-5'> {`gzip -r directory`} </p>
+        <img src={`${img_base_url}hxcpxfe1vdbcxcu2peaa.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+      
+
+
     </div>
   );
 };
