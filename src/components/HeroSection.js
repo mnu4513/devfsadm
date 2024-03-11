@@ -18,8 +18,8 @@ const HeroSection = () => {
 
 
     return (
-        <section >
-            <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+        <section className=" py-24 sm:py-32">
+            <div className="container flex flex-col justify-center p-6 mx-auto max-w-7xl px-6 lg:px-8 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center py-6 md:px-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leadi sm:text-6xl">Learn
                         <span className="dark:text-violet-400"> Unix Administration </span> and                     <span className="dark:text-violet-400"> Development </span>

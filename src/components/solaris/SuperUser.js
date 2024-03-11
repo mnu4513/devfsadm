@@ -97,7 +97,7 @@ const SuperUser = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
 export default SuperUser;
