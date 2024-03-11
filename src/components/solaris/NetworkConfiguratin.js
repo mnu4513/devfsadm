@@ -11,12 +11,7 @@ const NetworkConfiguratin = () => {
           Configuring network settings in Solaris involves using the ipadm and dladm commands.
         </p>
        
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            1. Username:
-          </span>
-          The superuser's username is typically "root".
-        </p>
+  
       </div>
 
 
@@ -29,11 +24,108 @@ const NetworkConfiguratin = () => {
 
       <div className='mb-4 ml-4 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To Switch the User:
+          1. To check IP address / net mask / mac address:
         </p>
-        <p className=' font-bold ml-5'> {`su - <user_name>`} </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To show link name, class, type, IP:
+        </p>
+        <p className=' font-bold ml-5'> {`ipadm`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check the link information:
+        </p>
+        <p className=' font-bold ml-5'> {`dladm show-link`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-4 mt-6'>
+        <p className='mt-5 font-bold'>
+          1. To check IP address:
+        </p>
+        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
     </div>
   );
 };
