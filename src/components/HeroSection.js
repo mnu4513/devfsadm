@@ -29,12 +29,12 @@ const HeroSection = () => {
                         <br className="hidden md:inline lg:hidden" /> in a easy and intresting way
                     </p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                        <button className="flex flex-row text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
+                        <div className="flex flex-row text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
                             <DropDown icon={iso_icon} name='Administration' content={courses} />
-                        </button>
-                        <button className="flex flex-row  text-lg font-semibold border rounded ">
+                        </div>
+                        <div className="flex flex-row  text-lg font-semibold border rounded ">
                             <DropDown icon={dev_icon} name='Development' content={courses} />
-                        </button>
+                        </div>
                     </div>
                 </div>
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
