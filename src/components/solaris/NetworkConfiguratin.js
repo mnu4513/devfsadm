@@ -10,122 +10,216 @@ const NetworkConfiguratin = () => {
         <p className='ml-2 mt-3'>
           Configuring network settings in Solaris involves using the ipadm and dladm commands.
         </p>
-       
-  
       </div>
-
-
       <div >
         <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
       <p className='ml-2 mt-10 '>
         Here are the basic steps to configure network settings in Solaris:
-        </p>
+      </p>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
           1. To check IP address / net mask / mac address:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`ifconfig -a`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To show link name, class, type, IP:
+          2. To show link name, class, type, IP:
         </p>
-        <p className=' font-bold ml-5'> {`ipadm`} </p>
+        <p className=' font-bold'> {`ipadm`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check the link information:
+          3. To check the link information:
         </p>
-        <p className=' font-bold ml-5'> {`dladm show-link`} </p>
-        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <p className=' font-bold'> {`dladm show-link`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-2 md:w-2xl lg:max-w-5xl' />
+        <p className=' mt-2'> With this command we can check vnic (virtual network interface card) as well.</p>
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          4. To check physical Network Adapater details:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`dladm show-phys`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          5. To check mac address of physical devices:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`dladm show-phys -m`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          6. To check physical device info with location:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`dladm show-phys -L`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
-
-      <div className='mb-4 ml-4 mt-6'>
+      <hr className='ml-2' />
+      <p className='ml-2 mt-6'>
+        To add more network interface card (link) we need to add more network adapaters with our server.
+        After adding these network adapaters, these will can be find in physical devices list.
+      </p>
+      <p className='ml-2 mt-3'>
+        After adding network adapater, if we want to use this device then we have to use it as a link.
+        For that we have to create link with this device.
+      </p>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          1. To create a link:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`ipadm create-ip <link_name>`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <p>
+          By default this link be created in down state.
+          To use this link we have assign IP address with this link.
+        </p>
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          2. To assign IP address to a link:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`ipadm create-addr -T static -a <IP_address> <link_name>`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <p className='mb-3'>
+          After assigning an IP address to a link, link will come in 'OK' state from 'down' state.
+        </p>
+        <p>
+          Now we can assess this new IP address to access server same as primary link (net0) IP address.
+        </p>
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          3. To delete IP address:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`ipadm delete-addr <IP_address_name>`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          4. To delete a link:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`ipadm delete-ip <link_name>`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <p className='ml-2'>
+        In such case whenever we have limited network adapaters and we need more IP address than the network adapater devices then we need to create vnic (virtual network interface card).
+      </p>
+
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          5. To create a vnic:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`dladm create-vnic -l <phys_link_name> <vnic_name> `} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          6. To delete a vnic:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`dladm delete-vnic <vnic_name>`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
+      <p className='ml-2'>
+        In such case whenever we have more than one physical devices (network adapaters) and we want assign a single IP address to all devices then we will create a IPMP group and we will add all the links to the IPMP group and then we will assign an IP address to that IPMP group.
+      </p>
+      <p className='mt-3'>
+        We create an IPMP group because in some cases if our one goes down due to some reason, then our server will work continue, because we are using same IP address on more than one link.
+      </p>
 
-      <div className='mb-4 ml-4 mt-6'>
+      <div className='mb-4 ml-2 mt-6'>
         <p className='mt-5 font-bold'>
-          1. To check IP address:
+          7. To create an IPMP group:
         </p>
-        <p className=' font-bold ml-5'> {`ifconfig -a`} </p>
+        <p className=' font-bold'> {`ipadm create-ipmp <IPMP_group_name>`} </p>
         <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          8. To add links in an IPMP group
+        </p>
+        <p className=' font-bold'> {`ipadm add-ipmp -i <first_link> -i <second_link> <IPMP_group_name> `} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          9. To assign IP address to an IPMP group:
+        </p>
+        <p className=' font-bold'> {`ipadm create-addr -T <type_of_address> -a <IP_address> <IPMP_group_name>`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          10. To check IPMP group status:
+        </p>
+        <p className=' font-bold'> {`ipmpstat -g`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          11. To check interface, active status, flags in an IPMP group:
+        </p>
+        <p className=' font-bold'> {`ipmpstat -i`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          12. To disable a link in an IPMP group:
+        </p>
+        <p className=' font-bold'> {`ipadm if_mpadm <link_name>`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          13. To enable a link in an IPMP group:
+        </p>
+        <p className=' font-bold'> {`if_mpadm -r <link_name>`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          14. To remove link from an IPMP group:
+        </p>
+        <p className=' font-bold'> {`ipadm remove-ipmp -i <link_name> <IPMP_group_name>`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
+
+
+      <div className='mb-4 ml-2 mt-6'>
+        <p className='mt-5 font-bold'>
+          15. To delete an IPMP group:
+        </p>
+        <p className=' font-bold'> {`ipadm delete-ipmp <IPMP_group_name>`} </p>
+        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      </div>
     </div>
   );
 };
