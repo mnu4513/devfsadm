@@ -127,7 +127,7 @@ const UserManagement = () => {
           8. To Modify the User's Shell:
         </p>
         <p className=' font-bold ml-5'> {`usermod -s <new_shell> <user_name>`} </p>
-        <img src={`${img_base_url}k6ayspdmo5cfypiemtem.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}mo6c1zhchcdxxsglb27d.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4'>

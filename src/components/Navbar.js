@@ -163,7 +163,7 @@ export default function Navbar() {
                                 alt=""
                             />
                         </Link>
-                        <button onClick={() => toggleTheme()} className='border-2 rounded-full'>
+                        <button onClick={() => toggleTheme()}>
                             {theme.mode === 'dark' ?
                                 <SunIcon className='h-6 w-6' aria-hidden='true' /> :
                                 <MoonIcon className='h-6 w-6' aria-hidden='true' />}

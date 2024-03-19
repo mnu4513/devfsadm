@@ -70,14 +70,14 @@ const SuperUser = () => {
           1. Make entry to sudoers file:
         </p>
         <p className=' font-bold ml-5'> {`vi /etc/sudoers`} </p>
-        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}pr3rtujhpvwhg98cqefb.png`} alt='' className='mt-3 md:w-2xl lg:max-w-5xl' />
         <p className='mt-3'> 
           In this file we will search - <p className='font-bold'> root ALL=(ALL) ALL</p>
         </p>
         <p className='mt-3'> 
           After this line we will make a new entry for another user -<p className='font-bold'> {`<user_name> All=(ALL) ALL`}</p>
         </p>
-        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}wxrcwnrsbzho002pis3i.png`} alt='' className='mt-3 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -85,7 +85,7 @@ const SuperUser = () => {
           2. To Switch the User:
         </p>
         <p className=' font-bold ml-5'> {`su - <user_name>`} </p>
-        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}gumblrprgfq6efa9f7px.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
       <div className='mb-4 ml-4 mt-10'>
@@ -93,7 +93,7 @@ const SuperUser = () => {
           3. To Provide Sudo Privileges:
         </p>
         <p className=' font-bold ml-5'> {`sudo su - `} </p>
-        <img src={`${img_base_url}yrf6tlynpn2irmotepui.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+        <img src={`${img_base_url}ykhrgzslz3iveoyzsf0f.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
     </div>
