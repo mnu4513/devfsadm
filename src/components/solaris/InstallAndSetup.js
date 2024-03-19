@@ -33,9 +33,10 @@ const InstallAndSetup = () => (
       <p className='mt-2'>Download links of all tools are provided already. </p>
       <p className='mt-2'> After the Installation of VMware, open VMware and start the setup. If you are having any issue in setup, you can refer the video for setup and isntallation.</p>
     </div>
-    <div>
-      <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/DjsxadCnijI?si=mV51f6M4rTlD-Jx4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    </div>
+    <div >
+        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      </div>
+
 
     <div>
       <p className='mt-2 ml-4'> While installing VMware pro 17 or higher version of VMware pro user key for pro version <span className='font-bold' >'MC60H-DWHD5-H80U9-6V85M-8280D'</span> </p>

@@ -8,14 +8,14 @@ const UserManagement = () => {
         <h2 className='text-2xl font-bold mt-5 ml-2'>User Management in Solaris</h2>
         <p className='ml-2 mt-3'>
           In Solaris, user management involves creating, modifying, and deleting user accounts, as well as managing user attributes.        </p>
-      
+
       </div>
-      <div className='mt-10' >
+      <div >
         <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
 
       <div className='mb-4 ml-2 mt-10'>
-        <p> Here are some important files in user management: 
+        <p> Here are some important files in user management:
           <li className='font-bold'> /etc/passwd</li>
           <li className='font-bold'> /etc/shadow</li>
         </p>
@@ -24,7 +24,7 @@ const UserManagement = () => {
         </p>
         <p className=' font-bold ml-5'> {`cat /etc/passwd`} </p>
         <img src={`${img_base_url}oym12gxwlmiccqxcz1ad.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-       
+
         <p className='mt-5 font-bold'>
           2. To get All User's Information in Password encrypted form:
         </p>
@@ -39,7 +39,7 @@ const UserManagement = () => {
         </p>
         <p className=' font-bold ml-5'> {`cat /etc/default/passwd`} </p>
         <img src={`${img_base_url}woxuwkkpcmukmyopzpe4.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      
+
         <p className='mt-5 font-bold'>
           4. To get copy of Password policy Information:
         </p>
@@ -48,7 +48,7 @@ const UserManagement = () => {
           It use to recover <sapn className='font-bold'> /etc/passwd</sapn> file, if deleted by mistake.
         </p>
         <img src={`${img_base_url}wa0nj9n1vbgq3xuljh7e.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      
+
         <p className='mt-5 font-bold'>
           5. To recover the shadow file:
         </p>
@@ -62,10 +62,10 @@ const UserManagement = () => {
         <img src={`${img_base_url}rfngt4zbztopn6facyz6.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
       </div>
 
-      <hr className='my-3 ml-4'/>
+      <hr className='my-3 ml-4' />
       <p className='ml-4 my-3 mt-5 font-bold'>
-          Here are some common commands for user management in Solaris:
-        </p>
+        Here are some common commands for user management in Solaris:
+      </p>
       <div className='mb-4 ml-4 mt-10'>
         <p className='mt-5 font-bold'>
           1. Creating a User:

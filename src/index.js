@@ -38,6 +38,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfServices from './components/TermsOfServices';
 import Features from './components/Features';
 import UploadImage from './components/UploadImage';
+import AboutTheCouse from './components/solaris/AboutTheCouse';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -78,7 +79,7 @@ const appRouter = createBrowserRouter([
         element: <HomeSolaris />,
         children: [{
           path: '/course/solaris/',
-          element: <IntroToSolaris />
+          element: < AboutTheCouse />
         }, {
           path: '/course/solaris/intro-to-solaris',
           element: <IntroToSolaris />
