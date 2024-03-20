@@ -28,7 +28,7 @@ import Links from './components/solaris/Link';
 import NetworkConfiguration from './components/solaris/NetworkConfiguratin';
 import ZFS from './components/solaris/ZFS';
 import PatchManagement from './components/solaris/PatchManagement';
-import Virtulization from './components/solaris/Virtulization';
+import Virtulization from './components/solaris/Virtualization';
 import LDOM from './components/solaris/LDOM';
 import InterviewPrep from './components/solaris/InetviewPreparation';
 

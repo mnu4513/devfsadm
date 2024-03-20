@@ -6,11 +6,11 @@ const AboutTheCouse = () => {
         <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
             <div>
                 <h2 className='text-2xl font-bold mt-5 ml-2'> Solaris System Administration Course </h2>
-
                 <p className='ml-2 my-3'>
-                    Course Description:
-                    Learn essential skills and techniques for efficiently managing Solaris 11 systems with our comprehensive System Administration course. Whether you're a beginner or an experienced professional, this course will equip you with the knowledge and hands-on experience needed to effectively administer Solaris environments.
-
+                    Learn essential skills and techniques for efficiently managing Solaris 11 systems with our comprehensive System Administration course.
+                </p>
+                <p className='ml-2'>
+                    Whether you're a beginner or an experienced professional, this course will equip you with the knowledge and hands-on experience needed to effectively administer Solaris environments.
                 </p>
             </div>
 
