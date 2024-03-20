@@ -6,7 +6,8 @@ import Error404 from './components/Error404';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './components/Home';
-import About from './components/About';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import ForgotPassword from './components/user/ForgotPassword';
@@ -77,8 +78,11 @@ const appRouter = createBrowserRouter([
         path: '/image',
         element: <UploadImage />
       }, {
-        path: '/about',
-        element: <About />
+        path: '/about-us',
+        element: <AboutUs />
+      }, {
+        path: '/contact-us',
+        element: <ContactUs />
       }, {
         path: '/user',
         element: <User />,
@@ -189,7 +193,7 @@ const appRouter = createBrowserRouter([
           element: <Variables />
         }, {
           path: '/course/shell/array',
-          element: <Arrays/>
+          element: <Arrays />
         }, {
           path: '/course/shell/string',
           element: <String />

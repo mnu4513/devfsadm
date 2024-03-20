@@ -24,18 +24,18 @@ const Virtualization = () => {
             Key features of Solaris Zones include:
             <ul className='list-decimal'>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Lightweight virtualization:</sapn> Zones have minimal overhead compared to traditional virtual machines, making them highly efficient in terms of resource utilization.
+                <span className="font-bold" >Lightweight virtualization:</span> Zones have minimal overhead compared to traditional virtual machines, making them highly efficient in terms of resource utilization.
               </li>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Resource management:</sapn>
+                <span className="font-bold" >Resource management:</span>
                 Solaris provides extensive tools for controlling resource allocation to zones, including CPU shares, memory caps, and network bandwidth limits.
               </li>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Scalability:</sapn>
+                <span className="font-bold" >Scalability:</span>
                 You can create and manage a large number of zones on a single Solaris host, making it easy to partition resources and isolate workloads.
               </li>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Security: </sapn>
+                <span className="font-bold" >Security: </span>
                 Zones offer strong isolation between applications and users, helping to enhance system security and mitigate risks.
               </li>
             </ul>
@@ -58,21 +58,21 @@ const Virtualization = () => {
             Key features of KVM on Solaris 11 include:
             <ul className='list-decimal'>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >
+                <span className="font-bold" >
                   Hardware virtualization:
-                </sapn>
+                </span>
                 KVM leverages hardware-assisted virtualization capabilities (Intel VT-x and AMD-V) to achieve near-native performance for guest VMs.
               </li>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Guest OS support:</sapn>
+                <span className="font-bold" >Guest OS support:</span>
                 KVM supports a wide range of guest operating systems, providing flexibility in running diverse workloads on Solaris 11.
               </li>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Management tools:</sapn>
+                <span className="font-bold" >Management tools:</span>
                 Solaris includes utilities such as vmadm for managing KVM-based virtual machines, allowing you to create, configure, and monitor VMs from the command line or through graphical interfaces.
               </li>
               <li className='ml-4 mt-2'>
-                <sapn className="font-bold" >Integration with Solaris features: </sapn>
+                <span className="font-bold" >Integration with Solaris features: </span>
                 KVM on Solaris benefits from the platform's robust features, including ZFS for storage management, DTrace for performance monitoring, and network virtualization capabilities.
               </li>
             </ul>

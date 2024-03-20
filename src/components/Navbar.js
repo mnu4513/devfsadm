@@ -20,15 +20,11 @@ const courses = [
     { name: 'HTML', description: 'Connect with third-party tools', href: '/course/solaris', icon: CursorArrowRaysIcon },
     { name: 'JavaScript', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
     { name: 'React', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
-]
-const callsToAction = [
-    { name: 'Watch Videos', href: '/videos', icon: PlayCircleIcon },
-    { name: 'Contact us', href: '/contact-us', icon: PhoneIcon },
-]
+];
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
-}
+};
 
 export default function Navbar() {
 
@@ -111,18 +107,7 @@ export default function Navbar() {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                    {callsToAction.map((item) => (
-                                        <Link
-                                            key={item.name}
-                                            href={item.href}
-                                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                                        >
-                                            <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                                            {item.name}
-                                        </Link>
-                                    ))}
-                                </div>
+
                             </Popover.Panel>
                         </Transition>
                     </Popover>
@@ -130,11 +115,11 @@ export default function Navbar() {
                     <Link to='/' className="text-sm font-semibold leading-6 " >
                         Features
                     </Link>
-                    <Link to='/' className="text-sm font-semibold leading-6 ">
-                        Marketplace
+                    <Link to='/about-us' className="text-sm font-semibold leading-6 ">
+                        About Us
                     </Link>
-                    <Link to='/' className="text-sm font-semibold leading-6 ">
-                        Company
+                    <Link to='/contact-us' className="text-sm font-semibold leading-6 ">
+                        Contact Us 
                     </Link>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -191,7 +176,7 @@ export default function Navbar() {
                                                 />
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="mt-2 space-y-2">
-                                                {[...courses, ...callsToAction].map((item) => (
+                                                {[...courses].map((item) => (
                                                     <Link
                                                         key={item.name}
                                                         to={item.href} // Use "to" instead of "href"
@@ -212,18 +197,18 @@ export default function Navbar() {
                                     Features
                                 </Link>
                                 <Link
-                                    to='/'
+                                    to='/about-us'
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    Marketplace
+                                    About Us
                                 </Link>
                                 <Link
-                                    to='/'
+                                    to='/contact-us'
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
-                                    Company
+                                    Contact Us
                                 </Link>
                             </div>
                             <div className="py-6">

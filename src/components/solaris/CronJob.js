@@ -129,11 +129,11 @@ const CronJob = () => {
       <p className='ml-2 mt-3 mb-6'>
         In case, if cron.allow is not presence on the server then we have to remove the user's entry from the cron.deny file to give the cron access to a normal user.
       </p>
-     
+
 
 
     </div>
-  )
-}
+  );
+};
 
 export default CronJob;
