@@ -1,22 +1,22 @@
 import blog_img from '../assets/img/blog.jpg';
+import { mine } from './Config';
 
 const posts = [
     {
       id: 1,
       title: 'Boost your conversion rate',
       img: blog_img,
-      href: '#',
+      href: '/blog/solaris',
       description:
         'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      category: { title: 'Marketing', href: '#' },
+      date: 'Mar 16, 2024',
+      datetime: '2024-03-16',
+      category: { title: 'Administration', href: '/course/solaris' },
       author: {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
+        name: 'Jay',
+        role: 'Co-Founder / CEO',
         href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: mine ,
       },
     },
     {
