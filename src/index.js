@@ -62,6 +62,7 @@ import BashVar from './components/shell_scripting/BashVar';
 import Automation from './components/shell_scripting/Automation';
 import Projects from './components/shell_scripting/Projects';
 import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp';
+import SolarisBlog from './components/blogs/SolarisBlog';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -171,6 +172,10 @@ const appRouter = createBrowserRouter([
           element: <InterviewPrep />
         }]
       }, {
+        path: '/blog/solaris',
+        element: <SolarisBlog />
+      },
+      {
         path: '/course/shell',
         element: <HomeShell />,
         children: [{

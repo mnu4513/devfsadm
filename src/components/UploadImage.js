@@ -27,7 +27,7 @@ const UploadImage = () => {
 
             const jsonData = await response.json();
             // Handle the response (you can update the UI or do other actions)
-            console.log('Image uploaded successfully:', jsonData?.data?.public_id);
+            console.log('Image uploaded successfully:', jsonData);
         } catch (error) {
             console.error('Error uploading image:', error);
         }
