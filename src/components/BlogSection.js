@@ -1,22 +1,22 @@
 import blog_img from '../assets/img/blog.jpg';
+import { mine } from './Config';
 
 const posts = [
     {
       id: 1,
       title: 'Solaris Administration Essentials: A Quick Guide',
       img: blog_img,
-      href: '#',
+      href: '/blog/solaris',
       description:
-        "Solaris administration involves the management, configuration, and maintenance of Solaris-based systems, ensuring their smooth operation and optimal performance. Whether you're a seasoned system administrator or just starting out, mastering Solaris administration is crucial for effectively managing enterprise-grade systems. In this blog, we'll cover some essential aspects of Solaris administration to help you kickstart your journey.",
-      date: 'Mar 16, 2024',
-      datetime: '2024-03-16',
-      category: { title: 'Administration', href: '/blog/solaris' },
+        'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
+      date: 'Mar 16, 2020',
+      datetime: '2020-03-16',
+      category: { title: 'Marketing', href: '#' },
       author: {
         name: 'Jay',
         role: 'Co-Founder / CEO',
         href: '#',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: mine ,
       },
     },
     {
