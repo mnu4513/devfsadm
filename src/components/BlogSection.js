@@ -15,7 +15,7 @@ const posts = [
     author: {
       name: 'Jay',
       role: 'Co-Founder / CEO',
-      href: '#',
+      href: '/profile/jay',
       imageUrl: mine,
     },
   },
