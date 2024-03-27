@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const SolarisBlog = () => {
     return (
@@ -181,13 +182,13 @@ const SolarisBlog = () => {
                     Conclusion:
                 </h2>
 
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Disaster Recovery:
-                    </span>
+                <p className='mt-3 mb-6'>
+                   
                     Solaris administration encompasses a broad range of tasks crucial for maintaining the stability, security, and performance of Solaris-based systems. This blog provides a concise overview of essential administrative tasks, serving as a starting point for aspiring Solaris administrators. As you delve deeper into Solaris administration, explore advanced topics and best practices to enhance your skills and effectively manage complex enterprise environments.
                 </p>
             </div>
+
+            <Link to='/course/solaris' className='ml-2 font-bold text-blue-400' > Visit here to get full Solaris 11 administration course. </Link>
         </div>
     );
 };

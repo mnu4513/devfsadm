@@ -9,9 +9,9 @@ const posts = [
     href: '/blog/solaris',
     description:
       "Solaris administration involves the management, configuration, and maintenance of Solaris-based systems, ensuring their smooth operation and optimal performance. Whether you're a seasoned system administrator or just starting out, mastering Solaris administration is crucial for effectively managing enterprise-grade systems. In this blog, we'll cover some essential aspects of Solaris administration to help you kickstart your journey.",
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+    date: 'Mar 16, 2024',
+    datetime: '2024-03-16',
+    category: { title: 'Administration', href: '/course/solaris' },
     author: {
       name: 'Jay',
       role: 'Co-Founder / CEO',
@@ -111,7 +111,7 @@ export default function BlogSection() {
     <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">From the blog</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
             Learn how to grow your business with our expert advice.
           </p>

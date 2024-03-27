@@ -100,6 +100,13 @@ const appRouter = createBrowserRouter([
           path: '/user/forgot-password',
           element: <ForgotPassword />
         },]
+      }, {
+        path: '/blog',
+        element: <SolarisBlog />,
+        children: [{
+          path: '/blog/solaris',
+          element: <SolarisBlog />
+        }]
       },
       {
         path: '/course/solaris',
