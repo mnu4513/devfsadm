@@ -1,33 +1,28 @@
+import { img_base_url, mine } from "./Config";
 const people = [{
-  name: 'Leslie Alexander',
+  name: 'Jay',
   role: 'Co-Founder / CEO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: mine,
 }, {
-  name: 'Leslie Alexander1',
+  name: 'Jay1',
   role: 'Co-Founder / CEO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: mine,
 }, {
-  name: 'Leslie Alexander2',
+  name: 'Jay2',
   role: 'Co-Founder / CEO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: mine,
 }, {
-  name: 'Leslie Alexander3',
+  name: 'Jay3',
   role: 'Co-Founder / CEO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: mine,
 }, {
-  name: 'Leslie Alexander4',
+  name: 'Jay4',
   role: 'Co-Founder / CEO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: mine,
 }, {
-  name: 'Leslie Alexander5',
+  name: 'Jay5',
   role: 'Co-Founder / CEO',
-  imageUrl:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: mine,
 }];
 
 export default function Teams() {
@@ -45,7 +40,7 @@ export default function Teams() {
           {people.map((person) => (
             <li key={person.name}>
               <div className="flex items-center gap-x-6 bg-white px-2 py-1 rounded-full">
-                <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+                <img className="h-16 w-16 rounded-full" src={`${img_base_url}${person.imageUrl}`} alt="" />
                 <div>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>

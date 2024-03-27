@@ -2,7 +2,7 @@ import React from 'react'
 
 const SolarisBlog = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto mb-8'>
             <div>
                 <h2 className='text-2xl font-bold mt-5 ml-2'>
                     Solaris Administration Essentials
