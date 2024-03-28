@@ -43,26 +43,18 @@ import Features from './components/Features';
 import UploadImage from './components/UploadImage';
 import AboutTheCouse from './components/solaris/AboutTheCouse';
 import IntroToShell from './components/shell_scripting/IntroToShell';
-import TypesOfShell from './components/shell_scripting/TypesOfShell';
-import ShellScripting from './components/shell_scripting/ShellScripting';
-import CreatingRunnignSS from './components/shell_scripting/CreatingRunnignSS';
-import Comments from './components/shell_scripting/Comments';
-import Variables from './components/shell_scripting/Variables';
-import Arrays from './components/shell_scripting/Arrays';
-import String from './components/shell_scripting/String';
-import ValuePrompt from './components/shell_scripting/ValuePrompt';
-import ArithmeticOp from './components/shell_scripting/ArithmeticOp';
-import IfElse from './components/shell_scripting/IfElse';
-import SwitchCase from './components/shell_scripting/SwitchCase';
-import LogicalOperators from './components/shell_scripting/LogicalOperators';
-import ForLoop from './components/shell_scripting/ForLoop';
-import WhileLoop from './components/shell_scripting/WhileLoop';
+import SetupEnv from './components/shell_scripting/SetupEnv';
+import ScriptingConcept from './components/shell_scripting/ScriptingConcept';
+import Control from './components/shell_scripting/Control';
+import TextProcessing from './components/shell_scripting/TextProcessing';
 import Functions from './components/shell_scripting/Functions';
-import BashVar from './components/shell_scripting/BashVar';
-import Automation from './components/shell_scripting/Automation';
+import ErrorHandling from './components/shell_scripting/ErrorHandling';
+import AdvanceTopics from './components/shell_scripting/AdvanceTopics';
 import Projects from './components/shell_scripting/Projects';
 import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp';
 import SolarisBlog from './components/blogs/SolarisBlog';
+import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
+import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -186,64 +178,40 @@ const appRouter = createBrowserRouter([
         path: '/course/shell',
         element: <HomeShell />,
         children: [{
+          path: '/course/shell/',
+          element: <AboutTheCouseShell />
+        }, {
           path: '/course/shell/intro-to-shell',
           element: <IntroToShell />
         }, {
-          path: '/course/shell/types-of-shell',
-          element: <TypesOfShell />
+          path: '/course/shell/setup-env',
+          element: <SetupEnv />
         }, {
-          path: '/course/shell/shell-scripting',
-          element: <ShellScripting />
+          path: '/course/shell/scripting-concept',
+          element: <ScriptingConcept />
         }, {
-          path: '/course/shell/running-sh-file',
-          element: <CreatingRunnignSS />
+          path: '/course/shell/control',
+          element: <Control />
         }, {
-          path: '/course/shell/comments',
-          element: <Comments />
+          path: '/course/shell/files-and-dir',
+          element: <FilesAndDirShell />
         }, {
-          path: '/course/shell/variables',
-          element: <Variables />
-        }, {
-          path: '/course/shell/array',
-          element: <Arrays />
-        }, {
-          path: '/course/shell/string',
-          element: <String />
-        }, {
-          path: '/course/shell/value-prompt',
-          element: <ValuePrompt />
-        }, {
-          path: '/course/shell/arithmetic-operation',
-          element: <ArithmeticOp />
-        }, {
-          path: '/course/shell/if-else',
-          element: <IfElse />
-        }, {
-          path: '/course/shell/switch-case',
-          element: <SwitchCase />
-        }, {
-          path: '/course/shell/logical-operators',
-          element: <LogicalOperators />
-        }, {
-          path: '/course/shell/for-loop',
-          element: <ForLoop />
-        }, {
-          path: '/course/shell/while-loop',
-          element: <WhileLoop />
+          path: '/course/shell/text-processing',
+          element: <TextProcessing />
         }, {
           path: '/course/shell/functions',
           element: <Functions />
         }, {
-          path: '/course/shell/bash-variables',
-          element: <BashVar />
+          path: '/course/shell/error-handling',
+          element: <ErrorHandling />
         }, {
-          path: '/course/shell/automation',
-          element: <Automation />
+          path: '/course/shell/advance-topics',
+          element: <AdvanceTopics />
         }, {
           path: '/course/shell/projects',
           element: <Projects />
         }, {
-          path: '/course/shell/interview-preparation',
+          path: '/course/shell/interview-prep',
           element: <ShellInterviewPerp />
         }]
       }, {

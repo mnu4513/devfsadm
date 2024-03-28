@@ -5,65 +5,38 @@ import learn_icon from '../../assets/ico/learn.svg';
 const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
-        name: 'Introduction to Shell',
+        name: 'Introduction to Shell Scripting',
         link: '/course/shell/intro-to-shell'
+    },  {
+        name: 'setting up environment',
+        link: '/course/shell/setup-env'
     }, {
-        name: 'Types of shell',
-        link: '/course/shell/types-of-shell'
+        name: 'Scripting Concept',
+        link: '/course/shell/scripting-concept'
     }, {
-        name: 'Shell Scripting',
-        link: '/course/shell/shell-scripting'
+        name: 'Control Structure',
+        link: '/course/shell/control'
     }, {
-        name: 'Creating and Running a Scripting File',
-        link: '/course/shell/running-sh-file'
+        name: 'Files and Directories',
+        link: '/course/shell/files-and-dir'
     }, {
-        name: 'Comments in Shell Script',
-        link: '/course/shell/comments'
+        name: 'Text Processing',
+        link: '/course/shell/text-processing'
     }, {
-        name: 'Variables',
-        link: '/course/shell/variables'
-    }, {
-        name: 'Array',
-        link: '/course/shell/array'
-    }, {
-        name: 'String',
-        link: '/course/shell/string'
-    }, {
-        name: 'Value Prompt',
-        link: '/course/shell/value-prompt'
-    }, {
-        name: 'Arithmetic Operation',
-        link: '/course/shell/arithmetic-operation'
-    }, {
-        name: 'If Else Conditions',
-        link: '/course/shell/if-else'
-    }, {
-        name: 'Switch Case',
-        link: '/course/shell/switch-case'
-    }, {
-        name: 'Logical Operators',
-        link: '/course/shell/logical-operators'
-    }, {
-        name: 'For Loop',
-        link: '/course/shell/for-loop'
-    }, {
-        name: 'While Loop',
-        link: '/course/shell/while-loop'
-    }, {
-        name: 'Functions',
+        name: 'Functions and Script Organization',
         link: '/course/shell/functions'
     }, {
-        name: 'Bash Variables',
-        link: '/course/shell/bash-variables'
+        name: 'Error Handling and Debugging',
+        link: '/course/shell/error-handling'
     }, {
-        name: 'Automation',
-        link: '/course/shell/automation'
+        name: 'Advance Topics',
+        link: '/course/shell/advance-topies'
     }, {
         name: 'Projects',
         link: '/course/shell/projects'
     },  {
         name: 'Interview Preparation',
-        link: '/course/shell/interview-preparation'
+        link: '/course/shell/interview-prep'
     }];
 
 
