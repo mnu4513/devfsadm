@@ -112,7 +112,7 @@ export default function Navbar() {
                         </Transition>
                     </Popover>
 
-                    <Link to='/' className="text-sm font-semibold leading-6 " >
+                    <Link to='/features' className="text-sm font-semibold leading-6 " >
                         Features
                     </Link>
                     <Link to='/about-us' className="text-sm font-semibold leading-6 ">
@@ -190,7 +190,7 @@ export default function Navbar() {
                                     )}
                                 </Disclosure>
                                 <Link
-                                    to='/'
+                                    to='/features'
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >

@@ -84,7 +84,7 @@ const Features = () => {
             {
                 featuresContent.map((e) => {
                     return (
-                        <div key={e.id}>
+                        <div key={e.id} className='mt-8 px-2'>
                             <h2 className="text-xl font-semibold mb-2 mt-4"> {e.title} </h2>
                             <p className='mb-2'> {e.description} </p>
                         </div>

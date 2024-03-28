@@ -31,9 +31,11 @@ export default function Teams() {
       <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-400 sm:text-4xl">Meet our leadership</h2>
-          <p className="mt-6 text-lg leading-8 ">
-            Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
-            suspendisse.
+          <p className="mt-4 text-lg leading-8 ">
+            Welcome to Devfsadm, where we believe in the power of exceptional leadership to drive innovation, foster collaboration, and guide our organization towards success. In this section, we invite you to meet the talented individuals who lead and contribute to our shared vision.
+          </p>
+          <p className="mt-3 text-lg leading-8 ">
+            Have questions or want to learn more about our team? Feel free to reach out to us directly. We're here to answer your inquiries and help you get to know our team better. Thank you for taking the time to explore our leadership section.
           </p>
         </div>
         <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
