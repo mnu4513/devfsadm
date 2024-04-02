@@ -38,7 +38,7 @@ export default function Teams() {
             Have questions or want to learn more about our team? Feel free to reach out to us directly. We're here to answer your inquiries and help you get to know our team better. Thank you for taking the time to explore our leadership section.
           </p>
         </div>
-        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+        <ul  className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
           {people.map((person) => (
             <li key={person.name}>
               <div className="flex items-center gap-x-6 bg-white px-2 py-1 rounded-full">
@@ -53,5 +53,5 @@ export default function Teams() {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
