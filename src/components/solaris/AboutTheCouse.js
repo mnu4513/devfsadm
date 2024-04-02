@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const AboutTheCouse = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto dark:text-white dark:bg-gray-800'>
             <div>
-                <h2 className='text-2xl font-bold mt-5 ml-2'> Solaris System Administration Course </h2>
+                <h2 className='text-2xl text-red-600 font-bold mt-5 ml-2'> Solaris System Administration Course </h2>
                 <p className='ml-2 my-3'>
                     Learn essential skills and techniques for efficiently managing Solaris 11 systems with our comprehensive System Administration course.
                 </p>
@@ -21,7 +21,7 @@ const AboutTheCouse = () => {
 
             <div >
 
-                <h2 className='ml-2 mt-6 text-xl font-bold'> Prerequisites:
+                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'> Prerequisites:
                 </h2>
                 <p className='ml-2'>
                     <li className='mt-2'>
@@ -32,7 +32,7 @@ const AboutTheCouse = () => {
                     </li>
                 </p>
 
-                <h2 className='ml-2 mt-6 text-xl font-bold'>
+                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'>
                     Who Should Enroll:
                 </h2>
                 <p className='ml-2'>
@@ -48,7 +48,7 @@ const AboutTheCouse = () => {
                 </p>
 
 
-                <h2 className='ml-2 mt-6 text-xl font-bold'>
+                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'>
                     Course Format:
                 </h2>
                 <p className='ml-2'>
@@ -63,10 +63,10 @@ const AboutTheCouse = () => {
                     </li>
                 </p>
 
-                <h2 className='ml-2 mt-6 text-xl font-bold'>
+                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'>
                     Topics:
                 </h2>
-                <p className='ml-2'>
+                <p className='ml-2 text-blue-500'>
                     <li className='mt-2'>
                         <Link to='/course/solaris/installation-and-setup'>
                             Installation and Setup
@@ -169,7 +169,7 @@ const AboutTheCouse = () => {
                     </li>
                 </p>
 
-                <h2 className='ml-2 mt-6 text-xl font-bold'>
+                <h2 className='ml-2 text-red-600 mt-6 text-xl font-bold'>
                     Duration:
                 </h2>
                 <p className='ml-2'>
