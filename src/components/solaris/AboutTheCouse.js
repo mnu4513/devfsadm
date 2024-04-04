@@ -5,7 +5,7 @@ const AboutTheCouse = () => {
     return (
         <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto dark:text-white dark:bg-gray-800'>
             <div>
-                <h2 className='text-2xl text-red-600 font-bold mt-5 ml-2'> Solaris System Administration Course </h2>
+                <h2 className='text-2xl text-red-500 font-bold mt-5 ml-2'> Solaris System Administration Course </h2>
                 <p className='ml-2 my-3'>
                     Learn essential skills and techniques for efficiently managing Solaris 11 systems with our comprehensive System Administration course.
                 </p>
@@ -15,13 +15,13 @@ const AboutTheCouse = () => {
             </div>
 
             <div className='mt-10' >
-                <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/uh7qptFsO90?si=RR97w1Br2Dvmjywk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/uh7qptFsO90?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
 
 
             <div >
 
-                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'> Prerequisites:
+                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'> Prerequisites:
                 </h2>
                 <p className='ml-2'>
                     <li className='mt-2'>
@@ -32,7 +32,7 @@ const AboutTheCouse = () => {
                     </li>
                 </p>
 
-                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'>
+                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'>
                     Who Should Enroll:
                 </h2>
                 <p className='ml-2'>
@@ -48,7 +48,7 @@ const AboutTheCouse = () => {
                 </p>
 
 
-                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'>
+                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'>
                     Course Format:
                 </h2>
                 <p className='ml-2'>
@@ -63,7 +63,7 @@ const AboutTheCouse = () => {
                     </li>
                 </p>
 
-                <h2 className='ml-2 mt-6 text-red-600 text-xl font-bold'>
+                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'>
                     Topics:
                 </h2>
                 <p className='ml-2 text-blue-500'>
@@ -169,7 +169,7 @@ const AboutTheCouse = () => {
                     </li>
                 </p>
 
-                <h2 className='ml-2 text-red-600 mt-6 text-xl font-bold'>
+                <h2 className='ml-2 text-red-500 mt-6 text-xl font-bold'>
                     Duration:
                 </h2>
                 <p className='ml-2'>

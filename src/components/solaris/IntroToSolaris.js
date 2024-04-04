@@ -5,14 +5,22 @@ const IntroToSolaris = () => {
   return (
     <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
       <div>
-        <h2 className='text-2xl text-red-600 font-bold mt-4 ml-4 mb-3'>Solaris</h2>
+        <h2 className='text-2xl text-red-500 font-bold mt-4 ml-4 mb-3'>Solaris</h2>
         <p className='ml-4'>  Solaris is a Unix-based operating system (OS) developed by Sun Microsystems, which is now owned by Oracle Corporation. Solaris has a long history and has been widely used in enterprise environments for server applications, especially in areas such as data centers and large-scale computing systems.</p>
       </div>
       <div >
-        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/aIHWfk8K3G8?si=kesAdg1n1uqB1BKN" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
+      <iframe
+      className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' 
+        title="Installation and Setup of Solaris OS"
+        src="https://www.youtube.com/embed/aIHWfk8K3G8?autoplay=1"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    </div>
+    
       <div className='mt-5 ml-4'>
-        <h2 className='text-xl font-bold text-red-600 mb-4'> Key Features </h2>
+        <h2 className='text-xl font-bold text-red-500 mb-4'> Key Features </h2>
         <span className='text-blue-500 ml-2 font-bold '>1. Scalability </span>
         <p className='ml-7 mb-4'>
           Solaris is designed to run on a wide range of hardware platforms, from small servers to large mainframes. It offers scalability to meet the needs of various computing environments.

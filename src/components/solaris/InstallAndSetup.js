@@ -4,9 +4,9 @@ import drive_icon from '../../assets/ico/drive_icon.webp';
 
 const InstallAndSetup = () => (
   <div className='flex flex-col px-5 space-y-5 lg:max-w-6xl mx-auto mb-5'>
-    <h3 className='text-2xl text-red-600 my-5 font-bold'>Installation and setup</h3>
+    <h3 className='text-2xl text-red-500 my-5 font-bold'>Installation and setup</h3>
     <div className='ml-2'>
-      <h2 className='text-xl text-red-600 font-bold'> Tools we required </h2>
+      <h2 className='text-xl text-red-500 font-bold'> Tools we required </h2>
       <p className='mt-2'> Download by visiting official website or on telegram or on google drive </p>
       <ul className='ml-8 space-y-2 mt-2'>
         <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> Oracle Solaris 11 </span>
@@ -25,7 +25,7 @@ const InstallAndSetup = () => (
       </ul>
     </div>
     <div className='ml-2'>
-      <h2 className='text-xl text-red-600 font-bold mt-4  '> Process to Installation </h2>
+      <h2 className='text-xl text-red-500 font-bold mt-4  '> Process to Installation </h2>
       <p className='mt-2 '>
         Fitst of all we need to download the ISO image file of Oracle Solaris 11.
         Then we need to download VMware or Virtual Box to run ISO image on our windows pc or on linux or macbook.
@@ -34,7 +34,14 @@ const InstallAndSetup = () => (
       <p className='mt-2'> After the Installation of VMware, open VMware and start the setup. If you are having any issue in setup, you can refer the video for setup and isntallation.</p>
     </div>
     <div >
-      <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/tomhp3foV60?si=blSVlviON0h60rJl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      <iframe
+      className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' 
+        title="Installation and Setup of Solaris OS"
+        src="https://www.youtube.com/embed/tomhp3foV60?autoplay=1&si=blSVlviON0h60rJl"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
     </div>
 
 
