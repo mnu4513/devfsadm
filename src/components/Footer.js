@@ -11,7 +11,7 @@ const Footer = () => {
                         <div className="flex items-center justify-center  rounded-full">
                             <img src={logoVp} alt=''  className='h-12 w-auto rounded-full border-red-500 border-2'/>
                         </div>
-                        <span className="self-center text-2xl font-semibold">DevFs Adm</span>
+                        <span className="self-center text-2xl font-semibold">DevFsAdm</span>
                     </Link>
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
