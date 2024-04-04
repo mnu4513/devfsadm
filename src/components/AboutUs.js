@@ -2,8 +2,8 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto mt-8 px-4 py-4 lg:max-w-7xl mb-5 dark:bg-gray-800 dark:text-white">
-      <h1 className="text-3xl text-red-600 font-semibold mb-2">Terms of Service</h1>
+    <div className="container mx-auto px-4 md:px-8 lg:px-24 pb-8 pt-8 lg:max-w-7xl dark:bg-gray-800 dark:text-white">
+      <h1 className="text-3xl text-red-600 font-semibold mb-2">About Us</h1>
       <p>
         Welcome to DevFsAdm, your premier destination for free online courses in Solaris system administration, Linux system administration, shell scripting, Git, HTML, CSS, JavaScript, Node.js, React, and more.
       </p>

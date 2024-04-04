@@ -19,7 +19,7 @@ const HeroSection = () => {
 
 
     return (
-        <section className=" py-24 sm:py-32">
+        <section className=" py-24 sm:py-32 dark:bg-gray-800 text-white">
             <div className="container flex flex-col justify-center p-6 mx-auto max-w-7xl px-6 lg:px-8 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center py-6 md:px-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leadi sm:text-6xl">Learn
