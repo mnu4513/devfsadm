@@ -79,13 +79,13 @@ const Features = () => {
 
     return (
         <div className="container mx-auto mt-8 px-4 lg:max-w-7xl mb-5">
-            <h1 className="text-3xl font-semibold mb-4">Features of Our Tutorials</h1>
+            <h1 className="text-3xl font-semibold text-red-500 mb-4">Features of Our Tutorials</h1>
 
             {
                 featuresContent.map((e) => {
                     return (
                         <div key={e.id} className='mt-8 px-2'>
-                            <h2 className="text-xl font-semibold mb-2 mt-4"> {e.title} </h2>
+                            <h2 className="text-xl text-red-500 font-semibold mb-2 mt-4"> {e.title} </h2>
                             <p className='mb-2'> {e.description} </p>
                         </div>
                     )

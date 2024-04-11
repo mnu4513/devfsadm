@@ -112,7 +112,7 @@ export default function BlogSection() {
     <div className=" py-24 sm:py-32 dark:bg-gray-800 text-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">From the blog</h2>
+          <h2 className="text-3xl text-violet-500 dark:text-white font-bold tracking-tight sm:text-4xl">From the blog</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
             Learn how to grow your business with our expert advice.
           </p>
@@ -140,7 +140,7 @@ export default function BlogSection() {
                     {post.title}
                   </Link>
                 </h3>
-                <p className="mt-5 line-clamp-3 text-sm leading-6 ">{post.description}</p>
+                <p className="mt-5 text-gray-700 dark:text-white line-clamp-3 text-sm leading-6 ">{post.description}</p>
               </div>
               <div className="relative mt-3 flex items-center gap-x-6 bg-white px-2 py-1 rounded-full w-full">
                 <img src={`${img_base_url}${post.author.imageUrl}`} alt="" className="h-16 w-16 rounded-full bg-gray-50" />

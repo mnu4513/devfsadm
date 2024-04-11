@@ -1,6 +1,7 @@
 import React from 'react';
 import telegram_icon from '../../assets/ico/telegram_icon.png';
 import drive_icon from '../../assets/ico/drive_icon.webp';
+import YouTubeVideo from '../utils/YouTubeVideo';
 
 const InstallAndSetup = () => (
   <div className='flex flex-col px-5 space-y-5 lg:max-w-6xl mx-auto mb-5'>
@@ -33,16 +34,9 @@ const InstallAndSetup = () => (
       <p className='mt-2'>Download links of all tools are provided already. </p>
       <p className='mt-2'> After the Installation of VMware, open VMware and start the setup. If you are having any issue in setup, you can refer the video for setup and isntallation.</p>
     </div>
-    <div >
-      <iframe
-      className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' 
-        title="Installation and Setup of Solaris OS"
-        src="https://www.youtube.com/embed/tomhp3foV60?autoplay=1&si=blSVlviON0h60rJl"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    </div>
+
+    <YouTubeVideo video_id='tomhp3foV60' />
+    
 
 
     <div>

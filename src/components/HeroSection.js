@@ -19,14 +19,16 @@ const HeroSection = () => {
 
 
     return (
-        <section className=" py-24 sm:py-32 dark:bg-gray-800 text-white">
+        <section className=" py-24 sm:py-32 dark:bg-gray-800 dark:text-white">
             <div className="container flex flex-col justify-center p-6 mx-auto max-w-7xl px-6 lg:px-8 sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center py-6 md:px-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leadi sm:text-6xl">Learn
-                        <span className="dark:text-violet-400"> Unix Administration </span> and                     <span className="dark:text-violet-400"> Development </span>
+                        <span className="text-violet-400"> Unix Administration </span>
+                        and
+                        <span className="text-violet-400"> Development </span>
 
                     </h1>
-                    <p className="mt-6 mb-8 text-lg sm:mb-12"> A platform to learn web development and Unix administration
+                    <p className="mt-12 mb-8 text-2xl sm:mb-12"> A platform to learn web development and Unix administration
                         <br className="hidden md:inline lg:hidden" /> in a easy and intresting way
                     </p>
                     <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">

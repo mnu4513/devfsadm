@@ -1,5 +1,6 @@
 import React from 'react';
 import { img_base_url } from '../Config';
+import YouTubeVideo from '../utils/YouTubeVideo';
 
 const BasicCommands = () => {
   return (
@@ -14,19 +15,8 @@ const BasicCommands = () => {
           Here are some common basic commands:
         </p>
       </div>
+      <YouTubeVideo video_id={`i8Vwtaozp_A`} />
 
-      <div >
-      <iframe
-      className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' 
-        title="Basic Commands in Solaris OS"
-        src="https://www.youtube.com/embed/i8Vwtaozp_A?autoplay=1"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      ></iframe>
-    </div>
-    
-    
 
       <div className='mb-4 ml-4 mt-10'>
         <p className='mt-5 font-bold text-red-500'>

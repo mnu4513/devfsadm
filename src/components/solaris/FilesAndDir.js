@@ -1,5 +1,6 @@
 import React from 'react';
 import { img_base_url } from '../Config';
+import YouTubeVideo from '../utils/YouTubeVideo';
 
 const FilesAndDir = () => {
 
@@ -11,12 +12,12 @@ const FilesAndDir = () => {
           In Solaris, service management involves the management of services, daemons, and system processes. Solaris uses the Service Management Facility (SMF) to manage system services. SMF replaces traditional init scripts and provides a more sophisticated and flexible mechanism for managing services.
         </p>
       </div>
-      <div >
-        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/yVwCHpj3aOI?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
+
+      <YouTubeVideo video_id={`yVwCHpj3aOI`} />
+   
 
       {/* files */}
-      <h2 className='ml-4 mr-2 mt-8 font-bold text-xl'> Files </h2>
+      <h2 className='ml-4 mr-2 mt-8 text-teal-500 font-bold text-xl'> Files </h2>
       <div className='ml-4'>
         <p className='mt-3 font-bold text-red-500'>1. To create an empty file</p>
         <p className=' font-bold ml-5 text-violet-600'> {`touch <file_name>`} </p>
@@ -91,7 +92,7 @@ const FilesAndDir = () => {
 
 <hr className='my-5 ml-4'/>
   {/* dir */}
-  <h2 className='ml-4 mr-2 mt-4 font-bold text-xl'> Directories </h2>
+  <h2 className='ml-4 mr-2 mt-4 text-teal-500 font-bold text-xl'> Directories </h2>
       <div className='ml-4'>
         <p className='mt-3 font-bold text-red-500'>1. To create a directory</p>
         <p className=' font-bold ml-5 text-violet-600'> {`mkdir <dir_name>`} </p>

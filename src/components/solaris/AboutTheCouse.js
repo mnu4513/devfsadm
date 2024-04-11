@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import YouTubeVideo from '../utils/YouTubeVideo';
 
 const AboutTheCouse = () => {
     return (
@@ -13,12 +14,8 @@ const AboutTheCouse = () => {
                     Whether you're a beginner or an experienced professional, this course will equip you with the knowledge and hands-on experience needed to effectively administer Solaris environments.
                 </p>
             </div>
-
-            <div className='mt-10' >
-                <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/uh7qptFsO90?autoplay=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-            </div>
-
-
+            <YouTubeVideo video_id='uh7qptFsO90'/>
+           
             <div >
 
                 <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'> Prerequisites:
