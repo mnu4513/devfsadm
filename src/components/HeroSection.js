@@ -11,10 +11,10 @@ const HeroSection = () => {
         { name: 'Solaris', description: 'Get a better understanding of your traffic', href: '/course/solaris', icon: CursorArrowRaysIcon },
         { name: 'Shell Scripting', description: 'Shell scripting in linux and solaris', href: '/course/shell', icon: CursorArrowRaysIcon },
         { name: 'Linux', description: 'Speak directly to your customers', href: '/course/solaris', icon: CursorArrowRaysIcon },
-        { name: 'Git', description: 'Your customers’ data will be safe and secure', href: '/course/solaris', icon: CursorArrowRaysIcon },
-        { name: 'HTML', description: 'Connect with third-party tools', href: '/course/solaris', icon: CursorArrowRaysIcon },
-        { name: 'JavaScript', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
-        { name: 'React', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
+        // { name: 'Git', description: 'Your customers’ data will be safe and secure', href: '/course/solaris', icon: CursorArrowRaysIcon },
+        // { name: 'HTML', description: 'Connect with third-party tools', href: '/course/solaris', icon: CursorArrowRaysIcon },
+        // { name: 'JavaScript', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
+        // { name: 'React', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
     ];
 
 
