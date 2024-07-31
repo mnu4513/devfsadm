@@ -55,6 +55,9 @@ import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp'
 import SolarisBlog from './components/blogs/SolarisBlog';
 import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
+import HomeLinux from './components/linux/HomeLinux';
+import BasicMonitoring from './components/linux/BasicMonitoring';
+import DateTime from './components/linux/DateTime';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -98,6 +101,20 @@ const appRouter = createBrowserRouter([
         children: [{
           path: '/blog/solaris',
           element: <SolarisBlog />
+        }]
+      },
+      {
+        path: '/course/linux',
+        element: <HomeLinux />,
+        children: [{
+          path: '/course/linux',
+          element: <AboutTheCouse />
+        }, {
+          path: '/course/linux/date-time',
+          element: <DateTime />
+        }, {
+          path: '/course/linux/basic-monitoring',
+          element: <BasicMonitoring />
         }]
       },
       {
