@@ -58,6 +58,7 @@ import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
 import HomeLinux from './components/linux/HomeLinux';
 import BasicMonitoring from './components/linux/BasicMonitoring';
 import DateTime from './components/linux/DateTime';
+import FilesAndDirLinux from './components/linux/Data_creation_and_deletation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -115,6 +116,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/linux/basic-monitoring',
           element: <BasicMonitoring />
+        }, {
+          path: '/course/linux/files-directories',
+          element: <FilesAndDirLinux />
         }]
       },
       {

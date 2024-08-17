@@ -20,7 +20,7 @@ export const Image = ({ imageSrc, imageAlt }) => (
 // Text Component :- [Descriptive Text]
 export const Text = ({ text }) => (
     <div className="mb-4">
-        <p className="ml-4 font-serif">{text}</p>
+        <p className="font-mono">{text}</p>
     </div>
 );
 
@@ -47,7 +47,7 @@ export const Command = ({ command }) => {
 
 // Heading Component :- [Heading of Page]
 export const Heading = ({ text }) => (
-    <div className="mb-8 mt-8 font-bold">
+    <div className="mb-8 mt-16 font-bold">
         <h1 className="text-4xl text-red-500 font-serif text-center">{text}</h1>
     </div>
 );
@@ -58,3 +58,11 @@ export const Subheading = ({ text }) => (
         <h2 className="text-2xl text-red-500 font-serif ">{text}</h2>
     </div>
 );
+
+// Note Component :- [Additional Note For Any Command]
+
+export const Note = ({text}) => (
+    <div className='mt-5 mb-8 text-blue-400 font-mono'>
+        <p> {text} </p>
+    </div>
+)
