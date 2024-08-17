@@ -63,6 +63,6 @@ export const Subheading = ({ text }) => (
 
 export const Note = ({text}) => (
     <div className='mt-5 mb-8 text-blue-400 font-mono'>
-        <p> {text} </p>
+        <p> [Note: {text}]</p>
     </div>
 )

@@ -5,23 +5,33 @@ import learn_icon from '../../assets/ico/learn.svg';
 const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
-        name: 'Introduction to Solaris',
-        link: '/course/solaris/intro-to-solaris'
+        name: 'Introduction to Linux',
+        link: '/course/linux/intro-to-linux'
     }, {
         name: 'Installation and Setup',
-        link: '/course/solaris/installation-and-setup'
+        link: '/course/linux/installation-and-setup'
     }, {
         name: 'Basic Commands',
-        link: '/course/solaris/basic-commands'
+        link: '/course/linux/basic-commands'
     }, {
+        name: 'Basic Monitoring',
+        link: '/course/linux/basic-monitoring'
+    },
+    {
         name: 'Files and Directories',
-        link: '/course/solaris/files-and-directories'
+        link: '/course/linux/files-and-directories'
+    }, {
+        name: 'Copy or Move Data',
+        link: '/course/linux/copy-move'
+    }, {
+        name: 'Date and Time',
+        link: '/course/linux/date-time'
     }, {
         name: 'Vi Editor',
-        link: '/course/solaris/vi-editor'
+        link: '/course/linux/vi-editor'
     }, {
         name: 'Archive',
-        link: '/course/solaris/archive'
+        link: '/course/linux/archive'
     }, {
         name: 'Link',
         link: '/course/solaris/link'

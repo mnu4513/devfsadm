@@ -58,7 +58,8 @@ import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
 import HomeLinux from './components/linux/HomeLinux';
 import BasicMonitoring from './components/linux/BasicMonitoring';
 import DateTime from './components/linux/DateTime';
-import FilesAndDirLinux from './components/linux/Data_creation_and_deletation';
+import FilesAndDirLinux from './components/linux/FileDir';
+import CopyMove from './components/linux/CopyMove';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -117,8 +118,11 @@ const appRouter = createBrowserRouter([
           path: '/course/linux/basic-monitoring',
           element: <BasicMonitoring />
         }, {
-          path: '/course/linux/files-directories',
+          path: '/course/linux/files-and-directories',
           element: <FilesAndDirLinux />
+        }, {
+          path: '/course/linux/copy-move',
+          element: <CopyMove />
         }]
       },
       {

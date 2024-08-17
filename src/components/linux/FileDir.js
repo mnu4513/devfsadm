@@ -1,7 +1,7 @@
 import React from 'react'
 import { Command, Heading, Subheading, Text, Image, Video, Note } from '../utils/Comps';
 
-const DateTime = () => {
+const FilesAndDirLinux = () => {
     return (
         <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
 
@@ -115,4 +115,4 @@ const DateTime = () => {
     )
 }
 
-export default DateTime;
+export default FilesAndDirLinux;
