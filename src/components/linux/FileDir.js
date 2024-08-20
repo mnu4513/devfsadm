@@ -5,7 +5,7 @@ const FilesAndDirLinux = () => {
     return (
         <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
 
-            <Heading text={`Files and Directories Creation and Deletation`} />
+            <Heading text={`Files and Directories in Linux`} />
 
             <Video videoSrc={`i8Vwtaozp_A`} />
 

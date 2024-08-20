@@ -11,13 +11,18 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Installation and Setup',
         link: '/course/linux/installation-and-setup'
     }, {
+        name: 'Login Mode in Linux',
+        link: '/course/linux/login-modes'
+    }, {
+        name: 'File Hierarchy Structure',
+        link: '/course/linux/fhs'
+    }, {
+        name: 'Basic Data Creation Rules',
+        link: '/course/linux/data-creation-rules'
+    }, {
         name: 'Basic Commands',
         link: '/course/linux/basic-commands'
     }, {
-        name: 'Basic Monitoring',
-        link: '/course/linux/basic-monitoring'
-    },
-    {
         name: 'Files and Directories',
         link: '/course/linux/files-and-directories'
     }, {
@@ -26,6 +31,21 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
     }, {
         name: 'Date and Time',
         link: '/course/linux/date-time'
+    }, {
+        name: 'Symbols',
+        link: '/course/linux/symbols'
+    }, {
+        name: 'Filter Data Using Grep Command',
+        link: '/course/linux/grep'
+    }, {
+        name: 'Head, Tail & Sed Commands',
+        link: '/course/linux/head-tail-sed'
+    }, {
+        name: 'Locate & Find Commands',
+        link: '/course/linux/locate-find'
+    }, {
+        name: 'Run Level & Target',
+        link: '/course/linux/run-level-target'
     }, {
         name: 'Vi Editor',
         link: '/course/linux/vi-editor'

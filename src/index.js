@@ -33,6 +33,18 @@ import Virtulization from './components/solaris/Virtualization';
 import LDOM from './components/solaris/LDOM';
 import InterviewPrep from './components/solaris/InetviewPreparation';
 
+// Linux 
+import HomeLinux from './components/linux/HomeLinux';
+import Basic_command_linux from './components/linux/BasicCommands';
+import FilesAndDir_linux from './components/linux/FileDir';
+import CopyMove_Linux from './components/linux/CopyMove';
+import DateTime from './components/linux/DateTime';
+import Symbols_linux from './components/linux/Symbols';
+import Grep_Linux from './components/linux/GrepEF';
+import HeadTail_linux from './components/linux/HeadTailSed';
+import LocateFind_linux from './components/linux/LocateFind';
+import RunLevelTarget_linux from './components/linux/RunLevelTarget';
+
 import HomeShell from './components/shell_scripting/HomeShell';
 
 import User from './components/user/User';
@@ -55,11 +67,7 @@ import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp'
 import SolarisBlog from './components/blogs/SolarisBlog';
 import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
-import HomeLinux from './components/linux/HomeLinux';
-import BasicMonitoring from './components/linux/BasicMonitoring';
-import DateTime from './components/linux/DateTime';
-import FilesAndDirLinux from './components/linux/FileDir';
-import CopyMove from './components/linux/CopyMove';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -112,17 +120,49 @@ const appRouter = createBrowserRouter([
           path: '/course/linux',
           element: <AboutTheCouse />
         }, {
+          path: '/course/linux/intro-to-linux',
+
+        }, {
+          path: '/course/linux/installation-and-setup',
+
+        }, {
+          path: '/course/linux/login-modes',
+
+        }, {
+          path: '/course/linux/fhs',
+
+        }, {
+          path: '/course/linux/data-creation-rules',
+
+        }, {
+          path: '/course/linux/basic-commands',
+          element: <Basic_command_linux />
+        }, {
+          path: '/course/linux/files-and-directories',
+          element: <FilesAndDir_linux />
+
+        }, {
+          path: '/course/linux/copy-move',
+          element: <CopyMove_Linux />
+
+        }, {
           path: '/course/linux/date-time',
           element: <DateTime />
         }, {
-          path: '/course/linux/basic-monitoring',
-          element: <BasicMonitoring />
+          path: '/course/linux/symbols',
+          element: <Symbols_linux />
         }, {
-          path: '/course/linux/files-and-directories',
-          element: <FilesAndDirLinux />
+          path: '/course/linux/grep',
+          element: <Grep_Linux />
         }, {
-          path: '/course/linux/copy-move',
-          element: <CopyMove />
+          path: '/course/linux/head-tail-sed',
+          element: <HeadTail_linux />
+        }, {
+          path: '/course/linux/locate-find',
+          element: <LocateFind_linux />
+        }, {
+          path: '/course/linux/run-level-target',
+          element: <RunLevelTarget_linux />
         }]
       },
       {
