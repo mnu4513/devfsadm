@@ -6,58 +6,67 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
         name: 'Introduction to Linux',
-        link: '/course/linux/intro-to-linux'
+        link: '/course/linux/intro-to-linux' // not done 
     }, {
         name: 'Installation and Setup',
-        link: '/course/linux/installation-and-setup'
+        link: '/course/linux/installation-and-setup' // not done 
     }, {
         name: 'Login Mode in Linux',
-        link: '/course/linux/login-modes'
+        link: '/course/linux/login-modes' // not done 
     }, {
         name: 'File Hierarchy Structure',
-        link: '/course/linux/fhs'
+        link: '/course/linux/fhs' // not done 
     }, {
         name: 'Basic Data Creation Rules',
-        link: '/course/linux/data-creation-rules'
+        link: '/course/linux/data-creation-rules' // not done 
     }, {
         name: 'Basic Commands',
-        link: '/course/linux/basic-commands'
-    }, {
-        name: 'Files and Directories',
-        link: '/course/linux/files-and-directories'
-    }, {
-        name: 'Copy or Move Data',
-        link: '/course/linux/copy-move'
+        link: '/course/linux/basic-commands' // done 
     }, {
         name: 'Date and Time',
-        link: '/course/linux/date-time'
+        link: '/course/linux/date-time' // done 
+    }, {
+        name: 'Files and Directories',
+        link: '/course/linux/files-and-directories' // done 
+    }, {
+        name: 'Copy or Move Data',
+        link: '/course/linux/copy-move' // done 
     }, {
         name: 'Symbols',
-        link: '/course/linux/symbols'
+        link: '/course/linux/symbols' // done 
     }, {
         name: 'Filter Data Using Grep Command',
-        link: '/course/linux/grep'
+        link: '/course/linux/grep' // done
     }, {
         name: 'Head, Tail & Sed Commands',
-        link: '/course/linux/head-tail-sed'
+        link: '/course/linux/head-tail-sed' // done 
     }, {
         name: 'Locate & Find Commands',
-        link: '/course/linux/locate-find'
-    }, {
-        name: 'Run Level & Target',
-        link: '/course/linux/run-level-target'
+        link: '/course/linux/locate-find' // done 
     }, {
         name: 'Vi Editor',
-        link: '/course/linux/vi-editor'
+        link: '/course/linux/vi-editor' // done 
+    }, {
+        name: 'Basic Permissions',
+        link: '/course/linux/permissions' // not done 
+    }, {
+        name: 'ACL',
+        link: '/course/linux/acl' // not done 
+    }, {
+        name: 'Control Root User',
+        link: '/course/linux/chattr' // not done 
+    }, {
+        name: 'Run Level & Target',
+        link: '/course/linux/run-level-target' // done 
     }, {
         name: 'Archive',
-        link: '/course/linux/archive'
+        link: '/course/linux/archive' // not done 
     }, {
-        name: 'Link',
-        link: '/course/solaris/link'
+        name: 'Inode & Link',
+        link: '/course/linux/inode-link' // not done 
     }, {
         name: 'User Management',
-        link: '/course/solaris/user-management'
+        link: '/course/linux/user-management' // not done 
     }, {
         name: 'Group Management',
         link: '/course/solaris/group-management'

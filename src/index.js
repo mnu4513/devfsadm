@@ -35,14 +35,23 @@ import InterviewPrep from './components/solaris/InetviewPreparation';
 
 // Linux 
 import HomeLinux from './components/linux/HomeLinux';
+import IntroToLinux from './components/linux/IntroToLinux';
+import LinuxSetup from './components/linux/LinuxSetup';
+import LoginModes from './components/linux/LoginModes';
+import FHS from './components/linux/FHS';
+import DataCreationRules from './components/linux/DataCreationRules';
 import Basic_command_linux from './components/linux/BasicCommands';
+import DateTime from './components/linux/DateTime';
 import FilesAndDir_linux from './components/linux/FileDir';
 import CopyMove_Linux from './components/linux/CopyMove';
-import DateTime from './components/linux/DateTime';
 import Symbols_linux from './components/linux/Symbols';
 import Grep_Linux from './components/linux/GrepEF';
 import HeadTail_linux from './components/linux/HeadTailSed';
 import LocateFind_linux from './components/linux/LocateFind';
+import Vi_Vim from './components/linux/ViVim';
+import Permissions from './components/linux/Permission';
+import ACL from './components/linux/ACL';
+import Chattr from './components/linux/Chattr';
 import RunLevelTarget_linux from './components/linux/RunLevelTarget';
 
 import HomeShell from './components/shell_scripting/HomeShell';
@@ -121,33 +130,31 @@ const appRouter = createBrowserRouter([
           element: <AboutTheCouse />
         }, {
           path: '/course/linux/intro-to-linux',
-
+          element: <IntroToLinux />
         }, {
           path: '/course/linux/installation-and-setup',
-
+          element: <LinuxSetup/> 
         }, {
           path: '/course/linux/login-modes',
-
+          element: <LoginModes/>
         }, {
           path: '/course/linux/fhs',
-
+          element: <FHS/>
         }, {
           path: '/course/linux/data-creation-rules',
-
+          element: <DataCreationRules/>
         }, {
           path: '/course/linux/basic-commands',
           element: <Basic_command_linux />
         }, {
+          path: '/course/linux/date-time',
+          element: <DateTime />
+        }, {
           path: '/course/linux/files-and-directories',
           element: <FilesAndDir_linux />
-
         }, {
           path: '/course/linux/copy-move',
           element: <CopyMove_Linux />
-
-        }, {
-          path: '/course/linux/date-time',
-          element: <DateTime />
         }, {
           path: '/course/linux/symbols',
           element: <Symbols_linux />
@@ -160,6 +167,18 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/linux/locate-find',
           element: <LocateFind_linux />
+        }, {
+          path: '/course/linux/vi-vim',
+          element: <Vi_Vim/>
+        }, {
+          path: '/course/linux/permission',
+          element: <Permissions/>
+        }, {
+          path: '/course/linux/acl',
+          element: <ACL/>
+        }, {
+          path: '/course/linux/chattr',
+          element: <Chattr/>
         }, {
           path: '/course/linux/run-level-target',
           element: <RunLevelTarget_linux />
@@ -295,7 +314,4 @@ const appRouter = createBrowserRouter([
 
 root.render(<RouterProvider router={appRouter} />);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
