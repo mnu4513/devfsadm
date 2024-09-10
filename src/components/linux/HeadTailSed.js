@@ -3,7 +3,7 @@ import { Command, Heading, Subheading, Text } from '../utils/Comps';
 
 const HeadTailSedCommands = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
             {/* Main Heading */}
             <Heading text={`Head, Tail, and Sed Commands in Linux`} />
 

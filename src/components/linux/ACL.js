@@ -3,7 +3,7 @@ import { Command, Heading, Subheading, Text, Note } from '../utils/Comps';
 
 const ACLPermissions = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
             <Heading text="Access Control List (ACL) in Linux" />
 
             <Subheading text="What is ACL?" />

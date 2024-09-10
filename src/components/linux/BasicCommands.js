@@ -3,7 +3,7 @@ import { Heading, Subheading, Video, Image, Text, Command } from '../utils/Comps
 
 const BasicMonitoring = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
 
 
             <Heading text={`Basic Linux Commands `} />

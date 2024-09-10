@@ -20,7 +20,7 @@ export const Image = ({ imageSrc, imageAlt }) => (
 // Text Component :- [Descriptive Text]
 export const Text = ({ text }) => (
     <div className="mb-4">
-        <p className="font-mono">{text}</p>
+        <p className="font-cambria">{text}</p>
     </div>
 );
 
@@ -32,7 +32,7 @@ export const Command = ({ command }) => {
     };
     return (
         <div className="mb-4 flex">
-            <pre className="bg-gray-200 px-2 py-2 text-blue-500 rounded-lg shadow-md flex w-full whitespace-pre-wrap break-words">
+            <pre className=" px-2 py-2 text-blue-500 rounded-lg shadow-md flex w-full whitespace-pre-wrap break-words">
                 {command}
                 <button
                     onClick={copyToClipboard}

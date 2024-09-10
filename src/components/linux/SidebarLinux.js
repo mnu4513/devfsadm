@@ -45,7 +45,16 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/locate-find' // done 
     }, {
         name: 'Vi Editor',
-        link: '/course/linux/vi-editor' // done 
+        link: '/course/linux/vi-vim' // done 
+    }, {
+        name: 'User Management',
+        link: '/course/linux/user-management' // not done 
+    }, {
+        name: 'Sudo & SUID',
+        link: '/course/linux/sudo-suid'
+    }, {
+        name: 'Run Level & Target',
+        link: '/course/linux/run-level-target' // done 
     }, {
         name: 'Basic Permissions',
         link: '/course/linux/permissions' // not done 
@@ -53,21 +62,15 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'ACL',
         link: '/course/linux/acl' // not done 
     }, {
-        name: 'Control Root User',
+        name: 'Control Root User [chattr]',
         link: '/course/linux/chattr' // not done 
-    }, {
-        name: 'Run Level & Target',
-        link: '/course/linux/run-level-target' // done 
     }, {
         name: 'Archive',
         link: '/course/linux/archive' // not done 
     }, {
         name: 'Inode & Link',
         link: '/course/linux/inode-link' // not done 
-    }, {
-        name: 'User Management',
-        link: '/course/linux/user-management' // not done 
-    }, {
+    },  {
         name: 'Group Management',
         link: '/course/solaris/group-management'
     }, {

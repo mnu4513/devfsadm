@@ -3,7 +3,7 @@ import { Command, Heading, Subheading, Text, Note } from '../utils/Comps';
 
 const FileEditingTools = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
 
             {/* Main Heading */}
             <Heading text={`File Editing Tools`} />

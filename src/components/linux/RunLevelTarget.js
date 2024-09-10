@@ -3,7 +3,7 @@ import { Command, Heading, Subheading, Text, Note } from '../utils/Comps';
 
 const RunLevelAndTarget = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
             <Heading text={`Run Level and Target`} />
             <Text text={`Run level or target is used to specify the mode in which we want to run the machine. Although run levels and targets serve the same purpose, they differ in their implementation and management.`} />
             <Text text={`Before RHEL-7, run levels were used to control the state of the machine, but in RHEL-7 and later, targets replaced run levels. This shift was part of the transition from the older SysV init system to the newer systemd.`} />

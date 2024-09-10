@@ -40,19 +40,21 @@ import LinuxSetup from './components/linux/LinuxSetup';
 import LoginModes from './components/linux/LoginModes';
 import FHS from './components/linux/FHS';
 import DataCreationRules from './components/linux/DataCreationRules';
-import Basic_command_linux from './components/linux/BasicCommands';
+import BasicCommandLinux from './components/linux/BasicCommands';
 import DateTime from './components/linux/DateTime';
-import FilesAndDir_linux from './components/linux/FileDir';
-import CopyMove_Linux from './components/linux/CopyMove';
-import Symbols_linux from './components/linux/Symbols';
-import Grep_Linux from './components/linux/GrepEF';
-import HeadTail_linux from './components/linux/HeadTailSed';
-import LocateFind_linux from './components/linux/LocateFind';
-import Vi_Vim from './components/linux/ViVim';
+import FilesAndDirLinux from './components/linux/FileDir';
+import CopyMoveLinux from './components/linux/CopyMove';
+import SymbolsLinux from './components/linux/Symbols';
+import GrepLinux from './components/linux/GrepEF';
+import HeadTailLinux from './components/linux/HeadTailSed';
+import LocateFindLinux from './components/linux/LocateFind';
+import ViVim from './components/linux/ViVim';
 import Permissions from './components/linux/Permission';
 import ACL from './components/linux/ACL';
 import Chattr from './components/linux/Chattr';
-import RunLevelTarget_linux from './components/linux/RunLevelTarget';
+import RunLevelTargetLinux from './components/linux/RunLevelTarget';
+import UserManagementLinux from './components/linux/UserManagement';
+import SudoSuid from './components/linux/SudoSuid';
 
 import HomeShell from './components/shell_scripting/HomeShell';
 
@@ -145,33 +147,42 @@ const appRouter = createBrowserRouter([
           element: <DataCreationRules/>
         }, {
           path: '/course/linux/basic-commands',
-          element: <Basic_command_linux />
+          element: <BasicCommandLinux />
         }, {
           path: '/course/linux/date-time',
           element: <DateTime />
         }, {
           path: '/course/linux/files-and-directories',
-          element: <FilesAndDir_linux />
+          element: <FilesAndDirLinux />
         }, {
           path: '/course/linux/copy-move',
-          element: <CopyMove_Linux />
+          element: <CopyMoveLinux />
         }, {
           path: '/course/linux/symbols',
-          element: <Symbols_linux />
+          element: <SymbolsLinux />
         }, {
           path: '/course/linux/grep',
-          element: <Grep_Linux />
+          element: <GrepLinux />
         }, {
           path: '/course/linux/head-tail-sed',
-          element: <HeadTail_linux />
+          element: <HeadTailLinux />
         }, {
           path: '/course/linux/locate-find',
-          element: <LocateFind_linux />
+          element: <LocateFindLinux />
         }, {
           path: '/course/linux/vi-vim',
-          element: <Vi_Vim/>
+          element: <ViVim/>
         }, {
-          path: '/course/linux/permission',
+          path: '/course/linux/user-management',
+          element: <UserManagementLinux />
+        }, {
+          path: '/course/linux/sudo-suid',
+          element: <SudoSuid />
+        }, {
+          path: '/course/linux/run-level-target',
+          element: <RunLevelTargetLinux />
+        }, {
+          path: '/course/linux/permissions',
           element: <Permissions/>
         }, {
           path: '/course/linux/acl',
@@ -179,9 +190,6 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/linux/chattr',
           element: <Chattr/>
-        }, {
-          path: '/course/linux/run-level-target',
-          element: <RunLevelTarget_linux />
         }]
       },
       {

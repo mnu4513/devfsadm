@@ -3,7 +3,7 @@ import { Command, Heading, Subheading, Text, Image, Video, Note } from '../utils
 
 const FilesAndDirLinux = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
 
             <Heading text={`Files and Directories in Linux`} />
 
