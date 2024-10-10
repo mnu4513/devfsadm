@@ -70,45 +70,24 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
     }, {
         name: 'Inode & Link',
         link: '/course/linux/inode-link' // not done 
-    },  {
-        name: 'Group Management',
-        link: '/course/solaris/group-management'
     }, {
-        name: 'SSH',
-        link: '/course/solaris/ssh'
-    }, {
-        name: 'Super User',
-        link: '/course/solaris/super-user'
-    }, {
-        name: 'Process Management',
-        link: '/course/solaris/process-management'
+        name: 'Crontab',
+        link: '/course/linux/crontab'
     }, {
         name: 'Service Management',
-        link: '/course/solaris/service-management'
+        link: '/course/linux/service-management'
     }, {
-        name: 'System Monitoring',
-        link: '/course/solaris/system-monitoring'
+        name: 'RPM',
+        link: '/course/linux/RPM'
     }, {
-        name: 'Nerwork Configuration',
-        link: '/course/solaris/network-configuration'
+        name: 'Network Configuration', 
+        link: '/course/linux/network-configuration'
     }, {
-        name: 'ZFS',
-        link: '/course/solaris/zfs'
+        name: 'SWAP',
+        link: '/course/linux/swap'
     }, {
-        name: 'Patch Management',
-        link: '/course/solaris/patch-management'
-    }, {
-        name: 'Virtulization',
-        link: '/course/solaris/virtulization'
-    }, {
-        name: 'LDOM',
-        link: '/course/solaris/ldom'
-    }, {
-        name: 'Cron Job',
-        link: '/course/solaris/cron-job'
-    }, {
-        name: 'Interview Preparation',
-        link: '/course/solaris/interview-preparation'
+        name: 'LVM', 
+        link: '/course/linux/LVM'
     }];
 
 

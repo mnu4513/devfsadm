@@ -55,6 +55,17 @@ import Chattr from './components/linux/Chattr';
 import RunLevelTargetLinux from './components/linux/RunLevelTarget';
 import UserManagementLinux from './components/linux/UserManagement';
 import SudoSuid from './components/linux/SudoSuid';
+import InodeLink from './components/linux/LinkInodes';
+import CrontabLinux from './components/linux/Crontab';
+import LVM from './components/linux/LVM';
+import NetworkConfigurationLinux from './components/linux/NetworkConfiguration';
+import SwapPartition from './components/linux/Swap';
+import RPM from './components/linux/RPM';
+import ServiceManagementLinux from './components/linux/ServiceManagement';
+
+
+
+
 
 import HomeShell from './components/shell_scripting/HomeShell';
 
@@ -190,6 +201,27 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/linux/chattr',
           element: <Chattr/>
+        }, {
+          path: '/course/linux/inode-link',
+          element: <InodeLink/>
+        }, {
+          path: '/course/linux/crontab',
+          element: <CrontabLinux/>
+        }, {
+          path: '/course/linux/service-management',
+          element: <ServiceManagementLinux/>
+        }, {
+          path: '/course/linux/RPM',
+          element: <RPM/>
+        }, {
+          path: '/course/linux/network-configuration',
+          element: <NetworkConfigurationLinux />
+        }, {
+          path: '/course/linux/swap',
+          element: <SwapPartition />
+        }, {
+          path: '/course/linux/LVM',
+          element: <LVM />
         }]
       },
       {
