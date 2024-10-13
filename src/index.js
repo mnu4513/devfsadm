@@ -62,6 +62,7 @@ import NetworkConfigurationLinux from './components/linux/NetworkConfiguration';
 import SwapPartition from './components/linux/Swap';
 import RPM from './components/linux/RPM';
 import ServiceManagementLinux from './components/linux/ServiceManagement';
+import BootingProcessPage from './components/linux/BootingProcess';
 
 
 
@@ -89,7 +90,6 @@ import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp'
 import SolarisBlog from './components/blogs/SolarisBlog';
 import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
-import BootingProcessPage from './components/linux/BootingProcess';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -3,7 +3,7 @@ import { Heading, Subheading, Text, Command } from '../utils/Comps';
 
 const BootingProcessPage = () => {
   return (
-    <div className="mx-4 my-4 lg:max-w-7xl lg:mx-auto">
+    <div className="mx-4 my-4 lg:max-w-4xl lg:mx-auto">
       
       {/* Main Heading */}
       <Heading text="Linux Booting Process" />
