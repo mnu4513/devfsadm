@@ -89,6 +89,7 @@ import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp'
 import SolarisBlog from './components/blogs/SolarisBlog';
 import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
+import BootingProcessPage from './components/linux/BootingProcess';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -210,6 +211,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/linux/service-management',
           element: <ServiceManagementLinux/>
+        }, {
+          path: '/course/linux/booting-process',
+          element: <BootingProcessPage />
         }, {
           path: '/course/linux/RPM',
           element: <RPM/>

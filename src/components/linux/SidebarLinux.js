@@ -77,6 +77,9 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Service Management',
         link: '/course/linux/service-management'
     }, {
+        name: 'Booting Process',
+        link: '/course/linux/booting-process'
+    }, {
         name: 'RPM',
         link: '/course/linux/RPM'
     }, {
