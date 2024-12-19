@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Command, Heading, Subheading, Text, Image, TerminalOutput } from '../utils/Comps';
+import {  Heading, Subheading, Text,  TerminalOutput } from '../utils/Comps';
 
 const Symbols = () => {
     return (

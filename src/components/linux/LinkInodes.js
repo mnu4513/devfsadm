@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Supersubheading, Text, Command, Subheading, Line, TerminalOutput } from '../utils/Comps';
+import { Heading, Supersubheading, Text,  Subheading, Line, TerminalOutput } from '../utils/Comps';
 
 const InodePage = () => {
     return (

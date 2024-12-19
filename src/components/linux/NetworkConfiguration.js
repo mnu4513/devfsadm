@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Text, Note } from '../utils/Comps';
+import { Heading, Subheading, Text } from '../utils/Comps';
 
 const NetworkConfiguration = () => {
     return (

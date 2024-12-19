@@ -1,5 +1,5 @@
 import React from 'react'
-import { Command, Heading, Supersubheading, TerminalOutput, Image, Text, Video } from '../utils/Comps';
+import {  Heading, Supersubheading, TerminalOutput,  Text, Video } from '../utils/Comps';
 
 const DateTime = () => {
     return (

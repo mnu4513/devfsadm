@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Supersubheading, Video, Image, Text, Command, TerminalOutput, Line } from '../utils/Comps';
+import { Heading, Supersubheading, Video,  Text, Command, TerminalOutput, Line } from '../utils/Comps';
 
 const BasicMonitoring = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Command, Heading, Subheading, Text, Image, Video, Note, TerminalOutput, Line, Supersubheading } from '../utils/Comps';
+import {  Heading, Subheading, Text,  Video,  TerminalOutput, Line, Supersubheading } from '../utils/Comps';
 
 const CopyMove = () => {
     return (

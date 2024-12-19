@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Text, Command, Note } from '../utils/Comps';
+import { Heading, Subheading, Text, Command } from '../utils/Comps';
 
 const LVMPage = () => {
   return (
