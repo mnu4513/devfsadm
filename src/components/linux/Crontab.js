@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Text, Command } from '../utils/Comps';
+import { Heading, Subheading, Text, Command, TerminalOutput } from '../utils/Comps';
 
 const CrontabAtPage = () => {
   return (
@@ -26,10 +26,24 @@ const CrontabAtPage = () => {
       <Subheading text="Requirements for Crontab" />
 
       {/* Command */}
-      <Command command="Package: crontabs" />
-      <Command command="rpm -qa crontabs" />
-      <Command command="Service: crond" />
-      <Command command="systemctl status crond" />
+      <Text text="Package: crontabs" />
+      <TerminalOutput content={`[root@localhost ~]# rpm -qa crontabs
+crontabs-1.11-27.20190603git.el9_0.noarch
+[root@localhost ~]#`} />
+      <Text text='Service: crond' />
+      <TerminalOutput content={`[root@localhost ~]# systemctl status crond
+● crond.service - Command Scheduler
+     Loaded: loaded (/usr/lib/systemd/system/crond.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2024-12-19 09:27:13 IST; 2h 6min ago
+   Main PID: 1057 (crond)
+      Tasks: 2 (limit: 23422)
+     Memory: 1.4M
+        CPU: 85ms
+     CGroup: /system.slice/crond.service
+             ├─1057 /usr/sbin/crond -n
+             └─1913 /usr/sbin/anacron -s
+`} />
+
 
       {/* Subheading */}
       <Subheading text="Crontab Configuration Files" />
@@ -53,6 +67,22 @@ const CrontabAtPage = () => {
       <Text text="• Month: [1-12 or jan-dec]" />
       <Text text="• Day of the Week: [0-6 (0 and 7 for Sunday) or mon-sun]" />
       <Text text="2. Command Field: The command or script to run at the specified time." />
+      <TerminalOutput content={`SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+
+# For details see man 4 crontabs
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name  command to be executed
+`} />
+
 
       {/* Subheading */}
       <Subheading text="Special Symbols in Crontab" />
@@ -67,13 +97,49 @@ const CrontabAtPage = () => {
       <Subheading text="Crontab Command" />
 
       {/* Command */}
-      <Command command="crontab -l  # List all scheduled cron jobs" />
-      <Command command="crontab -e  # Schedule or edit a cron job" />
-      <Command command="crontab -r  # Remove all cron jobs" />
-      <Command command="crontab -r -i  # Remove cron jobs with confirmation" />
-      <Command command="crontab -l -u <user_name>  # List cron jobs for a specific user" />
-      <Command command="crontab -e -u <user_name>  # Schedule a cron job for a specific user" />
-      <Command command="crontab -r -u <user_name>  # Remove cron jobs for a specific user" />
+      <Text text="List all scheduled cron jobs for currently loggedin user" />
+      <TerminalOutput content={`[root@localhost ~]#
+[root@localhost ~]# crontab -l
+23      14      *       *       *       /usr/bin/echo   hello
+[root@localhost ~]#
+`} />
+      <Text text="Schedule or edit a cron job for currently loggedin user" />
+      <TerminalOutput content={`[root@localhost ~]# crontab -e
+crontab: no changes made to crontab
+[root@localhost ~]#
+`} />
+      <Text text="Remove all cron jobs" />
+      <TerminalOutput content={`[root@localhost ~]# crontab -r
+[root@localhost ~]#
+[root@localhost ~]# crontab -l
+no crontab for root
+[root@localhost ~]#
+`} />
+      <Text text="Remove cron jobs with confirmation" />
+      <TerminalOutput content={`[root@localhost ~]#
+[root@localhost ~]# crontab -r -i
+crontab: really delete root's crontab? yes
+no crontab for root
+[root@localhost ~]#
+`} />
+      <Text text="List cron jobs for a specific user" />
+      <TerminalOutput content={`[root@localhost ~]#
+[root@localhost ~]# crontab -l -u dom
+23      14      *       *       *       /bin/echo
+[root@localhost ~]#
+`} />
+      <Text text="Schedule a cron job for a specific user" />
+      <TerminalOutput content={`[root@localhost ~]# crontab -e -u dom
+crontab: no changes made to crontab
+[root@localhost ~]#
+`} />
+      <Text text="Remove cron jobs for a specific user" />
+      <TerminalOutput content={`[root@localhost ~]# crontab -r -u dom
+[root@localhost ~]#
+[root@localhost ~]# crontab -l -u dom
+no crontab for dom
+
+`} />
 
       {/* Subheading */}
       <Subheading text="What is AT?" />
@@ -85,8 +151,26 @@ const CrontabAtPage = () => {
       <Subheading text="Requirements for AT" />
 
       {/* Command */}
-      <Command command="Package: at" />
-      <Command command="Service: atd" />
+      <Text text="Package: crontabs" />
+      <TerminalOutput content={`[root@localhost ~]# rpm -qa at
+at-3.1.23-10.el9.x86_64
+[root@localhost ~]#
+`} />
+      <Text text="Service: atd" />
+      <TerminalOutput content={`[root@localhost ~]#
+[root@localhost ~]# systemctl status atd
+● atd.service - Deferred execution scheduler
+     Loaded: loaded (/usr/lib/systemd/system/atd.service; enabl>
+     Active: active (running) since Thu 2024-12-19 09:27:13 IST>
+       Docs: man:atd(8)
+   Main PID: 992 (atd)
+      Tasks: 1 (limit: 23422)
+     Memory: 296.0K
+        CPU: 9ms
+     CGroup: /system.slice/atd.service
+             └─992 /usr/sbin/atd -f
+`} />
+
 
       {/* Subheading */}
       <Subheading text="AT Command Configuration Files" />
@@ -100,10 +184,41 @@ const CrontabAtPage = () => {
       <Subheading text="AT Command" />
 
       {/* Command */}
-      <Command command="atq  # List all scheduled tasks" />
-      <Command command="at <time>  # Schedule a new task" />
-      <Command command="at -c <task_index>  # View task details" />
-      <Command command="atrm <task_index>  # Remove a task" />
+      <Text text="List all scheduled tasks" />
+        <TerminalOutput content={`[root@localhost ~]# atq
+2       Thu Dec 19 13:00:00 2024 a root
+[root@localhost ~]#
+`} />
+<Text text={'Schedule a new task'} />
+<TerminalOutput content={`[root@localhost ~]# at 13:00
+warning: commands will be executed using /bin/sh
+at> /bin/echo hello
+at> <EOT>
+job 2 at Thu Dec 19 13:00:00 2024
+[root@localhost ~]# 
+`}/>
+   
+      <Text text={`View task details`} />
+      <TerminalOutput content={`[root@localhost ~]# at -c 2
+#!/bin/sh
+# atrun uid=0 gid=0
+# mail ok 0
+umask 22
+SHELL=/bin/bash; export SHELL
+HISTCONTROL=ignoredups; export HISTCONTROL
+HISTSIZE=1000; export HISTSIZE
+HOSTNAME=localhost; export HOSTNAME
+PWD=/root; export PWD
+LOGNAME=root; export LOGNAME
+HOME=/root; export HOME
+LANG=en_US.UTF-8; export LANG
+`} />
+
+      <Text text=" Remove a task" />
+      <TerminalOutput content={`[root@localhost ~]# atrm 2
+[root@localhost ~]# atq
+[root@localhost ~]#
+`} />
     </div>
   );
 };

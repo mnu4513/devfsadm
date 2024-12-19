@@ -24,6 +24,41 @@ export const Text = ({ text }) => (
     </div>
 );
 
+// terminal 
+
+export const TerminalOutput = ({ content }) => {
+    return (
+        <div
+      className="bg-black text-white font-mono p-4 rounded-lg overflow-auto mb-6"
+      style={{
+        maxHeight: "400px",
+        whiteSpace: "pre-wrap", // Ensure text wraps properly
+        wordBreak: "break-word", // Break long unbroken strings to fit within the container
+      }}
+    >
+      {content.split("\n").map((line, index) => {
+        // Handle lines with user prompts
+        if (line.startsWith("[ok@localhost") || line.startsWith("[root@localhost")) {
+          const delimiter = line.includes("$") ? "$" : "#";
+          return (
+            <div key={index}>
+              <span className="text-red-500 font-bold">
+                {line.split(delimiter)[0]}
+                {delimiter}
+              </span>
+              <span className="text-blue-400">
+                {line.split(delimiter)[1] || ""}
+              </span>
+            </div>
+          );
+        }
+        // Handle other lines (output or empty)
+        return <div key={index} className="text-green-400">{line}</div>;
+      })}
+    </div>
+    );
+  };
+
 // Command Component :- [Commnad or Command Example]
 export const Command = ({ command }) => {
     const copyToClipboard = () => {
