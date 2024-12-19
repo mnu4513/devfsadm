@@ -1,5 +1,5 @@
 import React from 'react'
-import { Command, Heading, Subheading, Text, Image, Video, Note } from '../utils/Comps';
+import { Heading, Subheading, Supersubheading, Text, Video, TerminalOutput, Line } from '../utils/Comps';
 
 const FilesAndDirLinux = () => {
     return (
@@ -10,96 +10,129 @@ const FilesAndDirLinux = () => {
             <Video videoSrc={`i8Vwtaozp_A`} />
 
 
-            <Heading text={`Files and Directories Creation`} />
+            <Subheading text={`Files and Directories Creation`} />
             {/* ===================================================== */}
             {/* mkdir command  */}
             <div >
-                <Subheading text={`Create Directory:`} />
-                <Command command={`mkdir [options] <directory_name>`} />
-                <Text text={`It is use to create a new directory.`} />
-                <Image imageSrc={`veyr4pjf8scgubxutj1h`} imageAlt={``} />
+                <Supersubheading text={`Creating a new Directory:`} />
+                <TerminalOutput content={`[root@localhost ~]# mkdir dir-1
+[root@localhost ~]# ls -l
+total 0
+drwxr-xr-x. 2 root root 6 Dec 19 16:25 dir-1
+[root@localhost ~]#
+`} />
             </div>
 
             {/* ===================================================== */}
             {/* mkdir command multiple directories */}
             <div >
-                <Subheading text={`Create Multiple Directories:`} />
-                <Command command={`mkdir <dir1> <dir2> <dir3>`} />
-                <Text text={`It is use to create multiple new directories at a time.`} />
-                <Image imageSrc={`mi2tsxtjuzv35xzxmyio`} imageAlt={``} />
+                <Supersubheading text={`Creating Multiple Directories:`} />
+                <TerminalOutput content={`[root@localhost ~]# mkdir dir2 dir3 dir4
+[root@localhost ~]# ls
+dir-1  dir2  dir3  dir4
+[root@localhost ~]#
+`} />
             </div>
 
 
             {/* ===================================================== */}
             {/* mkdir -p command  */}
             <div >
-                <Subheading text={`Create Nested Directories:`} />
-                <Command command={`mkdir -p <parent_dir/child/grandchild>`} />
-                <Text text={`It is use to create nested directories.`} />
-                <Text text={`Option '-p' is use to create nested directories.`} />
-                <Image imageSrc={`xaf2pw1hab25shfqfc6x`} imageAlt={``} />
+                <Supersubheading text={`Creating Nested Directories:`} />
+                < TerminalOutput content={`[root@localhost ~]# mkdir -p outer/inner
+[root@localhost ~]#
+[root@localhost ~]# ls outer
+inner
+[root@localhost ~]#
+`} />
             </div>
 
             {/* ===================================================== */}
             {/* touch command  */}
             <div >
-                <Subheading text={`Create New File:`} />
-                <Command command={`touch <file_name>`} />
-                <Text text={`It is use to create a new file.`} />
-                <Text text={`Command touch is often used to update file timestamps.`} />
-                <Image imageSrc={`hjk4tvnin2hr3c61jh31`} imageAlt={``} />
+                <Supersubheading text={`Create New File:`} />
+                <TerminalOutput content={`[root@localhost ~]# touch file
+[root@localhost ~]# ls -l
+total 0
+-rw-r--r--. 1 root root 0 Dec 19 16:33 file
+[root@localhost ~]#
+`} />
             </div>
 
             {/* ===================================================== */}
             {/* touch command  multiple files */}
             <div >
-                <Subheading text={`Create Multiple Files:`} />
-                <Command command={`touch <file1> <file2> <file3>`} />
-                <Text text={`It is use to create multiple empty files at a time.`} />
-                <Image imageSrc={`zeos0yc6wzmwaaeyi3iq`} imageAlt={``} />
+                <Supersubheading text={`Create Multiple Files:`} />
+                <TerminalOutput content={`[root@localhost ~]# touch file-1 file-2 file-3
+[root@localhost ~]# ls
+file  file-1  file-2  file-3
+[root@localhost ~]#
+`} />
             </div>
 
-
-            <Heading text={`Files and Directories Deletation`} />
+<Line/>
+            <Subheading text={`Files and Directories Deletation`} />
             {/* ===================================================== */}
             {/* rmdir command  */}
             <div >
-                <Subheading text={`Remove Empty Directory:`} />
-                <Command command={`rmdir <directory_name>`} />
-                <Text text={`Command 'rmdir' only works on directories that are completely empty. To remove directories with contents, use the 'rm' command.`} />
-                <Image imageSrc={`olsvjtjzwaizlccgsdw1`} imageAlt={``} />
+                <Supersubheading text={`Remove Empty Directory:`} />
+                <TerminalOutput content={`[root@localhost ~]# rmdir dir-1
+[root@localhost ~]# ls
+[root@localhost ~]#
+`} />
             </div>
 
             {/* ===================================================== */}
             {/* rm command */}
             <div >
-                <Subheading text={`Remove files and directories:`} />
-                <Command command={`rm [options] <file/dir_path>`} />
-                <Text text={`It is used to delete files or directories.`} />
+                <Supersubheading text={`Remove files and directories:`} />
+                <TerminalOutput content={`[root@localhost ~]# ls -ltrh
+total 0
+-rw-r--r--. 1 root root 0 Dec 19 16:36 file-1
+drwxr-xr-x. 2 root root 6 Dec 19 16:36 dir-1
+[root@localhost ~]# rm -rf file-1 dir-1
+[root@localhost ~]# ls -ltrh
+total 0
+[root@localhost ~]#
+`} />
+            
                 <Text text={` '-i' : Interactive mode. Prompts before each removal.`} />
                 <Text text={`'-r' or '-R' : Recursively remove directories and their contents.`} />
                 <Text text={`'-v' : Verbose mode. Displays the details of the removal process.`} />
                 <Text text={`'-f' : Force. Ignores non-existent files and never prompts.`} />
-                <Image imageSrc={`a4ip4vhssjez656hs7bc`} imageAlt={``} />
+                
             </div>
 
             {/* ===================================================== */}
             {/* rm command  */}
             <div >
-                <Subheading text={`Remove File:`} />
-                <Command command={`rm <file1> <file2> <file3>`} />
+                <Supersubheading text={`Remove Files:`} />
+                <TerminalOutput content={`[root@station1 ~]# ls
+file-1  file-2  file-3
+[root@station1 ~]# rm file-1 file-2 file-3
+rm: remove regular empty file 'file-1'? yes
+rm: remove regular empty file 'file-2'? yes
+rm: remove regular empty file 'file-3'? yes
+[root@station1 ~]# ls
+[root@station1 ~]#
+`}/>
                 <Text text={`Without any option, we can delete a single or multiple files at a time with 'rm' command.`} />
-                <Image imageSrc={`yxtu9kwd3sxyt5srrnpx`} imageAlt={``} />
+                
             </div>
 
             {/* ===================================================== */}
             {/* rm  -rf command  */}
             <div >
-                <Subheading text={`Forcefully remove a file or directory without prompting:`} />
-                <Command command={`rm -rf <file/dir_name>`} />
+                <Supersubheading text={`Forcefully remove a file or directory without prompting:`} />
+                <TerminalOutput content={`[root@station1 ~]# ls
+dir-1  file-1
+[root@station1 ~]# rm -rf dir-1 file-1
+[root@station1 ~]# ls
+[root@station1 ~]#
+`} />
                 <Text text={`It is use to delete any file or directory forcefully.`} />
                 <Text text={`Command 'rm -rf' deletes a directory recursively.`} />
-                <Image imageSrc={`ph4urg247bhy1k718f8o`} imageAlt={``} />
+                
                 <Text text={`With the help of command 'rm -rf', we can delete multiple files or directories at a time.`} />
             </div>
 
@@ -107,7 +140,7 @@ const FilesAndDirLinux = () => {
             {/* ===================================================== */}
 
             <div>
-                <Note text={`The '-rf' option allows you to delete directories and their contents forcefully. Be cautious with this option, as it will not prompt for confirmation and can lead to data loss.`} />
+                <Text text={`The '-rf' option allows you to delete directories and their contents forcefully. Be cautious with this option, as it will not prompt for confirmation and can lead to data loss.`} />
             </div>
 
 

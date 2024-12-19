@@ -1,5 +1,5 @@
 import React from 'react'
-import { Command, Heading, Subheading, Text, Image, Video, Note } from '../utils/Comps';
+import { Command, Heading, Subheading, Text, Image, Video, Note, TerminalOutput, Line, Supersubheading } from '../utils/Comps';
 
 const CopyMove = () => {
     return (
@@ -10,15 +10,20 @@ const CopyMove = () => {
             <Video videoSrc={'i8Vwtaozp_A'} />
 
 
-            <Heading text={`Copy Files and Directories Using 'cp' Command`} />
+            <Subheading text={`Copy Files and Directories Using 'cp' Command`} />
 
             {/* ===================================================== */}
             {/* cp command  [copy a file] */}
             <div >
-                <Subheading text={`Copy a File:`} />
-                <Command command={`cp [options] <source> <destination>`} />
-                <Text text={`It is use to copy a file to another location.`} />
-                <Image imageSrc={'mwesyf4lmdy4mw6ilgr2'} imageAlt={''} />
+    
+
+                <Supersubheading text={`Copy a file to another location.`} />
+                <TerminalOutput content={`[root@localhost ~]# cp anaconda-ks.cfg /mnt
+[root@localhost ~]# ls /mnt/
+anaconda-ks.cfg  hgfs
+[root@localhost ~]#
+`} />
+             
             </div>
 
             <Text text={`'-i'  : Interactive mode. Prompts before overwriting files.`} />
@@ -30,37 +35,53 @@ const CopyMove = () => {
             {/* ===================================================== */}
             {/* cp command  [copy a directory] */}
             <div >
-                <Subheading text={`Copy a Directory:`} />
-                <Command command={`cp [options] <source> <destination>`} />
-                <Text text={`It is use to copy a file to another location.`} />
-                <Image imageSrc={'ndarxpsdsanrntnqvewy'} imageAlt={''} />
+          
+   
+                <Supersubheading text={`Copy a directory to another location.`} />
+                <TerminalOutput content={`[root@localhost ~]# cp -r  /etc /mnt
+[root@localhost ~]# ls /mnt
+etc
+[root@localhost ~]#
+`} />
+          
             </div>
 
             {/* ===================================================== */}
             {/* cp command  [copy multiple files] */}
             <div >
-                <Subheading text={`Copy multiple files to a directory:`} />
-                <Command command={`cp file1.txt file2.txt /path/to/destination/`} />
-                <Text text={`It is use to copy multiple files to a same location.`} />
-                <Image imageSrc={'srvnwexnlym4rvscpuox'} imageAlt={''} />
+                <Supersubheading text={`Copy multiple files or directory to a location:`} />
+<TerminalOutput content={`[root@localhost ~]# cp -r anaconda-ks.cfg /etc /mnt
+[root@localhost ~]# ls
+anaconda-ks.cfg
+[root@localhost ~]# ls /mnt
+anaconda-ks.cfg  etc
+`} />
+            
             </div>
+
 
             {/* ===================================================== */}
             <div >
-                <Note text={` If the destination directory does not exist, 'cp' will create it and copy the data inside.`} />
-                <Note text={` If the destination is an existing directory, files will be copied into this directory.`} />
+                <Text text={` If the destination directory does not exist, 'cp' will create it and copy the data inside.`} />
+                <Text text={` If the destination is an existing directory, files will be copied into this directory.`} />
             </div>
 
+            <Line/>
 
 
-            <Heading text={`Move Files and Directories Using 'mv' Command`} />
+            <Subheading text={`Move Files and Directories Using 'mv' Command`} />
             {/* ===================================================== */}
             {/* mv command  [move a file] */}
             <div >
-                <Subheading text={`Move File or Directory:`} />
-                <Command command={`mv [options] <source> <destination>`} />
-                <Text text={`It is use to move or rename files or directories from one location to another..`} />
-                <Image imageSrc={'s8qonwnnlzqoaephqtmw'} imageAlt={''} />
+                <Supersubheading text={`Move File or Directory:`} />
+                <TerminalOutput content={`[root@localhost ~]# mv /mnt/etc /mnt/tmp
+[root@localhost ~]# ls
+anaconda-ks.cfg
+[root@localhost ~]# ls /mnt/tmp
+etc
+[root@localhost ~]#
+`} />
+                
                 <Text text={`'-i'  : Interactive mode. Prompts before overwriting files.`} />
                 <Text text={`'-v'  : Verbose mode. Shows detailed output of the copying process.`} />
                 <Text text={`'-f'  : Force. Overwrite files without prompting.`} />
@@ -69,39 +90,60 @@ const CopyMove = () => {
             {/* ===================================================== */}
             {/* mv command  [rename a file] */}
             <div >
-                <Subheading text={`Rename a File or a Directory:`} />
-                <Command command={`mv <old_name> <new_name>`} />
-                <Text text={`It is use to rename a file.`} />
-                <Image imageSrc={'i1fmhhnkdjzw048yfnel'} imageAlt={''} />
+                <Supersubheading text={`Rename a File or a Directory:`} />
+                <TerminalOutput content={`[root@localhost ~]# ls
+dir1  file1
+[root@localhost ~]# mv file1 new_file
+[root@localhost ~]# mv dir1 new_dir
+[root@localhost ~]# ls
+new_dir  new_file
+[root@localhost ~]#
+`} />
+                
             </div>
 
             {/* ===================================================== */}
             {/* mv command  [Move multiple files or directories] */}
             <div >
-                <Subheading text={`Move multiple files to a directory:`} />
-                <Command command={`mv <file1> <file2> <destination>`} />
-                <Text text={`It is also use to move multiple files or directories to another location.`} />
-                <Image imageSrc={'l4paa7pgyqyynasl26ql'} imageAlt={''} />
+                <Supersubheading text={`Move multiple files to a directory:`} />
+                <TerminalOutput content={`[root@localhost ~]# mv file dir-1 /mnt
+[root@localhost ~]# ls /mnt
+dir-1  file
+[root@localhost ~]# ls .
+[root@localhost ~]#
+`} />
+                
             </div>
 
 
             {/* ===================================================== */}
             <div >
-                <Note text={`If the destination is an existing directory, files will be moved into this directory.`} />
-                <Note text={`If the destination file already exists, it will be overwritten unless the '- i' option is used.`} />
+                <Text text={`If the destination is an existing directory, files will be moved into this directory.`} />
+                <Text text={`If the destination file already exists, it will be overwritten unless the '- i' option is used.`} />
             </div>
 
 
-
-            <Heading text={`Copy Files and Directories Using 'rsync' Command`} />
+<Line/>
+            <Subheading text={`Copy Files and Directories Using 'rsync' Command`} />
             <Text text={`Synchronize files and directories between two locations, performing incremental backups.`} />
             {/* ===================================================== */}
             {/* rsync command  [copy file or directories] */}
             <div >
-                <Subheading text={`Copy Files or Directories:`} />
-                <Command command={`rsync [options] <source> <destination>`} />
-                <Text text={`It is use to synchronize files and directories between two locations.`} />
-                <Image imageSrc={'apw40qfhpk6xwyvmdzsh'} imageAlt={''} />
+                <Supersubheading text={`Copy Files or Directories:`} />
+                <TerminalOutput content={`[root@localhost ~]# ls
+file-1  file-2
+[root@localhost ~]# rsync -v file-1 file-2 /mnt
+file-1
+file-2
+
+sent 131 bytes  received 54 bytes  370.00 bytes/sec
+total size is 0  speedup is 0.00
+[root@localhost ~]#
+[root@localhost ~]# ls /mnt
+file-1  file-2
+[root@localhost ~]#
+`}/>
+                    
             </div>
 
 
@@ -114,26 +156,45 @@ const CopyMove = () => {
             {/* ===================================================== */}
             {/* rsync command  [Synchronize a directory with another location:] */}
             <div >
-                <Subheading text={`Synchronize a directory with another location:`} />
-                <Command command={`rsync -av <source> <destination>`} />
-                <Text text={`It is use to synchronize a directory with another location.`} />
-                <Image imageSrc={'e1odotxypgmuysfysm0u'} imageAlt={''} />
+                <Supersubheading text={`Synchronize a directory with another location:`} />
+                <TerminalOutput content={`[root@localhost ~]# ls /root
+file-1  file-2  file-3
+[root@localhost ~]# rsync -iv /root/* /mnt
+>f..T...... file-1
+>f..T...... file-2
+>f+++++++++ file-3
+
+sent 187 bytes  received 73 bytes  520.00 bytes/sec
+total size is 0  speedup is 0.00
+[root@localhost ~]# ls /mnt
+file-1  file-2  file-3
+[root@localhost ~]#
+`} />
+                
             </div>
 
             {/* ===================================================== */}
             {/* rsync command  [Synchronize files over a network:] */}
             <div >
-                <Subheading text={`Synchronize files over a network:`} />
-                <Command command={`rsync -av <source> <user@IP:destination>`} />
-                <Text text={`It is use to synchronize the files over a networkn.`} />
-                <Image imageSrc={'e1odotxypgmuysfysm0u'} imageAlt={''} />
+                <Supersubheading text={`Synchronize files over a network:`} />
+                <TerminalOutput content={`[root@localhost ~]# rsync -iv /root/* 192.168.131.134:/tmp
+root@192.168.131.134's password:
+<f+++++++++ file-1
+<f+++++++++ file-2
+<f+++++++++ file-3
+
+sent 187 bytes  received 73 bytes  34.67 bytes/sec
+total size is 0  speedup is 0.00
+[root@localhost ~]#
+`} />
+                
             </div>
 
 
             {/* ===================================================== */}
             <div >
-                <Note text={`'rsync' only transfers changes, which makes it efficient for backups and synchronizations.`} />
-                <Note text={`It can be used manually, scheduled with 'crontab', or for network transfers.`} />
+                <Text text={`'rsync' only transfers changes, which makes it efficient for backups and synchronizations.`} />
+                <Text text={`It can be used manually, scheduled with 'crontab', or for network transfers.`} />
 
             </div>
 

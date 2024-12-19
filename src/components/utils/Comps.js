@@ -43,7 +43,7 @@ export const Line = ({ text = "", color = "border-gray-300", textColor = "text-g
 export const TerminalOutput = ({ content }) => {
     return (
         <div
-      className="bg-black text-white font-mono p-4 rounded-lg overflow-auto mb-6"
+      className="bg-black text-white font-mono p-4 rounded-lg overflow-auto mb-3"
       style={{
         maxHeight: "400px",
         whiteSpace: "pre-wrap", // Ensure text wraps properly
@@ -52,15 +52,15 @@ export const TerminalOutput = ({ content }) => {
     >
       {content.split("\n").map((line, index) => {
         // Handle lines with user prompts
-        if (line.startsWith("[ok@localhost") || line.startsWith("[root@localhost")) {
+        if (line.startsWith("[user@localhost") || line.startsWith("[root@localhost")) {
           const delimiter = line.includes("$") ? "$" : "#";
           return (
             <div key={index}>
-              <span className="text-red-500 font-bold">
+              <span className="text-gray-500 font-bold">
                 {line.split(delimiter)[0]}
                 {delimiter}
               </span>
-              <span className="text-blue-400">
+              <span className="text-blue-300">
                 {line.split(delimiter)[1] || ""}
               </span>
             </div>
@@ -107,6 +107,14 @@ export const Subheading = ({ text }) => (
         <h2 className="text-2xl text-red-500 font-serif ">{text}</h2>
     </div>
 );
+
+// Super-sub-haeding Component :- [Sub-heading or Command's Name]
+export const Supersubheading = ({ text }) => (
+  <div className="mb-2 mt-8 font-semibold flex">
+      <h2 className="text-xl text-gray-400 font-serif ">{text}</h2>
+  </div>
+);
+
 
 // Note Component :- [Additional Note For Any Command]
 

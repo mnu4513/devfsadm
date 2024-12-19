@@ -1,59 +1,62 @@
 import React from 'react';
-import { Command, Heading, Subheading, Text, Note } from '../utils/Comps';
+import { Command, Heading, Subheading, Text, Note, Supersubheading, Line } from '../utils/Comps';
 
 const ServiceManagement = () => {
     return (
         <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
-            <Heading text="Managing Services with systemctl in Linux" />
+            <Heading text="systemd & systemctl in Linux" />
 
-            <Subheading text="Overview" />
+            
             <Text text="In Linux, services (also referred to as daemons or units) are background processes that perform system functions. The management of these services has evolved over time." />
 
-            <Subheading text="Legacy System (Pre-RHEL 7)" />
+            <Supersubheading text="Legacy System (Pre-RHEL 7)" />
             <Text text="Parent Process: init (PID: 1)" />
             <Text text="Service Management Commands: 'service' for temporary actions and 'chkconfig' for permanent actions." />
 
-            <Subheading text="Modern System (RHEL 7 and Later)" />
+            <Supersubheading text="Modern System (RHEL 7 and Later)" />
             <Text text="Parent Process: systemd (PID: 1)" />
             <Text text="Service Management Command: 'systemctl' for both temporary and permanent actions." />
 
-            <Heading text="What is systemd?" />
+            <Subheading text="systemd" />
             <Text text="systemd is a system and service manager designed to overcome the limitations of the older init system. It starts services in parallel, reducing boot times and computational overhead, and provides a suite of features to manage services more efficiently." />
 
-            <Heading text="Differences Between init and systemd" />
+            <Subheading text="Differences Between init and systemd" />
 
-            <Subheading text="Initialization Process" />
+            <Supersubheading text="Initialization Process" />
             <Text text="init: Starts services serially, leading to longer boot times." />
             <Text text="systemd: Starts services concurrently, significantly reducing boot times." />
 
-            <Subheading text="Service Management" />
+            <Supersubheading text="Service Management" />
             <Text text="init: Uses 'service' and 'chkconfig' for managing services." />
             <Text text="systemd: Uses 'systemctl' for managing both temporary and permanent actions." />
 
-            <Subheading text="Service Configuration" />
+            <Supersubheading text="Service Configuration" />
             <Text text="init: Configured via scripts in /etc/init.d/ and /etc/rc.d/." />
             <Text text="systemd: Configured through unit files located in /etc/systemd/system/ and /lib/systemd/system/." />
 
-            <Subheading text="Dependency Management" />
+            <Supersubheading text="Dependency Management" />
             <Text text="init: Lacks built-in dependency management." />
             <Text text="systemd: Explicitly manages dependencies to ensure services are started in the correct order." />
 
-            <Subheading text="Resource Management" />
+            <Supersubheading text="Resource Management" />
             <Text text="init: Limited resource management capabilities." />
             <Text text="systemd: Includes advanced features like service monitoring, logging, and resource control (via cgroups)." />
 
-            <Subheading text="Service States" />
+            <Supersubheading text="Service States" />
             <Text text="init: Service states are basic (start/stop)." />
             <Text text="systemd: Provides detailed service states, such as active, inactive, and failed." />
 
-            <Heading text="Types of Units in systemd" />
+
+
+            <Subheading text="Types of Units in systemd" />
             <Text text="Service: Regular system services (e.g., ssh, ntp)." />
             <Text text="Path: Monitors file system paths." />
             <Text text="Socket: Manages network sockets (e.g., SCSI, iSCSI)." />
-            <Command command="systemctl <action> <unit_name>" />
-            <Text text="Manages units by either their specific type or just their name." />
+         
 
-            <Heading text="Managing Services with systemctl" />
+         <Line/>
+
+            <Heading text="Managing Services with systemctl command" />
 
             <Subheading text="Temporary Actions" />
             <Command command="systemctl start <unit_name>" />

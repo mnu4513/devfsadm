@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Text, Note } from '../utils/Comps';
+import { Heading, Subheading, Text, Supersubheading } from '../utils/Comps';
 
 const UnixLinuxComparison = () => {
     return (
@@ -15,7 +15,7 @@ const UnixLinuxComparison = () => {
             <Text text="• Unix systems can run third-party applications, including web servers like Apache." />
             <Text text="• Unix is available for both server and user environments." />
 
-            <Subheading text="Flavors of Unix" />
+            <Supersubheading text="Flavors of Unix" />
             <Text text="• IBM AIX – Developed by IBM." />
             <Text text="• Sun Solaris – Originally developed by Sun Microsystems, now owned by Oracle." />
             <Text text="• HP-UX – Developed by Hewlett-Packard." />
@@ -24,11 +24,8 @@ const UnixLinuxComparison = () => {
             <Subheading text="Linux" />
             <Text text="Linux is a free and open-source operating system kernel created by Linus Torvalds in 1991. Various distributions (distros) are based on the Linux kernel." />
 
-            <Subheading text="Portable and Non-portable OS" />
-            <Text text="• Portable OS: An OS that can run on various hardware platforms. Linux is considered portable as it can run on a wide range of hardware." />
-            <Text text="• Non-portable OS: An OS designed for specific hardware, not easily ported. Some traditional Unix systems were non-portable, though modern versions are more portable." />
 
-            <Subheading text="Popular Linux Distributions" />
+            <Supersubheading text="Popular Linux Distributions" />
             <Text text="• Red Hat Linux – A popular enterprise distribution, with Fedora as its community version." />
             <Text text="• SUSE Linux – Known for enterprise offerings like SUSE Linux Enterprise." />
             <Text text="• Ubuntu Linux – Widely used for its user-friendly interface." />
@@ -37,15 +34,20 @@ const UnixLinuxComparison = () => {
             <Text text="• Slackware Linux – Oldest Linux distribution, known for its simplicity." />
             <Text text="• Puppy Linux – Lightweight, designed for older hardware." />
 
+            <Subheading text="Portable and Non-portable OS" />
+            <Text text="• Portable OS: An OS that can run on various hardware platforms. Linux is considered portable as it can run on a wide range of hardware." />
+            <Text text="• Non-portable OS: An OS designed for specific hardware, not easily ported. Some traditional Unix systems were non-portable, though modern versions are more portable." />
+            
+            
             <Subheading text="Server and Client" />
             <Text text="A server provides resources to other computers (clients) over a network. A client requests and uses resources from servers." />
             
-            <Subheading text="Server" />
+            <Supersubheading text="Server" />
             <Text text="• Role: Provides resources, services, or data to clients." />
             <Text text="• Function: Hosts websites, databases, and files, and manages network resources." />
             <Text text="• Hardware: Typically powerful, designed for handling multiple requests and managing large data." />
 
-            <Subheading text="Client" />
+            <Supersubheading text="Client" />
             <Text text="• Role: Requests resources or services from servers." />
             <Text text="• Function: Uses servers to access web pages, send emails, or retrieve files." />
             <Text text="• Hardware: Can be any device capable of connecting to a network, such as desktops, laptops, and smartphones." />
