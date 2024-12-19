@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Text, Command, TerminalOutput } from '../utils/Comps';
+import { Heading, Subheading, Text, TerminalOutput, Line } from '../utils/Comps';
 
 const CrontabAtPage = () => {
   return (
@@ -11,13 +11,13 @@ const CrontabAtPage = () => {
       <Subheading text="What is Crontab?" />
 
       {/* Text */}
-      <Text text="Crontab is a service in Linux for job scheduling or task scheduling. The term 'cron' refers to the time-based scheduling daemon, and 'tab' refers to the table where the scheduled jobs are stored. Every user can schedule cron jobs based on their permissions. Administrators can set which users are allowed to use crontab." />
+      <Text text="Crontab is a service in Linux for job scheduling or task scheduling. The term 'cron' refers to the time-based scheduling daemon, while 'tab' refers to the table where scheduled jobs are stored. Every user can schedule cron jobs based on their permissions. Administrators can set which users are allowed to use crontab." />
 
       {/* Subheading */}
       <Subheading text="Use of Crontab" />
 
       {/* Text */}
-      <Text text="Crontab is used to schedule tasks at specific times or intervals. It is commonly used for:" />
+      <Text text="Crontab is used to schedule tasks at specific times or intervals. Common use cases include:" />
       <Text text="• Monitoring system health" />
       <Text text="• Running daily backups" />
       <Text text="• Daily server health checks" />
@@ -44,7 +44,6 @@ crontabs-1.11-27.20190603git.el9_0.noarch
              └─1913 /usr/sbin/anacron -s
 `} />
 
-
       {/* Subheading */}
       <Subheading text="Crontab Configuration Files" />
 
@@ -59,7 +58,7 @@ crontabs-1.11-27.20190603git.el9_0.noarch
       <Subheading text="Crontab Syntax" />
 
       {/* Text */}
-      <Text text="A crontab entry consists of two parts:" />
+      <Text text="A crontab entry consists of two main parts:" />
       <Text text="1. Time Table: Consists of five fields that specify the time to run the task:" />
       <Text text="• Minutes: [0-59]" />
       <Text text="• Hours: [0-23]" />
@@ -82,7 +81,6 @@ MAILTO=root
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 `} />
-
 
       {/* Subheading */}
       <Subheading text="Special Symbols in Crontab" />
@@ -138,11 +136,10 @@ crontab: no changes made to crontab
 [root@localhost ~]#
 [root@localhost ~]# crontab -l -u dom
 no crontab for dom
-
 `} />
-
+<Line/>
       {/* Subheading */}
-      <Subheading text="What is AT?" />
+      <Subheading text="What is the AT command?" />
 
       {/* Text */}
       <Text text="The AT command is used to schedule tasks to be executed once at a specific time in the future." />
@@ -160,8 +157,8 @@ at-3.1.23-10.el9.x86_64
       <TerminalOutput content={`[root@localhost ~]#
 [root@localhost ~]# systemctl status atd
 ● atd.service - Deferred execution scheduler
-     Loaded: loaded (/usr/lib/systemd/system/atd.service; enabl>
-     Active: active (running) since Thu 2024-12-19 09:27:13 IST>
+     Loaded: loaded (/usr/lib/systemd/system/atd.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2024-12-19 09:27:13 IST;
        Docs: man:atd(8)
    Main PID: 992 (atd)
       Tasks: 1 (limit: 23422)
@@ -170,7 +167,6 @@ at-3.1.23-10.el9.x86_64
      CGroup: /system.slice/atd.service
              └─992 /usr/sbin/atd -f
 `} />
-
 
       {/* Subheading */}
       <Subheading text="AT Command Configuration Files" />
@@ -185,38 +181,18 @@ at-3.1.23-10.el9.x86_64
 
       {/* Command */}
       <Text text="List all scheduled tasks" />
-        <TerminalOutput content={`[root@localhost ~]# atq
-2       Thu Dec 19 13:00:00 2024 a root
-[root@localhost ~]#
+      <TerminalOutput content={`[root@localhost ~]# atq
+2       Thu Dec 19 13:00:00 2024
+3       Thu Dec 19 14:00:00 2024
 `} />
-<Text text={'Schedule a new task'} />
-<TerminalOutput content={`[root@localhost ~]# at 13:00
-warning: commands will be executed using /bin/sh
-at> /bin/echo hello
+      <Text text="Schedule a task using AT" />
+      <TerminalOutput content={`[root@localhost ~]# at 14:30
+at> echo "Hello World" > /home/user/hello.txt
 at> <EOT>
-job 2 at Thu Dec 19 13:00:00 2024
-[root@localhost ~]# 
-`}/>
-   
-      <Text text={`View task details`} />
-      <TerminalOutput content={`[root@localhost ~]# at -c 2
-#!/bin/sh
-# atrun uid=0 gid=0
-# mail ok 0
-umask 22
-SHELL=/bin/bash; export SHELL
-HISTCONTROL=ignoredups; export HISTCONTROL
-HISTSIZE=1000; export HISTSIZE
-HOSTNAME=localhost; export HOSTNAME
-PWD=/root; export PWD
-LOGNAME=root; export LOGNAME
-HOME=/root; export HOME
-LANG=en_US.UTF-8; export LANG
+job 3 at Thu Dec 19 14:30:00 2024
 `} />
-
-      <Text text=" Remove a task" />
-      <TerminalOutput content={`[root@localhost ~]# atrm 2
-[root@localhost ~]# atq
+      <Text text="Remove a specific task" />
+      <TerminalOutput content={`[root@localhost ~]# atrm 3
 [root@localhost ~]#
 `} />
     </div>

@@ -19,13 +19,27 @@ export const Image = ({ imageSrc, imageAlt }) => (
 
 // Text Component :- [Descriptive Text]
 export const Text = ({ text }) => (
-    <div className="mb-4">
+    <div className="mb-3">
         <p className="font-cambria">{text}</p>
     </div>
 );
 
-// terminal 
 
+// line 
+export const Line = ({ text = "", color = "border-gray-300", textColor = "text-gray-500" }) => {
+    return (
+      <div className="flex items-center my-6">
+        <div className={`border-t-2 ${color} flex-grow`}></div>
+        {text && (
+          <span className={`mx-4 text-lg font-semibold ${textColor}`}>{text}</span>
+        )}
+        <div className={`border-t-2 ${color} flex-grow`}></div>
+      </div>
+    );
+  };
+
+
+// terminal 
 export const TerminalOutput = ({ content }) => {
     return (
         <div
