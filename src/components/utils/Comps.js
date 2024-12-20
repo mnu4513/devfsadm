@@ -110,8 +110,8 @@ export const Subheading = ({ text }) => (
 
 // Super-sub-haeding Component :- [Sub-heading or Command's Name]
 export const Supersubheading = ({ text }) => (
-  <div className="mb-2 mt-8 font-semibold flex">
-      <h2 className="text-xl text-gray-400 font-serif ">{text}</h2>
+  <div className="mb-2 mt-8 font-semibold flex ">
+      <h2 className="text-xl text-gray-300 font-serif ">{text}</h2>
   </div>
 );
 
