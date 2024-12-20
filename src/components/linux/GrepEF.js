@@ -1,5 +1,5 @@
 import React from 'react'
-import { Command, Heading, Supersubheading, Text, Image, Video, Note, Subheading, TerminalOutput, Line } from '../utils/Comps';
+import { Heading, Supersubheading, Text,  Video,  Subheading, TerminalOutput, Line } from '../utils/Comps';
 
 const GrepEF = () => {
     return (
