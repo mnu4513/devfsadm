@@ -83,14 +83,95 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'RPM',
         link: '/course/linux/RPM'
     }, {
+        name: 'Network',
+        link: '/course/linux/network'
+    }, {
         name: 'Network Configuration', 
         link: '/course/linux/network-configuration'
+    }, {
+        name: 'Storage Concepts',
+        link: '/course/linux/storage'
+    }, {
+        name: 'Storage Partition',
+        link: '/course/linux/partition'
     }, {
         name: 'SWAP',
         link: '/course/linux/swap'
     }, {
         name: 'LVM', 
         link: '/course/linux/LVM'
+    }, {
+        name: 'ISCSI',
+        link: '/course/linux/iscsi'
+    }, {
+        name: 'SSH',
+        link: '/course/linux/ssh'
+    }, {
+        name: 'FTP',
+        link: '/course/linux/ftp'
+    }, {
+        name: 'Apache',
+        link: '/course/linux/apache'
+    }, {
+        name: 'DNS',
+        link: '/course/linux/dns'
+    }, {
+        name: 'DHCP',
+        link: '/course/linux/dhcp'
+    }, {
+        name: 'IP Tables',
+        link: '/course/linux/ip-tables'
+    }, {
+        name: 'NFS',
+        link: '/course/linux/nfs'
+    }, {
+        name: 'Samba',
+        link: '/course/linux/samba'
+    }, {
+        name: 'Firewall',
+        link: '/course/linux/firewall'
+    }, {
+        name: 'SELinux',
+        link: '/course/linux/selinux'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
+    }, {
+        name: '',
+        link: '/course/linux/'
     }];
 
 

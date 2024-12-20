@@ -1,5 +1,5 @@
 import React from 'react';
-import { Command, Heading, Subheading, Text, Note, Supersubheading, Line } from '../utils/Comps';
+import { Heading, Subheading, Text, Supersubheading, Line, TerminalOutput } from '../utils/Comps';
 
 const ServiceManagement = () => {
     return (
@@ -59,50 +59,181 @@ const ServiceManagement = () => {
             <Heading text="Managing Services with systemctl command" />
 
             <Subheading text="Temporary Actions" />
-            <Command command="systemctl start <unit_name>" />
-            <Text text="Starts a service." />
-            <Command command="systemctl stop <unit_name>" />
-            <Text text="Stops a service." />
-            <Command command="systemctl restart <unit_name>" />
-            <Text text="Restarts a service." />
-            <Command command="systemctl reload <unit_name>" />
-            <Text text="Reloads a service's configuration without restarting it." />
-            <Command command="systemctl is-active <unit_name>" />
-            <Text text="Checks if a service is active." />
+            <Supersubheading text="Starts a service:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl start chronyd
+[root@localhost ~]#
+`} />
+
+        
+            <Supersubheading text="Stops a service:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl stop chronyd
+[root@localhost ~]#
+`} />
+
+            <Supersubheading text="Restarts a service:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl restart chronyd
+[root@localhost ~]#
+`} />
+            <Supersubheading text={`Reload a service:`} />
+            <TerminalOutput content={`[root@localhost ~]# systemctl reload sshd
+[root@localhost ~]#
+`} />
+<Text text="Reloads a service's configuration without restarting it." />
+
+            
+            <Supersubheading text={`Serverice active status:`} />
+            <TerminalOutput content={`[root@localhost ~]# systemctl is-active chronyd
+active
+[root@localhost ~]#
+`} />
+            <Text text="It checks if a service is active." />
 
             <Subheading text="Permanent Actions" />
-            <Command command="systemctl enable <unit_name>" />
-            <Text text="Enables a service to start at boot." />
-            <Command command="systemctl disable <unit_name>" />
+            <Supersubheading text={`Enalbe service:`} />
+            <TerminalOutput content={`[root@localhost ~]# systemctl enable chronyd
+Created symlink /etc/systemd/system/multi-user.target.wants/chronyd.service → /usr/lib/systemd/system/chronyd.service.
+[root@localhost ~]#
+`} />
+            <Text text="It enables a service to start at boot." />
+
+
+            <Supersubheading text={`Disable service:`}/>
+            <TerminalOutput content={`[root@localhost ~]# systemctl disable chronyd
+Removed /etc/systemd/system/multi-user.target.wants/chronyd.service.
+[root@localhost ~]#`} />
             <Text text="Disables a service from starting at boot." />
 
-            <Subheading text="Checking Service Status" />
-            <Command command="systemctl status <unit_name>" />
-            <Text text="Displays the status of a service." />
+            <Supersubheading text={`Check enable status:`}/>
+            <TerminalOutput content={`[root@localhost ~]# systemctl is-enabled chronyd
+enabled
+[root@localhost ~]#
+`} />
+
+
+            <Subheading text="Check Service Status:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl is-enabled chronyd
+enabled
+[root@localhost ~]# systemctl status sshd
+● sshd.service - OpenSSH server daemon
+     Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: >
+     Active: active (running) since Fri 2024-12-20 16:02:16 IST; 24min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 857 (sshd)
+      Tasks: 1 (limit: 10949)
+     Memory: 5.6M
+        CPU: 168ms
+     CGroup: /system.slice/sshd.service
+             └─857 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+`} />
+
+
 
             <Subheading text="Listing Units" />
-            <Command command="systemctl list-units" />
-            <Text text="Lists all active units." />
-            <Command command="systemctl list-unit-files" />
-            <Text text="Lists unit files with their states." />
-            <Command command="systemctl list-units --failed" />
-            <Text text="Lists failed units." />
+
+            <Supersubheading text="Lists all active units:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl list-units
+  UNIT                                                                             >
+  proc-sys-fs-binfmt_misc.automount                                                >
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:01.0-sound-card0-controlC0.device    >
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata3-host2-target2:0:0-2:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata3-host2-target2:0:0-2:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata3-host2-target2:0:0-2:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata3-host2-target2:0:0-2:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata3-host2-target2:0:0-2:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata4-host3-target3:0:0-3:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata5-host4-target4:0:0-4:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:11.0-0000:02:03.0-ata5-host4-target4:0:0-4:0:0:0-b>
+  sys-devices-pci0000:00-0000:00:15.0-0000:03:00.0-net-ens160.device               >
+  sys-devices-platform-serial8250-tty-ttyS0.device                                 >
+  sys-devices-platform-serial8250-tty-ttyS1.device                                 >
+  sys-devices-platform-serial8250-tty-ttyS2.device                                 >
+  sys-devices-platform-serial8250-tty-ttyS3.device                                 >
+  sys-devices-virtual-misc-rfkill.device                                           >
+  sys-module-configfs.device                                                       >
+  sys-module-fuse.device                                                           >
+  sys-subsystem-net-devices-ens160.device                                          >
+lines 1-20
+`} />
+
+            <Supersubheading text="Lists unit files with their states:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl list-unit-files
+UNIT FILE                                                                 STATE    >
+proc-sys-fs-binfmt_misc.automount                                         static   >
+-.mount                                                                   generated>
+boot-efi.mount                                                            generated>
+boot.mount                                                                generated>
+dev-hugepages.mount                                                       static   >
+dev-mqueue.mount                                                          static   >
+proc-sys-fs-binfmt_misc.mount                                             disabled >
+sys-fs-fuse-connections.mount                                             static   >
+sys-kernel-config.mount                                                   static   >
+sys-kernel-debug.mount                                                    static   >
+sys-kernel-tracing.mount                                                  static   >
+tmp.mount                                                                 disabled >
+insights-client-results.path                                              disabled >
+systemd-ask-password-console.path                                         static   >
+systemd-ask-password-plymouth.path                                        static   >
+systemd-ask-password-wall.path                                            static   >
+session-1.scope                                                           transient>
+session-3.scope                                                           transient>
+arp-ethers.service                                                        disabled >
+lines 1-20
+`} />
+
+
+
+            <Supersubheading text="Lists failed units:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl list-units --failed
+  UNIT                  LOAD   ACTIVE SUB    DESCRIPTION
+● dnf-makecache.service loaded failed failed dnf makecache
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+[root@localhost ~]#
+`} />
+
+
 
             <Subheading text="Masking and Unmasking Services" />
-            <Command command="systemctl mask <unit_name>" />
+            <Supersubheading text={`Mask a service:`} />
+            <TerminalOutput content={`[root@localhost ~]# systemctl mask chronyd
+Created symlink /etc/systemd/system/chronyd.service → /dev/null.
+[root@localhost ~]#
+`} />
             <Text text="Masks a service to prevent it from being started." />
-            <Command command="systemctl unmask <unit_name>" />
+
+
+            <Supersubheading text={`Unmask a service:`} />
+            <TerminalOutput content={`[root@localhost ~]# systemctl unmask chronyd
+Removed /etc/systemd/system/chronyd.service.
+[root@localhost ~]#
+`} />
             <Text text="Unmasks a service to allow it to be started." />
-            <Command command="systemctl list-unit-files | grep masked" />
-            <Text text="Lists all masked services." />
+
+            <Supersubheading text="List all masked services:" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl list-unit-files | grep masked
+chronyd.service                                                           masked          enabled
+[root@localhost ~]#
+`} />
 
             <Subheading text="Commands with Multiple Units" />
-            <Command command="systemctl is-active <unit1> <unit2>" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl is-active sshd chronyd
+active
+inactive
+[root@localhost ~]#
+`} />
             <Text text="Checks the active status of multiple services." />
-            <Command command="systemctl is-enabled <unit1> <unit2>" />
+            <TerminalOutput content={`[root@localhost ~]# systemctl is-enabled chronyd sshd
+disabled
+enabled
+[root@localhost ~]#
+`} />
             <Text text="Checks if multiple services are enabled." />
 
-            <Note text="Note: systemctl provides a unified interface for managing systemd units, offering flexibility and control over service management." />
+            <Text text="Note: systemctl provides a unified interface for managing systemd units, offering flexibility and control over service management." />
 
         </div>
     );
