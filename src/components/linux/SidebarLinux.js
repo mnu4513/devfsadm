@@ -9,7 +9,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/intro-to-linux' // done 
     }, {
         name: 'Installation and Setup',
-        link: '/course/linux/installation-and-setup' // not done 
+        link: '/course/linux/installation-and-setup'  
     }, {
         name: 'Login Mode in Linux',
         link: '/course/linux/login-modes' // done 
@@ -54,7 +54,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/group-management'
     }, {
         name: 'Sudo & SUID',
-        link: '/course/linux/sudo-suid'
+        link: '/course/linux/sudo-suid' // done
     }, {
         name: 'Run Level & Target',
         link: '/course/linux/run-level-target' // done 
@@ -93,7 +93,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/network'
     }, {
         name: 'Network Configuration', 
-        link: '/course/linux/network-configuration'
+        link: '/course/linux/network-configuration' // done
     }, {
         name: 'Storage',
         link: '/course/linux/storage'
@@ -111,7 +111,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/iscsi'
     }, {
         name: 'SSH',
-        link: '/course/linux/ssh'
+        link: '/course/linux/ssh' // done
     }, {
         name: 'DNS',
         link: '/course/linux/dns'

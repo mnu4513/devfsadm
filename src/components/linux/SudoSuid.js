@@ -47,8 +47,6 @@ Matching Defaults entries for root on localhost:
     env_keep+="LC_COLLATE LC_IDENTIFICATION LC_MEASUREMENT LC_MESSAGES",
     env_keep+="LC_MONETARY LC_NAME LC_NUMERIC LC_PAPER LC_TELEPHONE",
     env_keep+="LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY",
-    secure_path=/sbin\:/bin\:/usr/sbin\:/usr/bin
-
 User root may run the following commands on localhost:
     (ALL) ALL
 [root@localhost ~]#
