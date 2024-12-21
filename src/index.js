@@ -11,6 +11,8 @@ import ContactUs from './components/ContactUs';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import ForgotPassword from './components/user/ForgotPassword';
+
+// Solaris
 import HomeSolaris from './components/solaris/HomeSolaris';
 import IntroToSolaris from './components/solaris/IntroToSolaris';
 import InstallationAndSetup from './components/solaris/InstallAndSetup';
@@ -49,20 +51,39 @@ import GrepLinux from './components/linux/GrepEF';
 import HeadTailLinux from './components/linux/HeadTailSed';
 import LocateFindLinux from './components/linux/LocateFind';
 import ViVim from './components/linux/ViVim';
+import UserManagementLinux from './components/linux/UserManagement';
+import GroupManagementLinux from './components/linux/GroupManagement';
+import SudoSuid from './components/linux/SudoSuid';
+import RunLevelTargetLinux from './components/linux/RunLevelTarget';
 import Permissions from './components/linux/Permission';
 import ACL from './components/linux/ACL';
 import Chattr from './components/linux/Chattr';
-import RunLevelTargetLinux from './components/linux/RunLevelTarget';
-import UserManagementLinux from './components/linux/UserManagement';
-import SudoSuid from './components/linux/SudoSuid';
+import ArchiveLinux from './components/linux/Archive';
 import InodeLink from './components/linux/LinkInodes';
 import CrontabLinux from './components/linux/Crontab';
-import LVM from './components/linux/LVM';
-import NetworkConfigurationLinux from './components/linux/NetworkConfiguration';
-import SwapPartition from './components/linux/Swap';
-import RPM from './components/linux/RPM';
 import ServiceManagementLinux from './components/linux/ServiceManagement';
 import BootingProcessPage from './components/linux/BootingProcess';
+import RPM from './components/linux/RPM';
+import YUM from './components/linux/Yum';
+import Network from './components/linux/Network';
+import NetworkConfigurationLinux from './components/linux/NetworkConfiguration';
+import StorageConcept from './components/linux/StorageConcept';
+import StoragePartition from './components/linux/StoragePartition';
+import SwapPartition from './components/linux/Swap';
+import LVM from './components/linux/LVM';
+import Iscsi from './components/linux/Iscsi';
+import SSHLinux from './components/linux/Ssh';
+import Dns from './components/linux/Dns';
+import Ftp from './components/linux/Ftp';
+import Apache from './components/linux/Apache';
+import Dhcp from './components/linux/Dhcp';
+import Nfs from './components/linux/Nfs';
+import Samba from './components/linux/Samba';
+import IPTables from './components/linux/IPTables';
+import Firewall from './components/linux/Firewall';
+import SELinux from './components/linux/SELinux';
+
+
 
 
 
@@ -188,6 +209,9 @@ const appRouter = createBrowserRouter([
           path: '/course/linux/user-management',
           element: <UserManagementLinux />
         }, {
+          path: '/course/linux/group-management',
+          element : <GroupManagementLinux />
+        }, {
           path: '/course/linux/sudo-suid',
           element: <SudoSuid />
         }, {
@@ -202,6 +226,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/linux/chattr',
           element: <Chattr/>
+        }, {
+          path: '/course/linux/archive',
+          element: <ArchiveLinux/>
         }, {
           path: '/course/linux/inode-link',
           element: <InodeLink/>
@@ -218,14 +245,59 @@ const appRouter = createBrowserRouter([
           path: '/course/linux/RPM',
           element: <RPM/>
         }, {
+          path: '/course/linux/dnf',
+          element: <YUM/>
+        }, {
+          path: '/course/linux/network',
+          element: <Network/>
+        }, {
           path: '/course/linux/network-configuration',
           element: <NetworkConfigurationLinux />
+        }, {
+          path: '/course/linux/storage',
+          element: <StorageConcept />
+        }, {
+          path: '/course/linux/partition',
+          element: <StoragePartition />
         }, {
           path: '/course/linux/swap',
           element: <SwapPartition />
         }, {
           path: '/course/linux/LVM',
           element: <LVM />
+        }, {
+          path: '/course/linux/iscsi',
+          element: <Iscsi />
+        }, {
+          path: '/course/linux/ssh',
+          element: <SSHLinux/>
+        }, {
+          path: '/course/linux/dns',
+          element: <Dns/>
+        }, {
+          path: '/course/linux/ftp',
+          element: <Ftp />
+        }, {
+          path: '/course/linux/apache',
+          element: <Apache/>
+        }, {
+          path: '/course/linux/dhcp',
+          element: <Dhcp/>
+        }, {
+          path: '/course/linux/nfs',
+          element: <Nfs/>
+        }, {
+          path: '/course/linux/samba',
+          element: <Samba />
+        }, {
+          path: '/course/linux/ip-tables',
+          element: <IPTables/>
+        }, {
+          path: '/course/linux/firewall',
+          element: <Firewall />
+        }, {
+          path: '/course/linux/selinux',
+          element: <SELinux />
         }]
       },
       {

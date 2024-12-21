@@ -6,19 +6,19 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
         name: 'Introduction to Linux',
-        link: '/course/linux/intro-to-linux' // not done 
+        link: '/course/linux/intro-to-linux' // done 
     }, {
         name: 'Installation and Setup',
         link: '/course/linux/installation-and-setup' // not done 
     }, {
         name: 'Login Mode in Linux',
-        link: '/course/linux/login-modes' // not done 
+        link: '/course/linux/login-modes' // done 
     }, {
         name: 'File Hierarchy Structure',
-        link: '/course/linux/fhs' // not done 
+        link: '/course/linux/fhs' // done 
     }, {
         name: 'Basic Data Creation Rules',
-        link: '/course/linux/data-creation-rules' // not done 
+        link: '/course/linux/data-creation-rules' // done 
     }, {
         name: 'Basic Commands',
         link: '/course/linux/basic-commands' // done 
@@ -45,10 +45,13 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/locate-find' // done 
     }, {
         name: 'Vi Editor',
-        link: '/course/linux/vi-vim' // done 
+        link: '/course/linux/vi-vim' // not done 
     }, {
         name: 'User Management',
-        link: '/course/linux/user-management' // not done 
+        link: '/course/linux/user-management' // done 
+    }, {
+        name: 'Group Management',
+        link: '/course/linux/group-management'
     }, {
         name: 'Sudo & SUID',
         link: '/course/linux/sudo-suid'
@@ -60,28 +63,31 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/permissions' // not done 
     }, {
         name: 'ACL',
-        link: '/course/linux/acl' // not done 
+        link: '/course/linux/acl' // done 
     }, {
-        name: 'Control Root User [chattr]',
-        link: '/course/linux/chattr' // not done 
+        name: 'chattr',
+        link: '/course/linux/chattr' // done 
     }, {
         name: 'Archive',
         link: '/course/linux/archive' // not done 
     }, {
         name: 'Inode & Link',
-        link: '/course/linux/inode-link' // not done 
+        link: '/course/linux/inode-link' // done 
     }, {
         name: 'Crontab',
-        link: '/course/linux/crontab'
+        link: '/course/linux/crontab' // done
     }, {
         name: 'Service Management',
-        link: '/course/linux/service-management'
+        link: '/course/linux/service-management' //done
     }, {
         name: 'Booting Process',
         link: '/course/linux/booting-process'
     }, {
         name: 'RPM',
-        link: '/course/linux/RPM'
+        link: '/course/linux/RPM' // done
+    }, {
+        name: 'YUM Repos',
+        link: '/course/linux/dnf'
     }, {
         name: 'Network',
         link: '/course/linux/network'
@@ -89,14 +95,14 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Network Configuration', 
         link: '/course/linux/network-configuration'
     }, {
-        name: 'Storage Concepts',
+        name: 'Storage',
         link: '/course/linux/storage'
     }, {
         name: 'Storage Partition',
         link: '/course/linux/partition'
     }, {
         name: 'SWAP',
-        link: '/course/linux/swap'
+        link: '/course/linux/swap'  // 
     }, {
         name: 'LVM', 
         link: '/course/linux/LVM'
@@ -107,20 +113,17 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'SSH',
         link: '/course/linux/ssh'
     }, {
+        name: 'DNS',
+        link: '/course/linux/dns'
+    }, {
         name: 'FTP',
         link: '/course/linux/ftp'
     }, {
         name: 'Apache',
         link: '/course/linux/apache'
     }, {
-        name: 'DNS',
-        link: '/course/linux/dns'
-    }, {
         name: 'DHCP',
         link: '/course/linux/dhcp'
-    }, {
-        name: 'IP Tables',
-        link: '/course/linux/ip-tables'
     }, {
         name: 'NFS',
         link: '/course/linux/nfs'
@@ -128,50 +131,14 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Samba',
         link: '/course/linux/samba'
     }, {
+        name: 'IP Tables',
+        link: '/course/linux/ip-tables'
+    }, {
         name: 'Firewall',
         link: '/course/linux/firewall'
     }, {
         name: 'SELinux',
         link: '/course/linux/selinux'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
-    }, {
-        name: '',
-        link: '/course/linux/'
     }];
 
 
