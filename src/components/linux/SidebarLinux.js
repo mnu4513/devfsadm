@@ -96,7 +96,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/network-configuration' // done
     }, {
         name: 'Storage',
-        link: '/course/linux/storage'
+        link: '/course/linux/storage' // done
     }, {
         name: 'Storage Partition',
         link: '/course/linux/partition'
@@ -126,7 +126,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         link: '/course/linux/dhcp'
     }, {
         name: 'NFS',
-        link: '/course/linux/nfs'
+        link: '/course/linux/nfs' // done
     }, {
         name: 'Samba',
         link: '/course/linux/samba'
