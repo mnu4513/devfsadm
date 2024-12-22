@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Text, TerminalOutput, Line, Supersubheading } from '../utils/Comps';
+import { Heading, Subheading, Text, TerminalOutput,  Supersubheading } from '../utils/Comps';
 
 const NFSConfiguration = () => {
     return (
@@ -20,7 +20,7 @@ const NFSConfiguration = () => {
 
             <Supersubheading text={``}/>
             <Text text={``}/>
-            <Line/>
+          
             <Subheading text="Types of Storage Concepts" />
             <Supersubheading text={`DAS (Direct Attached Storage):`}/>
             <Text text={`Storage devices that are directly connected to a system.`}/> 
@@ -32,7 +32,7 @@ const NFSConfiguration = () => {
             <Text text={`Provides block-level storage access.`}/>
             <Text text={`Examples: SCSI, iSCSI, and Fibre Channel devices.`} />
 
-            <Line />
+          
 
             <Subheading text="NFS Configuration" />
 
