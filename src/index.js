@@ -37,6 +37,7 @@ import InterviewPrep from './components/solaris/InetviewPreparation';
 
 // Linux 
 import HomeLinux from './components/linux/HomeLinux';
+import AboutTheCourseLinux from './components/linux/AboutTheCourse'
 import IntroToLinux from './components/linux/IntroToLinux';
 import LinuxSetup from './components/linux/LinuxSetup';
 import LoginModes from './components/linux/LoginModes';
@@ -97,7 +98,7 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfServices from './components/TermsOfServices';
 import Features from './components/Features';
 import UploadImage from './components/UploadImage';
-import AboutTheCouse from './components/solaris/AboutTheCouse';
+import AboutTheCourse from './components/solaris/AboutTheCouse';
 import IntroToShell from './components/shell_scripting/IntroToShell';
 import SetupEnv from './components/shell_scripting/SetupEnv';
 import ScriptingConcept from './components/shell_scripting/ScriptingConcept';
@@ -162,7 +163,7 @@ const appRouter = createBrowserRouter([
         element: <HomeLinux />,
         children: [{
           path: '/course/linux',
-          element: <AboutTheCouse />
+          element: <AboutTheCourseLinux />
         }, {
           path: '/course/linux/intro-to-linux',
           element: <IntroToLinux />
@@ -305,7 +306,7 @@ const appRouter = createBrowserRouter([
         element: <HomeSolaris />,
         children: [{
           path: '/course/solaris/',
-          element: < AboutTheCouse />
+          element: < AboutTheCourse />
         }, {
           path: '/course/solaris/intro-to-solaris',
           element: <IntroToSolaris />
