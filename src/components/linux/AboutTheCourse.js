@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading, Text, Subheading, Line, Supersubheading } from '../utils/Comps'; 
 const AboutTheCourse = () => { 
     return ( 
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
             <Heading text={`Linux System Admin Course in Hindi`}/>
             <Heading text={`(Linux Course for Beginners)`}/>
             <Text text={`Welcome to [Your Course Name], the ultimate destination for mastering Linux – the operating system that powers servers, supercomputers, smartphones, and much more. Whether you’re a complete beginner or looking to expand your existing skills, this course will guide you through every step of your Linux journey with expert-led video lectures and practical exercises.`}/>
