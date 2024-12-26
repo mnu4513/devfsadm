@@ -99,7 +99,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
        valid_lft forever preferred_lft forever
 [root@localhost ~]#
 `} />
-            <Text text={`To set IP address:`} />
+            <Supersubheading text={`To set IP address:`} />
 <TerminalOutput content={`[root@localhost ~]# setup`} />
 
             <Text text={`Default LAN Card Name:

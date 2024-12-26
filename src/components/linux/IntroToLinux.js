@@ -1,12 +1,12 @@
 import React from 'react';
-import { Heading, Subheading, Text, Supersubheading } from '../utils/Comps';
+import { Heading, Subheading, Text, Supersubheading, Line } from '../utils/Comps';
 
 const UnixLinuxComparison = () => {
     return (
         <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
-            
+
             <Heading text="Unix and Linux Overview" />
-            
+
             <Subheading text="Unix" />
             <Text text="Unix is a powerful, multiuser, multitasking operating system originally developed in the 1960s and 1970s at AT&T's Bell Labs." />
             <Text text="• Unix is proprietary, but there are also free and open-source Unix-like systems." />
@@ -34,14 +34,18 @@ const UnixLinuxComparison = () => {
             <Text text="• Slackware Linux – Oldest Linux distribution, known for its simplicity." />
             <Text text="• Puppy Linux – Lightweight, designed for older hardware." />
 
+            <Line />
             <Subheading text="Portable and Non-portable OS" />
-            <Text text="• Portable OS: An OS that can run on various hardware platforms. Linux is considered portable as it can run on a wide range of hardware." />
-            <Text text="• Non-portable OS: An OS designed for specific hardware, not easily ported. Some traditional Unix systems were non-portable, though modern versions are more portable." />
-            
-            
+            <Supersubheading text={`Portable OS:`} />
+            <Text text="An OS that can run on various hardware platforms. Linux is considered portable as it can run on a wide range of hardware." />
+            <Supersubheading text={`Non-portable OS:`} />
+            <Text text="An OS designed for specific hardware, not easily ported. Some traditional Unix systems were non-portable, though modern versions are more portable." />
+
+
+            <Line />
             <Subheading text="Server and Client" />
             <Text text="A server provides resources to other computers (clients) over a network. A client requests and uses resources from servers." />
-            
+
             <Supersubheading text="Server" />
             <Text text="• Role: Provides resources, services, or data to clients." />
             <Text text="• Function: Hosts websites, databases, and files, and manages network resources." />
@@ -52,43 +56,44 @@ const UnixLinuxComparison = () => {
             <Text text="• Function: Uses servers to access web pages, send emails, or retrieve files." />
             <Text text="• Hardware: Can be any device capable of connecting to a network, such as desktops, laptops, and smartphones." />
 
+            <Line />
             <Subheading text="Basic Differences Between Linux and Unix" />
-            <Text text="1. **Origin and Development**:" />
+            <Supersubheading text="1. Origin and Development:" />
             <Text text="   • Unix: Developed in the 1960s at AT&T’s Bell Labs, proprietary." />
             <Text text="   • Linux: Created in 1991 by Linus Torvalds, free and open-source." />
-            
-            <Text text="2. **Licensing**:" />
+
+            <Supersubheading text="2. Licensing:" />
             <Text text="   • Unix: Mostly proprietary, requiring a paid license." />
             <Text text="   • Linux: Open-source under the GNU GPL, available for free." />
-            
-            <Text text="3. **Cost**:" />
+
+            <Supersubheading text="3. Cost:" />
             <Text text="   • Unix: Requires a paid license for both software and support." />
             <Text text="   • Linux: Generally free, but some distributions offer paid support." />
-            
-            <Text text="4. **Architecture**:" />
+
+            <Supersubheading text="4. Architecture:" />
             <Text text="   • Unix: Traditionally tied to specific hardware, though more portable now." />
             <Text text="   • Linux: Highly portable, can run on many different hardware platforms." />
-            
-            <Text text="5. **User Base**:" />
+
+            <Supersubheading text="5. User Base:" />
             <Text text="   • Unix: Historically used in academic and large enterprise environments." />
             <Text text="   • Linux: Widely used in personal, enterprise, and server environments." />
-            
-            <Text text="6. **System Administration**:" />
+
+            <Supersubheading text="6. System Administration:" />
             <Text text="   • Unix: Tools can vary between different Unix systems." />
             <Text text="   • Linux: Unified tools and conventions across distributions, with some variation." />
 
-            <Text text="7. **File System Hierarchy**:" />
+            <Supersubheading text="7. File System Hierarchy:" />
             <Text text="   • Unix: File system structures can vary between Unix systems." />
             <Text text="   • Linux: Follows the Filesystem Hierarchy Standard (FHS)." />
 
-            <Text text="8. **Community and Support**:" />
+            <Supersubheading text="8. Community and Support:" />
             <Text text="   • Unix: Support through commercial vendors." />
             <Text text="   • Linux: Large community support, with commercial options available." />
 
-            <Text text="9. **Usage and Popularity**:" />
+            <Supersubheading text="9. Usage and Popularity:" />
             <Text text="   • Unix: Usage has declined in favor of Linux." />
             <Text text="   • Linux: Continues to grow in web hosting, cloud computing, and desktop use." />
-            
+
         </div>
     );
 };
