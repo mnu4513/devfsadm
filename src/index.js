@@ -264,7 +264,7 @@ const appRouter = createBrowserRouter([
           path: '/course/linux/swap',
           element: <SwapPartition />
         }, {
-          path: '/course/linux/LVM',
+          path: '/course/linux/lvm',
           element: <LVM />
         }, {
           path: '/course/linux/iscsi',

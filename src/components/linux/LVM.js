@@ -1,124 +1,134 @@
-import React from 'react';
-import { Heading, Subheading, Text, Command } from '../utils/Comps';
+import React from 'react'
+import { Heading, Supersubheading, Text,   Subheading, TerminalOutput } from '../utils/Comps';
 
-const LVMPage = () => {
-  return (
-    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
-      {/* Heading */}
-      <Heading text="Logical Volume Manager (LVM)" />
+const GrepEF = () => {
+    return (
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
 
-      {/* Subheading */}
-      <Subheading text="Introduction" />
+            <Heading text={`Logical Volume Manager`} />
 
-      {/* Text */}
-      <Text text="LVM technology provides a flexible storage concept where volumes can be easily extended or reduced as needed. LVM is used both in physical data centers and cloud-based infrastructure." />
-      <Text text="LVM consists of physical volumes (PVs) and volume groups (VGs)." />
 
-      {/* Subheading */}
-      <Subheading text="Components of LVM" />
+            <Subheading text={`Checking Physical Volumes`} />
+            <Supersubheading text={`All Physical Volumes`}/>
+            <TerminalOutput content={`[root@localhost ~]# pvs
+PV         VG Fmt  Attr PSize PFree
+/dev/sdc1     lvm2 ---  2.00g 2.00g
+/dev/sdc2     lvm2 ---  3.00g 3.00g`}/>
 
-      {/* Subheading */}
-      <Subheading text="Physical Volume (PV)" />
+            <Supersubheading text={`Specific Physical Volume`}/>
+            <TerminalOutput content={`[root@localhost ~]# pvs /dev/sdc1
+PV         VG Fmt  Attr PSize PFree
+/dev/sdc1     lvm2 ---  2.00g 2.00g`}/>
 
-      {/* Text */}
-      <Text text="A physical volume is a partition on a disk with the hex code 8e. At least one physical volume is required to create a volume group." />
 
-      {/* Subheading */}
-      <Subheading text="Volume Group (VG)" />
+            <Supersubheading text={`Creating a Physical Volume`}/>
+            <TerminalOutput content={`[root@localhost ~]# pvcreate /dev/sdc1
+Physical volume "/dev/sdc1" successfully created.
+Creating devices file /etc/lvm/devices/system.devices`}/>
 
-      {/* Text */}
-      <Text text="A volume group is a collection of one or more physical volumes. One volume group can be divided into one or more logical volumes (LVs). VGs act as storage containers." />
-      <Text text="Volume groups store data in chunks known as Physical Extents (PEs), which have a default size of 4MB, but this can be resized." />
 
-      {/* Subheading */}
-      <Subheading text="Logical Volume (LV)" />
+            <Subheading text={`Displaying Physical Volume Information`}/>
+            <Supersubheading text={`All Physical Volumes`}/>
+            <TerminalOutput content={`[root@localhost ~]# pvdisplay
+"/dev/sdc1" is a new physical volume of "2.00 GiB"
+--- NEW Physical volume ---
+PV Name               /dev/sdc1
+VG Name
+PV Size               2.00 GiB
+Allocatable           NO
+PE Size               0
+Total PE              0
+Free PE               0
+Allocated PE          0
+PV UUID               Ljv3ch-lc7I-F1hu-2nbp-xU2j-ypx9-2rrhFe`}/>
 
-      {/* Text */}
-      <Text text="A logical volume is a subdivision of a volume group, with an assigned filesystem and mount point. It is used to store data flexibly." />
+            <Supersubheading text={`Specific Physical Volume`}/>
+            <TerminalOutput content={`[root@localhost ~]# pvdisplay /dev/sdc2
+"/dev/sdc2" is a new physical volume of "3.00 GiB"
+--- NEW Physical volume ---
+PV Name               /dev/sdc2
+VG Name
+PV Size               3.00 GiB
+Allocatable           NO
+PE Size               0
+Total PE              0
+Free PE               0
+Allocated PE          0
+PV UUID               wHSWqM-xLYB-hyIi-gdc9-54C5-gx6M-I3H6RK`}/>
 
-      {/* Subheading */}
-      <Subheading text="Steps for Creating and Using Logical Volumes" />
+<Subheading text={`Creating a Volume Group`}/>
+<Text text={`        To create a new volume group, at least one physical volume is required. By default, the volume group is created with a PE (physical extent) size of 4MB.
+`}/>
+            <Supersubheading text={`Default PE Size`}/>
+            <TerminalOutput content={`[root@localhost ~]# vgcreate myvg1 /dev/sdc1 /dev/sdc2
+Volume group "myvg1" successfully created.`}/>
 
-      {/* Subheading */}
-      <Subheading text="1. Physical Volume (PV) Creation" />
+            <Supersubheading text={`Custom PE Size`}/>
+            <TerminalOutput content={`[root@localhost ~]# vgcreate -s 8M myvg2 /dev/sdc3
+Physical volume "/dev/sdc3" successfully created.
+Volume group "myvg2" successfully created.`}/>
+<Text text={`Here, the PE size of the volume group is set to 8MB.`}/>
 
-      {/* Text */}
-      <Text text="First, create partitions using 'fdisk' or 'parted' command but do not format them. After partitioning, create the PV using:" />
-      <Command command="pvcreate <partition1> <partition2> ..." />
-      <Text text="To see the physical volumes, use the following commands:" />
-      <Command command="pvs" />
-      <Command command="pvs <PV_name>" />
-      <Command command="pvdisplay" />
-      <Command command="pvdisplay <PV_name>" />
+<Subheading text={`Checking Volume Group Status`}/>
+            <Supersubheading text={`All Volume Groups`}/>
+            <TerminalOutput content={`[root@localhost ~]# vgs
+VG    #PV #LV #SN Attr   VSize VFree
+myvg1   2   0   0 wz--n- 4.99g 4.99g`}/>
 
-      {/* Subheading */}
-      <Subheading text="2. Volume Group (VG) Creation" />
+            <Supersubheading text={`Specific Volume Group`}/>
+            <TerminalOutput content={`[root@localhost ~]# vgs myvg1
+VG    #PV #LV #SN Attr   VSize VFree
+myvg1   2   0   0 wz--n- 4.99g 4.99g`}/>
 
-      {/* Text */}
-      <Text text="After creating physical volumes, create a volume group with at least one PV using the command:" />
-      <Command command="vgcreate <VG_name> <PVs>" />
-      <Text text="To check the status of the volume groups, use:" />
-      <Command command="vgs" />
-      <Command command="vgs <VG_name>" />
-      <Command command="vgdisplay" />
-      <Command command="vgdisplay <VG_name>" />
+<Subheading text={`Creating a Logical Volume`}/>
+            <Supersubheading text={`With Specified Size`}/>
+            <TerminalOutput content={`[root@localhost ~]# lvcreate -L +1G -n mylv1 /dev/myvg1
+Logical volume "mylv1" created.`}/>
 
-      {/* Subheading */}
-      <Subheading text="3. Logical Volume (LV) Creation" />
+            <Supersubheading text={`With Number of Logical Extents`}/>
+            <TerminalOutput content={`[root@localhost ~]# lvcreate -l 100 -n mylv2 /dev/myvg1
+Logical volume "mylv2" created.`}/>
+<Text text={`This logical volume has a size of 400MB because the logical extent size of VG myvg1 is 4MB.`} />
 
-      {/* Text */}
-      <Text text="After creating a volume group, create a logical volume using:" />
-      <Command command="lvcreate -L +<size> -n <LV_name> <VG_name>" />
-      <Command command="lvcreate -l <PE_size> -n <LV_name> <VG_name>" />
-      <Text text="To list the logical volumes and see their status, use:" />
-      <Command command="lvs" />
-      <Command command="lvdisplay" />
-      <Text text="After creating the LV, format it with the appropriate filesystem:" />
-      <Command command="mkfs.xfs <LV_partition>" />
-      <Command command="mkfs.xfs /dev/vg1/lv1" />
-      <Text text="Mount the logical volume on a mount point using:" />
-      <Command command="mount <LV_partition> <mount_point>" />
-      <Text text="Then add an entry in the /etc/fstab file and reload the systemd daemon using:" />
-      <Command command="systemctl daemon-reload" />
+<Subheading text={`Formatting a Logical Volume`}/>
+            <Supersubheading text={`With ext4`}/>
+            <TerminalOutput content={`[root@localhost ~]# mkfs.ext4 /dev/myvg1/mylv1
+mke2fs 1.46.5 (30-Dec-2021)
+Creating filesystem with 262144 4k blocks and 65536 inodes
+Filesystem UUID: 9e695f65-06f2-4513-a2ea-a2fde0f1cce5
+Superblock backups stored on blocks:
+32768, 98304, 163840, 229376
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (8192 blocks): done
+Writing superblocks and filesystem accounting information: done`}/>
 
-      {/* Subheading */}
-      <Subheading text="LV Extend" />
+            <Supersubheading text={`With xfs`}/>
+            <TerminalOutput content={`[root@localhost ~]# mkfs.xfs /dev/myvg1/mylv2
+meta-data=/dev/myvg1/mylv2       isize=512    agcount=4, agsize=25600 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=1 inobtcount=1
+data     =                       bsize=4096   blocks=102400, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=1368, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0`}/>
 
-      {/* Text */}
-      <Text text="You can extend the size of a logical volume either in an offline state or during runtime, without unmounting it. However, there must be available space in the VG." />
-      <Text text="For ext2, ext3, or ext4 filesystems, there are two methods:" />
-      <Subheading text="1st Method: Using Two Commands" />
-      <Command command="lvextend -L +<size> <LV_name>" />
-      <Command command="resize2fs <LV_name>" />
-      <Text text="This command resizes the filesystem after extending the logical volume." />
+            <Subheading text={`Resizing Logical Volumes`}/> 
+            <Text text={`        Logical volumes can be resized at runtime, provided there is enough space in the respective volume group. Synchronization with the filesystem is required.
+`}/>
+<Supersubheading text={`Change Size to a Given Value`}/>
+            <TerminalOutput content={`[root@localhost ~]# lvresize -L 900M /dev/myvg1/mylv2
+Size of logical volume myvg1/mylv2 changed from 600.00 MiB to 900.00 MiB.`}/>
 
-      <Subheading text="2nd Method: Using lvresize" />
-      <Command command="lvresize" />
-      <Text text="This command resizes the logical volume and automatically adjusts the filesystem." />
+            <Supersubheading text={`Extend by a Specified Size`}/> 
+            <TerminalOutput content={`[root@localhost ~]# lvresize -L +200M /dev/myvg1/mylv2
+Size of logical volume myvg1/mylv2 changed from 400.00 MiB to 600.00 MiB.`}/>
 
-      <Text text="For xfs filesystems, the process differs:" />
-      <Subheading text="1st Method (up to RHEL 7):" />
-      <Command command="lvextend + xfs_growfs" />
+        </div>
+    )
+}
 
-      <Subheading text="2nd Method (RHEL 8 and newer):" />
-      <Command command="lvresize" />
-
-      {/* Subheading */}
-      <Subheading text="LVM Reduce" />
-
-      {/* Text */}
-      <Text text="LVM reduction is only supported in offline mode and is not supported on xfs filesystems. For ext2, ext3, and ext4 filesystems, use:" />
-      <Command command="lvresize -L <size> -r <LV_name>" />
-      <Text text="This command adjusts the size of the LV." />
-
-      {/* Subheading */}
-      <Subheading text="VG Extending and Reduction" />
-
-      {/* Text */}
-      <Text text="Volume groups can be extended or reduced by adding or removing physical volumes, depending on the system's requirements." />
-
-    </div>
-  );
-};
-
-export default LVMPage;
+export default GrepEF;
