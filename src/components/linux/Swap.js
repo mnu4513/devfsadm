@@ -3,7 +3,7 @@ import { Heading, Text, Subheading, TerminalOutput, Line } from '../utils/Comps'
 
 const Swap = () => {
     return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+        <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
             {/* Heading */}
             <Heading text="Swap Partition" />
             <Text text='A swap space is an area of a disk under the control of the Linux kernel memory management subsystem. The kernel uses swap space to supplement the system RAM by holding inactive pages of memory. The combined system RAM plus swap space is called virtual memory.' />

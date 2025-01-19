@@ -66,12 +66,23 @@ export const TerminalOutput = ({ content }) => {
             </div>
           );
         }
+        if (line.startsWith("/>") || line.startsWith("ftp") || line.startsWith("lftp") || line.startsWith("sftp")) {
+          return (
+              <span className="text-blue-300">
+                {line}
+              </span>
+          );
+        }
         // Handle other lines (output or empty)
         return <div key={index} className="text-green-400">{line}</div>;
       })}
     </div>
     );
   };
+
+
+
+
 
 // Command Component :- [Commnad or Command Example]
 export const Command = ({ command }) => {
