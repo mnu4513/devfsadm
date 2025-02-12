@@ -1,100 +1,87 @@
 import React from 'react';
-import { img_base_url } from '../Config';
+import { Heading, Subheading, Supersubheading, Text, TerminalOutput } from "../utils/Comps";
 
 const SuperUser = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl font-bold mt-5 ml-2'>Super User in Solaris</h2>
-        <p className='ml-2 mt-3'>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      <Heading text={`Super User in Solaris`} />
 
-          In Solaris, the superuser, also known as the root user, has the highest level of administrative privileges. The superuser has unrestricted access to all files and commands on the system, making it a critical account for system administration tasks.         </p>
-        <p className='ml-2 my-3'>
-          Here are key points about the superuser in Solaris:
-        </p>
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            1. Username:
-          </span>
-          The superuser's username is typically "root".
-        </p>
+      <Text text={`In Solaris, the superuser, also known as the root user, has the highest level of administrative privileges. The superuser has unrestricted access to all files and commands on the system, making it a critical account for system administration tasks.`} />
 
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            2. Access:
-          </span>
-          The root user has full access to the entire file system and can execute any command with elevated privileges.
-        </p>
+      <Text text={`Here are key points about the superuser in Solaris:`} />
 
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            3. Privileges:
-          </span>
-          The root user can modify system files, install software, configure system settings, and perform other administrative tasks that regular users cannot.
-        </p>
+      <Supersubheading text={`1. Username:`} />
+      <Text text={`The superuser's username is typically "root".`} />
 
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            4. Security:
-          </span>
-          Because of the extensive privileges, it's crucial to use the root account judiciously to avoid accidental system damage.
-        </p>
+      <Supersubheading text={`2. Access:`} />
+      <Text text={`The root user has full access to the entire file system and can execute any command with elevated privileges.`} />
 
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            5. Logging In:
-          </span>
-          You can log in as the root user by using the su (substitute user) command or by logging in directly if you have the root password.
-        </p>
+      <Supersubheading text={`3. Privileges:`} />
+      <Text text={`The root user can modify system files, install software, configure system settings, and perform other administrative tasks that regular users cannot.`} />
 
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            6. Command Prefixing:
-          </span>
-          When executing commands as the root user, it's common to use the sudo (superuser do) command to prefix commands with elevated privileges.
-        </p>
+      <Supersubheading text={`4. Security:`} />
+      <Text text={`Because of the extensive privileges, it's crucial to use the root account judiciously to avoid accidental system damage. The root account should only be used when necessary.`} />
 
-        <p className='ml-2 mt-3'>
-          <span className='font-bold mr-2'>
-            7. Security Concerns:
-          </span>
-          It's recommended to use the root account sparingly and, when possible, perform administrative tasks using a regular user account with sudo privileges. This adds an additional layer of security.
-        </p>
-      </div>
-      <div >
-        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
+      <Supersubheading text={`5. Logging In:`} />
+      <Text text={`You can log in as the root user by using the \`su\` (substitute user) command or by logging in directly if you have the root password.`} />
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold'>
-          1. Make entry to sudoers file:
-        </p>
-        <p className=' font-bold ml-5'> {`vi /etc/sudoers`} </p>
-        <img src={`${img_base_url}pr3rtujhpvwhg98cqefb.png`} alt='' className='mt-3 md:w-2xl lg:max-w-5xl' />
-        <p className='mt-3'> 
-          In this file we will search - <p className='font-bold'> root ALL=(ALL) ALL</p>
-        </p>
-        <p className='mt-3'> 
-          After this line we will make a new entry for another user -<p className='font-bold'> {`<user_name> All=(ALL) ALL`}</p>
-        </p>
-        <img src={`${img_base_url}wxrcwnrsbzho002pis3i.png`} alt='' className='mt-3 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text={`6. Command Prefixing:`} />
+      <Text text={`When executing commands as the root user, it's common to use the \`sudo\` (superuser do) command to prefix commands with elevated privileges. This grants temporary root access to execute specific commands without fully logging in as root.`} />
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold'>
-          2. To Switch the User:
-        </p>
-        <p className=' font-bold ml-5'> {`su - <user_name>`} </p>
-        <img src={`${img_base_url}gumblrprgfq6efa9f7px.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text={`7. Security Concerns:`} />
+      <Text text={`It's recommended to use the root account sparingly and, when possible, perform administrative tasks using a regular user account with \`sudo\` privileges. This adds an additional layer of security by reducing the risk of accidental or malicious changes.`} />
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold'>
-          3. To Provide Sudo Privileges:
-        </p>
-        <p className=' font-bold ml-5'> {`sudo su - `} </p>
-        <img src={`${img_base_url}ykhrgzslz3iveoyzsf0f.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      
+
+      <Subheading text={`1. Make entry to sudoers file:`} />
+      <Text text={`To grant sudo access to a user, you need to modify the sudoers file. This file defines which users can execute commands as the superuser.`} />
+
+      <Supersubheading text={`Command to open the sudoers file:`} />
+      <TerminalOutput content={`[root@localhost ~]# vi /etc/sudoers`} />
+      
+      <Text text={`In this file, you will search for the line:`} />
+      <TerminalOutput content={`
+# Host alias specification
+# User alias specification
+# Cmnd alias specification
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+john    ALL=(ALL:ALL) ALL
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+# See sudoers(5) for more information on "@include" directives:
+@includedir /etc/sudoers.d`} />
+
+      <Text text={`After this line, you will add a new entry for another user like:`} />
+      <TerminalOutput content={`john ALL=(ALL) ALL`} />
+      
+      <Text text={`This allows the specified user to run any command as the root user.`} />
+
+      
+
+      <Subheading text={`2. To Switch the User:`} />
+      <Text text={`The \`su\` (substitute user) command allows you to switch to another user account, including the root user.`} />
+
+      <Supersubheading text={`Command to switch to another user:`} />
+      <TerminalOutput content={`[root@localhost ~]# su - john
+[john@localhost ~]$`} />
+      
+      <Text text={`This command allows you to switch to the specified user account. If you switch to the root user, you will be logged in with full administrative privileges.`} />
+
+      
+
+      <Subheading text={`3. To Provide Sudo Privileges:`} />
+      <Text text={`To execute commands as the root user, you can prefix the command with \`sudo\`, which grants temporary root privileges.`} />
+
+      <Supersubheading text={`Command to execute as root:`} />
+      <TerminalOutput content={`[root@localhost ~]# su - john
+[john@localhost ~]$ sudo su -
+[sudo] password for john:
+[root@localhost ~]#`} />
+      
+      <Text text={`This command allows you to execute commands with root privileges without fully switching to the root account. After executing \`sudo su -\`, you will be able to execute administrative commands with elevated rights.`} />
 
     </div>
   );
