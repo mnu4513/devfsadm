@@ -1,238 +1,255 @@
+import { Heading, Supersubheading, TerminalOutput, Text } from "../utils/Comps";
 import React from 'react';
-import { img_base_url } from '../Config';
-import YouTubeVideo from '../utils/YouTubeVideo';
 
 const BasicCommands = () => {
   return (
 
     <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl text-red-500 font-bold mt-5 ml-4'>Basic Commands in Solaris</h2>
-        <p className='ml-4 mt-3'>
-          In Solaris, there are some basic commands, those will be very useful in day to day monitoring or to do daily tasks.
-        </p>
-        <p className='ml-4 my-3'>
-          Here are some common basic commands:
-        </p>
-      </div>
-      <YouTubeVideo video_id={`i8Vwtaozp_A`} />
+
+<Heading text="Basic Commands in Solaris" />
+
+<Text text="In Solaris, there are some basic commands that will be very useful for daily tasks like monitoring and managing your system." />
+<Text text="Here are some of the most common basic commands:" />
+
+        <Supersubheading text={"1. Start a friendly session:"} />
+        <TerminalOutput content="[root@localhost ~]# bash
+[root@localhost ~]#" />
+        <Text text="This command starts a new Bash shell session, which is more user-friendly and interactive." />
+      
+
+        <Supersubheading text="2. Check commands history:" />
+        <TerminalOutput content={`[root@localhost ~]# history
+    1  clear
+    2  apt upgrade
+    3  apt install
+    4  clear
+    5  vim /etc/sudoers
+    6  exit
+    7  history
+[root@localhost ~]#`}/>
+        <Text text="This command displays a list of previously executed commands, helping you track your actions." />
+      
+
+        <Supersubheading text="3. Current date:" />
+        <TerminalOutput content="[root@localhost ~]# date
+Wed Feb 12 05:21:57 UTC 2025
+[root@localhost ~]#" />
+        <Text text="This command displays the current system date and time." />
+      
+
+        <Supersubheading text="4. Calendar:" />
+        <TerminalOutput content={`[root@localhost ~]# cal
+   February 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28
+
+[root@localhost ~]#`} />
+        <Text text="This command displays the current month's calendar." />
+      
+
+        <Supersubheading text="5. Calendar for a Specific Year:" />
+        <TerminalOutput content={`[root@localhost ~]# cal 2024
+                            2024
+      January               February               March        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6               1  2  3                  1  2
+ 7  8  9 10 11 12 13   4  5  6  7  8  9 10   3  4  5  6  7  8  9
+14 15 16 17 18 19 20  11 12 13 14 15 16 17  10 11 12 13 14 15 16
+21 22 23 24 25 26 27  18 19 20 21 22 23 24  17 18 19 20 21 22 23
+28 29 30 31           25 26 27 28 29        24 25 26 27 28 29 30
+                                            31                  
+
+       April                  May                   June        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6            1  2  3  4                     1
+ 7  8  9 10 11 12 13   5  6  7  8  9 10 11   2  3  4  5  6  7  8
+14 15 16 17 18 19 20  12 13 14 15 16 17 18   9 10 11 12 13 14 15
+21 22 23 24 25 26 27  19 20 21 22 23 24 25  16 17 18 19 20 21 22
+28 29 30              26 27 28 29 30 31     23 24 25 26 27 28 29
+                                            30                  
+
+        July                 August              September      
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6               1  2  3   1  2  3  4  5  6  7
+ 7  8  9 10 11 12 13   4  5  6  7  8  9 10   8  9 10 11 12 13 14
+14 15 16 17 18 19 20  11 12 13 14 15 16 17  15 16 17 18 19 20 21
+21 22 23 24 25 26 27  18 19 20 21 22 23 24  22 23 24 25 26 27 28
+
+28 29 30 31           25 26 27 28 29 30 31  29 30
 
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          1. To do friendly session:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`bash`} </p>
-        <img src={`${img_base_url}qfcs2qnw3emi5pxegzx5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          2. To check command history:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`history`} </p>
-        <img src={`${img_base_url}uomwkaogoici20wqhok5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          3.To show the date:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`date`} </p>
-        <img src={`${img_base_url}zjm0nlqlivbbi5segvik.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      October               November              December
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          4. To check the calander:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`cal`} </p>
-        <img src={`${img_base_url}qxod4zxgtxwxslqo3cfs.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          5. To check calander or a particular year :
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`cal 2014`} </p>
-        <img src={`${img_base_url}qui2ebwukyrr7qhg70w8.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+       1  2  3  4  5                  1  2   1  2  3  4  5  6  7
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          6. To Calculate the data:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`bc`} </p>
-        <img src={`${img_base_url}rszcduwt4lguirmz1fet.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+ 6  7  8  9 10 11 12   3  4  5  6  7  8  9   8  9 10 11 12 13 14
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          7. To clear the terminal screen:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`clear`} </p>
-        <img src={`${img_base_url}jr5zeqv9311aekofr3t3.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          8. To check present working directory:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`pwd`} </p>
-        <img src={`${img_base_url}h4l8dbf41mqraz2j7dvz.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          9. To change the directory:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`cd <path_of_dir>`} </p>
-        <img src={`${img_base_url}z4huurxquyhpy7ezcuqn.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+27 28 29 30 31        24 25 26 27 28 29 30  29 30 31
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          10. To go to step back directory:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`cd ..`} </p>
-        <img src={`${img_base_url}ply5vwn44amkjg9z1wbg.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          11. To create a new directory:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`mkdir new-folder`} </p>
-        <img src={`${img_base_url}mf9knkmemkmf8yjewrpj.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          12. To remove file or directory:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`rm -rf <file_or_dir_path>`} </p>
-        <img src={`${img_base_url}dlee5jsa6zj8nrfdux2t.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+[root@localhost ~]#`} />
+        <Text text="This command displays the calendar for a specific year, in this case, 2014." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          13. To chack the directory recursively:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`ls -R`} </p>
-        <img src={`${img_base_url}xp8o4xrishzudhznlb4y.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="6. Calculate Data:" />
+        <TerminalOutput content={`[root@localhost ~]# bc
+5+5
+10
+quit
+[root@localhost ~]#`} />
+        <Text text="The 'bc' command opens an interactive calculator for performing mathematical calculations." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          14. To check OS details:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`uname -a`} </p>
-        <img src={`${img_base_url}eb7ytarhtqkuwrkbnuri.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="7. Clear the terminal screen:" />
+        <TerminalOutput content="[root@localhost ~]# clear" />
+        <Text text="This command clears the terminal screen, removing all previous output." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          15. To get memory, cpu information process wise:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`top`} </p>
-        <img src={`${img_base_url}xito4bpx68cpjjkv40i1.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="8. Check the present working directory:" />
+        <TerminalOutput content={`[root@localhost ~]# pwd
+/root
+[root@localhost ~]#`} />
+        <Text text="This command displays the full path of the current working directory." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          16. To get memory, cpu info user wise and process wise:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`prstat -a`} </p>
-        <img src={`${img_base_url}urieqshyiqu63b9bcuzm.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="9. Change the directory:" />
+        <TerminalOutput content={`[root@localhost ~]# cd /usr/bin
+[root@localhost /usr/bin]# pwd
+/usr/bin
+[root@localhost /usr/bin]#`} />
+        <Text text="This command allows you to navigate to a different directory by specifying its path." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          17. To list down the terminal:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`tty`} </p>
-        <img src={`${img_base_url}xpiad6kxctron7odcqbf.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="10. Go to the previous directory:" />
+        <TerminalOutput content={`[root@localhost /usr/bin]# pwd
+/usr/bin
+[root@localhost /usr/bin]# cd ..
+[root@localhost /usr]# pwd
+/usr
+[root@localhost /usr]#`} />
+        <Text text="This command navigates to the parent directory (one level up)." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          18. To get the command path:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`which <command_name>`} </p>
-        <img src={`${img_base_url}xwbhrgqr9tz6zknk4kwx.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="11. Create a new directory:" />
+        <TerminalOutput content={`[root@localhost ~]# mkdir folder1
+[root@localhost ~]# ls
+folder1
+[root@localhost ~]#`} />
+        <Text text="This command creates a new directory with the specified name (in this case, 'folder1')." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          19. To get the hostname:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`hostname`} </p>
-        <img src={`${img_base_url}i4rkwo5pzkernsxsw6kx.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="12. Remove a file or directory:" />
+        <TerminalOutput content={`[root@localhost ~]# rm -rf folder1/
+[root@localhost ~]# ls
+[root@localhost ~]#`} />
+        <Text text="This command removes a file or directory. Use with caution, as it permanently deletes files." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          20. To change the hostname:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`hostname <new_name>`} </p>
-        <img src={`${img_base_url}v4onbpvjjts9ud1chr6v.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="13. Check the directory recursively:" />
+        <TerminalOutput content={`[root@localhost ~]# ls -R /root
+/root:
+folder1
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          21. To check system uptime:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`uptime`} </p>
-        <img src={`${img_base_url}uabrcjjaxzz10ls9nygv.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+/root/folder1:
+[root@localhost ~]#`} />
+        <Text text="This command lists all files and directories recursively within the specified directory." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          22. To get user info:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`who am i`} </p>
-        <img src={`${img_base_url}nysejfjofshj6k2bmime.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="14. check OS details:" />
+        <TerminalOutput content="uname -a" />
+        <Text text="This command displays detailed information about the operating system." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          23. To check host ID:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`hostid`} </p>
-        <img src={`${img_base_url}jyrex3e1ixzkgh1unrfb.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="15. get memory and CPU information process-wise:" />
+        <TerminalOutput content={`[root@localhost ~]# top
+top - 05:45:04 up  1:51,  2 users,  load average: 0.00, 0.00, 0.00   Tasks:  35 total,   1 running,  34 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.1 sy,  0.0 ni, 99.8 id,  0.1 wa,  0.0 hi,  0.0  MiB Mem :  15724.1 total,  14881.3 free,    536.1 used,    419.5 buf
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  15188.0 ava
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          24. To check physical cpu:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`psrinfo -p`} </p>
-        <img src={`${img_base_url}c3yfgumagj1mx9zatp8v.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM
+    371 root      20   0 2082616  46660  26232 S   0.3   0.3               1 root      20   0   22092  12540   8860 S   0.0   0.1
+      2 root      20   0    2732   1888   1760 S   0.0   0.0
+      6 root      20   0    2732    116    116 S   0.0   0.0
+     53 root      19  -1   66672  18992  17840 S   0.0   0.1
+     96 root      20   0   24352   6528   4392 S   0.0   0.0
+    109 systemd+  20   0   21364  12404  10204 S   0.0   0.1
+    110 systemd+  20   0   90760   6972   6100 S   0.0   0.0
+    208 root      20   0    4160   2408   2168 S   0.0   0.0
+    209 message+  20   0    9824   4712   3780 S   0.0   0.0
+    213 polkitd   20   0  309068   7420   6544 S   0.0   0.0
+    217 root      20   0   17916   7856   6824 S   0.0   0.0
+    219 root      20   0 1755336  18348   9676 S   0.0   0.1
+    224 syslog    20   0  222808   4844   3708 S   0.0   0.0
+    227 root      20   0  334724  19304  14796 S   0.0   0.1
+    231 root      20   0   16692   5740   4904 S   0.0   0.0
+    368 root      20   0  107908  21668  12448 S   0.0   0.1
+    374 root      20   0    2732    792    716 S   0.0   0.0
+    379 root      20   0    2688    792    716 S   0.0   0.0
+    393 root      20   0 2189404  75816  47632 S   0.0   0.5
+    661 root      20   0    2740    216     88 S   0.0   0.0
+    662 root      20   0    2740    220     88 S   0.0   0.0
+    663 test      20   0    5780   4940   3280 S   0.0   0.0
+    664 root      20   0    8284   3628   3084 S   0.0   0.0
+    715 test      20   0   20152  10804   8744 S   0.0   0.1
+    716 test      20   0   22192   3104   1640 S   0.0   0.0
+    727 test      20   0    5780   4508   3012 S   0.0   0.0
+    749 root      20   0   20160  10804   8744 S   0.0   0.1
+    750 root      20   0   22200   3028   1576 S   0.0   0.0
+    824 root      20   0   14708   5736   4840 S   0.0   0.0
+    825 root      20   0   14708   2320   1356 S   0.0   0.0
+    826 root      20   0    7884   3016   2600 S   0.0   0.0
+    827 root      20   0    5912   5060   3268 S   0.0   0.0
+   1045 root      20   0    4852   3916   3280 S   0.0   0.0
+   1195 root      20   0    9076   5168   3044 R   0.0   0.0
+`} />
+        <Text text="This command displays a dynamic real-time view of the system’s processes, memory, and CPU usage." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          25. To check both (physical and virtual) cpu:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`psrinfo -vp`} </p>
-        <img src={`${img_base_url}yil27kggkmmtg4afolgk.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="16. get memory and CPU info user-wise and process-wise:" />
+        <TerminalOutput content="prstat -a" />
+        <Text text="This command shows process statistics sorted by user, including memory and CPU usage." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          26. To get command's full info:
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`man <any_command>`} </p>
-        <img src={`${img_base_url}wnayfgyiibrz0ggf2qhk.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="17. List down the terminal:" />
+        <TerminalOutput content={`[root@localhost ~]# tty
+/dev/pts/2
+[root@localhost ~]#`} />
+        <Text text="This command displays the file name of the terminal connected to the user." />
+      
 
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          27. To get the number of lines of output
-        </p>
-        <p className=' font-semibold ml-5 text-violet-600'> {`<command> | wc -l`} </p>
-        <img src={`${img_base_url}bkwi56lukq9ej9g0jeuh.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+        <Supersubheading text="18. Get the command path:" />
+        <TerminalOutput content={`[root@localhost ~]# which reboot
+/usr/sbin/reboot
+[root@localhost ~]#`} />
+        <Text text="This command shows the full path of the specified command." />
+      
+
+        <Supersubheading text="19. Get the hostname:" />
+        <TerminalOutput content={`[root@localhost ~]# hostname
+localhost
+[root@localhost ~]#`} />
+        <Text text="This command displays the hostname of the current system." />
+      
+
+        <Supersubheading text="20. Find out network interface details:" />
+        <TerminalOutput content="ifconfig" />
+        <Text text="This command displays network interface configuration details like IP addresses." />
+      
+
+
     </div>
   );
 };

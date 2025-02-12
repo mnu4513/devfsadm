@@ -52,7 +52,7 @@ export const TerminalOutput = ({ content }) => {
     >
       {content.split("\n").map((line, index) => {
         // Handle lines with user prompts
-        if (line.startsWith("[john@localhost") || line.startsWith("[root@localhost")) {
+        if (line.startsWith("[john@localhost") || line.startsWith("[root@localhost") || line.startsWith("[root@station") || line.startsWith("[john@station")) {
           const delimiter = line.includes("$") ? "$" : "#";
           return (
             <div key={index}>
