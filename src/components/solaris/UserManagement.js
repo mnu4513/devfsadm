@@ -1,206 +1,119 @@
 import React from 'react';
-import { img_base_url } from '../Config';
-import YouTubeVideo from '../utils/YouTubeVideo';
+import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line } from "../utils/Comps";
 
 const UserManagement = () => {
   return (
     <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl font-bold text-red-500 mt-5 ml-2'>User Management in Solaris</h2>
-        <p className='ml-2 mt-3'>
-          In Solaris, user management involves creating, modifying, and deleting user accounts, as well as managing user attributes.        </p>
+      <Heading text="User Management in Solaris" />
+      
+      <Text text="In Solaris, user management involves creating, modifying, and deleting user accounts, as well as managing user attributes." />
+      
+      {/* Important Files */}
+      <Subheading text="Important Files in User Management:" />
+      <Text text={`Here are some important files in user management:`} />
+      <ul className='ml-5'>
+        <li className='font-bold'>/etc/passwd</li>
+        <li className='font-bold'>/etc/shadow</li>
+      </ul>
 
-      </div>
+      <Line />
+      
+      {/* Files Explanation */}
+      <Text text={`1. To get All User's Information:`} />
+      <TerminalOutput content={`cat /etc/passwd`} />
+      <Text text={`The \`/etc/passwd\` file contains essential user information such as username, UID, GID, home directory, and shell.`} />
+      
+      <Text text={`2. To get All User's Information in Password encrypted form:`} />
+      <TerminalOutput content={`cat /etc/shadow`} />
+      <Text text={`The \`/etc/shadow\` file stores password information in an encrypted form, as well as the date of the last password change and password expiration details.`} />
 
-      <YouTubeVideo video_id={`M1tZMiTUpcw`} />
+      <Text text={`3. To check Password policy Information:`} />
+      <TerminalOutput content={`cat /etc/default/passwd`} />
+      <Text text={`The \`/etc/default/passwd\` file contains settings related to password policies like password length and aging.`} />
 
-      <div className='mb-4 ml-2 mt-10'>
-        <p> Here are some important files in user management:
-          <li className='font-bold'> /etc/passwd</li>
-          <li className='font-bold'> /etc/shadow</li>
-        </p>
-        <p className='mt-5 font-bold text-red-500'>
-          1. To get All User's Information:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`cat /etc/passwd`} </p>
-        <img src={`${img_base_url}oym12gxwlmiccqxcz1ad.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      <Text text={`4. To get a copy of Password policy Information:`} />
+      <TerminalOutput content={`cat /etc/opasswd`} />
+      <Text text={`The \`/etc/opasswd\` file stores a backup copy of the \`/etc/passwd\` file to recover it if deleted by mistake.`} />
 
-        <p className='mt-5 font-bold text-red-500'>
-          2. To get All User's Information in Password encrypted form:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`cat /etc/shadow`} </p>
-        <p>
-          It contains user management information in Password encrypted format.
-        </p>
-        <img src={`${img_base_url}zmygl6o92p5niak9sgsb.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      <Text text={`5. To recover the shadow file:`} />
+      <TerminalOutput content={`pwconv`} />
+      <Text text={`The \`pwconv\` command is used to recover the \`/etc/shadow\` file if it is lost.`} />
+      <Text text={`After recovering the shadow file, reset the root password with \`passwd root\` command.`} />
 
-        <p className='mt-5 font-bold text-red-500'>
-          3. To check Password policy Information:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`cat /etc/default/passwd`} </p>
-        <img src={`${img_base_url}woxuwkkpcmukmyopzpe4.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      <Line />
+      
+      {/* User Management Commands */}
+      <Subheading text="Common Commands for User Management in Solaris:" />
 
-        <p className='mt-5 font-bold text-red-500'>
-          4. To get copy of Password policy Information:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`cat /etc/opasswd`} </p>
-        <p>
-          It use to recover <sapn className='font-bold'> /etc/passwd</sapn> file, if deleted by mistake.
-        </p>
-        <img src={`${img_base_url}wa0nj9n1vbgq3xuljh7e.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
+      <Text text={`Here are some common commands for managing users in Solaris:`} />
 
-        <p className='mt-5 font-bold text-red-500'>
-          5. To recover the shadow file:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`pwconv`} </p>
-        <p>
-          It use to recover <sapn className='font-bold'> shadow </sapn> file, if deleted by mistake.
-        </p>
-        <p>
-          After recovered the shadow file we have to set the root Password using command <span className='font-bold' >passwd root</span>.
-        </p>
-        <img src={`${img_base_url}rfngt4zbztopn6facyz6.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="1. Creating a User:" />
+      <TerminalOutput content={`useradd <user_name>`} />
+      <Text text={`The \`useradd\` command creates a new user account. Replace \`<user_name>\` with the desired username.`} />
 
-      <hr className='my-3 ml-4' />
-      <p className='ml-4 my-3 mt-5 font-bold'>
-        Here are some common commands for user management in Solaris:
-      </p>
-      <div className='mb-4 ml-4 mt-10'>
-        <p className='mt-5 font-bold text-red-500'>
-          1. Creating a User:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`useradd <user_name>`} </p>
-        <img src={`${img_base_url}ximpj402bn5ked8fbg8j.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="2. Creating a User with Custom Info:" />
+      <TerminalOutput content={`useradd -u <UID> -g <GID> -c <comment> -m -d <home_dir> <user_name>`} />
+      <Text text={`The \`useradd\` command with additional options allows you to specify a custom user ID (\`-u\`), group ID (\`-g\`), comment (\`-c\`), home directory (\`-d\`), and create the user's home directory (\`-m\`).`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          2. Creating a User with Custom Info:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`useradd -u <UID> -g <GID> -c <comment> -m -d <home_dir> <user_name>`} </p>
-        <img src={`${img_base_url}kfsgvdkzvpzncqnfgxea.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="3. To Modify the User Name:" />
+      <TerminalOutput content={`usermod -l <new_user_name> <old_user_name>`} />
+      <Text text={`The \`usermod -l\` command changes the username of an existing account.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          3. To Modify the User Name:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`usermod -l <new_user_name> <old_user_name>`} </p>
-        <img src={`${img_base_url}zl2im2rqscfafsawa2ik.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="4. To Modify the User ID:" />
+      <TerminalOutput content={`usermod -u <new_ID> <user_name>`} />
+      <Text text={`The \`usermod -u\` command allows you to modify the user ID (UID) of an existing user.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          4. To Modify the User ID:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`usermod -u <new_ID> <user_name>`} </p>
-        <img src={`${img_base_url}csvtb4teygdxrm9dtyjm.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="5. To Modify the User's Group:" />
+      <TerminalOutput content={`usermod -g <new_GID> <user_name>`} />
+      <Text text={`The \`usermod -g\` command changes the user's primary group.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          5. To Modify the User's Group:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`usermod -g <new_GID> <user_name>`} </p>
-        <img src={`${img_base_url}byrnnjopeuhwbni47imt.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="6. To Modify the User's Comment:" />
+      <TerminalOutput content={`usermod -c <new_comment> <user_name>`} />
+      <Text text={`The \`usermod -c\` command allows you to modify the comment field for the user, which typically contains the user's full name.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          6. To Modify the User's Comment:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`usermod -c <new_comment> <user_name>`} </p>
-        <img src={`${img_base_url}prnzxvcvebxw5qvmwvqd.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="7. To Modify the User's Home Directory:" />
+      <TerminalOutput content={`usermod -d <new_dir> <user_name>`} />
+      <Text text={`The \`usermod -d\` command changes the user's home directory.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          7. To Modify the User's Home Directory:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`usermod -d <new_dir> <user_name>`} </p>
-        <img src={`${img_base_url}gktfyeld7inkknompss1.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="8. To Modify the User's Shell:" />
+      <TerminalOutput content={`usermod -s <new_shell> <user_name>`} />
+      <Text text={`The \`usermod -s\` command changes the user's default shell.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          8. To Modify the User's Shell:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`usermod -s <new_shell> <user_name>`} </p>
-        <img src={`${img_base_url}mo6c1zhchcdxxsglb27d.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="9. To Delete a User without Home Directory:" />
+      <TerminalOutput content={`userdel <user_name>`} />
+      <Text text={`The \`userdel\` command deletes a user account but keeps the user's home directory intact.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          9. To Delete a User without home directory:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`userdel <user_name>`} </p>
-        <img src={`${img_base_url}nujnysxsgwbqmybl1okq.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="10. To Delete a User along with Home Directory:" />
+      <TerminalOutput content={`userdel -r <user_name>`} />
+      <Text text={`The \`userdel -r\` command removes both the user account and the associated home directory.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          10. To Delete a User along with Home Directory:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`userdel -r <user_name>`} </p>
-        <img src={`${img_base_url}rovbdvotocbcsrbqtsmc.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="11. To Set or Change a User's Password:" />
+      <TerminalOutput content={`passwd <user_name>`} />
+      <Text text={`The \`passwd\` command allows you to set or change the password of a user account.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          11. To User's Password:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`passwd <user_name>`} </p>
-        <img src={`${img_base_url}chs9iokqelbs78iqu7oy.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="12. To Check User's Password Status:" />
+      <TerminalOutput content={`passwd -s <user_name>`} />
+      <Text text={`The \`passwd -s\` command checks the status of a user's password, such as whether it is locked or expired.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          12. To check User's Password Status:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`passwd -s <user_name>`} </p>
-        <img src={`${img_base_url}edsqugjxzi5tqrruzwgm.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="13. To Lock a User Account:" />
+      <TerminalOutput content={`passwd -l <user_name>`} />
+      <Text text={`The \`passwd -l\` command locks the specified user account, preventing the user from logging in.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          13. To lock a User:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`passwd -l <user_name>`} </p>
-        <img src={`${img_base_url}lrzlmhkon2vfqs3chb7y.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="14. To Unlock a User Account:" />
+      <TerminalOutput content={`passwd -u <user_name>`} />
+      <Text text={`The \`passwd -u\` command unlocks a previously locked user account.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          14. To unlock a User:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`passwd -u <user_name>`} </p>
-        <img src={`${img_base_url}poito4lmt8xm7htcwnsw.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="15. To Delete the Password of a User:" />
+      <TerminalOutput content={`passwd -d <user_name>`} />
+      <Text text={`The \`passwd -d\` command removes the password of a user, allowing login without a password (not recommended for regular use).`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          15. To Delete Password of a User:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`passwd -d <user_name>`} </p>
-        <img src={`${img_base_url}amblu0hsq4cvho5vnhri.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="16. To Get User Information:" />
+      <TerminalOutput content={`id <user_name>`} />
+      <Text text={`The \`id\` command provides information about the user, including UID, GID, and groups.`} />
 
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          16. To get User Information:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`id <user_name>`} </p>
-        <img src={`${img_base_url}ffwmoj5ngcttkxevzu27.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-
-      <div className='mb-4 ml-4'>
-        <p className='mt-5 font-bold text-red-500'>
-          17. To get User Information along with secondary group:
-        </p>
-        <p className=' font-bold ml-5 text-violet-600'> {`id -a <user_name>`} </p>
-        <img src={`${img_base_url}fnxkbwkob3fczckafbxz.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text="17. To Get User Information along with Secondary Groups:" />
+      <TerminalOutput content={`id -a <user_name>`} />
+      <Text text={`The \`id -a\` command shows detailed user information, including all groups the user belongs to (primary and secondary).`} />
 
     </div>
   );
