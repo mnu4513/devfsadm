@@ -1,139 +1,72 @@
 import React from 'react';
-import { img_base_url } from '../Config';
+import { Heading, Subheading, Supersubheading, Text, TerminalOutput } from '../utils/Comps';
 
-const CronJob = () => {
+const Crontab = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl font-bold mt-5 ml-2'>
-          Crontab in Solaris
-        </h2>
-        <p className='ml-2 mt-3 mb-8'>
-          In Solaris, the cron daemon is responsible for executing scheduled commands or scripts at specified intervals. The crontab command is used to manage these scheduled tasks.
-        </p>
-      </div>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      <Heading text={`Crontab in Solaris`} />
+      
+      <Text text={`In Solaris, the cron daemon is responsible for executing scheduled commands or scripts at specified intervals. The crontab command is used to manage these scheduled tasks, such as creating, modifying, listing, or removing cron jobs.`} />
 
-      <div >
-        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
+      <Subheading text={`1. Listing Cron Jobs:`} />
+      <Text text={`The crontab command allows users to list their current cron jobs. Here's how to use it:`} />
+      
+      <Supersubheading text={`To list the Cronjobs entry for the currently logged-in user:`} />
+      <TerminalOutput content={`crontab -l`} />
+      <Text text={`This command will display the cron jobs that are scheduled for the current user.`} />
 
-      <p className='ml-2 mt-8'>
-        There are six fileds in a cronjob -
-        <ul className='list-decimal ml-7'>
-          <li>
-            Minute
-          </li>
-          <li>
-            Hour
-          </li>
-          <li>
-            Day of Month
-          </li>
-          <li>
-            Month
-          </li>
-          <li>
-            Day of Week
-          </li>
-          <li>
-            Command
-          </li>
-        </ul>
-      </p>
+      <Supersubheading text={`To list the Cronjob entry for a particular user:`} />
+      <TerminalOutput content={`crontab -l -u username`} />
+      <Text text={`Replace \`username\` with the specific user's name to see their cron jobs.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          1. To list the cronjob entry for currently logged-in user:
-        </p>
-        <p className=' font-bold'> {`crontab -l`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`2. Editing Cron Jobs:`} />
+      <Text text={`To modify cron jobs, we use the following commands depending on the user.`} />
+      
+      <Supersubheading text={`To edit the Crontab file for the currently logged-in user:`} />
+      <TerminalOutput content={`crontab -e`} />
+      <Text text={`This opens the cron table for the current user in the default text editor, allowing you to add, modify, or remove cron jobs.`} />
+      
+      <Supersubheading text={`To edit the Crontab file for a particular user:`} />
+      <TerminalOutput content={`crontab -e -u username`} />
+      <Text text={`Replace \`username\` with the specific user's name to edit their crontab file.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          2. To list the cronjob entry for a particular user:
-        </p>
-        <p className=' font-bold'> {`crontab -l <user_name>`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`3. Removing Cron Jobs:`} />
+      <Text text={`If you no longer need a cron job, you can remove it using the following commands:`} />
+      
+      <Supersubheading text={`To remove the Crontab file for the currently logged-in user:`} />
+      <TerminalOutput content={`crontab -r`} />
+      <Text text={`This will remove all scheduled cron jobs for the current user.`} />
+      
+      <Supersubheading text={`To remove the Crontab file for a particular user:`} />
+      <TerminalOutput content={`crontab -r -u username`} />
+      <Text text={`Replace \`username\` with the name of the user whose cron jobs you want to remove.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          3. To edit the crontab file of currently logged-in user:
-        </p>
-        <p className=' font-bold'> {`crontab -e`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`4. Checking Cron Logs:`} />
+      <Text text={`You can check cron execution logs to monitor what has been executed in the cron jobs.`} />
+      
+      <Supersubheading text={`To check the log file of Crontab:`} />
+      <TerminalOutput content={`cat /var/log/cron`} />
+      <Text text={`This will show the logs for the cron daemon, including the execution details of all cron jobs.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          4.  To edit the crontab file of a particular user:
-        </p>
-        <p className=' font-bold'> {`crontab -e <user_name>`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`5. Crontab Files and User Permissions:`} />
+      <Text text={`Each user has a crontab file stored in a specific location. Additionally, there are configuration files that determine which users are allowed or denied access to cron jobs.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          5. To remove the crontab file of currently logged-in user:
-        </p>
-        <p className=' font-bold'> {`crontab -r`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text={`Location of every user's Crontab file:`} />
+      <TerminalOutput content={`cat /var/spool/cron/crontabs/username`} />
+      <Text text={`Replace \`username\` with the specific user's name to see their individual crontab file. Cron jobs for each user are stored in this directory.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          6. To remove the crontab file of a particular user:
-        </p>
-        <p className=' font-bold'> {`crontab -r <user_name>`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-      <hr className='ml-2' />
+      <Supersubheading text={`To list allowed users for Crontab:`} />
+      <TerminalOutput content={`cat /etc/cron.d/cron.allow`} />
+      <Text text={`This file lists the users who are permitted to use cron jobs. If a user is listed here, they can create and manage cron jobs.`} />
 
+      <Supersubheading text={`To list prohibited users for Crontab:`} />
+      <TerminalOutput content={`cat /etc/cron.d/cron.deny`} />
+      <Text text={`This file lists users who are prohibited from using cron jobs. If a user is listed here, they cannot create or modify cron jobs.`} />
 
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          1. To check log file of crontab:
-        </p>
-        <p className=' font-bold'> {`cat /var/cron/log`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          2. Location of every user's crontab file:
-        </p>
-        <p className=' font-bold'> {`/var/spool/cron/crontab`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          3. To list down how many users are allowed to user crontab:
-        </p>
-        <p className=' font-bold'> {`cat /etc/cron.d/cron.allow`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-
-      <div className='mb-4 ml-2 mt-6'>
-        <p className='mt-5 font-bold'>
-          4. To list down how many users are prohibited to use crontab:
-        </p>
-        <p className=' font-bold'> {`cat /etc/cron.d/cron.deny`} </p>
-        <img src={`${img_base_url}mjwqwh5rzphzytfsjwly.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-
-      <p className='ml-2'>
-        If we want to give access to a user to use the crontab, we have to remove that user's entry from cron.deny file and will have to add user's entry in cron.allow file.
-      </p>
-      <p className='ml-2 mt-3 mb-6'>
-        In case, if cron.allow is not presence on the server then we have to remove the user's entry from the cron.deny file to give the cron access to a normal user.
-      </p>
-
-
-
+      <Text text={`To allow a user to access the cron service, remove their entry from the \`cron.deny\` file and add their entry to the \`cron.allow\` file.`} />
+      <Text text={`If \`cron.allow\` does not exist on the server, then removing the user from \`cron.deny\` is sufficient to grant them cron access.`} />
     </div>
   );
 };
 
-export default CronJob;
+export default Crontab;
