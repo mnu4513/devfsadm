@@ -1,5 +1,5 @@
 import React from 'react';
-import { Command, Heading, Subheading, Text, Note } from '../utils/Comps';
+import { Command, Heading, Subheading, Text,  } from '../utils/Comps';
 
 const BasicPermissions = () => {
     return (
