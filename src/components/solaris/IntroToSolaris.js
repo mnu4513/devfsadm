@@ -1,51 +1,40 @@
 import React from 'react';
+import { Heading, Subheading, Supersubheading, Text } from "../utils/Comps";
 import YouTubeVideo from '../utils/YouTubeVideo';
 
 const IntroToSolaris = () => {
-
   return (
     <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl text-red-500 font-bold mt-4 ml-4 mb-3'>Solaris</h2>
-        <p className='ml-4'>  Solaris is a Unix-based operating system (OS) developed by Sun Microsystems, which is now owned by Oracle Corporation. Solaris has a long history and has been widely used in enterprise environments for server applications, especially in areas such as data centers and large-scale computing systems.</p>
-      </div>
-      <YouTubeVideo video_id='aIHWfk8K3G8' />
-    
-    
-      <div className='mt-5 ml-4'>
-        <h2 className='text-xl font-bold text-red-500 mb-4'> Key Features </h2>
-        <span className='text-blue-500 ml-2 font-bold '>1. Scalability </span>
-        <p className='ml-7 mb-4'>
-          Solaris is designed to run on a wide range of hardware platforms, from small servers to large mainframes. It offers scalability to meet the needs of various computing environments.
-        </p>
-        <span className='text-blue-500 ml-2 font-bold '>2. Reliability </span>
-        <p className='ml-7 mb-4'>
-          Solaris is known for its stability and reliability. It includes features such as dynamic tracing (DTrace) and advanced diagnostics tools to help administrators identify and troubleshoot issues.
-        </p>
-        <span className='text-blue-500 font-bold mt-2 ml-2'>3. Security </span>
-        <p className='ml-7 mb-4'>
-          Solaris incorporates various security features, including role-based access control (RBAC), cryptographic frameworks, and support for security standards. It is designed to meet the security requirements of enterprise environments.
-        </p>
-        <span className='text-blue-500 font-bold mt-2 ml-2'>4. Virtualization </span>
-        <p className='ml-7 mb-4'>
-          Solaris includes built-in support for virtualization technologies such as Oracle VM Server for SPARC/x86 and the Solaris Containers (now called Oracle Solaris Zones), allowing for efficient resource utilization and isolation.
-        </p>
-        <span className='text-blue-500 font-bold mt-2 ml-2'>5. File Systems </span>
-        <p className='ml-7 mb-4'>
-          Solaris supports advanced file systems like ZFS (Zettabyte File System), which provides features such as data integrity, snapshotting, and easy administration.
-        </p>
-        <span className='text-blue-500 font-bold mt-2 ml-2'>6. Networking </span>
-        <p className='ml-7 mb-4'>
-          Solaris has robust networking capabilities, supporting various network protocols and technologies. It includes features like TCP/IP networking, IPv6 support, and network virtualization.
-        </p>
-        <span className='text-blue-500 font-bold mt-2 ml-2'>7. Compatibility </span>
-        <p className='ml-7 mb-4'>
-          Solaris has a long history of compatibility with industry standards, making it suitable for interoperability with other systems and applications.
-        </p>
+      <Heading text="Introduction to Solaris" />
 
-        <p className='text-xl mt-3 mx-3'> Because of all these fretures, many organizations choose to use Oracle Solaris.
-        </p>
-      </div>
+      <Text text={`Solaris is a Unix-based operating system (OS) developed by Sun Microsystems, which was later acquired by Oracle Corporation. Solaris is renowned for its stability, scalability, and security features, making it a preferred choice in enterprise environments, particularly for server applications and large-scale computing systems. It is often used in data centers and complex enterprise setups.`} />
+
+      <YouTubeVideo video_id='aIHWfk8K3G8' />
+
+      <Subheading text="Key Features of Solaris" />
+
+      <Supersubheading text="1. Scalability" />
+      <Text text={`Solaris is designed to run efficiently on a variety of hardware platforms, from small servers to large mainframes. Its scalability makes it suitable for different computing environments, from a single server to multi-node clusters.`} />
+
+      <Supersubheading text="2. Reliability" />
+      <Text text={`Solaris is highly regarded for its stability and reliability. It includes advanced tools like DTrace for dynamic tracing and comprehensive diagnostics, which help administrators monitor and troubleshoot systems in real time.`} />
+
+      <Supersubheading text="3. Security" />
+      <Text text={`Solaris offers robust security features, including Role-Based Access Control (RBAC), cryptographic frameworks, and strong support for industry-standard security protocols. This ensures that Solaris meets the stringent security requirements of enterprise-level applications.`} />
+
+      <Supersubheading text="4. Virtualization" />
+      <Text text={`Solaris includes built-in support for virtualization technologies, such as Oracle VM Server for SPARC/x86 and Solaris Containers (Oracle Solaris Zones). These features help create isolated virtual environments, maximizing resource utilization and providing better workload management.`} />
+
+      <Supersubheading text="5. File Systems" />
+      <Text text={`Solaris supports advanced file systems like ZFS (Zettabyte File System), offering benefits like data integrity, snapshotting, and easy management. ZFS also helps with high availability and data protection by automatically correcting file system errors.`} />
+
+      <Supersubheading text="6. Networking" />
+      <Text text={`Solaris boasts robust networking capabilities, including support for multiple network protocols like TCP/IP and IPv6. The OS also includes network virtualization features to efficiently manage large-scale networks and complex enterprise infrastructures.`} />
+
+      <Supersubheading text="7. Compatibility" />
+      <Text text={`Solaris has a long track record of compatibility with industry standards, allowing seamless interoperability with other systems and applications. This makes it ideal for enterprises that need to run diverse software and communicate with a variety of systems.`} />
+
+      <Text text={`Due to its wide range of features, including its scalability, security, and reliability, many organizations continue to use Solaris for critical enterprise-level applications and complex server environments.`} />
     </div>
   );
 };

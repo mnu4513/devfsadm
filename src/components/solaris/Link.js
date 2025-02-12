@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Supersubheading, TerminalOutput, Text, Line } from "../utils/Comps";
+import { Heading, Subheading, Supersubheading, TerminalOutput, Text } from "../utils/Comps";
 
 const Link = () => {
   return (
