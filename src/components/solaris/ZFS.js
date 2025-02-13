@@ -1,253 +1,321 @@
 import React from 'react';
-import { img_base_url } from '../Config';
+import { Heading, TerminalOutput, Supersubheading, Subheading, Line, Text } from '../utils/Comps';
 
 const ZFS = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl font-bold mt-5 ml-4'>ZFS in Solaris</h2>
-        <h2 className='text-xl font-bold mb-5 ml-4'>(Zettabyte File System)</h2>
-        <p className='ml-4'>
-          ZFS (Zettabyte File System) is a combined file system and logical volume manager designed by Sun Microsystems (now part of Oracle Corporation) for Solaris. ZFS offers advanced features, data integrity, and simplified storage management.
-        </p>
-      </div>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      
+      <Heading text={`ZFS & zpool in Solaris`} />
+      
+      <Subheading text={`Overview of ZFS`} />
+      <Text text={`ZFS (Zettabyte File System) is an advanced file system and volume manager designed by Sun Microsystems (now Oracle). It provides high storage capacities, data integrity verification, automatic repair, snapshots, and easy management.`} />
+      
+      <Subheading text={`What is a Zpool?`} />
+      <Text text={`A zpool is a collection of storage devices that act as the foundation for ZFS file systems. A zpool provides storage to ZFS datasets and maintains data integrity and redundancy.`} />
+      
+      <Line />
+      
+      <Supersubheading text={`1. List available zpools`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]`} />
+      <Text text={`Displays a list of all zpools along with their health status, size, and used/free space.`} />
+      
+      <Supersubheading text={`2. Check detailed status of a pool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool status rpool
+  pool: rpool
+ state: ONLINE
+  scan: none requested
+config:
 
-      <hr className='mt-5 ml-4' />
+        NAME      STATE     READ WRITE CKSUM
+        rpool     ONLINE       0     0     0
+          c2t0d0  ONLINE       0     0     0
 
-      {/* Zpool */}
-      <div className='ml-4 mt-5'>
-        <h2 className='text-xl font-bold mb-2'> zpool</h2>
-        <p>
-          In Solaris, the zpool command is used to manage ZFS storage pools. ZFS (Zettabyte File System) is a combined file system and volume manager that provides features like pooled storage, snapshots, and data integrity. Here are some common zpool commands in Solaris:
-        </p>
-        <div className='mt-10' >
-          <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-        </div>
-        <div className='mb-4'>
-          <p className='mt-5'>1. To list down all pools </p>
-          <p className=' font-bold ml-5'> {`zpool list`} </p>
-          <img src={`${img_base_url}q5loyxkipfiz9vz8vqoy.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
-          <p>
-            In above result we can only one pool that is default rpool.
-          </p>
-          <p className='mt-2'>
-            Now we will check availabe free disks to create new pools. If we don't have free disks then we have to run a command to generate the WWN ( world wide name ) and after generating WWN number we will provide it to DB team and they will provide disk ID to us.
-          </p>
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>2. To get WWN number </p>
-          <p className=' font-bold ml-5'> {`fcinfo hba-port`} </p>
-          <img src={`${img_base_url}zots0iwgbesq89vanhaz.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
-          <p >
-            Now we are getting "No Adepters Found" as output because we are not working on actual server but on actual server it will generate WWN number.
-          </p>
-          <p className='mt-2' >
-            On our local machine we can add multiple local disks from our virtual machine's setting.
-          </p>
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>3. To refresh the disks</p>
-          <p className=' font-bold ml-5'> {`devfsadm`} </p>
-          <img src={`${img_base_url}whojbiadmwnijo35vvu2.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
-          <p>
-            After adding disks we have to refresh the disks.
-          </p>
-          <p className='mt-2'>
-            If this command doesn't work then we have to use another command to refresh the disks.
-          </p>
-          <p className='mt-3'>To refresh the disks </p>
-          <p className=' font-bold ml-5'> {`cfgadm -al`} </p>
-          <img src={`${img_base_url}dato8ifsg5dhv93siw5l.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>4. To list down all disks </p>
-          <p className=' font-bold ml-5'> {`echo | format`} </p>
-          <img src={`${img_base_url}y1g57auwa2snlxpd4g6h.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>5. To create a normal pool </p>
-          <p className=' font-bold ml-5'> {`zpool create <pool_name> <disk_Id>`} </p>
-          <img src={`${img_base_url}yrjbx6z9aqtwpp1ki5jt.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>6. To check pool status</p>
-          <p className=' font-bold ml-5'> {`zpool status <pool_name>`} </p>
-          <img src={`${img_base_url}ovpq4r4zsfivptj4makr.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>7. To Destroy a Pool </p>
-          <p className=' font-bold ml-5'> {`zpool destroy <pool_name>`} </p>
-          <img src={`${img_base_url}vnz6ab2lmoaijp88spsz.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>8. To list down all destroied pools</p>
-          <p className=' font-bold ml-5'> {`zpool import -D`} </p>
-          <img src={`${img_base_url}hp1dcd907ch03n2qo2y5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>9. To import back a destroied pool</p>
-          <p className=' font-bold ml-5'> {`zpool import -D <pool_name>`} </p>
-          <p className=' font-bold ml-5'> {`zpool import -D <pool_id>`} </p>
-          <img src={`${img_base_url}bz9p3ruh9wfh5syx4l03.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>10. To export a pool</p>
-          <p className=' font-bold ml-5'> {`zpool export <pool_name>`} </p>
-          <img src={`${img_base_url}djddvjq4gnxj1m5a5usw.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>11. To list down all the exported pools</p>
-          <p className=' font-bold ml-5'> {`zpool import`} </p>
-          <img src={`${img_base_url}hqb1qj7gcovmzhcap0dj.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>12. To import a alreday exported pool</p>
-          <p className=' font-bold ml-5'> {`zpool import <pool_name>`} </p>
-          <p className=' font-bold ml-5'> {`zpool import <pool_id>`} </p>
-          <img src={`${img_base_url}lwneuodtiqfpu06qttcg.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>13. To add a new disk in a already created pool</p>
-          <p className=' font-bold ml-5'> {`zpool add <pool_name> <new_disk_Id>`} </p>
-          <img src={`${img_base_url}f154onoeoils7jjehszg.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>14. To remove a disk from pool</p>
-          <p className=' font-bold ml-5'> {`zpool remove <pool_name> <disk_Id>`} </p>
-          <img src={`${img_base_url}kidjrwnohcfwim6gatra.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>15. To create a normal pool with multiple disks </p>
-          <p className=' font-bold ml-5'> {`zpool create <pool_name> <disk1_id> <disk2_id>`} </p>
-          <img src={`${img_base_url}moci5ugwncpneuz1drbd.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>16. To Create a Mirror Pool </p>
-          <p className=' font-bold ml-5'> {`zpool create <pool_name> mirror <disk1_id> <disk2_id>`} </p>
-          <img src={`${img_base_url}yxb9hpbe6e0m9ukl2ztc.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>17. To convert a normal pool into a mirror pool</p>
-          <p className=' font-bold ml-5'> {`zpool attach <pool_name> <primary_disk_id> <new_disk_id>`} </p>
-          <img src={`${img_base_url}bqhycw5tkpcqlysmo2rk.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>18. To detach or to convert a mirror pool into a normal pool</p>
-          <p className=' font-bold ml-5'> {`zpool detach <pool_name> <disk_id>`} </p>
-          <img src={`${img_base_url}upayrrhhojrkk5slwg4l.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>19. If we get an error in a pool and we want to clear the error from the pool</p>
-          <p className=' font-bold ml-5'> {`zpool clear <pool_name>`} </p>
-          <img src={`${img_base_url}uxpdiwvvfqgh2vlyolem.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>20. To get the history of the pools</p>
-          <p className=' font-bold ml-5'> {`zpool history <pool_name>`} </p>
-          <img src={`${img_base_url}dqv8uskqdapjzjqvjnb0.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>21. To take the pool's intigirity</p>
-          <p className=' font-bold ml-5'> {`zpool scrub <pool_name>`} </p>
-          <img src={`${img_base_url}pljjhywqxt65gr26q0uo.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>22. To check the pools status ( health )</p>
-          <p className=' font-bold ml-5'> {`zpool status -xv`} </p>
-          <img src={`${img_base_url}ra0scmie6knudyqb5lks.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>23. To check the data set name, mount point and size etc.</p>
-          <p className=' font-bold ml-5'> {`df -h`} </p>
-          <img src={`${img_base_url}ncis6qojsvxd8ixmfhow.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>24. To create children file system </p>
-          <p className=' font-bold ml-5'> {`zfs create <pool_name>/<child_name>`} </p>
-          <img src={`${img_base_url}zixqykmlcw2y0nk7d92g.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>25. To change mount point name </p>
-          <p className=' font-bold ml-5'> {`zfs set mountpoint=/<new_mountpoint_name> <data_set_name>`} </p>
-          <img src={`${img_base_url}cromenapqjjwppcdkmhr.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-
-      </div>
+errors: No known data errors
+[root@localhost:~#]`} />
+      <Text text={`Shows detailed information about a zpool, including its health, devices, and any errors.`} />
+      
+      <Supersubheading text={`3. Find available disks for creating a zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] echo | format
+Searching for disks...done
 
 
-      <hr className='mt-5 ml-4' />
+AVAILABLE DISK SELECTIONS:
+       0. c2t0d0 <VMware,-VMware Virtual S-1.0-16.00GB>
+          /pci@0,0/pci15ad,1976@10/sd@0,0
+       1. c2t1d0 <VMware,-VMware Virtual S-1.0 cyl 1022 alt 2 hd 64 sec 32>
+          /pci@0,0/pci15ad,1976@10/sd@1,0
+       2. c2t2d0 <VMware,-VMware Virtual S-1.0 cyl 1022 alt 2 hd 64 sec 32>
+          /pci@0,0/pci15ad,1976@10/sd@2,0
+Specify disk (enter its number): Specify disk (enter its number):
+[root@localhost:~#]`} />
+      <Text text={`Lists all available disks that can be used to create a new zpool.`} />
+      
+      <Supersubheading text={`4. Create a new zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool create pool2 c2t1d0
+[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+pool2  1008M   112K  1008M   0%  1.00x  ONLINE  -
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]>`} />
+      <Text text={`Creates a new zpool using the specified disk. If using multiple disks, specify them separated by spaces.`} />
+      
+      <Supersubheading text={`5. Destroy a zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool destroy pool2
+[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]`} />
+      <Text text={`Permanently removes a zpool and all associated data. This action is irreversible.`} />
+      
+      <Supersubheading text={`6. List destroyed zpools`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool import -D
+      pool: pool2
+      id: 3483049889266594694
+      state: ONLINE (DESTROYED)
+      action: The pool can be imported using its name or numeric identifier.
+      config:
+      
+        pool2     ONLINE
+          c2t1d0  ONLINE
+          c2t2d0  ONLINE
+[root@localhost:~#]`} />
+      <Text text={`Displays all the destroyed zpools along with disks and zpool ID.`} />
 
-      {/* Quota and reservation */}
-      <div className='ml-4 mt-5'>
-        <h2 className='text-xl font-bold mb-2'> Quota and Reservation</h2>
-        <p>
-          In a very simple term quota is a maximum size can be used by a file system and if it has free space then other sibling or patent file system can use it's space too.
-        </p>
-        <p className='mt-2'>
-          Reservation is the reserved space for a particular file system, this file system can use its parent's or sibling's sapce if it is out of sapce, but its parent or siblings can't use its reserved space.
-        </p>
-        <div className='mt-10' >
-          <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-        </div>
-
-        <div className='mb-4'>
-          <p className='mt-5'>1. To check quota details for a file system</p>
-          <p className=' font-bold ml-5'> {`zfs get quota <data_set_name>`} </p>
-          <img src={`${img_base_url}ktzkumg2ro0yd7tujlik.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-        <div className='mb-4'>
-          <p className='mt-5'>2. To set quota for a file system </p>
-          <p className=' font-bold ml-5'> {`zfs set quota=<size> <data_set_name>`} </p>
-          <img src={`${img_base_url}diqqrezgdtao3cr6kdy5.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-        <div className='mb-4'>
-          <p className='mt-5'>3. To unset the quota for a file system</p>
-          <p className=' font-bold ml-5'> {`zfs set quota=none <data_set_name>`} </p>
-          <img src={`${img_base_url}c4groadnkbb2dih6um0a.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-        <div className='mb-4'>
-          <p className='mt-5'>4. To check reservation details for a file system</p>
-          <p className=' font-bold ml-5'> {`zfs get reservation <data_set_name>`} </p>
-          <img src={`${img_base_url}mvdot73qwm5ava2pvz7w.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-        <div className='mb-4'>
-          <p className='mt-5'>5. To set the reservation value for a file system</p>
-          <p className=' font-bold ml-5'> {`zfs set reservation=<size> <data_set_name>`} </p>
-          <img src={`${img_base_url}hf2vawhbxc2acsgldygw.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
-        <div className='mb-4'>
-          <p className='mt-5'>6. To unset the reservation for a file system</p>
-          <p className=' font-bold ml-5'> {`zfs set reservation=none <data_set_name>`} </p>
-          <img src={`${img_base_url}clwaid39j5iwxmt23jcj .png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-        </div>
+      <Supersubheading text={`7. Import a destroyed zpool`}/>
+      <TerminalOutput content={`[root@localhost:~#] zpool import pool2
+[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+pool2  1008M   134K  1008M   0%  1.00x  ONLINE  -
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]`} />
+<Text text={`We can import a destroyed zpool only if disks form the zpool are not removed.`}/>
 
 
-      </div>
+      <Supersubheading text={`8. Export a zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool export pool2
+[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]`} />
+<Text text={`Exporting detaches a zpool from the system.`} />
 
+<Supersubheading text={`6. List exported zpools`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool import
+      pool: pool2
+      id: 3483049889266594694
+      state: ONLINE (DESTROYED)
+      action: The pool can be imported using its name or numeric identifier.
+      config:
+      
+        pool2     ONLINE
+          c2t1d0  ONLINE
+          c2t2d0  ONLINE
+[root@localhost:~#]`} />
+      <Text text={`Displays all the exported zpools along with disks and zpool ID.`} />
+
+<Supersubheading text={`10. Import an exported zpool`}/>
+      <TerminalOutput content={`[root@localhost:~#] zpool import pool2
+[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+pool2  1008M   134K  1008M   0%  1.00x  ONLINE  -
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]`} />
+
+<TerminalOutput content={`[root@localhost:~#] zpool import 3483049889266594694
+[root@localhost:~#] zpool list
+NAME    SIZE  ALLOC   FREE  CAP  DEDUP  HEALTH  ALTROOT
+pool2  1008M   134K  1008M   0%  1.00x  ONLINE  -
+rpool  15.6G  5.04G  10.6G  32%  1.00x  ONLINE  -
+[root@localhost:~#]`} />
+      <Text text={`Importing reattaches it when moved to a new system or rebooted.`} />
+      <Text text={`A zpool can be imported with the zpool name or zpool ID.`} />
+      
+      <Supersubheading text={`11. Add a disk to an existing zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool add pool2 c2t2d0
+[root@localhost:~#] zpool status pool2
+  pool: pool2
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME      STATE     READ WRITE CKSUM
+        pool2     ONLINE       0     0     0
+          c2t1d0  ONLINE       0     0     0
+          c2t2d0  ONLINE       0     0     0
+
+errors: No known data errors
+[root@localhost:~#]`} />
+      <Text text={`Extends the zpool by adding a new disk to increase its storage capacity.`} />
+      
+      
+
+
+      
+      <Supersubheading text={`12. Create a mirrored zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool create pool3 mirror c2t1d0 c2t2d0
+[root@localhost:~#] zpool status pool3
+  pool: pool3
+ state: ONLINE
+  scan: none requested
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        pool3       ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c2t1d0  ONLINE       0     0     0
+            c2t2d0  ONLINE       0     0     0
+
+errors: No known data errors
+[root@localhost:~#]`} />
+      <Text text={`Creates a mirrored zpool for redundancy, where each disk maintains an exact copy of the data.`} />
+      
+      <Supersubheading text={`13. Convert an existing zpool to a mirror`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool status pool2
+  pool: pool2
+ state: ONLINE
+  scan: resilvered 64K in 1s with 0 errors on Thu Feb 13 20:06:31 2025
+
+config:
+
+        NAME      STATE     READ WRITE CKSUM
+        pool2     ONLINE       0     0     0
+          c2t1d0  ONLINE       0     0     0
+
+errors: No known data errors
+[root@localhost:~#] zpool attach pool2 c2t1d0 c2t2d0
+[root@localhost:~#] zpool status pool2
+  pool: pool2
+ state: ONLINE
+  scan: resilvered 67K in 1s with 0 errors on Thu Feb 13 20:07:45 2025
+
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        pool2       ONLINE       0     0     0
+          mirror-0  ONLINE       0     0     0
+            c2t1d0  ONLINE       0     0     0
+            c2t2d0  ONLINE       0     0     0
+
+errors: No known data errors
+[root@localhost:~#]`} />
+      <Text text={`Adds redundancy by attaching a new disk to an existing single-disk zpool, converting it into a mirror.`} />
+      
+      <Supersubheading text={`14. Detach a disk from a mirrored zpool`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool detach pool2 c2t2d0
+[root@localhost:~#] zpool status pool2
+  pool: pool2
+ state: ONLINE
+  scan: resilvered 64K in 1s with 0 errors on Thu Feb 13 20:06:31 2025
+
+config:
+
+        NAME      STATE     READ WRITE CKSUM
+        pool2     ONLINE       0     0     0
+          c2t1d0  ONLINE       0     0     0
+
+errors: No known data errors
+[root@localhost:~#]`} />
+      <Text text={`Removes a disk from a mirror, converting it back into a standalone pool.`} />
+      
+      <Supersubheading text={`15. Clear zpool errors`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool clear pool2
+[root@localhost:~#]`} />
+      <Text text={`Clears recorded errors in the zpool without affecting data integrity.`} />
+      
+      <Supersubheading text={`16. View zpool history`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool history pool2
+History for 'pool2':
+2025-02-13.20:06:10 zpool create pool2 c2t1d0
+2025-02-13.20:06:36 zpool attach pool2 c2t1d0 c2t2d0
+2025-02-13.20:07:22 zpool detach pool2 c2t2d0
+2025-02-13.20:07:50 zpool attach pool2 c2t1d0 c2t2d0
+2025-02-13.20:09:10 zpool clear pool2
+
+[root@localhost:~#]`} />
+      <Text text={`Displays a log of all operations performed on the specified zpool.`} />
+      
+      <Supersubheading text={`17. Perform a pool integrity check (scrub)`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool scrub pool2
+[root@localhost:~#]`} />
+      <Text text={`Scans and verifies data integrity, repairing any inconsistencies automatically.`} />
+      
+      <Supersubheading text={`18. Check zpool health`} />
+      <TerminalOutput content={`[root@localhost:~#] zpool status -xv
+all pools are healthy
+[root@localhost:~#]`} />
+      <Text text={`Displays the health status of all zpools, listing any issues.`} />
+      
+      <Subheading text={`Managing ZFS File Systems`} />
+      <Supersubheading text={`19. Create a new ZFS file system`} />
+      <TerminalOutput content={`[root@localhost:~#] zfs create pool2/child1
+[root@localhost:~#] zfs list | grep child1
+pool2/child1                       31K   976M    31K  /pool2/child1
+[root@localhost:~#]`} />
+      <Text text={`Creates a new child filesystem within an existing zpool.`} />
+
+      <Supersubheading text={`20. Destroy a ZFS file system`} />
+      <TerminalOutput content={`[root@localhost:~#] zfs destroy pool2/child1
+[root@localhost:~#] zfs list | grep child1
+[root@localhost:~#]`} />
+      <Text text={`Destroy a ZFS filesystem within an existing zpool.`} />
+      
+      <Supersubheading text={`21. List all ZFS datasets`} />
+      <TerminalOutput content={`[root@localhost:~#] zfs list
+NAME                              USED  AVAIL  REFER  MOUNTPOINT
+pool2                             140K   976M    32K  /pool2
+pool2/child1                       31K   976M    31K  /pool2/child1
+rpool                            5.10G  10.3G  4.52M  /rpool
+rpool/ROOT                       3.03G  10.3G    31K  legacy
+rpool/dump                       1.03G  10.3G  1.00G  -
+rpool/export                     99.5K  10.3G    32K  /export
+rpool/export/home                67.5K  10.3G    32K  /export/home
+rpool/export/home/ok             35.5K  10.3G  35.5K  /export/home/ok
+rpool/swap                       1.03G  10.3G  1.00G  -
+[root@localhost:~#]`} />
+      <Text text={`Displays all ZFS datasets, their mount points, and used/free space.`} />
+
+      <Supersubheading text={`22. Change mount point of a ZFS dataset`} />
+      <TerminalOutput content={`[root@localhost:~#] zfs set mountpoint=/child2 pool2/child1
+[root@localhost:~#] zfs list
+NAME                              USED  AVAIL  REFER  MOUNTPOINT
+pool2                             149K   976M    31K  /pool2
+pool2/child1                       31K   976M    31K  /child2
+rpool                            5.10G  10.3G  4.52M  /rpool
+rpool/ROOT                       3.03G  10.3G    31K  legacy
+rpool/dump                       1.03G  10.3G  1.00G  -
+rpool/export                     99.5K  10.3G    32K  /export
+rpool/export/home                67.5K  10.3G    32K  /export/home
+rpool/export/home/ok             35.5K  10.3G  35.5K  /export/home/ok
+rpool/swap                       1.03G  10.3G  1.00G  -
+[root@localhost:~#]`} />
+      <Text text={`Changes the directory where the ZFS filesystem is mounted.`} />
+      
+      
+      <Supersubheading text={`19. Check file system usage`} />
+      <TerminalOutput content={`[root@localhost:~#] df -h
+Filesystem             Size   Used  Available Capacity  Mounted on
+rpool/ROOT/solaris      15G   2.8G        10G    22%    /
+/devices                 0K     0K         0K     0%    /devices
+/dev                     0K     0K         0K     0%    /dev
+ctfs                     0K     0K         0K     0%    /system/contract
+proc                     0K     0K         0K     0%    /proc
+mnttab                   0K     0K         0K     0%    /etc/mnttab
+swap                   2.1G   1.7M       2.1G     1%    /system/volatile
+swap                   2.1G     4K       2.1G     1%    /tmp
+rpool/VARSHARE          15G   2.4M        10G     1%    /var/share
+rpool/VARSHARE/zones    15G    31K        10G     1%    /system/zones
+rpool/export            15G    32K        10G     1%    /export
+rpool/export/home       15G    32K        10G     1%    /export/home
+rpool                   15G   4.5M        10G     1%    /rpool
+/dev/dsk/c1t0d0s2      736M   736M         0K   100%    /media/Oracle_Solaris-11_3-Text-X86
+rpool/export/home/ok    15G    35K        10G     1%    /export/home/ok
+pool2                  976M    31K       976M     1%    /pool2
+pool2/child1           976M    31K       976M     1%    /child2
+[root@localhost:~#]`} />
+      <Text text={`Shows disk space usage for all mounted filesystems, including ZFS.`} />
     </div>
   );
 };

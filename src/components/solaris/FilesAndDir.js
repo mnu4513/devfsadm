@@ -20,7 +20,12 @@ file.txt
       <Text text={`The \`touch\` command creates an empty file or updates the timestamp of an existing file.`} />
 
       <Supersubheading text={`To create a file of a specified size:`} />
-      <TerminalOutput content={`mkfile <file_size> <file_name>`} />
+      <TerminalOutput content={`[root@localhost:~ ]# mkfile 20M file.sh
+[root@localhost:~ ]# ls -l
+total 1
+-rw-------   1 root     root     20971520 Feb 13 20:44 file.sh
+[root@localhost:~ ]#
+`} />
       <Text text={`The \`mkfile\` command creates a file with the specified size (e.g., \`mkfile 1g myfile.txt\` creates a 1 GB file).`} />
 
       <Supersubheading text={`To create a text file in editor mode:`} />

@@ -50,8 +50,11 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Nerwork Configuration',
         link: '/course/solaris/network-configuration'
     }, {
-        name: 'ZFS',
-        link: '/course/solaris/zfs'
+        name: 'ZFS & zpool',
+        link: '/course/solaris/zfs-zpool'
+    }, {
+        name: 'ZFS Quota & Reservation',
+        link: '/course/solaris/quota-reservation'
     }, {
         name: 'Patch Management',
         link: '/course/solaris/patch-management'

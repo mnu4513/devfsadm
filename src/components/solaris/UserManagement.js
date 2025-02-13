@@ -47,15 +47,88 @@ john:!:20131:0:99999:7:::
       <Text text={`The \`/etc/shadow\` file stores password information in an encrypted form, as well as the date of the last password change and password expiration details.`} />
 
       <Supersubheading text={`3. To check Password policy Information:`} />
-      <TerminalOutput content={`cat /etc/default/passwd`} />
+      <TerminalOutput content={`[root@localhost:~ ]# cat /etc/default/passwd
+# Copyright (c) 1989, 2014, Oracle and/or its affiliates. All rights reserved.
+#
+MAXWEEKS=
+MINWEEKS=
+PASSLENGTH=6
+
+# NAMECHECK enables/disables login name checking.
+# The default is to do login name checking.
+# Specifying a value of "NO" will disable login name checking.
+#
+#NAMECHECK=NO
+
+# HISTORY sets the number of prior password changes to keep and
+# check for a user when changing passwords.  Setting the HISTORY
+# value to zero (0), or removing/commenting out the flag will
+# cause all users' prior password history to be discarded at the
+# next password change by any user.  No password history will
+# be checked if the flag is not present or has zero value.
+# The maximum value of HISTORY is 26.
+#
+# This flag is only enforced for user accounts defined in the
+# local passwd(4)/shadow(4) files.
+#
+#HISTORY=0
+#
+# Password complexity tunables.  The values listed are the defaults
+# which are compatible with previous releases of passwd.
+# See passwd(1) and pam_authtok_check(5) for use warnings and
+# discussion of the use of these options.
+#
+#MINDIFF=3
+#MINALPHA=2
+#MINNONALPHA=1
+#MINUPPER=0
+#MINLOWER=0
+#MAXREPEATS=0
+#MINSPECIAL=0
+#MINDIGIT=0
+#WHITESPACE=YES
+#
+#
+# passwd performs dictionary lookups if DICTIONLIST or DICTIONDBDIR
+# is defined. If the password database does not yet exist, it is
+# created by passwd. See passwd(1), pam_authtok_check(5) and
+# mkpwdict(1M) for more information.
+#
+#DICTIONLIST=
+#DICTIONDBDIR=/var/passwd
+#DICTIONMINWORDLENGTH=3
+[root@localhost:~ ]#
+`} />
       <Text text={`The \`/etc/default/passwd\` file contains settings related to password policies like password length and aging.`} />
 
       <Supersubheading text={`4. To get a copy of Password policy Information:`} />
-      <TerminalOutput content={`cat /etc/opasswd`} />
+      <TerminalOutput content={`[root@localhost:~]# cat /etc/opasswd
+root:x:0:0:Super-User:/root:/usr/bin/bash
+daemon:x:1:1::/:
+bin:x:2:2::/usr/bin:
+sys:x:3:3::/:
+adm:x:4:4:Admin:/var/adm:
+lp:x:71:8:Line Printer Admin:/:
+uucp:x:5:5:uucp Admin:/usr/lib/uucp:
+nuucp:x:9:9:uucp Admin:/var/spool/uucppublic:/usr/lib/uucp/uucico
+dladm:x:15:65:Datalink Admin:/:
+netadm:x:16:65:Network Admin:/:
+ocm:x:62:12:& User:/usr/lib/ocm:/usr/bin/pfksh
+aiuser:x:61:61:AI User:/:
+fptp:x:21:21:FTPD Reserved UID:/:
+dhcpserv:x:18:65:DHCP Configuration Admin:/:
+pkg5srv:x:97:97:pkg(5) server UID:/:
+[root@localhost:~]#
+`} />
       <Text text={`The \`/etc/opasswd\` file stores a backup copy of the \`/etc/passwd\` file to recover it if deleted by mistake.`} />
 
       <Supersubheading text={`5. To recover the shadow file:`} />
-      <TerminalOutput content={`pwconv`} />
+      <TerminalOutput content={`[root@localhost:~]# rm -rf /etc/shadow
+[root@localhost:~]# pwconv
+[root@localhost:~]# ls /etc/shadow
+/etc/shadow
+[root@localhost:~]#
+`} />
       <Text text={`The \`pwconv\` command is used to recover the \`/etc/shadow\` file if it is lost.`} />
       <Text text={`After recovering the shadow file, reset the root password with \`passwd root\` command.`} />
 

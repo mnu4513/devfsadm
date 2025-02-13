@@ -1,144 +1,183 @@
 import React from 'react';
-import { img_base_url } from '../Config';
+import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line } from '../utils/Comps';
 
-const Archive = () => {
+const ArchiveAndCompression = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl font-bold my-5 ml-4'>Archive in Solaris</h2>
-        <p className='mt-4 ml-4'>
-          An archive is a file that contains one or more other files, along with information about them, such as their names, permissions, and directory structure. Archiving is the process of gathering multiple files into a single file for easier storage, organization, and transportation. Archives are commonly used for backup, data transfer, and software distribution.
-        </p>
-        <p className='mt-4 ml-4'>
-          The archive file itself can take various formats, and different tools may be used to create, extract, or manipulate archives. Some common archive formats include:
-        </p>
-        <p className='mt-4 ml-4'>
-          <span className='font-bold '>1. Tar (Tape Archive): </span>
-          Originally designed for tape backups, the tar command is commonly used to create uncompressed archives. It bundles files together without compression, and a separate compression tool (like gzip or bzip2) is often used in conjunction with tar to create compressed archives.
-        </p>
-        <p className='mt-4 ml-4'>
-          <span className='font-bold '>2. Zip: </span>
-          This is a widely used archive format that supports compression. Zip archives are common in both Windows and Unix-like operating systems. Tools like zip and unzip are used for creating and extracting Zip archives.
-        </p>
-        <p className='mt-4 ml-4'>
-          <span className='font-bold'>3. gzip and bzip2: </span>
-          While not traditional archive formats, these are compression tools commonly used in conjunction with tar. They compress a single file and are often used to create compressed archives with the .gz or .bz2 extensions.
-        </p>
-        <p className='mt-4 ml-4'>
-          <span className='font-bold '>4. 7-Zip:</span>
-          This is a versatile archive format and compression tool that supports various compression algorithms. It is known for its high compression ratio and is widely used on Windows and other platforms.
-        </p>
-      </div>
-      <div >
-        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      <Heading text={`Archive and Compression in Solaris`} />
 
-      {/* Tar */}
-      <h2 className='ml-4 mr-2 mt-10 font-bold text-xl'> Tar: </h2>
-      <p className='ml-5 mt-2 mb-8'>
-        In Solaris, the tar command is commonly used for creating and manipulating tar archives. Here are some basic examples of using the tar command in Solaris:
-      </p>
-      <div className='ml-4'>
-        <p className='mt-3 font-bold'>1. To create a tar archive</p>
-        <p className=' font-bold ml-5'> {`tar -cvf archive.tar files/directories`} </p>
-        <img src={`${img_base_url}zyyouq4yq9a30gvpduap.png`} alt='' className='mt-3 mb-4 md:w-2xl lg:max-w-5xl' />
-        <p className='mt-2'>
-          <span className='font-bold ml-5'> -c: </span>
-          Create a new archive.
-        </p>
-        <p className='mt-2'>
-          <span className='font-bold ml-5'> -v: </span>
-          Verbose mode, display the files being archided.
-        </p>
-        <p className='mt-2'>
-          <span className='font-bold ml-5'> -f: </span>
-          Specify the archive file name.
-        </p>
-      </div>
+      <Text text={`Archiving and compression are essential techniques in Linux for managing files efficiently. Archiving combines multiple files into one, while compression reduces file sizes for better storage and transfer. Often, both are used together.`} />
 
-      <div className='ml-4'>
-        <p className='mt-5 font-bold'>2. To add files to an Exiting Archive</p>
-        <p className=' font-bold ml-5'> {`tar -rvf archive.tar new_files`} </p>
-        <img src={`${img_base_url}jmjb7beyhnw0wgovf7vp.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+<Line/>
+      <Subheading text={`File Formats`} />
 
-      <div className='ml-4'>
-        <p className='mt-5 font-bold'>3. View Contents of a Tar Archive:</p>
-        <p className=' font-bold ml-5'> {`tar -tvf archive.tar`} </p>
-        <img src={`${img_base_url}ryqeppd2dhszcjvsb26d.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text={`Archived Only`} />
+      <TerminalOutput content={`file_name.tar`} />
+      <Text text={`The .tar format is used to archive multiple files and directories into a single file without compression.`} />
 
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>4. Extract Files from a Tar Archive</p>
-        <p className=' font-bold ml-5'> {`tar -xvf archive.tar`} </p>
-        <img src={`${img_base_url}jpn80d3iuom96hytbsol.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Supersubheading text={`Compressed Only`} />
+      <TerminalOutput content={`file_name.gz`} />
+      <TerminalOutput content={`file_name.bz2`} />
+      <TerminalOutput content={`file_name.xz`} />
+      <Text text={`These formats are used for compression only, reducing file size without combining multiple files.`} />
 
-      <hr className='ml-4'/>
+      <Supersubheading text={`Archived and Compressed`} />
+      <TerminalOutput content={`file_name.tar.gz`} />
+      <TerminalOutput content={`file_name.tar.bz2`} />
+      <TerminalOutput content={`file_name.tar.xz`} />
+      <Text text={`These formats combine both archiving and compression, making it easier to manage multiple files while reducing their size.`} />
 
-      {/* zip */}
-      <h2 className='ml-4 mr-2 mt-10 font-bold text-xl'> Zip </h2>
-      <p className='ml-5 mt-2 mb-4'>
-        In Solaris, you can use the zip command to create and manipulate zip archives. Below are some basic examples of using the zip command:
-      </p>
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>1. Create a Zip Archive:</p>
-        <p className=' font-bold ml-5'> {`zip -r archive.zip files_or_directories`} </p>
-        <img src={`${img_base_url}wdpxnu6n0cqkxtfppnyb.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
-        <p className='mt-2'>
-          <span className='font-bold ml-5'> -r: </span>
-          Recursively include files in subdirectories.
-        </p>
-      </div>
+      <Line />
 
+      <Heading text={`Compression`} />
+      <Text text={`Compression reduces the size of files by removing redundant data. This helps in saving disk space and speeding up file transfers.`} />
 
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>2. Extract Files from a Zip Archive:</p>
-        <p className=' font-bold ml-5'> {`unzip archive.zip`} </p>
-        <img src={`${img_base_url}azdp6uvs1b23ogtv3f2v.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>3. View Contents of a Zip Archive:</p>
-        <p className=' font-bold ml-5'> {`unzip -l archive.zip`} </p>
-        <img src={`${img_base_url}xqu6ha7ebrytvy1r1v21.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>4. Update a Zip Archive:</p>
-        <p className=' font-bold ml-5'> {`zip -r archive.zip new_files_or_directories`} </p>
-        <img src={`${img_base_url}wi8zls3hmthxe9uqtutn.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`Compression Methods and Commands`} />
+      <table className='w-full text-left'>
+        <thead>
+          <tr className='text-green-400'>
+            <th>Command</th>
+            <th>Format</th>
+            <th>Option</th>
+            <th>Decompression Command</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>gzip</td>
+            <td>.gz</td>
+            <td>-z</td>
+            <td>gunzip</td>
+          </tr>
+          <tr>
+            <td>bzip2</td>
+            <td>.bz2</td>
+            <td>-j</td>
+            <td>bunzip2</td>
+          </tr>
+          <tr>
+            <td>xz</td>
+            <td>.xz</td>
+            <td>-J</td>
+            <td>unxz</td>
+          </tr>
+        </tbody>
+      </table>
 
+      <Subheading text={`Comparison of Compression Methods`} />
+      <Supersubheading text={`Speed of Compression:`} />
+      <TerminalOutput content={`gzip > bzip2 > xz`} />
+      <Text text={`gzip is the fastest, while xz takes the longest due to higher compression efficiency.`} />
 
-      <hr className='ml-4'/>
+      <Supersubheading text={`Compression Ratio:`} />
+      <TerminalOutput content={`xz > bzip2 > gzip`} />
+      <Text text={`xz provides the best compression but takes the longest time. gzip is the least efficient but the fastest.`} />
+
+      <Subheading text={`gzip`} />
+      <Text text={`A fast compression method using the .gz format.`} />
+      <Supersubheading text={`Compress a file:`} />
+      <TerminalOutput content={`[root@localhost:~]# gzip file.txt
+[root@localhost:~]# ls
+file.txt.gz
+[root@localhost:~]#
+`} />
+      <Text text={`This command compresses file.txt and creates file.txt.gz.`} />
       
-      {/* gzip */}
-      <h2 className='ml-4 mr-2 mt-10 font-bold text-xl'> gzip </h2>
-      <p className='ml-5 mt-2 mb-4'>
-        In Solaris, you can use the gzip command to compress and decompress files using the gzip compression algorithm. Here are some basic examples:
-      </p>
+      <Supersubheading text={`Decompress a .gz file:`} />
+      <TerminalOutput content={`[root@localhost:~]# gunzip file.txt.gz
+[root@localhost:~]# ls
+file.txt
+[root@localhost:~]#`} />
+      <TerminalOutput content={`[root@localhost:~]# gzip -d file.txt
+[root@localhost:~]# ls
+file.txt
+[root@localhost:~]#
+`} />
+      <Text text={`Both commands decompress file.txt.gz back to file.txt.`} />
 
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>1. Compress a File:</p>
-        <p className=' font-bold ml-5'> {`gzip filename`} </p>
-        <img src={`${img_base_url}wsjdrvnwk7mipbhyeewv.png`} alt='' className='mt-3 mb-3 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`bzip2`} />
+      <Text text={`A higher compression ratio method using the .bz2 format.`} />
+      <Supersubheading text={`Compress a file:`} />
+      <TerminalOutput content={`[root@localhost:~]# bzip2 file.txt
+[root@localhost:~]# ls
+file.txt.bz2
+[root@localhost:~]#`} />
+      <Text text={`This compresses file.txt into file.txt.bz2.`} />
 
+      <Supersubheading text={`Decompress a .bz2 file:`} />
+      <TerminalOutput content={`[root@localhost:~]# bunzip2 file.txt.bz2
+[root@localhost:~]# ls
+file.txt
+[root@localhost:~]#`} />
+      <TerminalOutput content={`[root@localhost:~]# bzip2 -d file.txt.bz2
+[root@localhost:~]# ls
+file.txt
+[root@localhost:~]#`} />
 
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>2. Decompress a File:</p>
-        <p className=' font-bold ml-5'> {`gunzip filename.gz`} </p>
-        <img src={`${img_base_url}nkwtktf3jm8newjel5co.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
-      <div className='ml-4 mb-4'>
-        <p className='mt-5 font-bold'>3. Compress Multiple Files or Directories:</p>
-        <p className=' font-bold ml-5'> {`gzip -r directory`} </p>
-        <img src={`${img_base_url}emmquppeph4wodyhni79.png`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-      </div>
+      <Subheading text={`xz`} />
+      <Text text={`The highest compression ratio method using the .xz format.`} />
+      <Supersubheading text={`Compress a file:`} />
+      <TerminalOutput content={`[root@localhost:~]# xz file.txt
+[root@localhost:~]# ls
+file.txt.xz
+[root@localhost:~]#`} />
+      <Text text={`This compresses file.txt into file.txt.xz.`} />
 
+      <Supersubheading text={`Decompress an .xz file:`} />
+      <TerminalOutput content={`[root@localhost:~]# unxz file.txt.xz
+[root@localhost:~]# ls
+file.txt
+[root@localhost:~]#`} />
+      <TerminalOutput content={`[root@localhost:~]# xz -d file.txt.xz
+[root@localhost:~]# ls
+file.txt
+[root@localhost:~]#`} />
 
+      <Line />
+      <Heading text={`Archiving`} />
+      <Text text={`Archiving combines multiple files into a single file without compression. The tar command is the most commonly used tool for this purpose.`} />
 
+      <Subheading text={`Basic tar Commands`} />
+      <Supersubheading text={`Create an archive:`} />
+      <TerminalOutput content={`[root@localhost:~]# tar -cvf archive.tar file1 file2
+a file1 0K
+a file2 0K
+[root@localhost:~]# ls
+archive.tar  file1        file2
+[root@localhost:~]#`} />
+
+      <Supersubheading text={`Extract an archive:`} />
+      <TerminalOutput content={`[root@localhost:~]# tar -xvf archive.tar
+tar: blocksize = 4
+x file1, 0 bytes, 0 tape blocks
+x file2, 0 bytes, 0 tape blocks
+[root@localhost:~]#`} />
+
+      <Subheading text={`Archive with Compression`} />
+      <Supersubheading text={`Create a gzip-compressed archive:`} />
+      <TerminalOutput content={`[root@localhost:~]# tar -cjvf archive.tar.gz file1 file2
+Compressing 'archive.tar.gz' with '/usr/bin/bzip2'...
+a file1 0K
+a file2 0K
+[root@localhost:~]# ls
+archive.tar.gz  file1           file2
+[root@localhost:~]#`} />
+
+<Supersubheading text={`See the data of a gzip-compressed archive without extrating:`} />
+      <TerminalOutput content={`[root@localhost:~]# tar -tjvf archive.tar.gz
+-rw-r--r--   0/0        0 Feb 13 21:08 2025 file1
+-rw-r--r--   0/0        0 Feb 13 21:08 2025 file2
+[root@localhost:~]#`} />
+
+      <Supersubheading text={`Extract a gzip-compressed archive:`} />
+      <TerminalOutput content={`[root@localhost:~]# tar -xjvf archive.tar.gz
+x file1, 0 bytes, 0 tape blocks
+x file2, 0 bytes, 0 tape blocks
+[root@localhost:~]#`} />
+
+      <Text text={`By understanding and using these commands effectively, you can efficiently manage files in Linux using archiving and compression techniques.`} />
     </div>
   );
 };
 
-export default Archive;
+export default ArchiveAndCompression;

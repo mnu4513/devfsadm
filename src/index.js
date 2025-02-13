@@ -30,6 +30,7 @@ import Archive from './components/solaris/Archive';
 import Links from './components/solaris/Link';
 import NetworkConfiguration from './components/solaris/NetworkConfiguratin';
 import ZFS from './components/solaris/ZFS';
+import QuotaReservation from './components/solaris/QuotaReservation';
 import PatchManagement from './components/solaris/PatchManagement';
 import Virtulization from './components/solaris/Virtualization';
 import LDOM from './components/solaris/LDOM';
@@ -353,8 +354,11 @@ const appRouter = createBrowserRouter([
           path: '/course/solaris/network-configuration',
           element: <NetworkConfiguration />
         }, {
-          path: '/course/solaris/zfs',
+          path: '/course/solaris/zfs-zpool',
           element: <ZFS />
+        }, {
+          path: '/course/solaris/quota-reservation',
+          element: <QuotaReservation />
         }, {
           path: '/course/solaris/patch-management',
           element: <PatchManagement />

@@ -3,7 +3,7 @@ import { Heading, Subheading, Supersubheading, TerminalOutput, Text } from "../u
 
 const Link = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
       <Heading text={`Soft & Hard Links in Solaris`} />
       
       <Text text={`In Solaris, a link is a connection between a file name and the actual data on the disk. Links enable multiple filenames to be associated with the same file or directory. There are two main types of links in Solaris: hard links and symbolic (soft) links.`} />

@@ -4,7 +4,7 @@ import YouTubeVideo from '../utils/YouTubeVideo';
 
 const IntroToSolaris = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
       <Heading text="Introduction to Solaris" />
 
       <Text text={`Solaris is a Unix-based operating system (OS) developed by Sun Microsystems, which was later acquired by Oracle Corporation. Solaris is renowned for its stability, scalability, and security features, making it a preferred choice in enterprise environments, particularly for server applications and large-scale computing systems. It is often used in data centers and complex enterprise setups.`} />
