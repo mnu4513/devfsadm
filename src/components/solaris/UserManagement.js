@@ -3,7 +3,7 @@ import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line } from
 
 const UserManagement = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
       <Heading text="User Management in Solaris" />
       
       <Text text="In Solaris, user management involves creating, modifying, and deleting user accounts, as well as managing user attributes." />
@@ -16,9 +16,8 @@ const UserManagement = () => {
         <li className='font-bold'>/etc/shadow</li>
       </ul>
 
-<Supersubheading/>      
       {/* Files Explanation */}
-      <Text text={`1. To get All User's Information:`} />
+      <Supersubheading text={`1. To get All User's Information:`} />
       <TerminalOutput content={`[root@localhost:~ ]# cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -33,7 +32,7 @@ john:x:1001:1002::/home/john:/bin/sh
 [root@localhost:~ ]#`} />
       <Text text={`The \`/etc/passwd\` file contains essential user information such as username, UID, GID, home directory, and shell.`} />
       
-      <Text text={`2. To get All User's Information in Password encrypted form:`} />
+      <Supersubheading text={`2. To get All User's Information in Password encrypted form:`} />
       <TerminalOutput content={`[root@localhost:~ ]# cat /etc/shadow
 root:*:20094:0:99999:7:::
 daemon:*:20094:0:99999:7:::
@@ -47,15 +46,15 @@ john:!:20131:0:99999:7:::
 [root@localhost:~ ]#`} />
       <Text text={`The \`/etc/shadow\` file stores password information in an encrypted form, as well as the date of the last password change and password expiration details.`} />
 
-      <Text text={`3. To check Password policy Information:`} />
+      <Supersubheading text={`3. To check Password policy Information:`} />
       <TerminalOutput content={`cat /etc/default/passwd`} />
       <Text text={`The \`/etc/default/passwd\` file contains settings related to password policies like password length and aging.`} />
 
-      <Text text={`4. To get a copy of Password policy Information:`} />
+      <Supersubheading text={`4. To get a copy of Password policy Information:`} />
       <TerminalOutput content={`cat /etc/opasswd`} />
       <Text text={`The \`/etc/opasswd\` file stores a backup copy of the \`/etc/passwd\` file to recover it if deleted by mistake.`} />
 
-      <Text text={`5. To recover the shadow file:`} />
+      <Supersubheading text={`5. To recover the shadow file:`} />
       <TerminalOutput content={`pwconv`} />
       <Text text={`The \`pwconv\` command is used to recover the \`/etc/shadow\` file if it is lost.`} />
       <Text text={`After recovering the shadow file, reset the root password with \`passwd root\` command.`} />
