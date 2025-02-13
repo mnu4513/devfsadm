@@ -1,163 +1,109 @@
 import React from 'react';
-import { img_base_url } from '../Config';
-import YouTubeVideo from '../utils/YouTubeVideo';
+import { Heading, Supersubheading, Text, TerminalOutput, Line } from "../utils/Comps";
 
 const ViEditor = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl text-red-500 font-bold my-5'>VI Editor in Solaris</h2>
-        <p>
-          In Solaris, the "vi" editor is a commonly used text editor.
-        </p>
-        <p>
-          Here are some basic commands to help you get started with vi:
-        </p>
-      </div>
-      <YouTubeVideo video_id={`9B-IOooDxIo`} />
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      
+      {/* Page Heading */}
+      <Heading text="VI Editor in Solaris" />
+
+      {/* Introduction */}
+      <Text text="In Solaris, the 'vi' editor is a powerful and commonly used text editor for editing configuration files, scripts, and more. It operates in different modes to provide maximum efficiency and flexibility for text editing." />
+      
+      <Text text="Here are some basic commands to help you get started with vi:" />
+      
+   
+
+      {/* Opening File */}
      
-      <div className='mt-5'>
-        {/* Opening file in vs code */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>1. Opening File </h2>
-        <p className='ml-8 my-2'>To create a new file or to open an existing file in VI Editor</p>
-        <span className='font-bold text-violet-600 ml-8'>
-          {`vi <file_name>`}
-        </span>
+        <Supersubheading text="1. Opening a File" />
+        <TerminalOutput content="[root@localhost ~]# vi file.txt" />
+        <Text text="To create a new file or open an existing file in the vi editor, use the `vi` command followed by the file name. If the file doesn’t exist, vi will create it." />
+     
 
-        <img src={`${img_base_url}asyocz59tvjnuswdvbfx`} alt='' className='mt-5 mb-8 md:w-2xl md:ml-4 lg:max-w-5xl' />
+      {/* Switching Modes */}
+     
+        <Supersubheading text="2. Switching Modes" />
+        <Text text="Vi operates in different modes. Here are the primary modes you’ll be using:" />
+        
+        <Text text="• Command Mode: This is the default mode when you open a file. In command mode, you can navigate the document and manipulate text, but you cannot directly edit the text." />
+        
+        <Text text="• Insert Mode: To edit or insert text, press 'i' in command mode. Once in insert mode, you can start typing freely." />
+        
+        <Text text="• Visual Mode: To highlight and select text for copying, cutting, or other operations, press 'v' in command mode." />
+        
+     
 
-        {/* Switching modex - 2 */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>2. Switching Modes </h2>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Command Mode:
-          </span> This is the default mode when you open a file. You can navigate and manipulate text.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Insert Mode:
-          </span>
-          To start inserting or editing text, press i in command mode.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Visual Mode:
-          </span>
-          To highlight and select text, press v in command mode.
-        </p>
+      {/* Saving and Exiting */}
+     
+        <Supersubheading text="3. Saving and Exiting" />
+        <Text text="To save and exit vi or to exit without saving, here are the key commands:" />
+        
+        <Text text="• Save Changes: In command mode, type :w and press Enter to save changes." />
+        
+        <Text text="• Save and Exit: Type ':wq' or ':x' in command mode and press Enter to save changes and exit vi." />
+        
+        <Text text="• Exit without Saving: If you want to exit vi without saving any changes, type ':q!' in command mode and press Enter." />
+        
+     
 
+      {/* Navigation */}
+     
+        <Supersubheading text="4. Navigation" />
+        <Text text="Navigating within a file in vi is done through command mode. Here are the common navigation commands:" />
+        
+        <Text text="• Moving Cursor: Use the arrow keys or the following keys in command mode: 'h' (left), 'j' (down), 'k' (up), 'l' (right)." />
+        
+        <Text text="• Go to the Beginning of Line: Press '0' in command mode to move the cursor to the beginning of the current line." />
+        
+        <Text text="• Go to the End of Line: Press '$' in command mode to move the cursor to the end of the current line." />
+        
+        <Text text="• Go to a Specific Line: Type ':<line_number>' in command mode to jump directly to a specified line number." />
+        
+     
 
-        {/* Saving and exiting - 3 */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>3. Saving and Exiting </h2>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Save Changes:
-          </span>
-          In command mode, type :w and press Enter.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Save and Exit:
-          </span>
-          To start inserting or editing text, press i in command mode.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Exit without Saving:
-          </span>
-          In command mode, type :q! and press Enter.
-        </p>
+      {/* Editing Text */}
+     
+        <Supersubheading text="5. Editing Text" />
+        <Text text="In vi, text editing is done in insert mode. Here are some useful editing commands in command mode:" />
+        
+        <Text text="• Delete a Character: Press 'x' in command mode to delete the character under the cursor." />
+        
+        <Text text="• Delete a Line: Press 'dd' in command mode to delete the entire line where the cursor is currently placed." />
+        
+        <Text text="• Copy (Yank) and Paste (Put): In command mode, type 'yy' to copy the current line, and type 'p' to paste it below the cursor." />
+        
+     
 
+      {/* Search and Replace */}
+     
+        <Supersubheading text="6. Search and Replace" />
+        <Text text="Here’s how you can search for text and perform replacements in vi:" />
+        
+        <Text text="• Search Forward: In command mode, type '/' followed by the search term and press Enter. This searches forward in the document." />
+        
+        <Text text="• Search Backward: In command mode, type '?' followed by the search term and press Enter. This searches backward in the document." />
+        
+        <Text text="• Replace Text: In command mode, type ':s/old_text/new_text/g' to replace all occurrences of 'old_text' with 'new_text' in the current line." />
+        
+     
 
-        {/* Navigation - 4 */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>4. Navigation </h2>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Moving Cursor:
-          </span>
-          Arrow keys or h (left), j (down), k (up), l (right),
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Go to the Beginning of Line:
-          </span>
-          0 (zero) in command mode.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Go to the End of Line:
-          </span>
-          $ in command mode.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Go to a Specific Line:
-          </span>
-          {`:<line_number> in command mode.`}
-        </p>
+      {/* Undo and Redo */}
+     
+        <Supersubheading text="7. Undo and Redo" />
+        <Text text="If you make a mistake or want to revert changes, use these commands:" />
+        
+        <Text text="• Undo: In command mode, press 'u' to undo the last change." />
+        
+        <Text text="• Redo: In command mode, press 'Ctrl + r' to redo a change that was undone." />
+        
+     
 
-
-        {/* Editing text */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>5. Editing Text </h2>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Delete a Character:
-          </span>
-          Press x in command mode.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Delete a Line:
-          </span>
-          Press dd in command mode.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Copy (Yank) and Paste (Put):
-          </span>
-          In command mode, use yy to copy a line and p to paste it.
-        </p>
-
-
-        {/* Search and Replace */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>6. Search and Replace: </h2>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Search Forward:
-          </span>
-          In command mode, type / followed by the search term and press Enter.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Search Backward:
-          </span>
-          In command mode, type ? followed by the search term and press Enter.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Replace Text:
-          </span>
-          In command mode, type :s/old_text/new_text/g to replace all occurrences of old_text with new_text.
-        </p>
-
-        {/* Undo and Redo */}
-        <h2 className='text-xl font-bold mt-8 ml-2 text-red-500'>7. Undo and Redo: </h2>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Undo:
-          </span>
-          In command mode, press u.
-        </p>
-        <p className='ml-8 my-2'>
-          <span className='font-bold mr-2 text-blue-500'>
-            Redo:
-          </span>
-          In command mode, press Ctrl + r.
-        </p>
-      </div>
-
-        <p className='my-5'>These are just some basic commands to get you started with vi in Solaris. Remember that vi can be powerful once you get used to its modes and commands.</p>
-    </div>
+      {/* Conclusion */}
+      <Line/>
+      <Text text="These are just some basic commands to get you started with vi in Solaris. As you become more comfortable with vi, you’ll discover even more powerful features. The key to mastering vi is practice and familiarity with its modes and commands." />
+   </div>
   );
 };
 
