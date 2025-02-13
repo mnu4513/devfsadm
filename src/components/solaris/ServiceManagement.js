@@ -1,76 +1,71 @@
 import React from 'react';
-import { img_base_url } from '../Config';
+import { Heading, Supersubheading, Text, TerminalOutput } from "../utils/Comps";
 
 const ServiceManagement = () => {
-
-  const content = [{
-    id: 1,
-    title: 'To list all services',
-    command: 'svcs -a',
-    image: 'ra6wmdkxpsx3nhw7inpn.png'
-  }, {
-    id: 2,
-    title: 'To search a service using service name',
-    command: 'svcs -a | grep <service_name>',
-    image: 'bcpwbll6wdk6xnsocdbb.png'
-  }, {
-    id: 3,
-    title: 'To enable a service',
-    command: 'svcs enable <service_name>',
-    image: 'vne28rxuhuiwznlmqcod.png'
-  }, {
-    id: 4,
-    title: 'To disable a service',
-    command: 'svcadm disable <service_name>',
-    image: 'o4aks7hw7gx62nmd98q4.png'
-  }, {
-    id: 5,
-    title: 'To refresh a service',
-    command: 'svcadm refresh <service_name>',
-    image: 'nxubxlikr1ywtj5obwmo.png'
-  }, {
-    id: 6,
-    title: 'To restart any service',
-    command: 'svcadm restart <service_name>',
-    image: 'isyosfv78fvu26dxl7q4.png'
-  }, {
-    id: 7,
-    title: 'To list down services',
-    command: 'svcs -xv',
-    image: 'mtwdzptj8eqxmtew8dre.png'
-  }, {
-    id: 8,
-    title: 'To clear any service from the maintinance',
-    command: 'svcadm clear <service_name>',
-    image: 'dryypmm9oqasshgq1uea.png'
-  }];
-
   return (
-    <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto'>
-      <div>
-        <h2 className='text-2xl font-bold my-5 ml-4'>Service Management in Solaris</h2>
-        <p className='ml-4'>
-          In Solaris, service management involves the management of services, daemons, and system processes. Solaris uses the Service Management Facility (SMF) to manage system services. SMF replaces traditional init scripts and provides a more sophisticated and flexible mechanism for managing services.
-        </p>
-      </div>
-      <div >
-        <iframe className='mt-5 h-96 w-full md:h-96 md:px-24 lg:w-4/5' src="https://www.youtube.com/embed/C49Tksl_3J4?si=4GLRa9_QsoRG_LGf" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-      </div>
-      <div >
-        {
-          content?.map((e) => {
-            return (
-              <div key={e.id} className='ml-4'>
-                <h2 className=' mr-2 mt-4 font-bold'> {e.id}. {e.title} :-  </h2>
-                
-                 <p className=' font-bold'> {e.command} </p>
-                
-                <img src={`${img_base_url}${e.image}`} alt='' className='mt-3 mb-8 md:w-2xl lg:max-w-5xl' />
-              </div>
-            )
-          })
-        }
-      </div>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      {/* Page Heading */}
+      <Heading text="Service Management in Solaris" />
+
+      {/* Introduction */}
+      <Text text="In Solaris, service management involves the management of services, daemons, and system processes. Solaris uses the Service Management Facility (SMF) to manage system services. SMF replaces traditional init scripts and provides a more sophisticated and flexible mechanism for managing services." />
+      
+
+      {/* Command 1: To list all services */}
+      <div className='ml-4'>
+        <Supersubheading text="1. To list all services" />
+        <TerminalOutput content="svcs -a" />
+        <Text text="The `svcs -a` command lists all services available on the system, regardless of their current status (online, offline, or maintenance)." />
+        </div>
+
+      {/* Command 2: To search a service using service name */}
+      <div className='ml-4'>
+        <Supersubheading text="2. To search a service using service name" />
+        <TerminalOutput content="svcs -a | grep <service_name>" />
+        <Text text="The `svcs -a | grep <service_name>` command filters the service list to search for a particular service by its name." />
+        </div>
+
+      {/* Command 3: To enable a service */}
+      <div className='ml-4'>
+        <Supersubheading text="3. To enable a service" />
+        <TerminalOutput content="svcs enable <service_name>" />
+        <Text text="The `svcs enable <service_name>` command enables a specific service, allowing it to start automatically on boot or when required." />
+        </div>
+
+      {/* Command 4: To disable a service */}
+      <div className='ml-4'>
+        <Supersubheading text="4. To disable a service" />
+        <TerminalOutput content="svcadm disable <service_name>" />
+        <Text text="The `svcadm disable <service_name>` command disables a service, preventing it from running even if it is triggered." />
+        </div>
+
+      {/* Command 5: To refresh a service */}
+      <div className='ml-4'>
+        <Supersubheading text="5. To refresh a service" />
+        <TerminalOutput content="svcadm refresh <service_name>" />
+        <Text text="The `svcadm refresh <service_name>` command refreshes the state of the service, reloading its configuration and restarting it without needing a full reboot." />
+        </div>
+
+      {/* Command 6: To restart any service */}
+      <div className='ml-4'>
+        <Supersubheading text="6. To restart any service" />
+        <TerminalOutput content="svcadm restart <service_name>" />
+        <Text text="The `svcadm restart <service_name>` command restarts a service. This can be useful to apply changes or resolve issues without rebooting the system." />
+        </div>
+
+      {/* Command 7: To list down services with extended information */}
+      <div className='ml-4'>
+        <Supersubheading text="7. To list down services with extended information" />
+        <TerminalOutput content="svcs -xv" />
+        <Text text="The `svcs -xv` command lists all services with detailed status and troubleshooting information, including which services are in maintenance mode and why." />
+        </div>
+
+      {/* Command 8: To clear any service from maintenance mode */}
+      <div className='ml-4'>
+        <Supersubheading text="8. To clear any service from maintenance mode" />
+        <TerminalOutput content="svcadm clear <service_name>" />
+        <Text text="The `svcadm clear <service_name>` command clears a service from maintenance mode and attempts to restart it. This is helpful if the service has encountered an issue and is stuck in maintenance." />
+        </div>
     </div>
   );
 };
