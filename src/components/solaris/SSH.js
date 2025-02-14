@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Supersubheading, TerminalOutput, Text } from "../utils/Comps";
+import { Heading, Supersubheading, TerminalOutput, Text } from "../utils/Comps";
 
 const SSH = () => {
   return (
