@@ -6,8 +6,8 @@ const SystemMonitoring = () => {
     <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
       {/* Page Heading */}
       <Heading text={`System Monitoring in Solaris`} />
-      <Text text={`System monitoring is crucial for system administrators to ensure that a computer system is running efficiently and without issues. It involves tracking and analyzing various system resources, such as CPU, memory, disk usage, and processes. By constantly monitoring these resources, administrators can:`}/>
-
+      <Text text={`System monitoring is crucial for system administrators to ensure that a computer system is running efficiently and without issues. It involves tracking and analyzing various system resources, such as CPU, memory, disk usage, and processes.`}/>
+<Text text={` By constantly monitoring these resources, administrators can:`}/>
       <ul className="ml-4 list-disc">
         <li> Identify performance bottlenecks: Detect issues such as high CPU or memory usage that may slow down the system.</li>
         <li> Prevent system failures: Early detection of issues like hardware failures or disk errors allows administrators to address them before they cause a crash.</li>
