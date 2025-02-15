@@ -118,6 +118,7 @@ import SolarisBlog from './components/blogs/SolarisBlog';
 import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
 import NFSSolaris from './components/solaris/NFS';
+import BootPhasePage from './components/solaris/BootPhase';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -382,6 +383,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/solaris/run-level',
           element: <RunLevel/>
+        }, {
+          path: '/course/solaris/boot-phase',
+          element: <BootPhasePage />
         }, {
           path: '/course/solaris/ilom-snapshot',
           element: <ILOM/>

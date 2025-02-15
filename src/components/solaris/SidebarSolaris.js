@@ -77,6 +77,9 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Run Level',
         link: '/course/solaris/run-level'
     }, {
+        name: 'Boot Phase',
+        link: '/course/solaris/boot-phase'
+    }, {
         name: 'Explorer',
         link: '/course/solaris/explorer'
     }, {
