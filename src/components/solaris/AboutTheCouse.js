@@ -1,187 +1,122 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import YouTubeVideo from '../utils/YouTubeVideo';
+import { Heading, Subheading, Text } from '../utils/Comps';
 
-const AboutTheCouse = () => {
-    return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto dark:text-white dark:bg-gray-800'>
-            <div>
-                <h2 className='text-2xl text-red-500 font-bold mt-5 ml-2'> Solaris System Administration Course in Hindi </h2>
-                <p className='ml-2 my-3'>
-                    Learn essential skills and techniques for efficiently managing Solaris 11 systems with our comprehensive System Administration course.
-                </p>
-                <p className='ml-2'>
-                    Whether you're a beginner or an experienced professional, this course will equip you with the knowledge and hands-on experience needed to effectively administer Solaris environments.
-                </p>
-            </div>
-            <YouTubeVideo video_id='uh7qptFsO90'/>
-           
-            <div >
+const AboutTheCourse = () => {
+  return (
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto dark:text-white dark:bg-gray-800'>
+      {/* Heading */}
+      <Heading text="Solaris System Administration Course in Hindi" />
+      <Heading text="(Solaris Administration Course for Beginners)" />
 
-                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'> Prerequisites:
-                </h2>
-                <p className='ml-2'>
-                    <li className='mt-2'>
-                        Basic knowledge of Unix/Linux operating systems.
-                    </li>
-                    <li className='mt-2'>
-                        Familiarity with command-line interfaces and system administration concepts.
-                    </li>
-                </p>
+      {/* Course Description */}
+      <Text text="Learn essential skills and techniques for efficiently managing Solaris 11 systems with our comprehensive System Administration course." />
+      <Text text="Whether you're a beginner or an experienced professional, this course will equip you with the knowledge and hands-on experience needed to effectively administer Solaris environments." />
 
-                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'>
-                    Who Should Enroll:
-                </h2>
-                <p className='ml-2'>
-                    <li className='mt-2'>
-                        Students interested in pursuing a career in Unix/Linux system administration.
-                    </li>
-                    <li className='mt-2'>
-                        System administrators responsible for managing Solaris 11 environments.
-                    </li>
-                    <li className='mt-2'>
-                        IT professionals seeking to enhance their skills in Solaris system administration.
-                    </li>
-                </p>
+      {/* Course Preview Video */}
+      <YouTubeVideo video_id="uh7qptFsO90" />
 
+      
+      {/* Prerequisites */}
+      <Subheading text="Prerequisites:" />
+      <ul className='ml-8 mt-2'>
+        <li className='mt-2'>Basic knowledge of Unix/Linux operating systems.</li>
+        <li className='mt-2'>Familiarity with command-line interfaces and system administration concepts.</li>
+      </ul>
 
-                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'>
-                    Course Format:
-                </h2>
-                <p className='ml-2'>
-                    <li className='mt-2'>
-                        Real-world scenarios and case studies for practical learning.
-                    </li>
-                    <li className='mt-2'>
-                        Access to course materials, resources, and community support.
-                    </li>
-                    <li className='mt-2'>
-                        Video lectures, demonstrations, and hands-on lab exercises, written notes with commadns and their output.
-                    </li>
-                </p>
+      
+      {/* Who Should Enroll */}
+      <Subheading text="Who Should Enroll:" />
+      <ul className='ml-8 mt-2'>
+        <li className='mt-2'>Students interested in pursuing a career in Unix/Linux system administration.</li>
+        <li className='mt-2'>System administrators responsible for managing Solaris 11 environments.</li>
+        <li className='mt-2'>IT professionals seeking to enhance their skills in Solaris system administration.</li>
+      </ul>
 
-                <h2 className='ml-2 mt-6 text-red-500 text-xl font-bold'>
-                    Topics:
-                </h2>
-                <p className='ml-2 text-blue-500'>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/installation-and-setup'>
-                            Installation and Setup
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/basic-commands'>
-                            Basic Commands
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/user-management'>
-                            User Management
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/group-management'>
-                            Group Management
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/files-and-directories'>
-                            Files and Directories
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/vi-editor'>
-                            VI Editor
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/ssh'>
-                            SSH
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/super-user'>
-                            Super User
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/process-management'>
-                            Process Management
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/service-management'>
-                            Service Management
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/system-monitoring'>
-                            System Monitoring
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/archive'>
-                            Archive
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/link'>
-                            Link
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/network-configuration'>
-                            Network Configuratin
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/zfs'>
-                            ZFS (Zettabyte File System)
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/patch-management'>
-                            Patch Management
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/virtulization'>
-                            Virtulization
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/ldom'>
-                            LDOM
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/cron-job'>
-                            Cron Job (Crontab)
-                        </Link>
-                    </li>
-                    <li className='mt-2'>
-                        <Link to='/course/solaris/interview-preparation'>
-                            Interview Preparation
-                        </Link>
-                    </li>
-                </p>
+      
+      {/* Course Format */}
+      <Subheading text="Course Format:" />
+      <ul className='ml-8 mt-2'>
+        <li className='mt-2'>Real-world scenarios and case studies for practical learning.</li>
+        <li className='mt-2'>Access to course materials, resources, and community support.</li>
+        <li className='mt-2'>Video lectures, demonstrations, and hands-on lab exercises, written notes with commands and their output.</li>
+      </ul>
 
-                <h2 className='ml-2 text-red-500 mt-6 text-xl font-bold'>
-                    Duration:
-                </h2>
-                <p className='ml-2'>
-                    <li className='mt-2'>
-                        The course is designed to be completed in 3 weeks, with 5 of study per week.
-                    </li>
-                </p>
-            </div>
+      
+      {/* Course Topics */}
+      <Subheading text="Topics:" />
+      <ul className='ml-8 text-blue-500 mt-2'>
+        <li className='mt-2'>
+          <Link to='/course/solaris/installation-and-setup'>Installation and Setup</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/basic-commands'>Basic Commands</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/user-management'>User Management</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/group-management'>Group Management</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/files-and-directories'>Files and Directories</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/vi-editor'>VI Editor</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/ssh'>SSH</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/super-user'>Super User</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/process-management'>Process Management</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/service-management'>Service Management</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/system-monitoring'>System Monitoring</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/archive'>Archive</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/link'>Link</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/network-configuration'>Network Configuration</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/zfs'>ZFS (Zettabyte File System)</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/patch-management'>Patch Management</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/virtulization'>Virtualization</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/ldom'>LDOM</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/cron-job'>Cron Job (Crontab)</Link>
+        </li>
+        <li className='mt-2'>
+          <Link to='/course/solaris/interview-preparation'>Interview Preparation</Link>
+        </li>
+      </ul>
 
-            <p className='ml-2 mt-8 mb-4'>
-                By covering these topics in your Solaris 11 System Administration course, students will gain a comprehensive understanding of Solaris administration principles and acquire valuable skills for managing Solaris environments effectively.
-            </p>
+      
+     
 
-        </div>
-    );
+      <Text text={``}/>
+      {/* Course Closing Statement */}
+      <Text text="By covering these topics in your Solaris 11 System Administration course, students will gain a comprehensive understanding of Solaris administration principles and acquire valuable skills for managing Solaris environments effectively." />
+    </div>
+  );
 };
 
-export default AboutTheCouse;
+export default AboutTheCourse;
