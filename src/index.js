@@ -31,6 +31,8 @@ import Links from './components/solaris/Link';
 import NetworkConfiguration from './components/solaris/NetworkConfiguratin';
 import ZFS from './components/solaris/ZFS';
 import QuotaReservation from './components/solaris/QuotaReservation';
+import ZfsSnapshot from './components/solaris/ZfsSnapshot';
+import Swap from './components/solaris/Swap';
 import PatchManagement from './components/solaris/PatchManagement';
 import LDOM from './components/solaris/LDOM';
 import InterviewPrep from './components/solaris/InetviewPreparation';
@@ -360,6 +362,12 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/solaris/quota-reservation',
           element: <QuotaReservation />
+        }, {
+          path: '/course/solaris/zfs-snapshot',
+          element: <ZfsSnapshot/>
+        }, {
+          path: '/course/solaris/swap',
+          element: <Swap/>
         }, {
           path: '/course/solaris/patch-management',
           element: <PatchManagement />

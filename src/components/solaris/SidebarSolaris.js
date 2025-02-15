@@ -56,6 +56,12 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'ZFS Quota & Reservation',
         link: '/course/solaris/quota-reservation'
     }, {
+        name: 'ZFS Snapshot',
+        link: '/course/solaris/zfs-snapshot'
+    }, {
+        name: 'Swap',
+        link: '/course/solaris/swap'
+    }, {
         name: 'Patch Management',
         link: '/course/solaris/patch-management'
     }, {
