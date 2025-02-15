@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Line, Subheading, Supersubheading, TerminalOutput, Text } from "../utils/Comps";
+import { Heading, Line, Subheading, Text } from "../utils/Comps";
 
 const VirtualizationPage = () => {
   return (

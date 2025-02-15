@@ -2,56 +2,61 @@ import React from 'react';
 import telegram_icon from '../../assets/ico/telegram_icon.png';
 import drive_icon from '../../assets/ico/drive_icon.webp';
 import YouTubeVideo from '../utils/YouTubeVideo';
+import { Heading, Line, Subheading, Text, TerminalOutput } from '../utils/Comps';
 
-const InstallAndSetup = () => (
-  <div className='flex flex-col px-5 space-y-5 lg:max-w-6xl mx-auto mb-5'>
-    <h3 className='text-2xl text-red-500 my-5 font-bold'>Installation and setup</h3>
-    <div className='ml-2'>
-      <h2 className='text-xl text-red-500 font-bold'> Tools we required </h2>
-      <p className='mt-2'> Download by visiting official website or on telegram or on google drive </p>
+const InstallAndSetup = () => {
+  return (
+    <div className='flex flex-col px-5 space-y-5 lg:max-w-4xl mx-auto mb-5'>
+      <Heading text={`Installation and Setup`} />
+
+      <Text text={`In this guide, we will walk you through the process of installing Oracle Solaris 11 and setting it up with VMware or VirtualBox. The necessary tools and steps for installation are outlined below.`} />
+
+      <Line />
+      
+      <Subheading text={`Tools We Require`} />
+      <Text text={`You can download the required tools by visiting the official websites or through the links provided below. The tools include Oracle Solaris 11, VMware 17 Pro, and Putty Terminal.`} />
       <ul className='ml-8 space-y-2 mt-2'>
-        <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> Oracle Solaris 11 </span>
+        <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>
+          <span> Oracle Solaris 11 </span>
           <a rel='noreferrer' href='https://t.me/solaris_adm/2' target='_blank'> <img src={telegram_icon} alt='' className='h-5 mx-3' /></a>
-          <a rel='noreferrer' href='https://drive.google.com/file/d/1zOC1PiW2J2lMag35V0DyYd4pNoKPchhQ/view?usp=drivesdk' target='_blank'> <img src={drive_icon} alt='' className='h-5 ' /></a>
+          <a rel='noreferrer' href='https://drive.google.com/file/d/1zOC1PiW2J2lMag35V0DyYd4pNoKPchhQ/view?usp=drivesdk' target='_blank'> <img src={drive_icon} alt='' className='h-5' /></a>
         </button>
-        <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> VMware 17 pro </span>
+
+        <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>
+          <span> VMware 17 Pro </span>
           <a rel='noreferrer' href='https://t.me/solaris_adm/3' target='_blank'> <img src={telegram_icon} alt='' className='h-5 mx-3' /></a>
           <a rel='noreferrer' href='https://drive.google.com/file/d/1zPuYdHrvtzbfIf-qcS3wS6XVd6-p4Zn7/view?usp=drivesdk' target='_blank'> <img src={drive_icon} alt='' className='h-5' /></a>
         </button>
-        <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>    <span> Putty Terminal </span>
+
+        <button className='flex flex-row w-60 border-2 px-2 py-1 items-center justify-between rounded-md bg-gray-300 text-blue-400'>
+          <span> Putty Terminal </span>
           <a rel='noreferrer' href='https://t.me/solaris_adm/4' target='_blank'> <img src={telegram_icon} alt='' className='h-5 mx-3' /></a>
           <a rel='noreferrer' href='https://drive.google.com/file/d/1zWYAp65GrlOCbBAkNiVUQDT5-boNcq0h/view?usp=drivesdk' target='_blank'> <img src={drive_icon} alt='' className='h-5' /></a>
         </button>
-
       </ul>
+
+      <Line />
+
+      <Subheading text={`Process to Installation`} />
+      <Text text={`First, you need to download the ISO image file of Oracle Solaris 11.`} />
+      <Text text={`After downloading the ISO image, you will need VMware or VirtualBox to run the ISO image on your Windows PC, Linux, or MacBook.`} />
+      <Text text={`The download links for all the necessary tools have been provided above.`} />
+
+      <Text text={`Once VMware is installed, open VMware and start the setup process. If you encounter any issues during the setup, you can refer to the setup video below for guidance.`} />
+
+      <YouTubeVideo video_id='tomhp3foV60' />
+
+      
+
+      <Text text={`While installing VMware Pro 17 or higher, use the following user key for the Pro version:`} />
+      <TerminalOutput content={`MC60H-DWHD5-H80U9-6V85M-8280D`} />
+
+      <Text text={`After downloading and installing VMware, you will need to install the Solaris ISO file using VMware.`} />
+      <Text text={`For this, we will use the default settings provided by VMware. There is no need for advanced custom configuration. Select the ISO image file and proceed with the general configuration.`} />
+      <Text text={`Once you have completed the installation of the Solaris ISO image, let it reboot.`} />
+      <Text text={`After the reboot, your OS should work smoothly without any issues.`} />
     </div>
-    <div className='ml-2'>
-      <h2 className='text-xl text-red-500 font-bold mt-4  '> Process to Installation </h2>
-      <p className='mt-2 '>
-        Fitst of all we need to download the ISO image file of Oracle Solaris 11.
-        Then we need to download VMware or Virtual Box to run ISO image on our windows pc or on linux or macbook.
-      </p>
-      <p className='mt-2'>Download links of all tools are provided already. </p>
-      <p className='mt-2'> After the Installation of VMware, open VMware and start the setup. If you are having any issue in setup, you can refer the video for setup and isntallation.</p>
-    </div>
-
-    <YouTubeVideo video_id='tomhp3foV60' />
-    
-
-
-    <div>
-      <p className='mt-2 ml-2'> While installing VMware pro 17 or higher version of VMware pro user key for pro version <span className='font-bold text-blue-400' >'MC60H-DWHD5-H80U9-6V85M-8280D'</span> </p>
-
-      <p className='mt-2 ml-2'>After downloading and installing VMware we will install Solaris iso file on this app.
-        For this we won't use advance custom setting, we will use normal setting provided by VMware application.
-        We will select our iso image file and will proceed with genral configuration.
-        We will wait for Installation of Solaris iso image and then we will let it reboot.
-        After rebooting process our OS will work smoothly.
-      </p>
-    </div>
-
-
-  </div>
-)
+  );
+};
 
 export default InstallAndSetup;
