@@ -20,7 +20,7 @@ const AboutTheCourse = () => {
       
       {/* Prerequisites */}
       <Subheading text="Prerequisites:" />
-      <ul className='ml-8 mt-2'>
+      <ul className='ml-4 mt-2'>
         <li className='mt-2'>Basic knowledge of Unix/Linux operating systems.</li>
         <li className='mt-2'>Familiarity with command-line interfaces and system administration concepts.</li>
       </ul>
@@ -28,7 +28,7 @@ const AboutTheCourse = () => {
       
       {/* Who Should Enroll */}
       <Subheading text="Who Should Enroll:" />
-      <ul className='ml-8 mt-2'>
+      <ul className='ml-4 mt-2'>
         <li className='mt-2'>Students interested in pursuing a career in Unix/Linux system administration.</li>
         <li className='mt-2'>System administrators responsible for managing Solaris 11 environments.</li>
         <li className='mt-2'>IT professionals seeking to enhance their skills in Solaris system administration.</li>
@@ -37,7 +37,7 @@ const AboutTheCourse = () => {
       
       {/* Course Format */}
       <Subheading text="Course Format:" />
-      <ul className='ml-8 mt-2'>
+      <ul className='ml-4 mt-2'>
         <li className='mt-2'>Real-world scenarios and case studies for practical learning.</li>
         <li className='mt-2'>Access to course materials, resources, and community support.</li>
         <li className='mt-2'>Video lectures, demonstrations, and hands-on lab exercises, written notes with commands and their output.</li>
@@ -46,7 +46,7 @@ const AboutTheCourse = () => {
       
       {/* Course Topics */}
       <Subheading text="Topics:" />
-      <ul className='ml-8 text-blue-500 mt-2'>
+      <ul className='ml-4 text-blue-500 mt-2'>
         <li className='mt-2'>
           <Link to='/course/solaris/installation-and-setup'>Installation and Setup</Link>
         </li>
