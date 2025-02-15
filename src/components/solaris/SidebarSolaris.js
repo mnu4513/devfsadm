@@ -86,6 +86,9 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'ILOM Snapshot',
         link: '/course/solaris/ilom-snapshot'
     }, {
+        name: 'Virtualization',
+        link: '/course/solaris/virtualization'
+    },{
         name: 'Interview Preparation',
         link: '/course/solaris/interview-preparation'
     }];

@@ -119,6 +119,7 @@ import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
 import NFSSolaris from './components/solaris/NFS';
 import BootPhasePage from './components/solaris/BootPhase';
+import VirtualizationPage from './components/solaris/Virtualization';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -395,6 +396,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/solaris/explorer',
           element: <ExplorerLogs/>
+        }, {
+          path: '/course/solaris/virtualization',
+          element: <VirtualizationPage/>
         }, {
           path: '/course/solaris/interview-preparation',
           element: <InterviewPrep />
