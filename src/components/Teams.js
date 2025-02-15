@@ -1,26 +1,26 @@
 import { img_base_url, mine } from "./Config";
 const people = [{
-  name: 'Jay',
+  name: '0',
   role: 'Co-Founder / CEO',
   imageUrl: mine,
 }, {
-  name: 'Jay1',
+  name: '1',
   role: 'Co-Founder / CEO',
   imageUrl: mine,
 }, {
-  name: 'Jay2',
+  name: '2',
   role: 'Co-Founder / CEO',
   imageUrl: mine,
 }, {
-  name: 'Jay3',
+  name: '3',
   role: 'Co-Founder / CEO',
   imageUrl: mine,
 }, {
-  name: 'Jay4',
+  name: '4',
   role: 'Co-Founder / CEO',
   imageUrl: mine,
 }, {
-  name: 'Jay5',
+  name: '5',
   role: 'Co-Founder / CEO',
   imageUrl: mine,
 }];

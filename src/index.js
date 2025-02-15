@@ -32,9 +32,10 @@ import NetworkConfiguration from './components/solaris/NetworkConfiguratin';
 import ZFS from './components/solaris/ZFS';
 import QuotaReservation from './components/solaris/QuotaReservation';
 import PatchManagement from './components/solaris/PatchManagement';
-import Virtulization from './components/solaris/Virtualization';
 import LDOM from './components/solaris/LDOM';
 import InterviewPrep from './components/solaris/InetviewPreparation';
+import ILOM from './components/solaris/IlomSnapshot';
+import ExplorerLogs from './components/solaris/Explorer';
 
 // Linux 
 import HomeLinux from './components/linux/HomeLinux';
@@ -363,14 +364,17 @@ const appRouter = createBrowserRouter([
           path: '/course/solaris/patch-management',
           element: <PatchManagement />
         }, {
-          path: '/course/solaris/virtulization',
-          element: <Virtulization />
-        }, {
           path: '/course/solaris/ldom',
           element: <LDOM />
         }, {
           path: '/course/solaris/cron-job',
           element: <CronJob />
+        }, {
+          path: '/course/solaris/ilom-snapshot',
+          element: <ILOM/>
+        }, {
+          path: '/course/solaris/explorer',
+          element: <ExplorerLogs/>
         }, {
           path: '/course/solaris/interview-preparation',
           element: <InterviewPrep />

@@ -59,9 +59,6 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Patch Management',
         link: '/course/solaris/patch-management'
     }, {
-        name: 'Virtulization',
-        link: '/course/solaris/virtulization'
-    }, {
         name: 'LDOM',
         link: '/course/solaris/ldom'
     }, {
@@ -70,6 +67,12 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
     }, {
         name: 'Interview Preparation',
         link: '/course/solaris/interview-preparation'
+    }, {
+        name: 'Explorer',
+        link: '/course/solaris/explorer'
+    }, {
+        name: 'ILOM Snapshot',
+        link: '/course/solaris/ilom-snapshot'
     }];
 
 

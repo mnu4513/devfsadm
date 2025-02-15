@@ -14,7 +14,7 @@ const posts = [
     datetime: '2024-03-16',
     category: { title: 'Administration', href: '/course/solaris' },
     author: {
-      name: 'Jay',
+      name: '0',
       role: 'Co-Founder / CEO',
       href: '/profile/jay',
       imageUrl: mine,
