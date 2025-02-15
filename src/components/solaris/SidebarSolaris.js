@@ -47,6 +47,9 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'System Monitoring',
         link: '/course/solaris/system-monitoring'
     }, {
+        name: 'Cron Job',
+        link: '/course/solaris/cron-job'
+    }, {
         name: 'Nerwork Configuration',
         link: '/course/solaris/network-configuration'
     }, {
@@ -68,17 +71,17 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'LDOM',
         link: '/course/solaris/ldom'
     }, {
-        name: 'Cron Job',
-        link: '/course/solaris/cron-job'
-    }, {
-        name: 'Interview Preparation',
-        link: '/course/solaris/interview-preparation'
+        name: 'Run Level',
+        link: '/course/solaris/run-level'
     }, {
         name: 'Explorer',
         link: '/course/solaris/explorer'
     }, {
         name: 'ILOM Snapshot',
         link: '/course/solaris/ilom-snapshot'
+    }, {
+        name: 'Interview Preparation',
+        link: '/course/solaris/interview-preparation'
     }];
 
 
