@@ -7,7 +7,7 @@ import { Heading, Line, Subheading, Text, TerminalOutput } from '../utils/Comps'
 const InstallAndSetup = () => {
   return (
     <div className='flex flex-col px-5 space-y-5 lg:max-w-4xl mx-auto mb-5'>
-      <Heading text={`Installation and Setup`} />
+      <Heading text={`Solaris Lab Installation and Setup`} />
 
       <Text text={`In this guide, we will walk you through the process of installing Oracle Solaris 11 and setting it up with VMware or VirtualBox. The necessary tools and steps for installation are outlined below.`} />
 
