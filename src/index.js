@@ -117,6 +117,7 @@ import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp'
 import SolarisBlog from './components/blogs/SolarisBlog';
 import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
 import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
+import NFSSolaris from './components/solaris/NFS';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -384,6 +385,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/solaris/ilom-snapshot',
           element: <ILOM/>
+        }, {
+          path: '/course/solaris/nfs',
+          element: <NFSSolaris/>
         }, {
           path: '/course/solaris/explorer',
           element: <ExplorerLogs/>

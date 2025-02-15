@@ -65,6 +65,9 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Swap',
         link: '/course/solaris/swap'
     }, {
+        name: 'NFS',
+        link: '/course/solaris/nfs'
+    }, {
         name: 'Patch Management',
         link: '/course/solaris/patch-management'
     }, {
