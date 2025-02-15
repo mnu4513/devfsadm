@@ -102,7 +102,7 @@ solaris                     origin   online F file:///mnt/SRU11.4.69/
       <Text text={`Before performing the actual patching, it’s recommended to perform a dry run. A dry run simulates the patching process without making any changes to the system. It shows which packages will be updated, removed, or added, and provides an overview of the space required and any potential errors.`} />
 
       <Text text={`To perform a dry run, use the following command:`} />
-      <TerminalOutput content={`[root@localhost:~]#~# pkg update -nv
+      <TerminalOutput content={`[root@localhost:~]# pkg update -nv
             Packages to update:         3
      Estimated space available: 167.05 GB
 Estimated space to be consumed:  77.15 MB
@@ -119,7 +119,7 @@ solaris
   system/diagnostic/stackdb
     11.4-11.4.69.0.1.170.2 -> 11.4-11.4.76.0.1.182.1
 
-[root@localhost:~]#~#`} />
+[root@localhost:~]#`} />
       <Text text={`The '-nv' flags stand for "no install" and "verbose," respectively. This allows you to preview the patching actions and confirm if everything looks correct.`} />
 
       <Supersubheading text={`Step 5: Final Patching Operation`} />
@@ -133,13 +133,13 @@ solaris
       <Text text={`After the patching operation, a new boot environment (BE) will be created. The boot environment allows you to revert to a previous configuration if the new patches cause any issues.`} />
 
       <Text text={`You can view the available boot environments using the command:`} />
-      <TerminalOutput content={`[root@localhost:~]#~# beadm list
+      <TerminalOutput content={`[root@localhost:~]# beadm list
 BE Name       Flags Mountpoint Space   Policy Created
 ------------- ----- ---------- ------- ------ ----------------
 11.4.69.170.2 N     /          138.24G static 2024-03-17 15:37
 solaris       -     -          1.48G   static 2024-02-23 17:37
 11.4.76.170.1 R     /          138.24G static 2024-12-17 13:31
-[root@localhost:~]#~#`} />
+[root@localhost:~]#`} />
       <Text text={`The output will show all the available boot environments and their current status. The 'N' flag indicates the currently running BE, while the 'R' flag indicates the BE that will be activated after a reboot. A 'NR' flag means that the BE is both running and will be active after the next reboot.`} />
 
       <Text text={`If you want to activate a different boot environment, use:`} />
@@ -151,30 +151,30 @@ solaris       -     -          1.48G   static 2024-02-23 17:37
       <Text text={`To reboot the system, use the following command:`} />
       <TerminalOutput content={`[root@localhost:~]# init 6`} />
       <Text text={`After the system reboots, it will come up with the new SRU according to the selected boot environment. You can verify the current boot environment again after the reboot:`} />
-      <TerminalOutput content={`[root@localhost:~]#~# beadm list
+      <TerminalOutput content={`[root@localhost:~]# beadm list
 BE Name       Flags Mountpoint Space   Policy Created
 ------------- ----- ---------- ------- ------ ----------------
 11.4.69.170.2 -     /          138.24G static 2024-03-17 15:37
 solaris       -     -          1.48G   static 2024-02-23 17:37
 11.4.76.170.1 NR    /          138.24G static 2024-12-17 13:31
-[root@localhost:~]#~#`} />
+[root@localhost:~]#`} />
       <Text text={`You can also check the updated version of the OS by running:`} />
       <TerminalOutput content={`[root@localhost:~]# uname -a
 SunOS OEM 5.11 11.4.76.170.1 sun4v sparc sun4v logical-domain
 [root@localhost:~]#`} />
-      <TerminalOutput content={`[root@localhost:~]#~# pkg list avf entire
+      <TerminalOutput content={`[root@localhost:~]# pkg list avf entire
 NAME (PUBLISHER)                                  VERSION                    IFO
 entire                                            11.4-11.4.76.0.1.170.1     i--
 
 pkg list: no packages matching the following patterns are installed:
   avf
-[root@localhost:~]#~#`} />
+[root@localhost:~]#`} />
 
       <Supersubheading text={`Step 8: Post-patching Checks`} />
       <Text text={`After rebooting, perform a set of post-patching checks to ensure that all packages have been updated successfully and the system is stable. This includes checking system logs, verifying package versions, and confirming the correct operation of critical services.`} />
 
       <Text text={`For example, you can check the package status using:`} />
-      <TerminalOutput content={`[root@localhost:~]#~# pkg info | more
+      <TerminalOutput content={`[root@localhost:~]# pkg info | more
              Name: archiver/gnu-tar
           Summary: GNU version of the tar archiving utility
       Description: Tar is a program for packaging a set of files as a single
@@ -220,7 +220,7 @@ Last Install Time: June  4, 2024 at  6:07:54 AM
              Size: 6.80 MB
              FMRI: pkg://solaris/codec/flac@1.4.2-11.4.69.0.1.170.1:20240503T150338Z
        Source URL: http://downloads.xiph.org/releases/flac/flac-1.4.2.tar.xz
-[root@localhost:~]#~#`} />
+[root@localhost:~]#`} />
       <Text text={`You can also verify that the patches were successfully applied by checking the installed versions or running health checks on the system.`} />
 
       <Line />
@@ -229,13 +229,13 @@ Last Install Time: June  4, 2024 at  6:07:54 AM
 
       <Supersubheading text={`Condition 1: If Application Has Issues with New OS Patch`} />
       <Text text={`First, check the previous boot environment status using the command:`} />
-      <TerminalOutput content={`[root@localhost:~]#~# beadm list
+      <TerminalOutput content={`[root@localhost:~]# beadm list
 BE Name       Flags Mountpoint Space   Policy Created
 ------------- ----- ---------- ------- ------ ----------------
 11.4.69.170.2 N     /          138.24G static 2024-03-17 15:37
 solaris       -     -          1.48G   static 2024-02-23 17:37
 11.4.76.170.1 R     /          138.24G static 2024-12-17 13:31
-[root@localhost:~]#~#`} />
+[root@localhost:~]#`} />
       <Text text={`Next, select the previous boot environment and activate it:`} />
       <TerminalOutput content={`[root@localhost:~]# beadm activate 11.4.69.170.2`} />
       <Text text={`It will set the flag 'R' on the previous BE. After this, reboot the server to activate the previous BE:`} />
