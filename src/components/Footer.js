@@ -9,9 +9,9 @@ const Footer = () => {
                 <div className="lg:w-1/3">
                     <Link rel="noopener noreferrer" to="/" className="flex justify-center space-x-3 lg:justify-start">
                         <div className="flex items-center justify-center  rounded-full">
-                            <img src={logoVp} alt=''  className='h-12 w-auto rounded-full border-red-500 border-2'/>
+                            <img src={logoVp} alt=''  className='h-12 w-auto rounded-full'/>
                         </div>
-                        <span className="self-center text-2xl font-semibold">DevFsAdm</span>
+                        <span className="self-center text-2xl font-semibold">infoUnix</span>
                     </Link>
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -79,7 +79,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 DevFsAdm. All rights reserved.</div>
+            <div className="py-6 text-sm text-center dark:text-gray-400">© 2023 infoUnix. All rights reserved.</div>
         </footer>
     );
 };

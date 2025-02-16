@@ -10,7 +10,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Link } from 'react-router-dom';
-import icon from '../assets/ico/icon.png';
+import icon from '../assets/img/logoVP.png';
 
 
 const courses = [
@@ -58,8 +58,8 @@ export default function Navbar() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link to='/' className="-m-1.5 p-1.5">
-                        <span className="sr-only">Devfsadm</span>
-                        <img className="h-8 w-auto rounded-full border-2 border-red-500" src={icon} alt="" />
+                        <span className="sr-only">infoUnix</span>
+                        <img className="h-8 w-auto rounded-full" src={icon} alt="" />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -144,7 +144,7 @@ export default function Navbar() {
                             <span className="sr-only">Devfsadm</span>
 
                             <img
-                                className="h-8 w-auto rounded-full border-2 border-red-500"
+                                className="h-8 w-auto rounded-full"
                                 src={icon}
                                 alt=""
                             />
