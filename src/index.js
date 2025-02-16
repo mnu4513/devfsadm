@@ -120,6 +120,7 @@ import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
 import NFSSolaris from './components/solaris/NFS';
 import BootPhasePage from './components/solaris/BootPhase';
 import VirtualizationPage from './components/solaris/Virtualization';
+import PrePostCheck from './components/solaris/PrePostCheck';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -375,6 +376,9 @@ const appRouter = createBrowserRouter([
         }, {
           path: '/course/solaris/patch-management',
           element: <PatchManagement />
+        }, {
+          path: '/course/solaris/pre-post-checks',
+          element: <PrePostCheck/>
         }, {
           path: '/course/solaris/ldom',
           element: <LDOM />

@@ -71,6 +71,9 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Patch Management',
         link: '/course/solaris/patch-management'
     }, {
+        name: 'Pre & Post Checks',
+        link: '/course/solaris/pre-post-checks'
+    }, {
         name: 'LDOM',
         link: '/course/solaris/ldom'
     }, {
