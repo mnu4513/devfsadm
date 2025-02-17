@@ -1,9 +1,10 @@
 import React from 'react'
-import { Heading, Line, Subheading, Supersubheading, Text } from './utils/Comps';
+import { Heading, Line, Subheading, Supersubheading, Text, TextWithLinks } from './utils/Comps';
+import {Link} from 'react-router-dom';
 
 const AboutUs = () => {
   return (
-    <div className="container mx-auto px-4 md:px-8 lg:px-24 pb-8 pt-8 lg:max-w-4xl dark:bg-gray-800 dark:text-white">
+    <div className="container mx-auto mt-8 px-4 lg:max-w-4xl mb-5 dark:bg-gray-800 dark:text-white">
       <Heading text={`About Us (infoUnix)`}/>
       <Text text={`Welcome to infoUnix, your premier destination for free online courses in Solaris system administration, Linux system administration, shell scripting, Git & Github, Docker, Podman, HTML, CSS, JavaScript, Node.js, React, and more.`}/>
 
@@ -36,7 +37,16 @@ const AboutUs = () => {
       <Line/>
       <Subheading text={`Get in Touch`}/>
       <Text text={`Have questions or feedback? `}/>
-      <Text text={`We'd love to hear from you! Reach out to us at support@infounix.com or connect with us on Instagram, Twitter or LinkedIn.`}/>
+      <TextWithLinks>We'd love to hear from you! Reach out to us at  
+      <Link to="mailto:support@infounix.com" className='text-blue-500'> support@infounix.com </Link> 
+      or connect with us on 
+      <Link to="https://instagram.com/infounix" className='text-blue-500'> Instagram </Link>
+      ,
+      <Link to="https://x.com/infounix" className='text-blue-500'> Twitter </Link>
+      or
+      <Link to="https://linkedin.com/infounix" className='text-blue-500'> LinkedIn </Link>.          
+      </TextWithLinks>
+      
 
       <Line />
       <Subheading text={`Join Our Community`}/>
