@@ -94,6 +94,15 @@ disabled       21:41:56 svc:/network/smtp:sendmail
       
         <Supersubheading text="7. To list down services with extended information" />
         <TerminalOutput content={`[root@localhost:~]# svcs -xv
+svc:/network/nfs/nlockmgr:default (NFS lock manager)
+ State: disabled since February 17, 2025 12:00:21 PM UTC
+Reason: Disabled by an administrator.
+   See: http://support.oracle.com/msg/SMF-8000-05
+   See: man -M /usr/share/man -s 1M lockd
+   See: /var/svc/log/network-nfs-nlockmgr:default.log
+Impact: 2 dependent services are not running:
+        svc:/network/nfs/client:default
+        svc:/network/nfs/server:default
 [root@localhost:~]#`}/>
         <Text text="The `svcs -xv` command lists all services with detailed status and troubleshooting information, including which services are in maintenance mode and why." />
         
