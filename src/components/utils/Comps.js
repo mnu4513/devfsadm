@@ -24,6 +24,13 @@ export const Text = ({ text }) => (
     </div>
 );
 
+// Text with links 
+export const TextWithLinks = ({ children }) => (
+  <div className="mb-3">
+      <p className="font-cambria ">{children}</p>
+  </div>
+);
+
 
 // line 
 export const Line = ({ text = "", color = "border-gray-300", textColor = "text-gray-500" }) => {
