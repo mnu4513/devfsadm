@@ -102,7 +102,6 @@ import CronJob from './components/solaris/CronJob';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfServices from './components/TermsOfServices';
 import Features from './components/Features';
-import UploadImage from './components/UploadImage';
 import AboutTheCourse from './components/solaris/AboutTheCouse';
 import IntroToShell from './components/shell_scripting/IntroToShell';
 import SetupEnv from './components/shell_scripting/SetupEnv';
@@ -134,9 +133,6 @@ const appRouter = createBrowserRouter([
       {
         path: '/',
         element: <Home />
-      }, {
-        path: '/image',
-        element: <UploadImage />
       }, {
         path: '/about-us',
         element: <AboutUs />
