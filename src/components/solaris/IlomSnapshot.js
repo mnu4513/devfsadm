@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Supersubheading, Text } from "../utils/Comps";
+import { Heading, Supersubheading, Text, Image } from "../utils/Comps";
 
 const ILOM = () => {
   return (
@@ -23,14 +23,16 @@ const ILOM = () => {
       <Text text={`Follow these steps to take an ILOM snapshot from the ILOM web interface:`} />
       
       <ol className="list-decimal ml-4 mb-4">
-        <li>Login to the ILOM web interface by entering the ILOM IP address in a web browser.</li>
-        <li>You will be prompted to enter a valid username and password. The default username is usually `root`, and the password is the one set during system configuration.</li>
-        <li>Once logged in, the ILOM web GUI (Graphical User Interface) will appear.</li>
-        <li>Navigate to the `Maintenance` tab in the top menu.</li>
-        <li>Under the `Maintenance` tab, look for an option to take a snapshot. This is typically labeled as `Create Snapshot` or similar.</li>
-        <li>Select the option to create a snapshot and choose a location or method for downloading the snapshot file (you can save it to your local system or share it directly with Oracle Support if necessary).</li>
-        <li>Click the `Run` button to initiate the snapshot creation process.</li>
-        <li>The snapshot process will take a few moments. Once completed, the snapshot will be available for download and can be shared with Oracle Support for troubleshooting purposes.</li>
+        <li><Text text={`Login to the ILOM web interface by entering the ILOM IP address in a web browser.`}/></li>
+        <li><Text text={`You will be prompted to enter a valid username and password. The default username is usually 'root', and the password is the one set during system configuration.`}/></li>
+        <Image imageSrc={`r7m47oxvlcal0vgcj1fn`} imageAlt={`Login_ILOM`} />
+        <li><Text text={`Once logged in, the ILOM web GUI (Graphical User Interface) will appear.`}/></li>
+        <li><Text text={`Navigate to the 'Maintenance' tab in the top menu.`}/></li>
+        <li><Text text={`Under the 'Maintenance' tab, look for an option to take a snapshot. This is typically labeled as 'Create Snapshot' or similar.`}/></li>
+        <li><Text text={`Select the option to create a snapshot and choose a location or method for downloading the snapshot file (you can save it to your local system or share it directly with Oracle Support if necessary).`}/></li>
+        <li><Text text={`Click the 'Run' button to initiate the snapshot creation process.`}/></li>
+        <Image imageSrc={`sxfq3qpkijuv94siqwxi`} imageAlt={`ILOM_snapshot`} />
+        <li><Text text={`The snapshot process will take a few moments. Once completed, the snapshot will be available for download and can be shared with Oracle Support for troubleshooting purposes.`}/></li>
       </ol>
 
       <Text text={`Once the snapshot is created, you can share it with Oracle Support to help diagnose and resolve any hardware-related issues that may be affecting your system. The snapshot contains important diagnostic information, including hardware status, error logs, and configuration details, making it easier for Oracle Support to pinpoint the root cause of issues.`} />

@@ -1,7 +1,11 @@
 {
-  "name": "course",
+  "name": "infounix",
   "version": "0.1.0",
   "private": true,
+  "author":{
+    "name": "Jay",
+    "email": "jaybhagwan0@proton.me"
+  },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
