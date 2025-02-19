@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavShell = ({ toggleSidebar }) => {
+const NavDocker = ({ toggleSidebar }) => {
     return (
         <nav className='flex flex-row justify-between bg-gray-900 text-white pr-6 pl-1'>
             <button className="p-2" onClick={toggleSidebar}>
@@ -16,4 +16,4 @@ const NavShell = ({ toggleSidebar }) => {
     );
 };
 
-export default NavShell;
+export default NavDocker;

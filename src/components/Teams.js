@@ -37,7 +37,8 @@ export default function Teams() {
             <Text text={`Welcome to infoUnix, where we believe in the power of exceptional leadership to drive innovation, foster collaboration, and guide our organization towards success. In this section, we invite you to meet the talented individuals who lead and contribute to our shared vision.`}/>
             
          
-          <Text text={`Have questions or want to learn more about our team? Feel free to reach out to us directly. We're here to answer your inquiries and help you get to know our team better. Thank you for taking the time to explore our leadership section.`}/>
+          <Text text={`Have questions or want to learn more about our team? Feel free to reach out to us directly. We're here to answer your inquiries and help you get to know our team better. `}/>
+          <Text text={`Thank you for taking the time to explore our leadership section.`}/>
         </div>
         <ul  className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
           {people.map((person) => (

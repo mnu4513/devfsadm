@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Supersubheading, Text,  Video,  Subheading, TerminalOutput, Line } from '../utils/Comps';
+import { Heading, Supersubheading, Text,    Subheading, TerminalOutput, Line } from '../utils/Comps';
 
 const GrepEF = () => {
     return (
@@ -7,7 +7,7 @@ const GrepEF = () => {
 
             <Heading text={`Filter Data Using Grep Command`} />
 
-            <Video videoSrc={'i8Vwtaozp_A'} />
+            {/* <Video videoSrc={'i8Vwtaozp_A'} /> */}
 
 
             <Subheading text={`Search Pattern Using 'grep' Command`} />

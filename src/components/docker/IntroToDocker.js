@@ -1,6 +1,6 @@
 import React from 'react'
 
-const IntroToShell = () => {
+const IntroToDocker = () => {
   return (
     <div>
       Understanding the role of shell scripts in automation and system administration.
@@ -9,4 +9,4 @@ Overview of different shell environments (e.g., Bash, sh, csh) and their feature
   )
 }
 
-export default IntroToShell
+export default IntroToDocker;

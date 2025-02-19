@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import NavShell from './NavShell';
-import SidebarShell from './SidebarShell';
+import NavDocker from './NavDocker';
+import SidebarDocker from './SidebarDocker';
 import { Outlet } from 'react-router-dom';
 
-const HomeShell = () => {
+const HomeDocker = () => {
 
     const [sidebarVisible, setSidebarVisible] = useState(false);
     const toggleSidebar = () => {
@@ -12,13 +12,13 @@ const HomeShell = () => {
 
     return (
         <div>
-            <NavShell toggleSidebar={toggleSidebar} sidebarVisible={sidebarVisible} />
+            <NavDocker toggleSidebar={toggleSidebar} sidebarVisible={sidebarVisible} />
             <div className='flex'>
-                <SidebarShell toggleSidebar={toggleSidebar} sidebarVisible={sidebarVisible} />
+                <SidebarDocker toggleSidebar={toggleSidebar} sidebarVisible={sidebarVisible} />
                 <Outlet />
             </div>
         </div>
     );
 };
 
-export default HomeShell;
+export default HomeDocker;

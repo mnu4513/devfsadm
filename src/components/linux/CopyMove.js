@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Heading, Subheading, Text,  Video,  TerminalOutput, Line, Supersubheading } from '../utils/Comps';
+import {  Heading, Subheading, Text,   TerminalOutput, Line, Supersubheading } from '../utils/Comps';
 
 const CopyMove = () => {
     return (
@@ -7,7 +7,7 @@ const CopyMove = () => {
 
             <Heading text={`Copy or Move Files and Directories`} />
 
-            <Video videoSrc={'i8Vwtaozp_A'} />
+            {/* <Video videoSrc={'i8Vwtaozp_A'} /> */}
 
 
             <Subheading text={`Copy Files and Directories Using 'cp' Command`} />

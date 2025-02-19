@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Subheading, Supersubheading, Text, Video, TerminalOutput, Line } from '../utils/Comps';
+import { Heading, Subheading, Supersubheading, Text,  TerminalOutput, Line } from '../utils/Comps';
 
 const FilesAndDirLinux = () => {
     return (
@@ -7,7 +7,7 @@ const FilesAndDirLinux = () => {
 
             <Heading text={`Files and Directories in Linux`} />
 
-            <Video videoSrc={`i8Vwtaozp_A`} />
+            {/* <Video videoSrc={`i8Vwtaozp_A`} /> */}
 
 
             <Subheading text={`Files and Directories Creation`} />

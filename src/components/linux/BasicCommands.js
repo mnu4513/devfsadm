@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Supersubheading, Video,  Text, Command, TerminalOutput, Line } from '../utils/Comps';
+import { Heading, Supersubheading,   Text, Command, TerminalOutput, Line } from '../utils/Comps';
 
 const BasicMonitoring = () => {
     return (
@@ -7,7 +7,7 @@ const BasicMonitoring = () => {
 
 
             <Heading text={`Basic Linux Commands `} />
-            <Video videoSrc={'i8Vwtaozp_A'} />
+            {/* <Video videoSrc={'i8Vwtaozp_A'} /> */}
 
             {/* ===================================================== */}
             {/* whoami */}

@@ -2,41 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import learn_icon from '../../assets/ico/learn.svg';
 
-const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
+const SidebarDocker = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
-        name: 'Introduction to Shell Scripting',
-        link: '/course/shell/intro-to-shell'
-    },  {
-        name: 'setting up environment',
-        link: '/course/shell/setup-env'
-    }, {
-        name: 'Scripting Concept',
-        link: '/course/shell/scripting-concept'
-    }, {
-        name: 'Control Structure',
-        link: '/course/shell/control'
-    }, {
-        name: 'Files and Directories',
-        link: '/course/shell/files-and-dir'
-    }, {
-        name: 'Text Processing',
-        link: '/course/shell/text-processing'
-    }, {
-        name: 'Functions and Script Organization',
-        link: '/course/shell/functions'
-    }, {
-        name: 'Error Handling and Debugging',
-        link: '/course/shell/error-handling'
-    }, {
-        name: 'Advance Topics',
-        link: '/course/shell/advance-topies'
-    }, {
-        name: 'Projects',
-        link: '/course/shell/projects'
-    },  {
-        name: 'Interview Preparation',
-        link: '/course/shell/interview-prep'
+        name: 'Intro to Docker',
+        link: '/course/docker/intro-to-docker'
     }];
 
 
@@ -72,4 +42,4 @@ const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
     );
 };
 
-export default SidebarShell;
+export default SidebarDocker;

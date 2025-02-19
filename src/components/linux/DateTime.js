@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Heading, Supersubheading, TerminalOutput,  Text, Video } from '../utils/Comps';
+import {  Heading, Supersubheading, TerminalOutput,  Text } from '../utils/Comps';
 
 const DateTime = () => {
     return (
@@ -7,7 +7,7 @@ const DateTime = () => {
 
             <Heading text={'Date and Time Commands in Linux'} />
 
-            <Video videoSrc={'i8Vwtaozp_A'} />
+            {/* <Video videoSrc={'i8Vwtaozp_A'} /> */}
 
             {/* date command  */}
             <div >

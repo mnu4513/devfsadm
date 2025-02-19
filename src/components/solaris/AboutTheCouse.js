@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import YouTubeVideo from '../utils/YouTubeVideo';
+// import YouTubeVideo from '../utils/YouTubeVideo';
 import { Heading, Subheading, Text } from '../utils/Comps';
 
 const AboutTheCourse = () => {
@@ -15,7 +15,7 @@ const AboutTheCourse = () => {
       <Text text="Whether you're a beginner or an experienced professional, this course will equip you with the knowledge and hands-on experience needed to effectively administer Solaris environments." />
 
       {/* Course Preview Video */}
-      <YouTubeVideo video_id="uh7qptFsO90" />
+      {/* <YouTubeVideo video_id="uh7qptFsO90" /> */}
 
       
       {/* Prerequisites */}
