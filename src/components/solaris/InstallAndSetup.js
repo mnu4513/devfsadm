@@ -1,7 +1,7 @@
 import React from 'react';
 import telegram_icon from '../../assets/ico/telegram_icon.png';
 import drive_icon from '../../assets/ico/drive_icon.webp';
-// import YouTubeVideo from '../utils/YouTubeVideo';
+import YouTubeVideo from '../utils/YouTubeVideo';
 import { Heading, Line, Subheading, Text, TerminalOutput } from '../utils/Comps';
 
 const InstallAndSetup = () => {
@@ -44,7 +44,7 @@ const InstallAndSetup = () => {
 
       <Text text={`Once VMware is installed, open VMware and start the setup process. If you encounter any issues during the setup, you can refer to the setup video below for guidance.`} />
 
-      {/* <YouTubeVideo video_id='tomhp3foV60' /> */}
+      <YouTubeVideo video_id='tomhp3foV60' />
 
       
 

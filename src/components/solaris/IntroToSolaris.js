@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Subheading, Supersubheading, Text } from "../utils/Comps";
-import YouTubeVideo from '../utils/YouTubeVideo';
+// import YouTubeVideo from '../utils/YouTubeVideo';
 
 const IntroToSolaris = () => {
   return (
@@ -9,7 +9,7 @@ const IntroToSolaris = () => {
 
       <Text text={`Solaris is a Unix-based operating system (OS) developed by Sun Microsystems, which was later acquired by Oracle Corporation. Solaris is renowned for its stability, scalability, and security features, making it a preferred choice in enterprise environments, particularly for server applications and large-scale computing systems. It is often used in data centers and complex enterprise setups.`} />
 
-      <YouTubeVideo video_id='aIHWfk8K3G8' />
+      {/* <YouTubeVideo video_id='aIHWfk8K3G8' /> */}
 
       <Subheading text="Key Features of Solaris" />
 
