@@ -8,32 +8,32 @@ const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
         name: 'Introduction to Shell Scripting',
         link: '/course/shell/intro-to-shell'
     },  {
-        name: 'setting up environment',
-        link: '/course/shell/setup-env'
+        name: 'Basic of Linux Shell',
+        link: '/course/shell/basic-of-shell'
     }, {
-        name: 'Scripting Concept',
-        link: '/course/shell/scripting-concept'
+        name: 'Variables and User Input',
+        link: '/course/shell/variables-and-user-input'
     }, {
-        name: 'Control Structure',
-        link: '/course/shell/control'
+        name: 'String and Array',
+        link: '/course/shell/string-and-array'
     }, {
-        name: 'Files and Directories',
-        link: '/course/shell/files-and-dir'
+        name: 'Arithmetic Operations',
+        link: '/course/shell/arithmetic-operations'
     }, {
-        name: 'Text Processing',
-        link: '/course/shell/text-processing'
+        name: 'Conditional Statements',
+        link: '/course/shell/conditional-statements'
     }, {
-        name: 'Functions and Script Organization',
-        link: '/course/shell/functions'
+        name: 'Loops in Shell Scripting',
+        link: '/course/shell/loops-in-shell-scripting'
     }, {
-        name: 'Error Handling and Debugging',
-        link: '/course/shell/error-handling'
+        name: 'Functions and Arguments',
+        link: '/course/shell/functions-and-arguments'
     }, {
-        name: 'Advance Topics',
-        link: '/course/shell/advance-topies'
+        name: 'File Handling Redirection',
+        link: '/course/shell/file-handling-redirection'
     }, {
-        name: 'Projects',
-        link: '/course/shell/projects'
+        name: 'Automating Script',
+        link: '/course/shell/script-automation'
     },  {
         name: 'Interview Preparation',
         link: '/course/shell/interview-prep'

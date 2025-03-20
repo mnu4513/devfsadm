@@ -39,6 +39,12 @@ import LDOM from './components/solaris/LDOM';
 import ILOM from './components/solaris/IlomSnapshot';
 import ExplorerLogs from './components/solaris/Explorer';
 import InterviewPrep from './components/solaris/InetviewPreparation';
+import AboutTheCourse from './components/solaris/AboutTheCouse';
+import NFSSolaris from './components/solaris/NFS';
+import CronJob from './components/solaris/CronJob';
+import BootPhasePage from './components/solaris/BootPhase';
+import VirtualizationPage from './components/solaris/Virtualization';
+import PrePostCheck from './components/solaris/PrePostCheck';
 
 // Linux 
 import HomeLinux from './components/linux/HomeLinux';
@@ -89,37 +95,28 @@ import IPTables from './components/linux/IPTables';
 import Firewall from './components/linux/Firewall';
 import SELinux from './components/linux/SELinux';
 
+// shell
+import HomeShell from './components/shell/HomeShell';
+import AboutTheCouseShell from './components/shell/AboutTheCourseShell';
+import IntroToShell from './components/shell/IntroToShell';
+import BasicOfShell from './components/shell/BasicOfShell';
+import VariablesAndUserInput from './components/shell/VariableUserInput';
+import StringsAndArrays from './components/shell/StringArray';
 
 
-
-
-
-
-import HomeShell from './components/shell_scripting/HomeShell';
 
 import User from './components/user/User';
-import CronJob from './components/solaris/CronJob';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfServices from './components/TermsOfServices';
 import Features from './components/Features';
-import AboutTheCourse from './components/solaris/AboutTheCouse';
-import IntroToShell from './components/shell_scripting/IntroToShell';
-import SetupEnv from './components/shell_scripting/SetupEnv';
-import ScriptingConcept from './components/shell_scripting/ScriptingConcept';
-import Control from './components/shell_scripting/Control';
-import TextProcessing from './components/shell_scripting/TextProcessing';
-import Functions from './components/shell_scripting/Functions';
-import ErrorHandling from './components/shell_scripting/ErrorHandling';
-import AdvanceTopics from './components/shell_scripting/AdvanceTopics';
-import Projects from './components/shell_scripting/Projects';
-import ShellInterviewPerp from './components/shell_scripting/ShellInterviewPerp';
 import SolarisBlog from './components/blogs/SolarisBlog';
-import AboutTheCouseShell from './components/shell_scripting/AboutTheCourseShell';
-import FilesAndDirShell from './components/shell_scripting/FilesAndDirShell';
-import NFSSolaris from './components/solaris/NFS';
-import BootPhasePage from './components/solaris/BootPhase';
-import VirtualizationPage from './components/solaris/Virtualization';
-import PrePostCheck from './components/solaris/PrePostCheck';
+import ArithmeticOperations from './components/shell/Arithmetic';
+import ConditionalStatements from './components/shell/ConditionalStatements';
+import LoopsInShellScripting from './components/shell/LoopsInShell';
+import FunctionsAndArguments from './components/shell/FunctionsArguments';
+import FileHandlingRedirection from './components/shell/FileHandlingRedirection';
+import AutomatingScripts from './components/shell/AutomatingScript';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -417,35 +414,32 @@ const appRouter = createBrowserRouter([
           path: '/course/shell/intro-to-shell',
           element: <IntroToShell />
         }, {
-          path: '/course/shell/setup-env',
-          element: <SetupEnv />
+          path: '/course/shell/basic-of-shell',
+          element: <BasicOfShell/>
         }, {
-          path: '/course/shell/scripting-concept',
-          element: <ScriptingConcept />
+          path: '/course/shell/variables-and-user-input',
+          element: <VariablesAndUserInput/>
         }, {
-          path: '/course/shell/control',
-          element: <Control />
+          path: '/course/shell/string-and-array',
+          element: <StringsAndArrays/>
         }, {
-          path: '/course/shell/files-and-dir',
-          element: <FilesAndDirShell />
+          path: '/course/shell/arithmetic-operations',
+          element: <ArithmeticOperations/>
         }, {
-          path: '/course/shell/text-processing',
-          element: <TextProcessing />
+          path: '/course/shell/conditional-statements',
+          element: <ConditionalStatements/>
         }, {
-          path: '/course/shell/functions',
-          element: <Functions />
+          path: '/course/shell/loops-in-shell-scripting',
+          element: <LoopsInShellScripting/>
         }, {
-          path: '/course/shell/error-handling',
-          element: <ErrorHandling />
+          path: '/course/shell/functions-and-arguments',
+          element: <FunctionsAndArguments/>
         }, {
-          path: '/course/shell/advance-topics',
-          element: <AdvanceTopics />
+          path: '/course/shell/file-handling-redirection',
+          element: <FileHandlingRedirection/>
         }, {
-          path: '/course/shell/projects',
-          element: <Projects />
-        }, {
-          path: '/course/shell/interview-prep',
-          element: <ShellInterviewPerp />
+          path: '/course/shell/script-automation',
+          element: <AutomatingScripts/>
         }]
       }, {
         path: '/privacy-policy',
