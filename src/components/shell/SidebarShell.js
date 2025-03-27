@@ -5,7 +5,7 @@ import learn_icon from '../../assets/ico/learn.svg';
 const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
-        name: 'Introduction to Shell Scripting',
+        name: 'Intro to Shell Scripting',
         link: '/course/shell/intro-to-shell'
     },  {
         name: 'Basic of Linux Shell',
@@ -59,7 +59,7 @@ const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
                                 <li className="rounded-sm" key={e.name}>
                                     <Link rel="noopener noreferrer" to={e.link} onClick={() => toggleSidebar()} className="flex items-center p-2 space-x-3 rounded-md">
                                         <img src={learn_icon} alt='' className='bg-white rounded-full' />
-                                        <span> {e.name} </span>
+                                        <span className='font-cambria'> {e.name} </span>
                                     </Link>
                                 </li>
                             ))
