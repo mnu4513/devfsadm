@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heading, Subheading, Supersubheading, Text, Line } from '../utils/Comps';
-// import YouTubeEmbed from '@/components/ui/YouTubeEmbed';
+import { Heading, Subheading, Supersubheading, Text, Line, Video } from '../utils/Comps';
 
 export default function ShellScriptingHome() {
   return (
@@ -15,6 +14,7 @@ export default function ShellScriptingHome() {
      
       
       <Line />
+      <Video videoSrc={`6iWjxutRr-o`}/>
       <Supersubheading text={`What You Will Learn?`}/>
       <Text text={`✅ Basics of Shell Scripting (Syntax, Execution, and Structure)`}/>
       <Text text={`✅ Variables, User Input, and Data Handling`}/>

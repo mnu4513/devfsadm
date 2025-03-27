@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line } from '../utils/Comps';
+import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line, Video } from '../utils/Comps';
 
 const ShellScriptingIntro = () => {
   return (
@@ -9,6 +9,8 @@ const ShellScriptingIntro = () => {
       <Text text={`A shell is an interface between the user and the operating system that allows users to execute commands and automate tasks using scripts. Shell scripting enables automation, efficient system administration, and complex task execution in Unix-like operating systems.`} />
       
       <Line />
+      <Video videoSrc={`LwrfUpsLk9E`}/>
+      <Line/>
       <Subheading text={`Linux Shell`} />
       <Text text={`A shell is a command-line interpreter that processes commands entered by the user. It provides an interface to interact with the Linux kernel.`} />
       
