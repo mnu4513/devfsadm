@@ -1,18 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import learn_icon from '../../assets/ico/learn.svg';
+import AnsibleData from './AnsibleData';
 
 const SidebarAnsible = ({ toggleSidebar, sidebarVisible }) => {
-
-    const content = [{
-        name: 'Intro to Ansible',
-        link: '/course/ansible/intro-to-ansible'
-    }, {
-        name: 'Ansible Lab Setup',
-        link: '/course/ansible/lab-setup'
-    }];
-
-
 
 
     return (
@@ -28,7 +19,7 @@ const SidebarAnsible = ({ toggleSidebar, sidebarVisible }) => {
                 <div className="flex-1">
                     <ul className="pt-2 pb-4 space-y-1 text-sm">
                         {
-                            content.map((e) => (
+                            AnsibleData?.slice(1).map((e) => (
                                 <li className="rounded-sm" key={e.name}>
                                     <Link rel="noopener noreferrer" to={e.link} onClick={() => toggleSidebar()} className="flex items-center p-2 space-x-3 rounded-md">
                                         <img src={learn_icon} alt='' className='bg-white rounded-full' />
