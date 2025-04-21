@@ -1,5 +1,6 @@
 import HomeAnsible from './AboutTheCourseAnsible';
 import IntroToAnsible from './IntroToAnsible';
+import AnsibleLabSetup from './LabSetup';
 
 
 const AnsibleData = [{
@@ -12,6 +13,11 @@ const AnsibleData = [{
     element: <IntroToAnsible />,
     name: 'Intro to Ansible',
     link: '/course/ansible/intro-to-ansible'
+}, {
+    id: 2, 
+    element: <AnsibleLabSetup/>,
+    name: 'Ansible Lab Setup',
+    link: '/course/ansible/lab-setup'
 }];
 
 export default AnsibleData;

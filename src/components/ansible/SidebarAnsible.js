@@ -5,38 +5,11 @@ import learn_icon from '../../assets/ico/learn.svg';
 const SidebarAnsible = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
-        name: 'Intro to Shell Scripting',
-        link: '/course/ansible/intro-to-shell'
-    },  {
-        name: 'Basic of Linux Shell',
-        link: '/course/ansible/basic-of-shell'
+        name: 'Intro to Ansible',
+        link: '/course/ansible/intro-to-ansible'
     }, {
-        name: 'Variables and User Input',
-        link: '/course/ansible/variables-and-user-input'
-    }, {
-        name: 'String and Array',
-        link: '/course/ansible/string-and-array'
-    }, {
-        name: 'Arithmetic Operations',
-        link: '/course/ansible/arithmetic-operations'
-    }, {
-        name: 'Conditional Statements',
-        link: '/course/ansible/conditional-statements'
-    }, {
-        name: 'Loops in Shell Scripting',
-        link: '/course/ansible/loops-in-shell-scripting'
-    }, {
-        name: 'Functions and Arguments',
-        link: '/course/ansible/functions-and-arguments'
-    }, {
-        name: 'File Handling Redirection',
-        link: '/course/ansible/file-handling-redirection'
-    }, {
-        name: 'Automating Script',
-        link: '/course/ansible/script-automation'
-    },  {
-        name: 'Interview Preparation',
-        link: '/course/ansible/interview-prep'
+        name: 'Ansible Lab Setup',
+        link: '/course/ansible/lab-setup'
     }];
 
 

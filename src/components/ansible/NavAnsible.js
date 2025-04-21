@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavAnsible = ({ toggleSidebar }) => {
     return (
@@ -11,7 +11,7 @@ const NavAnsible = ({ toggleSidebar }) => {
                     <rect width="352" height="32" x="80" y="384"></rect>
                 </svg>
             </button>
-            {/* <button> <Link to='/course'> Videos </Link> </button> */}
+            <button> <Link to='/course/ansible'> Videos </Link> </button>
         </nav>
     );
 };
