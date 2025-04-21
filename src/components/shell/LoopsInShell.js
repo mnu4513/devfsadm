@@ -3,7 +3,7 @@ import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line } from
 
 const LoopsInShellScripting = () => {
   return (
-    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto font-cambria'>
       <Heading text={`Loops in Shell Scripting`} />
       <Text text={`Loops are essential constructs in shell scripting that allow the execution of a block of code multiple times. They help automate repetitive tasks, making scripts efficient and concise. Shell scripting supports three primary types of loops: for, while, and until.`} />
       

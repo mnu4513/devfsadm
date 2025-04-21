@@ -8,8 +8,8 @@ const StringsAndArrays = () => {
       
       <Text text={`Strings and arrays are fundamental to shell scripting, enabling efficient data manipulation, storage, and retrieval. Understanding how to work with them is crucial for writing powerful scripts.`} />
       <Line />
-      <Video videoSrc={`itdMpRZ4gKc`}/>
-      <Line/>
+      {/* <Video videoSrc={`itdMpRZ4gKc`}/> */}
+      {/* <Line/> */}
 
       <Subheading text={`String Operations`} />
       <Text text={`Strings in shell scripting are sequences of characters used for text processing. Here are some common string operations:`} />

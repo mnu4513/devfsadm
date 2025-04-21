@@ -152,7 +152,7 @@ const SidebarSolaris = ({ toggleSidebar, sidebarVisible }) => {
 
 
             <div className={`flex flex-col h-full p-3 w-60 bg-gray-900 text-gray-100 ${sidebarVisible ? '' : 'hidden'}`}>
-
+           
 
                 <div className="flex-1">
                     <ul className="pt-2 pb-4 space-y-1 text-sm">

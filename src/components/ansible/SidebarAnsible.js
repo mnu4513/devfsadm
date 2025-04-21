@@ -2,41 +2,41 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import learn_icon from '../../assets/ico/learn.svg';
 
-const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
+const SidebarAnsible = ({ toggleSidebar, sidebarVisible }) => {
 
     const content = [{
         name: 'Intro to Shell Scripting',
-        link: '/course/shell/intro-to-shell'
+        link: '/course/ansible/intro-to-shell'
     },  {
         name: 'Basic of Linux Shell',
-        link: '/course/shell/basic-of-shell'
+        link: '/course/ansible/basic-of-shell'
     }, {
         name: 'Variables and User Input',
-        link: '/course/shell/variables-and-user-input'
+        link: '/course/ansible/variables-and-user-input'
     }, {
         name: 'String and Array',
-        link: '/course/shell/string-and-array'
+        link: '/course/ansible/string-and-array'
     }, {
         name: 'Arithmetic Operations',
-        link: '/course/shell/arithmetic-operations'
+        link: '/course/ansible/arithmetic-operations'
     }, {
         name: 'Conditional Statements',
-        link: '/course/shell/conditional-statements'
+        link: '/course/ansible/conditional-statements'
     }, {
         name: 'Loops in Shell Scripting',
-        link: '/course/shell/loops-in-shell-scripting'
+        link: '/course/ansible/loops-in-shell-scripting'
     }, {
         name: 'Functions and Arguments',
-        link: '/course/shell/functions-and-arguments'
+        link: '/course/ansible/functions-and-arguments'
     }, {
         name: 'File Handling Redirection',
-        link: '/course/shell/file-handling-redirection'
+        link: '/course/ansible/file-handling-redirection'
     }, {
         name: 'Automating Script',
-        link: '/course/shell/script-automation'
+        link: '/course/ansible/script-automation'
     },  {
         name: 'Interview Preparation',
-        link: '/course/shell/interview-prep'
+        link: '/course/ansible/interview-prep'
     }];
 
 
@@ -72,4 +72,4 @@ const SidebarShell = ({ toggleSidebar, sidebarVisible }) => {
     );
 };
 
-export default SidebarShell;
+export default SidebarAnsible;

@@ -9,8 +9,8 @@ const VariablesAndUserInput = () => {
       <Text text={`Variables in shell scripting store values and are essential for processing data dynamically. They can be system-defined or user-defined. Variables help scripts become more flexible and reusable by allowing data to be stored and modified during execution.`} />
       
       <Line />
-      <Video videoSrc={`QQ5zJzdWPLY`}/>
-      <Line/>
+      {/* <Video videoSrc={`QQ5zJzdWPLY`}/> */}
+      {/* <Line/> */}
       
       <Subheading text={`Variables`} />
 

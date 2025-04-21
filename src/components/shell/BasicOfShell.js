@@ -9,8 +9,8 @@ const GettingStartedWithShell = () => {
       <Text text={`A shell script is a sequence of commands written in a file to be executed by the shell. It automates repetitive tasks and simplifies system administration. Shell scripting is widely used for managing servers, automating deployments, and performing routine operations.`} />
       
       <Line />
-      <Video videoSrc={`zzq9BKM8PeQ`}/>
-      <Line/>
+      {/* <Video videoSrc={`zzq9BKM8PeQ`}/> */}
+      {/* <Line/> */}
       
       <Subheading text={`Creating Your First Shell Script`} />
       

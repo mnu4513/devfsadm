@@ -97,12 +97,12 @@ import SELinux from './components/linux/SELinux';
 
 // shell
 import HomeShell from './components/shell/HomeShell';
-import AboutTheCouseShell from './components/shell/AboutTheCourseShell';
-import IntroToShell from './components/shell/IntroToShell';
-import BasicOfShell from './components/shell/BasicOfShell';
-import VariablesAndUserInput from './components/shell/VariableUserInput';
-import StringsAndArrays from './components/shell/StringArray';
+import ShellData from './components/shell/ShellData'
 
+
+// Ansible 
+import HomeAnsible from './components/ansible/HomeAnsible';
+import AnsibleData from './components/ansible/AnsibleData';
 
 
 import User from './components/user/User';
@@ -110,12 +110,6 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfServices from './components/TermsOfServices';
 import Features from './components/Features';
 import SolarisBlog from './components/blogs/SolarisBlog';
-import ArithmeticOperations from './components/shell/Arithmetic';
-import ConditionalStatements from './components/shell/ConditionalStatements';
-import LoopsInShellScripting from './components/shell/LoopsInShell';
-import FunctionsAndArguments from './components/shell/FunctionsArguments';
-import FileHandlingRedirection from './components/shell/FileHandlingRedirection';
-import AutomatingScripts from './components/shell/AutomatingScript';
 
 
 
@@ -407,40 +401,17 @@ const appRouter = createBrowserRouter([
       {
         path: '/course/shell',
         element: <HomeShell />,
-        children: [{
-          path: '/course/shell/',
-          element: <AboutTheCouseShell />
-        }, {
-          path: '/course/shell/intro-to-shell',
-          element: <IntroToShell />
-        }, {
-          path: '/course/shell/basic-of-shell',
-          element: <BasicOfShell/>
-        }, {
-          path: '/course/shell/variables-and-user-input',
-          element: <VariablesAndUserInput/>
-        }, {
-          path: '/course/shell/string-and-array',
-          element: <StringsAndArrays/>
-        }, {
-          path: '/course/shell/arithmetic-operations',
-          element: <ArithmeticOperations/>
-        }, {
-          path: '/course/shell/conditional-statements',
-          element: <ConditionalStatements/>
-        }, {
-          path: '/course/shell/loops-in-shell-scripting',
-          element: <LoopsInShellScripting/>
-        }, {
-          path: '/course/shell/functions-and-arguments',
-          element: <FunctionsAndArguments/>
-        }, {
-          path: '/course/shell/file-handling-redirection',
-          element: <FileHandlingRedirection/>
-        }, {
-          path: '/course/shell/script-automation',
-          element: <AutomatingScripts/>
-        }]
+        children: ShellData.map(route => ({
+          path: route.link,
+          element: route.element
+        }))
+      }, {
+        path: '/course/ansible',
+        element: <HomeAnsible />,
+        children: AnsibleData.map(route => ({
+          path: route.link,
+          element: route.element
+        }))
       }, {
         path: '/privacy-policy',
         element: <PrivacyPolicy />

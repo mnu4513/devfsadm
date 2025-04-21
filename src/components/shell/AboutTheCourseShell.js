@@ -14,7 +14,7 @@ export default function ShellScriptingHome() {
      
       
       <Line />
-      <Video videoSrc={`6iWjxutRr-o`}/>
+      {/* <Video videoSrc={`6iWjxutRr-o`}/> */}
       <Supersubheading text={`What You Will Learn?`}/>
       <Text text={`✅ Basics of Shell Scripting (Syntax, Execution, and Structure)`}/>
       <Text text={`✅ Variables, User Input, and Data Handling`}/>
