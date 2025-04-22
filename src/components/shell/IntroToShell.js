@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line, Video } from '../utils/Comps';
+import { Heading, Subheading, Supersubheading, Text, TerminalOutput, Line,  } from '../utils/Comps';
 
 const ShellScriptingIntro = () => {
   return (

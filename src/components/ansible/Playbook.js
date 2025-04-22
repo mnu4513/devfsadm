@@ -1,4 +1,4 @@
-import { Heading, Subheading, Supersubheading, Text, Line, TerminalOutput } from '../utils/Comps';
+import { Heading, Subheading, Text, Line, TerminalOutput } from '../utils/Comps';
 
 export default function AnsiblePlaybook() {
   return (

@@ -1,4 +1,5 @@
-import { Heading, Subheading, Supersubheading, Text, Line, TerminalOutput, Video } from '../utils/Comps';
+import { Heading, Subheading, Supersubheading, Text, Line, TerminalOutput,  } from '../utils/Comps';
+import { Link } from 'react-router-dom';
 
 export default function AnsibleLabSetup() {
   return (
@@ -20,7 +21,7 @@ export default function AnsibleLabSetup() {
 
       <Subheading text={`Step 1: Download Ubuntu Server ISO`} />
       <Text text={`Download Ubuntu Server 22.04 from the official website:`} />
-      <a href="https://ubuntu.com/download/server" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">
+      <a href="https://ubuntu.com/download/server" className="text-blue-500 hover:underline font-cambria hover:text-blue-800" target="_blank" rel="noopener noreferrer">
         https://ubuntu.com/download/server
       </a>
 
@@ -48,7 +49,7 @@ export default function AnsibleLabSetup() {
       <Subheading text={`Step 3: Install Ubuntu on Each VM`} />
       <Text text={`Use the downloaded ISO to install Ubuntu Server on each VM. During installation:`} />
       <Text text={`✅ Set a static IP or note down DHCP-assigned IPs (we’ll need them).`} />
-      <Text text={`✅ Create a user (e.g., ` + "`ansible`" + `) with sudo privileges.`} />
+      <Text text={`✅ Create a user (e.g.,  + "ansible" + ) with sudo privileges.`} />
       <Text text={`✅ Enable OpenSSH server if prompted (or install it manually after install).`} />
 
       <Line />
@@ -80,7 +81,7 @@ export default function AnsibleLabSetup() {
       <Line />
 
       <Subheading text={`Step 7: Create Ansible Inventory File`} />
-      <Text text={`Create a file named ` + "`hosts`" + ` in "/etc/ansible/" or in your own project folder:`} />
+      <Text text={`Create a file named  + "hosts" +  in "/etc/ansible/" or in your own project folder:`} />
       <TerminalOutput content={`[webservers]\nnode1\nnode2`} />
       <Text text={`Now test it:`} />
       <TerminalOutput content={`ansible all -i hosts -m ping`} />
@@ -99,7 +100,12 @@ export default function AnsibleLabSetup() {
       <Line />
 
       <Subheading text={`🎉 You're Ready!`} />
-      <Text text={`You now have a fully functional Ansible lab environment using VMware! In the next lesson, we’ll write your first Ansible playbook and automate package installation on both nodes.`} />
+
+      <p className='font-cambria'>
+      You now have a fully functional Ansible lab environment using VMware! In the  <span className='text-blue-400 hover:text-blue-700'>
+                      <Link to='/course/ansible/modules'>next lesson</Link>
+                    </span> (Ansible Modules), we'll see about the Ansible modules in depth. 🔧🚀
+                  </p>
     </div>
   );
 }

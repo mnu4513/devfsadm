@@ -6,6 +6,8 @@ import IntroToAnsible from './IntroToAnsible';
 import AnsibleLabSetup from './LabSetup';
 import AnsiblePlaybook from './Playbook';
 import AnsibleTasks from './PlaybookTasks';
+import StaticInventory from './StaticInventory';
+import AnsibleVariables from './Variables';
 
 
 const AnsibleData = [{
@@ -25,39 +27,44 @@ const AnsibleData = [{
     link: '/course/ansible/lab-setup'
 }, {
     id: 3, 
+    element: <StaticInventory/>,
+    name: 'Ansible Static Inventory',
+    link: '/course/ansible/inventory'
+}, {
+    id: 4, 
     element: <AnsibleModules/>,
     name: 'Ansible Modules',
     link: '/course/ansible/modules'
 }, {
-    id: 4, 
+    id: 5, 
     element: <AdHocCommands/>, 
     name: 'Ad-hoc Command',
     link: '/course/ansible/ad-hoc'
 }, {
-    id: 5, 
+    id: 6, 
     element: <AdHocExamples/>,
     name: 'Ad-hoc Command Example',
     link: '/course/ansible/ad-hoc-examples'
 }, {
-    id: 6,
+    id: 7,
     element: <AnsiblePlaybook/>,
     name: 'Ansible Playbook',
     link: '/course/ansible/playbook'
 }, {
-    id: 7,
+    id: 8,
+    element: <AnsibleVariables/>,
+    name: 'Ansible Variables',
+    link: '/course/ansible/variables'
+}, {
+    id: 9,
+    element: <AnsiblePlaybook/>,
+    name: 'Ansible Playbook',
+    link: '/course/ansible/playbook'
+}, {
+    id: 10,
     element: <AnsibleTasks/>,
     name: 'Playbook Tasks',
     link: '/course/ansible/playbook-tasks'
-}, {
-    id: 6,
-    element: <AnsiblePlaybook/>,
-    name: 'Ansible Playbook',
-    link: '/course/ansible/playbook'
-}, {
-    id: 6,
-    element: <AnsiblePlaybook/>,
-    name: 'Ansible Playbook',
-    link: '/course/ansible/playbook'
 }, {
     id: 6,
     element: <AnsiblePlaybook/>,

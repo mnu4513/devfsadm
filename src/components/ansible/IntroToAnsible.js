@@ -1,4 +1,5 @@
 import { Heading, Subheading, Supersubheading, Text, Line, Video, TerminalOutput } from '../utils/Comps';
+import { Link } from 'react-router-dom';
 
 export default function IntroToAnsible() {
   return (
@@ -99,8 +100,13 @@ export default function IntroToAnsible() {
 
       <Line />
 
-      <Subheading text={`Coming Up Next`} />
-      <Text text={`In the next lesson, you'll set up your first Ansible project, configure an inventory file, and write your first playbook to install and start Nginx on a remote server! 🔧🚀`} />
+      <Subheading text={`Coming Up Next 🚀`} />
+  
+      <p className='font-cambria'>
+              In the  <span className='text-blue-400 hover:text-blue-700'>
+                <Link to='/course/ansible/lab-setup'>next lesson</Link>
+              </span> (Ansible Lab Setup), we'll set up the lab to practices the real-life examples of Ansible. 🔧🚀
+            </p>
     </div>
   );
 }

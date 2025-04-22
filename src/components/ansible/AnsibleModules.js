@@ -1,4 +1,5 @@
 import { Heading, Subheading, Supersubheading, Text, Line, TerminalOutput } from '../utils/Comps';
+import { Link } from 'react-router-dom';
 
 export default function AnsibleModules() {
   return (
@@ -69,14 +70,19 @@ export default function AnsibleModules() {
       <Text text={`✅ Always test your modules using ad-hoc commands before using them in playbooks.`} />
       <Text text={`✅ Use the \`--check\` flag to preview changes.`} />
       <Text text={`✅ Explore modules at:`} />
-      <a href="https://docs.ansible.com/ansible/latest/collections/index_module.html" target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline'>
+      <a href="https://docs.ansible.com/ansible/latest/collections/index_module.html" target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline hover:text-blue-800 font-cambria'>
         Ansible Module Index
       </a>
 
       <Line />
 
       <Subheading text={`Coming Up Next`} />
-      <Text text={`Now that you understand modules, in the next lesson you'll learn how to use them in **ad-hoc commands** for quick one-time automation. Let’s get our hands dirty! 💻⚡`} />
+     
+      <p className='font-cambria'>
+      Now that you understand modules, in the <span className='text-blue-400 hover:text-blue-700'>
+                            <Link to='/course/ansible/ad-hoc'>next lesson</Link>
+                          </span> (Ad-hoc Command), you'll learn how to use them in **ad-hoc commands** for quick one-time automation. Let’s get our hands dirty! 💻⚡
+                        </p>
     </div>
   );
 }

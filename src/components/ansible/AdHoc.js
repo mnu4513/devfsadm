@@ -1,4 +1,5 @@
 import { Heading, Subheading, Supersubheading, Text, Line, TerminalOutput } from '../utils/Comps';
+import { Link } from 'react-router-dom';
 
 export default function AdHocCommands() {
   return (
@@ -76,7 +77,11 @@ export default function AdHocCommands() {
       <Line />
 
       <Subheading text={`Coming Up Next`} />
-      <Text text={`Now that you know how to use Ad-Hoc commands, it's time to explore how Ansible handles automation at scale using **Playbooks**. You'll learn how to write reusable and structured YAML configurations to manage your infrastructure like a pro. 🛠️📘`} />
+      <p className='font-cambria'>
+      Now that you know how to use Ad-Hoc commands, it's time to explore <span className='text-blue-400 hover:text-blue-700'>
+                <Link to='/course/ansible/ad-hoc-examples'>Ad-hoc Examples</Link>
+              </span> to see the real world use case of Ansible Ad-hoc.🛠️
+            </p>
     </div>
   );
 }

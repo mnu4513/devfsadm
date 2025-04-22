@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Heading, Subheading, Supersubheading, Text, Line, Video } from '../utils/Comps';
+import { Heading, Subheading, Supersubheading, Text, Line,  } from '../utils/Comps';
 
 export default function ShellScriptingHome() {
   return (

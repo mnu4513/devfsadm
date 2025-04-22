@@ -45,7 +45,7 @@ export default function AnsibleHome() {
       <p className='font-cambria'>
         Click on the <span className='text-blue-400 hover:text-blue-700'>
           <Link to='/course/ansible/intro-to-ansible'>next lesson</Link>
-        </span> to begin your journey in Ansible Automation!
+        </span> (Introduction to Ansible) to begin your journey in Ansible Automation!
       </p>
     </div>
   );

@@ -1,4 +1,5 @@
 import { Heading, Subheading, Supersubheading, Text, Line, TerminalOutput } from '../utils/Comps';
+import { Link } from 'react-router-dom';
 
 export default function AdHocExamples() {
   return (
@@ -144,6 +145,12 @@ export default function AdHocExamples() {
       <TerminalOutput content={`ansible web -m user -a 'name=tom state=absent'`} />
       
       <Line />
+<p className='font-cambria'>
+
+      Now that you know how to use Ad-Hoc commands, it's time to explore how Ansible handles automation at scale using <span className='text-blue-400 hover:text-blue-700'>
+                      <Link to='/course/ansible/playbook'>Ansible playbook</Link>
+                    </span> . You'll learn how to write reusable and structured YAML configurations to manage your infrastructure like a pro. 🛠️
+</p>
     </div>
   );
 }
