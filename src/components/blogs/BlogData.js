@@ -4,6 +4,7 @@ import SolarisBlog from "./SolarisBlog";
 import ShellScriptingBlog from "./ShellBlog";
 import LinuxBlog from "./LinuxBlog";
 import DockerBlog from "./DockerBlog";
+import GitBlog from './GitGithubBlog'
 
 const BlogData = [{
     id: 0,
@@ -35,6 +36,11 @@ const BlogData = [{
     name: 'Docker Blog',
     element: <DockerBlog/>,
     link: '/blog/docker'
+}, {
+    id: 6,
+    name: 'Git & GitHub Blog',
+    element: <GitBlog/>,
+    link: '/blog/git-github'
 }];
 
 export default BlogData;

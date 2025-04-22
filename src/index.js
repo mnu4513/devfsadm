@@ -39,6 +39,10 @@ import ShellData from './components/shell/ShellData'
 import HomeAnsible from './components/ansible/HomeAnsible';
 import AnsibleData from './components/ansible/AnsibleData';
 
+// Git & GitHub
+import HomeGit from './components/git/HomeGit';
+import GitData from './components/git/GitData';
+
 // Blog 
 import HomeBlog from './components/blogs/HomeBlog';
 import BlogData from './components/blogs/BlogData';
@@ -106,14 +110,21 @@ const appRouter = createBrowserRouter([
       }, {
         path: '/course/shell',
         element: <HomeShell />,
-        children: ShellData.map(child => ({
+        children: ShellData?.map(child => ({
           path: child.link,
           element: child.element
         }))
       }, {
         path: '/course/ansible',
         element: <HomeAnsible />,
-        children: AnsibleData.map(child => ({
+        children: AnsibleData?.map(child => ({
+          path: child.link,
+          element: child.element
+        }))
+      }, {
+        path: '/course/git-github',
+        element: <HomeGit />,
+        children: GitData?.map(child => ({
           path: child.link,
           element: child.element
         }))
