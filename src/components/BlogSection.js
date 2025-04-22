@@ -1,6 +1,7 @@
 import blog_img from '../assets/img/blog.jpg';
 import { img_base_url, mine } from './Config';
 import { Link } from 'react-router-dom';
+import { Line } from './utils/Comps';
 
 const posts = [
   {
@@ -112,13 +113,15 @@ export default function BlogSection() {
   return (
     <div className=" py-24 sm:py-32 dark:bg-gray-800 text-white font-cambria">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <Line/>
         <div className="mx-auto max-w-2xl lg:mx-0">
+          
           <h2 className="text-3xl text-violet-500 dark:text-white font-bold tracking-tight sm:text-4xl">From the blog</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
             Learn how to grow your business with our expert advice.
           </p>
         </div>
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  border-gray-200 pt-10  lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
               <img src={post.img} alt='' className='my-3 h-64 w-96' />
