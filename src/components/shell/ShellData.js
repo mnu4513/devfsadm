@@ -1,4 +1,4 @@
-import HomeShell from './AboutTheCourseShell';
+import AboutTheCourseShell from './AboutTheCourseShell';
 import IntroToShell from './IntroToShell';
 import BasicOfLinuxShell from './BasicOfShell';
 import VariableUserInput from './VariableUserInput'
@@ -13,7 +13,7 @@ import InterviewPrep from './InterviewPrep';
 
 const ShellData = [{
     id: 0,
-    element: <HomeShell/>,
+    element: <AboutTheCourseShell/>,
     name: 'Shell Scripting Course Overview',
     link: '/course/shell'
 },{

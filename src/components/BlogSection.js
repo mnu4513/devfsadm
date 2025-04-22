@@ -1,4 +1,4 @@
-import blog_img from '../assets/img/blog.jpg';
+// import blog_img from '../assets/img/blog.jpg';
 import { img_base_url, mine } from './Config';
 import { Link } from 'react-router-dom';
 import { Line } from './utils/Comps';
@@ -74,14 +74,14 @@ const posts = [
   },
   {
     id: 5,
-    title: 'Getting Started with Ansible for IT Automation',
-    img: blog_img,
-    href: '/blog/ansible',
+    title: 'Master Docker: Containerization for DevOps Engineers',
+    img: `${img_base_url}qg0m1cnokddvzerbfiqc`, 
+    href: '/blog/docker',
     description:
-      "Ansible simplifies configuration management and deployment. This blog walks you through the basics of Ansible modules, playbooks, and real-world examples to help you automate tasks across your infrastructure.",
-    date: 'Apr 18, 2024',
-    datetime: '2024-04-18',
-    category: { title: 'DevOps', href: '/course/ansible' },
+      "Docker streamlines development and deployment by packaging applications into containers. This blog explains how Docker works, key commands, and real-world use cases to boost efficiency and reliability.",
+    date: 'Apr 22, 2024',
+    datetime: '2024-04-22',
+    category: { title: 'Containers', href: '/course/docker' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
@@ -91,22 +91,23 @@ const posts = [
   },
   {
     id: 6,
-    title: 'Getting Started with Ansible for IT Automation',
-    img: blog_img,
-    href: '/blog/ansible',
+    title: 'Essential Git & GitHub Skills for Devs and Sysadmins',
+    img: `${img_base_url}myqjgiq9xoxzsuyhusxr`, 
+    href: '/blog/git-github',
     description:
-      "Ansible simplifies configuration management and deployment. This blog walks you through the basics of Ansible modules, playbooks, and real-world examples to help you automate tasks across your infrastructure.",
-    date: 'Apr 18, 2024',
-    datetime: '2024-04-18',
-    category: { title: 'DevOps', href: '/course/ansible' },
+      "Version control is non-negotiable for developers and DevOps teams. This blog covers the most important Git commands, GitHub workflows, and how to collaborate efficiently on codebases.",
+    date: 'Apr 22, 2024',
+    datetime: '2024-04-22',
+    category: { title: 'Version Control', href: '/course/git-github' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
       href: '#',
       imageUrl: mine,
     },
-  }
+  },
 ];
+
 
 
 export default function BlogSection() {
