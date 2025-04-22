@@ -52,24 +52,14 @@ const AnsibleData = [{
     link: '/course/ansible/playbook'
 }, {
     id: 8,
-    element: <AnsibleVariables/>,
-    name: 'Ansible Variables',
-    link: '/course/ansible/variables'
-}, {
-    id: 9,
-    element: <AnsiblePlaybook/>,
-    name: 'Ansible Playbook',
-    link: '/course/ansible/playbook'
-}, {
-    id: 10,
     element: <AnsibleTasks/>,
     name: 'Playbook Tasks',
     link: '/course/ansible/playbook-tasks'
 }, {
-    id: 6,
-    element: <AnsiblePlaybook/>,
-    name: 'Ansible Playbook',
-    link: '/course/ansible/playbook'
+    id: 9,
+    element: <AnsibleVariables/>,
+    name: 'Ansible Variables',
+    link: '/course/ansible/variables'
 }, {
     id: 6,
     element: <AnsiblePlaybook/>,
