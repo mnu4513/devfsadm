@@ -1,196 +1,71 @@
-import React from 'react'
+import { Heading, Subheading, Text, Line } from '../utils/Comps';
 import { Link } from 'react-router-dom';
 
-const SolarisBlog = () => {
-    return (
-        <div className='mx-4 my-4 lg:max-w-7xl lg:mx-auto mb-8'>
-            <div>
-                <h2 className='text-2xl font-bold mt-5 ml-2'>
-                    Solaris Administration Essentials
-                </h2>
-                <p className='ml-2 mt-3'>
-                    Solaris administration involves the management, configuration, and maintenance of Solaris-based systems, ensuring their smooth operation and optimal performance. Whether you're a seasoned system administrator or just starting out, mastering Solaris administration is crucial for effectively managing enterprise-grade systems. In this blog, we'll cover some essential aspects of Solaris administration to help you kickstart your journey.
-                </p>
-            </div>
+export default function SolarisBlog() {
+  return (
+    <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      <Heading text={`Solaris Course Blog`} />
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    1. User and Group Management:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        User Administration:
-                    </span>
-                    Use commands like useradd, usermod, and userdel to create, modify, and delete user accounts. Set passwords with passwd.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Group Administration:
-                    </span>
-                    Manage user groups using groupadd, groupmod, and groupdel commands. Assign users to groups for simplified permissions management.
-                </p>
-            </div>
+      <Subheading text={`Master the Solaris Operating System 🌞`} />
+      <Text text={`Solaris is a robust UNIX operating system known for its scalability, performance, and advanced features like ZFS and SMF. Whether you're managing enterprise infrastructure or preparing for Solaris admin roles, this course walks you through every vital concept with clarity.`} />
+      <Text text={`This course is ideal for Linux admins looking to expand into Solaris, or IT pros managing SPARC-based systems and Oracle environments.`} />
 
+      <Line />
 
+      <Subheading text={`Course Highlights 📘`} />
+      <Text text={`Here's a breakdown of what you'll master:`} />
+      
+      <ul className='list-disc ml-6 font-cambria'>
+        <li><Link to='/course/solaris/intro-to-solaris' className='text-blue-500 hover:text-blue-700 hover:underline'>Introduction to Solaris</Link> – Learn what Solaris is and where it fits in the enterprise landscape.</li>
+        <li><Link to='/course/solaris/installation-and-setup' className='text-blue-500 hover:text-blue-700 hover:underline'>Installation and Setup</Link> – Set up Solaris in your lab or VM environment.</li>
+        <li><Link to='/course/solaris/basic-commands' className='text-blue-500 hover:text-blue-700 hover:underline'>Basic Commands</Link> – Master essential CLI commands and navigation.</li>
+        <li><Link to='/course/solaris/user-management' className='text-blue-500 hover:text-blue-700 hover:underline'>User Management</Link> and <Link to='/course/solaris/group-management' className='text-blue-500 hover:text-blue-700 hover:underline'>Group Management</Link> – Create, modify, and secure users and groups.</li>
+        <li><Link to='/course/solaris/files-and-directories' className='text-blue-500 hover:text-blue-700 hover:underline'>Files and Directories</Link> – Navigate and manage files effectively.</li>
+        <li><Link to='/course/solaris/vi-editor' className='text-blue-500 hover:text-blue-700 hover:underline'>Vi Editor</Link> – Use vi like a pro for scripting and config changes.</li>
+        <li><Link to='/course/solaris/ssh' className='text-blue-500 hover:text-blue-700 hover:underline'>SSH</Link> and <Link to='/course/solaris/super-user' className='text-blue-500 hover:text-blue-700 hover:underline'>Super User</Link> – Connect securely and gain root access responsibly.</li>
+        <li><Link to='/course/solaris/zfs-zpool' className='text-blue-500 hover:text-blue-700 hover:underline'>ZFS & zpool</Link>, <Link to='/course/solaris/quota-reservation' className='text-blue-500 hover:text-blue-700 hover:underline'>Quota & Reservation</Link>, <Link to='/course/solaris/zfs-snapshot' className='text-blue-500 hover:text-blue-700 hover:underline'>Snapshot</Link> – Dive deep into Solaris' advanced file system.</li>
+        <li><Link to='/course/solaris/patch-management' className='text-blue-500 hover:text-blue-700 hover:underline'>Patch Management</Link> and <Link to='/course/solaris/pre-post-checks' className='text-blue-500 hover:text-blue-700 hover:underline'>Pre & Post Checks</Link> – Keep your system secure and updated.</li>
+        <li><Link to='/course/solaris/ldom' className='text-blue-500 hover:text-blue-700 hover:underline'>LDOM</Link>, <Link to='/course/solaris/virtualization' className='text-blue-500 hover:text-blue-700 hover:underline'>Virtualization</Link> – Understand Solaris virtualization for large-scale infra.</li>
+        <li><Link to='/course/solaris/interview-preparation' className='text-blue-500 hover:text-blue-700 hover:underline'>Interview Preparation</Link> – Crack interviews with Solaris-focused questions and scenarios.</li>
+      </ul>
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    2. File System Management:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        File System Types:
-                    </span>
-                    Understand different file system types supported by Solaris, such as UFS and ZFS.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Disk Management:
-                    </span>
-                    Use commands like format, zpool, and zfs for disk partitioning, formatting, and management.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        File System Mounting:
-                    </span>
-                    Mount file systems with mount command and manage mounts persistently using /etc/vfstab.
-                </p>
-            </div>
+      <Line />
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    3. Package Management:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Package Installation:
-                    </span>
-                    Install software packages using the pkgadd command.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Package Removal:
-                    </span>
-                    Remove packages with pkgrm command.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Package Varification:
-                    </span>
-                    Verify installed packages with pkgchk to ensure integrity.
-                </p>
-            </div>
+      <Subheading text={`Why Learn Solaris? 💼`} />
+      <Text text={`Solaris still powers mission-critical workloads in banks, telecoms, and Oracle hardware environments. With skills in Solaris, you can:`} />
+      <ul className='list-disc ml-6 font-cambria'>
+        <li>Manage legacy enterprise systems confidently</li>
+        <li>Handle advanced storage setups with ZFS</li>
+        <li>Automate system monitoring and recovery</li>
+        <li>Gain an edge in system admin job markets</li>
+      </ul>
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    4. Network Configuration:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Interface Configuration:
-                    </span>
-                    Configure network interfaces using ifconfig.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Network Services:
-                    </span>
-                    Manage network services with svcadm command.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Firewall Configuration:
-                    </span>
-                    Implement firewall rules with ipf or iptables.
-                </p>
-            </div>
+      <Line />
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    5. System Monitoring and Performance:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Resource Monitoring:
-                    </span>
-                    Monitor system resources with commands like vmstat, prstat, and top.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Performance Tuning:
-                    </span>
-                    Tune system performance parameters using svcadm or /etc/system.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Log Management:
-                    </span>
-                    Monitor system logs in /var/adm/messages for troubleshooting and analysis.
-                </p>
-            </div>
+      <Subheading text={`Mistakes Beginners Should Avoid 🚫`} />
+      <Text text={`Avoid these common pitfalls when working with Solaris:`} />
+      <ul className='list-disc ml-6 font-cambria'>
+        <li>Using Linux-style commands where Solaris differs (e.g., `pkg` vs `yum`)</li>
+        <li>Forgetting to enable services with SMF (`svcadm` commands)</li>
+        <li>Mismanaging ZFS datasets or snapshots</li>
+        <li>Improper patching without backups or post-checks</li>
+      </ul>
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    6. Security Measures:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Access Control:
-                    </span>
-                    Configure user access controls using sudo or RBAC (Role-Based Access Control).
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Security Updates:
-                    </span>
-                    Stay updated with security patches using patchadd and patchrm.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Audit Trails:
-                    </span>
-                    Enable audit trails with audit to track system activities.
-                </p>
-            </div>
+      <Line />
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    7. Backup and Recovery:
-                </h2>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Backup Strategies:
-                    </span>
-                    Develop backup strategies using tools like tar, cpio, or rsync.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Snapshotting:
-                    </span>
-                    Utilize ZFS snapshots for point-in-time backups and recovery.
-                </p>
-                <p className='mt-3'>
-                    <span className='font-bold mr-2'>
-                        Disaster Recovery:
-                    </span>
-                    Plan for disaster recovery with comprehensive backup solutions.
-                </p>
-            </div>
+      <Subheading text={`Power Tips 🔧`} />
+      <Text text={`✅ Explore all ZFS features like compression, deduplication, and cloning.`} />
+      <Text text={`✅ Learn Solaris SMF deeply – it's a powerful way to manage services.`} />
+      <Text text={`✅ Document LDOM and networking setups — they're common in interviews.`} />
+      <Text text={`✅ Practice patching and rolling back using snapshots — real world lifesaver!`} />
 
-            <div className='ml-2 mt-8'>
-                <h2 className='text-xl font-bold'>
-                    Conclusion:
-                </h2>
+      <Line />
 
-                <p className='mt-3 mb-6'>
-                   
-                    Solaris administration encompasses a broad range of tasks crucial for maintaining the stability, security, and performance of Solaris-based systems. This blog provides a concise overview of essential administrative tasks, serving as a starting point for aspiring Solaris administrators. As you delve deeper into Solaris administration, explore advanced topics and best practices to enhance your skills and effectively manage complex enterprise environments.
-                </p>
-            </div>
-
-            <Link to='/course/solaris' className='ml-2 font-bold text-blue-400' > Visit here to get full Solaris 11 administration course. </Link>
-        </div>
-    );
-};
-
-export default SolarisBlog;
+      <Subheading text={`Start Your Solaris Journey 🌐`} />
+      <Text text={`Kickstart your Solaris sysadmin journey and stand out in hybrid infrastructure roles.`} />
+      <p className='font-cambria'>Head over to 
+        <Link to='/course/solaris' className='text-blue-500 hover:text-blue-700 hover:underline'> Solaris Course Overview</Link> to begin your deep dive.
+      </p>
+    </div>
+  );
+}

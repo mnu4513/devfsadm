@@ -60,11 +60,6 @@ const AnsibleData = [{
     element: <AnsibleVariables/>,
     name: 'Ansible Variables',
     link: '/course/ansible/variables'
-}, {
-    id: 6,
-    element: <AnsiblePlaybook/>,
-    name: 'Ansible Playbook',
-    link: '/course/ansible/playbook'
 }];
 
 export default AnsibleData;

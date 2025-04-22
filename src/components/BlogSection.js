@@ -6,10 +6,10 @@ const posts = [
   {
     id: 1,
     title: 'Solaris Administration Essentials: A Quick Guide',
-    img: blog_img,
+    img: `${img_base_url}dfgzdzja20mc6mid98in`,
     href: '/blog/solaris',
     description:
-      "Solaris administration involves the management, configuration, and maintenance of Solaris-based systems, ensuring their smooth operation and optimal performance. Whether you're a seasoned system administrator or just starting out, mastering Solaris administration is crucial for effectively managing enterprise-grade systems. In this blog, we'll cover some essential aspects of Solaris administration to help you kickstart your journey.",
+      "Solaris administration involves managing, configuring, and maintaining Solaris-based systems. This blog outlines key tasks, tools, and strategies that system administrators must know to ensure optimal system performance and reliability.",
     date: 'Mar 16, 2024',
     datetime: '2024-03-16',
     category: { title: 'Administration', href: '/course/solaris' },
@@ -22,14 +22,14 @@ const posts = [
   },
   {
     id: 2,
-    title: 'Boost your conversion rate',
-    img: blog_img,
-    href: '#',
+    title: 'Why Linux Still Rules: Core Skills for Every Engineer',
+    img: `${img_base_url}ealcifpwnvcmkemf2oz3`,
+    href: '/blog/linux',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+      "Linux is the backbone of modern IT infrastructure. This blog covers essential Linux commands, real-world use cases, and why mastering Linux is non-negotiable for engineers working with servers, DevOps, or security.",
+    date: 'Apr 5, 2024',
+    datetime: '2024-04-05',
+    category: { title: 'Operating Systems', href: '/course/linux' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
@@ -39,14 +39,14 @@ const posts = [
   },
   {
     id: 3,
-    title: 'Boost your conversion rate',
-    img: blog_img,
-    href: '#',
+    title: '10 Shell Scripting Tips for Automating Daily Tasks',
+    img: `${img_base_url}lxempqyxe0amauxu3tm7`,
+    href: '/blog/shell-scripting',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+      "Shell scripting is a powerful tool for automating repetitive tasks in Linux environments. In this blog, you'll discover practical scripting examples, tips, and common patterns used by sysadmins to boost productivity.",
+    date: 'Apr 12, 2024',
+    datetime: '2024-04-12',
+    category: { title: 'Automation', href: '/course/shell-scripting' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
@@ -56,14 +56,14 @@ const posts = [
   },
   {
     id: 4,
-    title: 'Boost your conversion rate',
-    img: blog_img,
-    href: '#',
+    title: 'Getting Started with Ansible for IT Automation',
+    img: `${img_base_url}sw8wtuaepwbi6dig3upd`,
+    href: '/blog/ansible',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+      "Ansible simplifies configuration management and deployment. This blog walks you through the basics of Ansible modules, playbooks, and real-world examples to help you automate tasks across your infrastructure.",
+    date: 'Apr 18, 2024',
+    datetime: '2024-04-18',
+    category: { title: 'DevOps', href: '/course/ansible' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
@@ -73,14 +73,14 @@ const posts = [
   },
   {
     id: 5,
-    title: 'Boost your conversion rate',
+    title: 'Getting Started with Ansible for IT Automation',
     img: blog_img,
-    href: '#',
+    href: '/blog/ansible',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+      "Ansible simplifies configuration management and deployment. This blog walks you through the basics of Ansible modules, playbooks, and real-world examples to help you automate tasks across your infrastructure.",
+    date: 'Apr 18, 2024',
+    datetime: '2024-04-18',
+    category: { title: 'DevOps', href: '/course/ansible' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
@@ -90,26 +90,27 @@ const posts = [
   },
   {
     id: 6,
-    title: 'Boost your conversion rate',
+    title: 'Getting Started with Ansible for IT Automation',
     img: blog_img,
-    href: '#',
+    href: '/blog/ansible',
     description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    category: { title: 'Marketing', href: '#' },
+      "Ansible simplifies configuration management and deployment. This blog walks you through the basics of Ansible modules, playbooks, and real-world examples to help you automate tasks across your infrastructure.",
+    date: 'Apr 18, 2024',
+    datetime: '2024-04-18',
+    category: { title: 'DevOps', href: '/course/ansible' },
     author: {
       name: 'Michael Foster',
       role: 'Co-Founder / CTO',
       href: '#',
       imageUrl: mine,
     },
-  },
+  }
 ];
+
 
 export default function BlogSection() {
   return (
-    <div className=" py-24 sm:py-32 dark:bg-gray-800 text-white">
+    <div className=" py-24 sm:py-32 dark:bg-gray-800 text-white font-cambria">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl text-violet-500 dark:text-white font-bold tracking-tight sm:text-4xl">From the blog</h2>
@@ -120,7 +121,7 @@ export default function BlogSection() {
         <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {posts.map((post) => (
             <article key={post.id} className="flex max-w-xl flex-col items-start justify-between">
-              <img src={post.img} alt='' className='my-3' />
+              <img src={post.img} alt='' className='my-3 h-64 w-96' />
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime} className="text-blue-400">
                   {post.date}
@@ -134,7 +135,7 @@ export default function BlogSection() {
               </div>
 
               <div className="group relative">
-                <h3 className="mt-3 text-lg font-semibold leading-6 text-blue-900 group-hover:text-gray-600">
+                <h3 className="mt-3 text-lg font-semibold leading-6 text-red-600 group-hover:text-blue-300 ">
                   <Link to={post.href}>
                     <span className="absolute inset-0" />
                     {post.title}

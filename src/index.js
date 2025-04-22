@@ -2,15 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Error404 from './components/Error404';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+// Pages
 import Home from './components/Home';
+import Error404 from './components/Error404';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfServices from './components/TermsOfServices';
+import Features from './components/Features';
+
+// User: Login & Register
+import User from './components/user/User';
 import Login from './components/user/Login';
 import Register from './components/user/Register';
 import ForgotPassword from './components/user/ForgotPassword';
+
 
 // Solaris
 import HomeSolaris from './components/solaris/HomeSolaris';
@@ -30,12 +39,11 @@ import ShellData from './components/shell/ShellData'
 import HomeAnsible from './components/ansible/HomeAnsible';
 import AnsibleData from './components/ansible/AnsibleData';
 
+// Blog 
+import HomeBlog from './components/blogs/HomeBlog';
+import BlogData from './components/blogs/BlogData';
 
-import User from './components/user/User';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import TermsOfServices from './components/TermsOfServices';
-import Features from './components/Features';
-import SolarisBlog from './components/blogs/SolarisBlog';
+
 
 
 
@@ -74,11 +82,11 @@ const appRouter = createBrowserRouter([
         },]
       }, {
         path: '/blog',
-        element: <SolarisBlog />,
-        children: [{
-          path: '/blog/solaris',
-          element: <SolarisBlog />
-        }]
+        element: <HomeBlog />,
+        children: BlogData?.map(child => ({
+          path: child.link,
+          element: child.element
+        }))
       },
       {
         path: '/course/linux',
@@ -96,10 +104,6 @@ const appRouter = createBrowserRouter([
           element: child.element
         }))
       }, {
-        path: '/blog/solaris',
-        element: <SolarisBlog />
-      },
-      {
         path: '/course/shell',
         element: <HomeShell />,
         children: ShellData.map(child => ({
