@@ -1,6 +1,6 @@
 import React from 'react';
 import { img_base_url } from '../Config';
-import copy_icon from '../../assets/ico/copy.svg';
+// import copy_icon from '../../assets/ico/copy.svg';
 
 
 //  Video Component :- [Provide Video Source ID from YouTube]
@@ -92,24 +92,22 @@ export const TerminalOutput = ({ content }) => {
 
 
 // Command Component :- [Commnad or Command Example]
-export const Command = ({ command }) => {
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(command);
-        alert("Command copied to clipboard!");
-    };
-    return (
-        <div className="mb-4 flex">
-            <pre className=" px-2 py-2 text-blue-500 rounded-lg shadow-md flex w-full whitespace-pre-wrap break-words">
-                {command}
-                <button
-                    onClick={copyToClipboard}
-                    className="hover:bg-blue-300 hover:rounded-md ml-2"
-                >
-                    <img className='w-4' src={copy_icon} alt='c' />
-                </button>
-            </pre>
-        </div>
-    );
+export const Command = ({ content }) => {
+  return (
+    <div
+  className="font-mono px-4 rounded-md overflow-auto mb-2 bg-gray-700 dark:bg-white"
+  style={{
+    maxHeight: "400px",
+    whiteSpace: "pre-wrap", // Ensure text wraps properly
+    wordBreak: "break-word", // Break long unbroken strings to fit within the container
+  }}
+>
+  {content.split("\n").map((line, index) => {
+    // Handle other lines (output or empty)
+    return <div key={index} className="text-gray-900">{line}</div>;
+  })}
+</div>
+);
 };
 
 // Heading Component :- [Heading of Page]

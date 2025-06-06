@@ -47,7 +47,8 @@ import GitData from './components/git/GitData';
 import HomeBlog from './components/blogs/HomeBlog';
 import BlogData from './components/blogs/BlogData';
 
-
+// Exams 
+import ExamPage from './components/exams/solaris/ExamPage';
 
 
 
@@ -137,6 +138,9 @@ const appRouter = createBrowserRouter([
       }, {
         path: '/features',
         element: <Features />
+      }, {
+        path: '/exam/mysql',
+        element: <ExamPage/>
       }
     ]
   }
