@@ -139,7 +139,7 @@ const appRouter = createBrowserRouter([
         path: '/features',
         element: <Features />
       }, {
-        path: '/exam/mysql',
+        path: '/exam/solaris-1z0-821',
         element: <ExamPage/>
       }
     ]
