@@ -738,8 +738,8 @@ expize= authors profiles= roles= limitpriy=
 defaultpriy= lock_after_retries=
 ${` `}
 # zfs list rpool/export/home
-NAME    USED  AVAIL  REFER  MOUNTPOINT
-rpool/export/home  13.9M \ 3.31G    35K  /export/home
+NAME               USED   AVAIL    REFER  MOUNTPOINT
+rpool/export/home  13.9M  3.31G    35K    /export/home
 ${` `}
 # ls -l /export/home
 total 21
