@@ -20,8 +20,8 @@ const ExamCard = ({ question }) => {
       {/* Displaying the options with consistent spacing */}
       <div className="mt-4 space-y-2">
         {question.options
-          .filter(opt => opt?.value?.trim() !== '')
-          .map((option, idx) => {
+          ?.filter(opt => opt?.value?.trim() !== '')
+          ?.map((option, idx) => {
             return (
               <div key={idx} className="flex items-start gap-2">
                 <span className="text-red-400">⭕</span>

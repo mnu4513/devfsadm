@@ -32,7 +32,9 @@ const list = [
     id: 3,
     question: [
       {type: 'text', value: "Examine this command and its output:"},
-      {type: 'command', value: "# svcs sendmail\nSTATE    STIME    FMRI\nmaintenance    13:39:35 svc:/network/amtp:sendmail"},
+      {type: 'command', value: `# svcs sendmail
+STATE          STIME       FMRI
+maintenance    13:39:35    svc:/network/amtp:sendmail"`},
       {type: 'text', value: "Which two commands can be used to determine the reason for the sendmail service being in the maintenance state?"}
     ],
     options: [
@@ -66,7 +68,9 @@ const list = [
     id: 5,
     question: [
       {type: 'text', value: "Examine this command and its output:"},
-      {type: 'command', value: "$ ipadm show-addr net1/v4\nADDROBJ    TYPE    STATE    ADDR\nnet1/v4    static    inaccessible 192.168.180.136/24"},
+      {type: 'command', value: `$ ipadm show-addr net1/v4
+ADDROBJ    TYPE      STATE           ADDR
+net1/v4    static    inaccessible    192.168.180.136/24`},
       {type: 'text', value: "Why is the address object net1/v4 marked inaccessible?"}
     ],
     options: [
@@ -148,8 +152,16 @@ const list = [
     id: 10,
     question: [
       {type: 'text', value: "Examine these commands and their output:"},
-      {type: 'command', value: "# ipadm show-if net3\nIFNAME    CLASS    STATE    ACTIVE OVER\nnet3    ip    ok    yes    --"},
-      {type: 'command', value: "# ipadm show-addr net3\nADDROBJ    TYPE    STATE    ADDR\nnet3/v4    static\tok    172.16.1.1/16\nnet3/v6    addrconf ok    fe801:20c:29ff:fe77:7563/10\nnet3/v6a   static\tok    fdaa:92f:9b63:e2c4:5/64"},
+      {type: 'command', value: `# ipadm show-if net3
+IFNAME    CLASS    STATE    ACTIVE OVER
+net3    ip    ok    yes    --
+${` `}
+# ipadm show-addr net3
+ADDROBJ    TYPE    STATE    ADDR
+net3/v4    static	ok    172.16.1.1/16
+net3/v6    addrconf ok    fe801:20c:29ff:fe77:7563/10
+net3/v6a   static	ok    fdaa:92f:9b63:e2c4:5/64
+`},
       {type: 'text', value: "Examine this list of commands:"},
       {type: 'command', value: "1. ipadm delete-addr net3/v4"},
       {type: 'command', value: "2. ipadm delete-addr net3/v6"},
@@ -222,7 +234,8 @@ const list = [
     id: 14,
     question: [
       {type: 'text', value: "Examine this crontab entry."},
-      {type: 'command', value: "# crontab -1 sys\n0 6 * * 6 /usr/lib/sa/sal"},
+      {type: 'command', value: `# crontab -1 sys
+0   6   *   *   6   /usr/lib/sa/sal`},
       {type: 'text', value: "When will /usr/lib/sa/sal run?"}
     ],
     options: [
@@ -252,7 +265,15 @@ const list = [
     id: 16,
     question: [
       {type: 'text', value: "Examine this command and output:"},
-      {type: 'command', value: "oracle@serverA:~S svcs -l ssh | egrep 'fmtlenabled(state|depend'\n\nfmri:    svc:/network/ssh:default\nenabled    true\nstate    offline\n...\ndependency    require_all/none svc:/system/cryptosvc (disabled)\n..."},
+      {type: 'command', value: `oracle@serverA:~S svcs -l ssh | egrep 'fmtlenabled(state|depend'
+${` `}
+fmri:    svc:/network/ssh:default
+enabled    true
+state    offline
+...
+dependency    require_all/none svc:/system/cryptosvc (disabled)
+...
+`},
       {type: 'text', value: "Which is the minimum set of commands to bring svc:/network/ssh:default back online?"}
     ],
     options: [
@@ -272,7 +293,8 @@ svcadm restart svc:/network/ssh:default`}]
     id: 17,
     question: [
       {type: 'text', value: "Examine this command and its output:"},
-      {type: 'command', value: "$ grep user.log /etc/syslog.conf\nuser.warning    /var/adm/user.log"},
+      {type: 'command', value: `$ grep user.log /etc/syslog.conf
+user.warning    /var/adm/user.log`},
       {type: 'text', value: "Which two will add a message to /var/adm/user.log?"}
     ],
     options: [
@@ -320,7 +342,15 @@ svcadm restart svc:/network/ssh:default`}]
     id: 20,
     question: [
       {type: 'text', value: "View the Exhibit."},
-      {type: 'command', value: "| ADDROBJ    | TYPE     | STATE   | ADDR                        |\n|------------|----------|---------|-----------------------------|\n| 100/√4     | static   | ok      | 127.0.0.1/8                 |\n| net0/.b    | dhcp     | ok      | 10.0.2.15/24                |\n| net1/.b    | dhcp     | ok      | 10.0.3.15/24                |\n| 100/√6     | static   | ok      | ::1/128                     |\n| net0/.a    | addrconf | ok      | fe80::a00:27ff:fec5:38b9/10 |\n| net1/.a    | addrconf | ok      | fe80::a00:27ff:fe2b:498a/10 |"},
+      {type: 'command', value: `| ADDROBJ    | TYPE     | STATE | ADDR                        |
+|------------|----------|-------|-----------------------------|
+| 100/√4     | static   | ok    | 127.0.0.1/8                 |
+| net0/.b    | dhcp     | ok    | 10.0.2.15/24                |
+| net1/.b    | dhcp     | ok    | 10.0.3.15/24                |
+| 100/√6     | static   | ok    | ::1/128                     |
+| net0/.a    | addrconf | ok    | fe80::a00:27ff:fec5:38b9/10 |
+| net1/.a    | addrconf | ok    | fe80::a00:27ff:fe2b:498a/10 |
+`},
       {type: 'text', value: "The configuration information in the exhibit is displayed on your system immediately after installing the OS."},
       {type: 'text', value: "Choose the option that describes the selection made during the installation of the OS to obtain this configuration."}
     ],
@@ -335,7 +365,7 @@ svcadm restart svc:/network/ssh:default`}]
       id: 21,
       question: [
         {type: 'text', value: "You log in to the system as user1, then switch user to root by using the `su - command`. After entering the correct password, you enter the following commands:"},
-        {type: 'command', value: "whoami:who am i:id"},
+        {type: 'command', value: "whoami;who am i;id"},
         {type: 'text', value: "Which option correctly represents the output?"}
       ],
       options: [
@@ -360,7 +390,9 @@ uid=0(root) gid=0(root)`}]
       id: 22,
       question: [
         {type: 'text', value: "Examine this command and output executed by user `prutser`."},
-        {type: 'command', value: "$ crontab -1\ncrontab: you are not authorized to use cron. sorry."},
+        {type: 'command', value: `$ crontab -1
+crontab: you are not authorized to use cron. sorry.
+`},
         {type: 'text', value: "Identify two reasons for this message."}
       ],
       options: [
@@ -470,10 +502,14 @@ ipadm show-mask`},
       question: [
         {type: 'text', value: "To inspect network interface net3, you enter the following commands:"},
         {type: 'command', value: `$ ipadm show-if | grep net3
-net3 ip down no`},
-        {type: 'command', value: `$ sudo ipadm up-addr net3/v4
-ipadm: cannot mark the address up: Object not found`},
-        {type: 'text', value: "What problem do you suspect?\nAssume the user is authorized and provided the correct password."}
+net3 ip down no
+${` `}
+$ sudo ipadm up-addr net3/v4
+ipadm: cannot mark the address up: Object not found
+`},
+
+        {type: 'text', value: "What problem do you suspect?"},
+        {type: 'text', value: "Assume the user is authorized and provided the correct password."}
       ],
       options: [
         {type: 'text', value: "The net3 interface hasn't been enabled yet."},
@@ -503,18 +539,21 @@ ipadm: cannot mark the address up: Object not found`},
       question: [
         {type: 'text', value: "Examine these commands and their output:"},
         {type: 'command', value: `# pkg list unzip
-pkg list: no packages matching 'unzip' installed`},
-        {type: 'command', value: `# pkg list -af unzip
+pkg list: no packages matching 'unzip' installed
+${` `}
+# pkg list -af unzip
 NAME (PUBLISHER)    VERSION    IFO
 compress/unzip    6.0-0.175.2.7.0.4.0    ---
 compress/unzip    6.0-0.175.2.6.0.5.0    ---
 compress/unzip    6.0-0.175.2.3.0.4.0    ---
 compress/unzip    6.0-0.175.2.0.0.42.1    ---
 compress/unzip    6.0-0.175.1.0.0.24.0    ---
-compress/unzip    6.0-0.175.0.0.0.2.537    ---`},
-        {type: 'command', value: `# pkg list entire
+compress/unzip    6.0-0.175.0.0.0.2.537    ---
+${` `}
+# pkg list entire
 NAME (PUBLISHER)    VERSION    IFO
-entire    0.5.11-0.175.1.21.0.4.1    i--`},
+entire    0.5.11-0.175.1.21.0.4.1    i--
+`},
         {type: 'text', value: "Which command can you use to install the latest version of the unzip package that is compatible with the current image?"}
       ],
       options: [
@@ -653,14 +692,13 @@ drwxr-xr-x 3 jack other 3 2012-01-06 08:27 dira
 jack@solaris:~$ ls -LR dira
 dira:
 total 2
-drwxrwxr-t 2 jack other 3 2012-01-06 08:27 dirb`},
-             
-
-              {type: "command", value: `dira/dirb:
+drwxrwxr-t 2 jack other 3 2012-01-06 08:27 dirb
+${` `}
+dira/dirb:
 total 1
 -rw-r-rw-- 1 jack other 8768 2012-01-06 08:28 testfile
--rwxr-xr-x 1 jack other 3398 2011-12-30 12:10 scriptfile`},
-            
+-rwxr-xr-x 1 jack other 3398 2011-12-30 12:10 scriptfile
+`},
               {"type": "text", "value": "Which three are true?"}
           ],
           "options": [
@@ -697,15 +735,19 @@ total 1
 group=staff,10 project=default,3 basedir='export/home
 skel='etc/skel shell='/usr/bin/bash inactive=0
 expize= authors profiles= roles= limitpriy=
-defaultpriy= lock_after_retries=`},
-              {type: "command", value: `# zfs list rpool/export/home
+defaultpriy= lock_after_retries=
+${` `}
+# zfs list rpool/export/home
 NAME    USED  AVAIL  REFER  MOUNTPOINT
-rpool/export/home  13.9M \ 3.31G    35K  /export/home`},
-              {type: "command", value: `# ls -l /export/home
+rpool/export/home  13.9M \ 3.31G    35K  /export/home
+${` `}
+# ls -l /export/home
 total 21
-drwxr-xr-x  16 ocp staff    27 Oct 29 22:47 ocp`},
-              {type: "command", value: `# logins -u
-ocp    430    staff    10    OCP exam developer`},
+drwxr-xr-x  16 ocp staff    27 Oct 29 22:47 ocp
+${` `}
+# logins -u
+ocp    430    staff    10    OCP exam developer
+`},
 
 {"type": "text", "value": "Next you execute:"},
 {type: "command", value: `# useradd -u 500 -g dba oracle`},
@@ -890,10 +932,10 @@ tank/oracle 33K\t\t    4.84G\t33K\t      /data/oracle`},
             {type: 'text', value: "Review the boot environments displayed on your system:"},
             {type: 'command', value: `| BE         | Active | Mountpoint | Space   | Policy | Created          |
 |------------|--------|------------|---------|--------|------------------|
-| oldBE      | -      | -          | 149.0K  | static | 2011-11-28 15:15 |
-| newBE      | -      | -          | 363.05M | static | 2011-11-28 14:47 |
-| solaris    | -      | -          | 100.68M | static | 2011-11-20 18:09 |
-| solaris-1  | NR     | /          | 19.07G  | static | 2012-01-22 07:23 |`},
+| oldBE      |   -    |     -      | 149.0K  | static | 2011-11-28 15:15 |
+| newBE      |   -    |     -      | 363.05M | static | 2011-11-28 14:47 |
+| solaris    |   -    |     -      | 100.68M | static | 2011-11-20 18:09 |
+| solaris-1  |   NR   |     /      | 19.07G  | static | 2012-01-22 07:23 |`},
             {type: 'text', value: "Which option describes the solaris-1 BE?"}
           ],
           options: [
@@ -1081,71 +1123,111 @@ R F /data/files -> /data/files3
                   {"type": "text", "value": "Following your company policy, which option describes a valid procedure for backing up the /data file system to a remote disk named /remote/backup?"}
               ],
               "options": [
-                  {"type": "command", value: "On Saturday:\nzfs create snapshot pool1/data@sat\nzfs send pool1/data@sat | zfs recv remote/backup/`date '+%m%d%y'`\n\nOn each weekday:\nRemove the previous daily snapshot.\nzfs create pool1/data@daily\nzfs send -i pool1/data@sat pool1/data@daily | zfs recv remote/backup/`date '+%m%d%y'`"},
-                  {"type": "command", value: "On Saturday:\nzfs snapshot pool1/data@sat\nzfs send pool1/data@sat > /remote/backup/full\n\nOn each weekday:\nRemove the previous daily snapshot.\nzfs snapshot pool1/data@daily\nzfs send -i pool1/data@sat pool1/data@daily > /remote/backup/full"},
-                  {"type": "command", value: "On Saturday:\nzfs create snapshot pool1/data@sat\nzfs send pool1/data@sat | zfs recv remote/backup\n\nOn each weekday:\nRemove the previous daily snapshot.\nzfs create -i pool1/data@sat pool1/data@daily\nzfs send pool1/data@daily | zfs recv remote/backup"},
-                  {"type": "command", value: "On Saturday:\nzfs snapshot pool1/data@sat\nzfs send pool1/data@sat > /remote/backup/full\n\nOn each weekday:\nRemove the previous daily snapshot.\nzfs snapshot pool1/data@daily\nzfs send -i pool1/data@sat pool1/data@daily > /remote/backup/`date '+%m%d%y'`"}
-              ],
-              "answer": [{"type": "command", value: "On Saturday:\nzfs create snapshot pool1/data@sat\nzfs send pool1/data@sat | zfs recv remote/backup/`date '+%m%d%y'`\n\nOn each weekday:\nRemove the previous daily snapshot.\nzfs create pool1/data@daily\nzfs send -i pool1/data@sat pool1/data@daily | zfs recv remote/backup/`date '+%m%d%y'`"}]
-          },
-          {
-              "id": 59,
-              "question": [
-                  {"type": "text", "value": "A user is unable to log on to the system due to several failed attempts."},
-                  {"type": "text", "value": "Examine the user1 account status:"},
-                  {"type": "command", "value": `# logins -x -l user1  
+                  {"type": "command", value: `On Saturday:
+zfs create snapshot pool1/data@sat  
+zfs send pool1/data@sat | zfs recv remote/backup/\`date '+%m%d%y'\`  
+${` `}
+On each weekday:
+Remove the previous daily snapshot.  
+zfs create pool1/data@daily  
+zfs send -i pool1/data@sat pool1/data@daily | zfs recv remote/backup/\`date '+%m%d%y'\`
+`},
+                  {"type": "command", value: `On Saturday:
+zfs snapshot pool1/data@sat  
+zfs send pool1/data@sat > /remote/backup/full
+${` `}
+On each weekday:
+Remove the previous daily snapshot.  
+zfs snapshot pool1/data@daily  
+zfs send -i pool1/data@sat pool1/data@daily > /remote/backup/full 
+`},
+                  {"type": "command", value: `On Saturday:
+zfs create snapshot pool1/data@sat  
+zfs send pool1/data@sat | zfs recv remote/backup 
+${` `}
+On each weekday:
+Remove the previous daily snapshot.  
+zfs create -i pool1/data@sat pool1/data@daily  
+zfs send pool1/data@daily | zfs recv remote/backup 
+`},
+                  {"type": "command", value: `On Saturday:
+zfs snapshot pool1/data@sat  
+zfs send pool1/data@sat > /remote/backup/full  
+${` `}
+On each weekday:
+Remove the previous daily snapshot. 
+zfs snapshot pool1/data@daily  
+zfs send -i pool1/data@sat pool1/data@daily > /remote/backup/\`date '+%m%d%y'\`
+`}
+],
+"answer": [{"type": "command", value: `On Saturday:
+zfs create snapshot pool1/data@sat  
+zfs send pool1/data@sat | zfs recv remote/backup/\`date '+%m%d%y'\`  
+${` `}
+On each weekday:
+Remove the previous daily snapshot.  
+zfs create pool1/data@daily  
+zfs send -i pool1/data@sat pool1/data@daily | zfs recv remote/backup/\`date '+%m%d%y'\`
+`}]
+},
+{
+    "id": 59,
+    "question": [
+        {"type": "text", "value": "A user is unable to log on to the system due to several failed attempts."},
+        {"type": "text", "value": "Examine the user1 account status:"},
+        {"type": "command", "value": `# logins -x -l user1  
 user1    430    staff    10  
-/export/home/user1  
-/usr/bin/bash  
-LK 112416 -1 -1 -1`},
-                      {"type": "text", "value": "Which action or actions should you take to make the user1 account usable again?"}
-              ],
-              "options": [
-                  {"type": "text", "value": "Assign a new password to user1."},
-                  {"type": "text", "value": "Assign a new password to user1 and unlock the account."},
-                  {"type": "text", "value": "Unlock the user1 account."},
-                  {"type": "text", "value": "Remove the password from user1."},
-                  {"type": "text", "value": "Remove the password from user1 and unlock the account."}
-              ],
-              "answer": [{"type": "text", "value": "Assign a new password to user1 and unlock the account."}]
-          },
-          {
-              "id": 60,
-              "question": [
-                  {"type": "text", "value": "You need to connect two nonglobal zones using a private virtual network."},
-                  {"type": "text", "value": "Identify the network resources required in the global zone to accomplish this."}
-              ],
-              "options": [
-                  {"type": "text", "value": "a virtual bridge"},
-                  {"type": "text", "value": "an etherstub and two virtual network interfaces"},
-                  {"type": "text", "value": "two virtual network interfaces"},
-                  {"type": "text", "value": "two etherstubs"}
-              ],
-              "answer": [{"type": "text", "value": "an etherstub and two virtual network interfaces"}]
-          },
-          {
-              "id": 61,
-              "question": [
-                  {"type": "text", "value": "Examine this login attempt by the user oracle:"},
-                  {"type": "command", value: `login: oracle
+         /export/home/user1  
+         /usr/bin/bash  
+         LK 112416 -1 -1 -1`},
+            {"type": "text", "value": "Which action or actions should you take to make the user1 account usable again?"}
+    ],
+    "options": [
+        {"type": "text", "value": "Assign a new password to user1."},
+        {"type": "text", "value": "Assign a new password to user1 and unlock the account."},
+        {"type": "text", "value": "Unlock the user1 account."},
+        {"type": "text", "value": "Remove the password from user1."},
+        {"type": "text", "value": "Remove the password from user1 and unlock the account."}
+    ],
+    "answer": [{"type": "text", "value": "Assign a new password to user1 and unlock the account."}]
+},
+{
+    "id": 60,
+    "question": [
+        {"type": "text", "value": "You need to connect two nonglobal zones using a private virtual network."},
+        {"type": "text", "value": "Identify the network resources required in the global zone to accomplish this."}
+    ],
+    "options": [
+        {"type": "text", "value": "a virtual bridge"},
+        {"type": "text", "value": "an etherstub and two virtual network interfaces"},
+        {"type": "text", "value": "two virtual network interfaces"},
+        {"type": "text", "value": "two etherstubs"}
+    ],
+    "answer": [{"type": "text", "value": "an etherstub and two virtual network interfaces"}]
+},
+{
+    "id": 61,
+    "question": [
+        {"type": "text", "value": "Examine this login attempt by the user oracle:"},
+        {"type": "command", value: `login: oracle
 Password: <password entered>
 Login incorrect
 `},
-                  {"type": "text", "value": "What is the reason or reasons for the login failure?"}
-              ],
-              "options": [
-                  {"type": "text", "value": "The oracle account exists but the account is locked."},
-                  {"type": "text", "value": "The oracle account exists but the password is incorrect."},
-                  {"type": "text", "value": "The oracle account does not exist, or the oracle account is locked, or the password is incorrect."},
-                  {"type": "text", "value": "The oracle account does not exist."},
-                  {"type": "text", "value": "Either the oracle account is locked or the password is incorrect."}
-              ],
-              "answer": [{"type": "text", "value": "The oracle account does not exist, or the oracle account is locked, or the password is incorrect."}]
-          },             {
-                "id": 62,
-                "question": [
-                    {"type": "text", "value": "The following information is displayed for the svc:/network/ssh service:"},
-                    {"type": "command", value: `fmri         svc:/network/ssh:default  
+        {"type": "text", "value": "What is the reason or reasons for the login failure?"}
+    ],
+    "options": [
+        {"type": "text", "value": "The oracle account exists but the account is locked."},
+        {"type": "text", "value": "The oracle account exists but the password is incorrect."},
+        {"type": "text", "value": "The oracle account does not exist, or the oracle account is locked, or the password is incorrect."},
+        {"type": "text", "value": "The oracle account does not exist."},
+        {"type": "text", "value": "Either the oracle account is locked or the password is incorrect."}
+    ],
+    "answer": [{"type": "text", "value": "The oracle account does not exist, or the oracle account is locked, or the password is incorrect."}]
+},             {
+      "id": 62,
+      "question": [
+          {"type": "text", "value": "The following information is displayed for the svc:/network/ssh service:"},
+          {"type": "command", value: `fmri         svc:/network/ssh:default  
 name         SSH server  
 enabled      true  
 state        offline  
@@ -1156,7 +1238,7 @@ restarter    svc:/system/svc/restarter:default
 contract_id  321  
 manifest     /etc/svc/profile/generic.xml  
 manifest     /lib/svc/manifest/network/ssh.xml  
-
+${` `}
 dependency   require_all/none svc:/system/filesystem/local (online)  
 dependency   optional_all/none svc:/system/filesystem/autofs (online)  
 dependency   require_all/none svc:/network/loopback (online)  
@@ -1176,144 +1258,144 @@ See: /var/svc/log/network-ssh:default.log
 Impact: This service is not running.
 `},
                
-                    {"type": "text", "value": "Which describes the minimum set of commands to be executed to bring the svc:/network/ssh:default service back online?"}
-                ],
-                "options": [
-                    {"type": "command", "value": "svcadm restart svc:/system/cryptosvc\nsvcadm restart svc:/network/ipfilter:default\nsvcadm restart svc:/network/ssh:default"},
-                    {"type": "command", "value": "svcadm enable svc:/system/cryptosvc\nsvcadm enable svc:/network/ipfilter:default\nsvcadm refresh svc:/network/ssh:default"},
-                    {"type": "command", "value": "svcadm enable svc:/network/ssh:default"},
-                    {"type": "command", "value": "svcadm enable svc:/system/cryptosvc"},
-                    {"type": "command", "value": "svcadm refresh svc:/network/ssh:default"},
-                    {"type": "command", "value": "svcadm restart svc:/network/ssh:default"},
-                    {"type": "command", "value": "svcadm enable svc:/system/cryptosvc\nsvcadm enable svc:/network/ipfilter:default\nsvcadm enable svc:/network/ssh:default"}
-                ],
-                "answer": [{"type": "command", "value": "svcadm enable svc:/system/cryptosvc"}]
-            },
-            {
-                "id": 63,
-                "question": [
-                    {"type": "text", "value": "A user jack, using a bash shell, requests a directory listing as follows:"},
-                    {"type": "command", value: `jack@solaris:~$ ls
+        {"type": "text", "value": "Which describes the minimum set of commands to be executed to bring the svc:/network/ssh:default service back online?"}
+    ],
+    "options": [
+        {"type": "command", "value": "svcadm restart svc:/system/cryptosvc\nsvcadm restart svc:/network/ipfilter:default\nsvcadm restart svc:/network/ssh:default"},
+        {"type": "command", "value": "svcadm enable svc:/system/cryptosvc\nsvcadm enable svc:/network/ipfilter:default\nsvcadm refresh svc:/network/ssh:default"},
+        {"type": "command", "value": "svcadm enable svc:/network/ssh:default"},
+        {"type": "command", "value": "svcadm enable svc:/system/cryptosvc"},
+        {"type": "command", "value": "svcadm refresh svc:/network/ssh:default"},
+        {"type": "command", "value": "svcadm restart svc:/network/ssh:default"},
+        {"type": "command", "value": "svcadm enable svc:/system/cryptosvc\nsvcadm enable svc:/network/ipfilter:default\nsvcadm enable svc:/network/ssh:default"}
+    ],
+    "answer": [{"type": "command", "value": "svcadm enable svc:/system/cryptosvc"}]
+},
+{
+    "id": 63,
+    "question": [
+        {"type": "text", "value": "A user jack, using a bash shell, requests a directory listing as follows:"},
+        {"type": "command", value: `jack@solaris:~$ ls
 dira dirb dirc diraa dirabc`},
-                    {"type": "text", "value": "Which three statements are correct?"}
-                ],
-                "options": [
-                    {"type": "text", "value": "The pattern dir*b? will expand to dirabc."},
-                    {"type": "text", "value": "The pattern dir*a will expand to diraa."},
-                    {"type": "text", "value": "The pattern dir? will expand to dira dirb dirc."},
-                    {"type": "text", "value": "The pattern dir*a will expand to dira diraa."},
-                    {"type": "text", "value": "The pattern dir*b? will expand to dirb dirabc."}
-                ],
-                "answer": [
-                  {"type": "text", "value": "The pattern dir*b? will expand to dirabc."},
-                  {"type": "text", "value": "The pattern dir? will expand to dira dirb dirc."},
-                  {"type": "text", "value": "The pattern dir*a will expand to dira diraa."},
-                  ]
-            },
-            {
-                "id": 64,
-                "question": [
-                    {"type": "text", "value": "Which two statements are true concerning ZFS?"}
-                ],
-                "options": [
-                    {"type": "text", "value": "Each file in a ZFS file system always has transactionally consistent metadata on disk."},
-                    {"type": "text", "value": "Redundancy is implemented at the ZFS storage pool level."},
-                    {"type": "text", "value": "Redundancy is implemented at the ZFS storage pool level or at the file system level."},
-                    {"type": "text", "value": "A single ZFS file system can use storage from multiple ZFS storage pools."},
-                    {"type": "text", "value": "The most recently written pieces of data are never lost."}
-                ],
-                "answer": [
-                  {"type": "text", "value": "Each file in a ZFS file system always has transactionally consistent metadata on disk."},
-                  {"type": "text", "value": "Redundancy is implemented at the ZFS storage pool level."},
-                  ]
-            },
-            {
-                "id": 65,
-                "question": [
-                    {"type": "text", "value": "You suspect a problem with the openldap package and want to make sure that the files have not been modified or otherwise tampered with."},
-                    {"type": "text", "value": "Which command would validate all of the files contained in the openldap package and report any problems?"}
-                ],
-                "options": [
-                    {"type": "command", "value": "pkginfo openldap"},
-                    {"type": "command", "value": "pkg not-property signature-policy verify"},
-                    {"type": "command", "value": "pkg contents openldap"},
-                    {"type": "command", "value": "pkqchk openldap"},
-                    {"type": "command", "value": "pkg verify openldap"}
-                ],
-                "answer": [{"type": "command", "value": "pkg verify openldap"}]
-            },
-            {
-                "id": 66,
-                "question": [
-                    {"type": "text", "value": "You display the IP interface information with ipmpstat -i."},
-                    {"type": "text", "value": "Which two characteristics are indicated by characters that may be included in the FLAGS column?"}
-                ],
-                "options": [
-                    {"type": "text", "value": "IP forwarding enabled"},
-                    {"type": "text", "value": "Nominated to send/receive IPv4 multicast for its IPMP group"},
-                    {"type": "text", "value": "Default route"},
-                    {"type": "text", "value": "Allocated to global zone"},
-                    {"type": "text", "value": "Unusable due to being inactive"}
-                ],
-                "answer": [
-                  {"type": "text", "value": "Nominated to send/receive IPv4 multicast for its IPMP group"},
-                  {"type": "text", "value": "Unusable due to being inactive"}
-              ]
-            },
-            {
-                "id": 68,
-                "question": [
-                    {"type": "text", "value": "Before booting testzone, a non-global zone, you want to connect to the zone's console so that you can watch the boot process."},
-                    {"type": "text", "value": "Choose the command used to connect to testzone's console."}
-                ],
-                "options": [
-                    {"type": "command", "value": "zoneadm -C testzone"},
-                    {"type": "command", "value": "zlogin -C testzone"},
-                    {"type": "command", "value": "zlogin -z testzone console"},
-                    {"type": "command", "value": "zlogin -z testzone -C"},
-                    {"type": "command", "value": "zoneadm -z testzone -C"},
-                    {"type": "command", "value": "zoneadm -console testzone"}
-                ],
-                "answer": [{"type": "command", "value": "zlogin -C testzone"}]
-            },
-            {
-                "id": 69,
-                "question": [
-                    {"type": "text", "value": "You finished installing Oracle Solaris 11 by using the Text Installer. You now want to verify basic system information."},
-                    {"type": "text", "value": "Which three statements are true?"}
-                ],
-                "options": [
-                    {"type": "text", "value": "The cat /etc/release command can be used to display the version of the operating system and the host name."},
-                    {"type": "text", "value": "The netadm list command can be used to display the configured network devices."},
-                    {"type": "text", "value": "The uname command can be used to display the version of the operating system."},
-                    {"type": "text", "value": "The uname command can be used to display the host name."},
-                    {"type": "text", "value": "The format command can be used to display the available disk drives."}
-                ],
-                "answer": [
-                  {"type": "text", "value": "The cat /etc/release command can be used to display the version of the operating system and the host name."},
-                  {"type": "text", "value": "The uname command can be used to display the version of the operating system."},
-                  {"type": "text", "value": "The format command can be used to display the available disk drives."}
-              ]
-            },
-            {
-                "id": 70,
-                "question": [
-                    {"type": "text", "value": "You have a ZFS file system named /dbase/oral and you want to guarantee that 10 GB of storage space is available to that dataset for all data, snapshots, and clones."},
-                    {"type": "text", "value": "Which option would you choose?"}
-                ],
-                "options": [
-                    {"type": "command", "value": "zfs set refquota=10g dbase/oral"},
-                    {"type": "command", "value": "zfs set quota=10g dbase/oral"},
-                    {"type": "command", "value": "zfs set reservation=10g dbase/oral"},
-                    {"type": "command", "value": "zfs set refreservation=10g dbase/oral"}
-                ],
-                "answer": [{"type": "command", "value": "zfs set reservation=10g dbase/oral"}]
-            },               {
+        {"type": "text", "value": "Which three statements are correct?"}
+    ],
+    "options": [
+        {"type": "text", "value": "The pattern dir*b? will expand to dirabc."},
+        {"type": "text", "value": "The pattern dir*a will expand to diraa."},
+        {"type": "text", "value": "The pattern dir? will expand to dira dirb dirc."},
+        {"type": "text", "value": "The pattern dir*a will expand to dira diraa."},
+        {"type": "text", "value": "The pattern dir*b? will expand to dirb dirabc."}
+    ],
+    "answer": [
+      {"type": "text", "value": "The pattern dir*b? will expand to dirabc."},
+      {"type": "text", "value": "The pattern dir? will expand to dira dirb dirc."},
+      {"type": "text", "value": "The pattern dir*a will expand to dira diraa."},
+      ]
+},
+{
+    "id": 64,
+    "question": [
+        {"type": "text", "value": "Which two statements are true concerning ZFS?"}
+    ],
+    "options": [
+        {"type": "text", "value": "Each file in a ZFS file system always has transactionally consistent metadata on disk."},
+        {"type": "text", "value": "Redundancy is implemented at the ZFS storage pool level."},
+        {"type": "text", "value": "Redundancy is implemented at the ZFS storage pool level or at the file system level."},
+        {"type": "text", "value": "A single ZFS file system can use storage from multiple ZFS storage pools."},
+        {"type": "text", "value": "The most recently written pieces of data are never lost."}
+    ],
+    "answer": [
+      {"type": "text", "value": "Each file in a ZFS file system always has transactionally consistent metadata on disk."},
+      {"type": "text", "value": "Redundancy is implemented at the ZFS storage pool level."},
+      ]
+},
+{
+    "id": 65,
+    "question": [
+        {"type": "text", "value": "You suspect a problem with the openldap package and want to make sure that the files have not been modified or otherwise tampered with."},
+        {"type": "text", "value": "Which command would validate all of the files contained in the openldap package and report any problems?"}
+    ],
+    "options": [
+        {"type": "command", "value": "pkginfo openldap"},
+        {"type": "command", "value": "pkg not-property signature-policy verify"},
+        {"type": "command", "value": "pkg contents openldap"},
+        {"type": "command", "value": "pkqchk openldap"},
+        {"type": "command", "value": "pkg verify openldap"}
+    ],
+    "answer": [{"type": "command", "value": "pkg verify openldap"}]
+},
+{
+    "id": 66,
+    "question": [
+        {"type": "text", "value": "You display the IP interface information with ipmpstat -i."},
+        {"type": "text", "value": "Which two characteristics are indicated by characters that may be included in the FLAGS column?"}
+    ],
+    "options": [
+        {"type": "text", "value": "IP forwarding enabled"},
+        {"type": "text", "value": "Nominated to send/receive IPv4 multicast for its IPMP group"},
+        {"type": "text", "value": "Default route"},
+        {"type": "text", "value": "Allocated to global zone"},
+        {"type": "text", "value": "Unusable due to being inactive"}
+    ],
+    "answer": [
+      {"type": "text", "value": "Nominated to send/receive IPv4 multicast for its IPMP group"},
+      {"type": "text", "value": "Unusable due to being inactive"}
+  ]
+},
+{
+    "id": 68,
+    "question": [
+        {"type": "text", "value": "Before booting testzone, a non-global zone, you want to connect to the zone's console so that you can watch the boot process."},
+        {"type": "text", "value": "Choose the command used to connect to testzone's console."}
+    ],
+    "options": [
+        {"type": "command", "value": "zoneadm -C testzone"},
+        {"type": "command", "value": "zlogin -C testzone"},
+        {"type": "command", "value": "zlogin -z testzone console"},
+        {"type": "command", "value": "zlogin -z testzone -C"},
+        {"type": "command", "value": "zoneadm -z testzone -C"},
+        {"type": "command", "value": "zoneadm -console testzone"}
+    ],
+    "answer": [{"type": "command", "value": "zlogin -C testzone"}]
+},
+{
+    "id": 69,
+    "question": [
+        {"type": "text", "value": "You finished installing Oracle Solaris 11 by using the Text Installer. You now want to verify basic system information."},
+        {"type": "text", "value": "Which three statements are true?"}
+    ],
+    "options": [
+        {"type": "text", "value": "The cat /etc/release command can be used to display the version of the operating system and the host name."},
+        {"type": "text", "value": "The netadm list command can be used to display the configured network devices."},
+        {"type": "text", "value": "The uname command can be used to display the version of the operating system."},
+        {"type": "text", "value": "The uname command can be used to display the host name."},
+        {"type": "text", "value": "The format command can be used to display the available disk drives."}
+    ],
+    "answer": [
+      {"type": "text", "value": "The cat /etc/release command can be used to display the version of the operating system and the host name."},
+      {"type": "text", "value": "The uname command can be used to display the version of the operating system."},
+      {"type": "text", "value": "The format command can be used to display the available disk drives."}
+  ]
+},
+{
+    "id": 70,
+    "question": [
+        {"type": "text", "value": "You have a ZFS file system named /dbase/oral and you want to guarantee that 10 GB of storage space is available to that dataset for all data, snapshots, and clones."},
+        {"type": "text", "value": "Which option would you choose?"}
+    ],
+    "options": [
+        {"type": "command", "value": "zfs set refquota=10g dbase/oral"},
+        {"type": "command", "value": "zfs set quota=10g dbase/oral"},
+        {"type": "command", "value": "zfs set reservation=10g dbase/oral"},
+        {"type": "command", "value": "zfs set refreservation=10g dbase/oral"}
+    ],
+    "answer": [{"type": "command", "value": "zfs set reservation=10g dbase/oral"}]
+},               {
       id: 71,
       question: [
         {type: 'text', value: "Examine this command and its output:"},
         {type: 'command', value: `#logins -s
-  
+${` `}
 root      0     root     0     Super-User  
 daemon    1     other    1  
 bin       2     bin      2  
@@ -1518,7 +1600,11 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
       "id": 82,
       "question": [
         { "type": "text", "value": "Examine this command and its output:" },
-        { "type": "command", "value": "$ ssh osll\nLast login: Wed Oct 29 16:35:20 2014 from osll.example.co\nOracle Corporation SunOS 5.11 11.2 September 2014\n$" },
+        { "type": "command", "value": `$ ssh osll
+Last login: Wed Oct 29 16:35:20 2014 from osll.example.co
+Oracle Corporation 		SunOS 5.11 		11.2 	September 2014
+$	
+` },
         { "type": "text", "value": "There are no accounts without passwords on the remote system and host-based authentication is not configured.\n\nWhich two conclusions can be drawn based on the output shown?" }
       ],
       "options": [
@@ -1536,7 +1622,12 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
       "id": 83,
       "question": [
         { "type": "text", "value": "You are logged in to a Solaris 11 system as user jack. You issue the following sequence of commands:" },
-        { "type": "command", "value": "jack@solaris:~$ id\nuid=65432(jack) gid=10(staff) groups=10(staff)\njack@solaris:-$ su\nPassword:\njack@solaris:~#" },
+        { "type": "command", "value": `jack@solaris:~$ id
+uid=65432(jack) gid=10(staff) groups=10(staff)
+jack@sclaris:-$ su
+Password:
+jack@solaris:~#
+` },
         { "type": "text", "value": "Identify two correct statements." }
       ],
       "options": [
@@ -1578,7 +1669,27 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
         "id": 86,
         "question": [
           { "type": "text", "value": "Examine this command and its output:" },
-          { "type": "command", "value": "# svcs -l nfs/client\nfmri         svc:/network/nfs/client:default\nname         NFS client\nenabled      true\nstate        online\nnext_state   none\nstate_time   May  6, 2015 04:22:58 PM CEST\nlogfile      /var/svc/log/network-nfs-client:default.log\nrestarter    svc:/system/svc/restarter:default\nmanifest     /etc/svc/profile/generic.xml\nmanifest     /lib/svc/manifest/network/nfs/client.xml\ndependency   require_any/error svc:/milestone/network (online)\ndependency   require_all/error svc:/network/nfs/nlockmgr (online)\ndependency   optional_all/error svc:/network/nfs/cbd (online)\ndependency   optional_all/error svc:/network/nfs/mapid (online)\ndependency   require_all/restart svc:/network/rpc/bind (online)\ndependency   optional_all/none svc:/network/rpc/keyserv (online)\ndependency   optional_all/none svc:/network/rpc/gss (online)\ndependency   require_all/none svc:/milestone/name-services (online)" },
+          { "type": "command", "value": ` # svcs -l nfs/client
+ ${` `}
+fmri         svc:/network/nfs/client:default
+name         NFS client
+enabled      true
+state        online
+next_state   none
+state_time   May  6, 2015 04:22:58 PM CEST
+logfile      /var/svc/log/network-nfs-client:default.log
+restarter    svc:/system/svc/restarter:default
+manifest     /etc/svc/profile/generic.xml
+manifest     /lib/svc/manifest/network/nfs/client.xml
+dependency   require_any/error svc:/milestone/network (online)
+dependency   require_all/error svc:/network/nfs/nlockmgr (online)
+dependency   optional_all/error svc:/network/nfs/cbd (online)
+dependency   optional_all/error svc:/network/nfs/mapid (online)
+dependency   require_all/restart svc:/network/rpc/bind (online)
+dependency   optional_all/none svc:/network/rpc/keyserv (online)
+dependency   optional_all/none svc:/network/rpc/gss (online)
+dependency   require_all/none svc:/milestone/name-services (online)
+` },
           { "type": "text", "value": "Which two statements are true?" }
         ],
         "options": [
@@ -1596,7 +1707,37 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
         "id": 87,
         "question": [
           { "type": "text", "value": "Examine this command and its output:" },
-          { "type": "command", "value": "# zpool status tank\npool: tank\nstate: DEGRADED\nstatus: One or more devices are unavailable in response to persistent errors.\nSufficient replicas exist for the pool to continue functioning in a degraded state.\naction: Determine if the device needs to be replaced, and clear the errors using 'zpool clear' or 'fmadm repaired', or replace the device with 'zpool replace'.\nRun 'zpool status -v' to see device specific details.\nscan: resilvered 684M in 0h1m with 0 errors on Tue Feb 24 17:14:31 2015\nconfig:\nNAME       STATE     READ WRITE CKSUM\ntank       DEGRADED  0    0     0\n  raidz1-0 DEGRADED  0    0     0\n    spare-0 DEGRADED  0    0     0\n      c9t1d0 UNAVAIL  0    0     0\n      c9t5d0 ONLINE   0    0     0\n      c9t2d0 ONLINE   0    0     0\n      c9t3d0 ONLINE   0    0     0\n      c9t4d0 ONLINE   0    0     0\nspares\n  c9t5d0  INUSE\nerrors: No known data errors" },
+          { "type": "command", value: `# zpool status tank
+            ${` `}
+    pool: tank  
+    state: DEGRADED  
+    status: One or more devices are unavailable in response to persistent errors.  
+    Sufficient replicas exist for the pool to continue functioning in a degraded state.  
+    ${` `}    
+    action: Determine if the device needs to be replaced, and clear the errors  
+    using 'zpool clear' or 'fmadm repaired', or replace the device  
+    with 'zpool replace'.  
+    Run 'zpool status -v' to see device specific details.  
+    ${` `}
+    scan: resilvered 684M in 0h1m with 0 errors on Tue Feb 24 17:14:31 2015  
+    ${` `}
+config:  
+${` `}
+NAME       STATE     READ WRITE CKSUM  
+tank       DEGRADED  0    0     0  
+  raidz1-0 DEGRADED  0    0     0  
+    spare-0 DEGRADED  0    0     0  
+      c9t1d0 UNAVAIL  0    0     0  
+      c9t5d0 ONLINE   0    0     0  
+      c9t2d0 ONLINE   0    0     0  
+      c9t3d0 ONLINE   0    0     0  
+      c9t4d0 ONLINE   0    0     0  
+      ${` `}
+spares  
+  c9t5d0  INUSE  
+  ${` `}
+errors: No known data errors  
+` },
           { "type": "text", "value": "Which two outcomes can be deduced about the tank storage pool based on this output?" }
         ],
         "options": [
@@ -1611,6 +1752,77 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
           { "type": "text", "value": "I/O write performance is degraded." }
         ]
       },         {
+        "id": 88,
+        "question": [
+          { "type": "text", "value": "Examine this command and its output:" },
+          { "type": "command", "value": `# zfs list —r -t all tank
+
+NAME 					USED 	AVAIL 	MOUNTPOINT
+tank 					2.00G 	2.84G 	/tank
+tank/database 			2.00G 	2.84G 	/tank/database
+tank/database@today 	0 		-	 	-
+`},
+          { "type": "text", "value": "Next you execute:" },
+          { "type": "command", "value": "# zfs clone tank/database@today tank/today" },
+          { "type": "text", "value": `Which statement is true about the results of executing this command?`}
+        ],
+        "options": [
+          { "type": "text", "value": "The tank/database@today snapshot is converted into a clone and this clone is automatically mounted." },
+          { "type": "text", "value": "The tank/database@today snapshot is converted into a clone but this clone is not automatically mounted." },
+          { "type": "text", "value": "A clone is created from the tank/database@today snapshot but this clone is not automatically mounted." },
+          { "type": "text", "value": "A clone is created from the tank/database@today snapshot and this clone is automatically mounted." },
+          { "type": "text", "value": "It fails because you cannot use a snapshot as the source for a clone." }
+        ],
+        "answer": [{ "type": "text", "value": "A clone is created from the tank/database@today snapshot and this clone is automatically mounted." }]
+      },     
+      {
+     "id": 89,
+     "question": [
+       { "type": "text", "value": "Examine this command and its output:" },
+       { "type": "command", "value": `$ zonestat 30 1
+Collecting data for first interval...
+Interval: 1, Duration: 0:00:30
+
+SUMMARY          Cpus/Online: 2/2     PhysMem: 4095M     VirtMem: 5119M
+
+          ------------CPU--------------    	---PhysMem---  ---VirtMem---  ---PhysNet---
+ZONE      USED  %PART  STLN    %STLN      	USED   %USED   USED   %USED   PBYTE  %PUSE
+[total]   1.02  51.0%  42.94M  42949671%    1024M  25.0%   1269M  24.7%   2060   0.00%
+[system]  1.02  51.0%  -       -          	943M   23.0%   1198M  23.4%   -      -
+zonel     0.00  0.02%  -       -         	80.2M  1.95%   70.1M  1.37%   42     0.00%
+` },
+       { "type": "text", "value": "Which two outcomes can be deduced from this output?" }
+     ],
+     "options": [
+       { "type": "text", "value": "The global zone consumed 51% of the available CPU capacity." },
+       { "type": "text", "value": "This output was captured on a nonglobal zone." },
+       { "type": "text", "value": "51% of the available CPU capacity was used by the global zone, the nonglabal zones, the kernel.ar a combination of any or all of these." },
+       { "type": "text", "value": "51% of the available CPU capacity was used by the kernel." }
+     ],
+     "answer": [{ "type": "text", "value": "51% of the available CPU capacity was used by the global zone, the nonglabal zones, the kernel.ar a combination of any or all of these." },
+     { "type": "text", "value": "51% of the available CPU capacity was used by the kernel." }
+     ]
+   },    
+          {
+        "id": 90,
+        "question": [
+          { "type": "text", "value": "You are installing Oracle Solaris 11 on a SPARC-based system by using the Text Installer. Which three statements are true?" }
+        ],
+        "options": [
+          { "type": "text", "value": "The set of packages that will be installed are server based." },
+          { "type": "text", "value": "The Root user will always be configured as a role." },
+          { "type": "text", "value": "The root filesystem will always be located on a local disk." },
+          { "type": "text", "value": "The root filesystem will always be deployed on ZFS." },
+          { "type": "text", "value": "The network can be configured using DHCP." },
+          { "type": "text", "value": "You must always create one regular user when installing the system." },
+        ],
+        "answer": [
+          { "type": "text", "value": "The set of packages that will be installed are server based." },
+          { "type": "text", "value": "The root filesystem will always be deployed on ZFS." },
+          { "type": "text", "value": "The network can be configured using DHCP." },
+        ]
+      },      
+           {
           "id": 91,
           "question": [
             { "type": "text", "value": "Which utility lists network ports in use by a process?" }
@@ -1626,8 +1838,15 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
           "id": 92,
           "question": [
             { "type": "text", "value": "Examine this command and its output:" },
-            { "type": "command", "value": "# beadm list\nBE Flags Mountpoint Space Policy Created\nOS11.1 - - 42.65M Static 2014-09-04\nOS11.2 - - 49.18M Static 2014-09-04\nOS11.2-10 N / 42.08M Static 2015-04-27\nOS11.2-11 R - 12.79M Static 2015-05-12" },
-            { "type": "text", "value": "You want to create a new Boot Environment (BE) by executing:\n# beadm create OS11.2-12\nWhich statement is true concerning the outcome of this command?" }
+            { "type": "command", value: `# beadm list
+BE 			Flags 	Mountpoint Space 	Policy 	Created
+0S11.1 		-			-		42.65M 	Static 	2014-09-04
+OS11.2 		-			-		49.18M 	static 	2014-09-04
+0S11.2-10	N			/		42.08M 	static 	2015-04-27
+0S11.2-11 	R 			-		12.79M 	static 	2015-05-12` }, 
+{ "type": "text", "value": "You want to create anew Boot Environment (BE) by executing:" },
+{ "type": "command", "value": "# beadm create OS11.2-12" },
+{ "type": "text", "value": "Which statement is true concerning the outcome of this command?" },
           ],
           "options": [
             { "type": "text", "value": "It creates a new BE called OS11.2-12 by cloning OS11.2-10 and activates the new BE." },
@@ -1641,7 +1860,23 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
             "id": 93,
             "question": [
               { "type": "text", "value": "Examine these commands and their output:" },
-              { "type": "command", "value": "$ ls -al\ntotal 12\ndrwxrwxrwx 2  root  sys   4  Nov 24 12:51  .\ndrwxr-xr-x 39 root  sys   46 Aug 3  12:06  ..\n-rw-rw-r-- 1  user1 staff 44 Nov 24 12:51  bar\n-r--r----- 1  user2 users 44 Nov 24 12:48  foo\n\n$ id -a user1\nuid=430(user1) gid=10(staff) groups=10 (staff)\n\n$ id -a user2\nuid=431 (user2) gid=100 (users) groups=100 (users)\n\n$ id -a user3\nuid=432(user3) gid=101(user3) groups=101 (user3)" },
+              { "type": "command", "value": `$ ls -al
+total 12
+drwxrwxrwx 2  root  sys   4  Nov 24 12:51  .
+drwxr-xr-x 39 root  sys   46 Aug 3  12:06  ..
+-rw-rw-r-- 1  userl staff 44 Nov 24 12:51  bar
+-r--r----- 1  user2 users 44 Nov 24 12:48  foo
+${` `}
+$ id —a userl
+uid=430(userl) gid=10(staff) groups=10 (staff)
+${` `}
+$ id -—a user2
+uid=431 (user2) gid=100 (users) groups=100 (users)
+${` `}
+$ id -a user3
+uid-432(user3) gid-10i(user3) groups—-101 (user3)
+
+` },
               { "type": "text", "value": "Which two are true?" }
             ],
             "options": [
@@ -1700,7 +1935,10 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
             "id": 97,
             "question": [
               { "type": "text", "value": "Examine this command and its output:" },
-              { "type": "command", "value": "# svcs bind\nSTATE         STIME       FMRI\nmaintenance   3:09:15     svc:/network/rpc/bind:default" },
+              { "type": "command", "value": `# svcs bind
+STATE 			STIME 		FMRI
+maintenance 	3:09:15 	svc:/network/rpc/bind:default
+`},
               { "type": "text", "value": "Which two commands can be used to list all services that are in the offline state due to the bind service being in the maintenance state?" }
             ],
             "options": [
@@ -1715,8 +1953,23 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
             "id": 98,
             "question": [
               { "type": "text", "value": "Examine this command and its output:" },
-              { "type": "command", "value": "# zpool status tank\npool: tank\nstate: ONLINE\nscan: none requested\nconfig:\nNAME    STATE   READ WRITE CKSUM\ntank    ONLINE  0    0     0\n  c9t1d0  ONLINE  0    0     0\n  c9t2d0  ONLINE  0    0     0\nerrors: No known data errors" },
-              { "type": "text", "value": "Next you execute:\n# zpool add tank mirror c9t3d0 c9t4d0\nWhat is the outcome of executing this zpool add command?" }
+              { "type": "command", "value": `# zpool status tank
+	pool: tank
+	state: ONLINE
+	scan: none requested
+	config:
+	${` `}
+		NAME 		STATE 	READ WRITE CKSUM
+		tank 		ONLINE	0 		0 	0
+			c9tldO 	ONLINE 	0 		0 	0
+			e$t2da0 ONLINE 	0 		0
+${` `}
+errors: No known data errors
+
+` },
+              { "type": "text", "value": "Next you execute:" },
+              { "type": "command", "value": `# zpool add tank mirror c9t3d0 c9t4d0` },
+              { "type": "text", value: "What is the outcome of executing this zpool add command?" }
             ],
             "options": [
               { "type": "text", "value": "The nonmirrored tank storage pool is converted into a mirrored storage pool." },
@@ -1742,7 +1995,11 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
             "id": 100,
             "question": [
               { "type": "text", "value": "Examine this command and its output:" },
-              { "type": "command", "value": "# zfs list -r /data\nNAME          USED   AVAIL   REFER   MOUNTPOINT\ntank          2.27G  2.57G   800M    /data\ntank/oracle  1.49G  524M    1.49G   /data/oracle" },
+              { "type": "command", "value": `§ zfs list —r /data
+NAME 			USED 	AVATL 	REFER 	MOUNTPOINT
+tank 	 		2.27G 	2.57G 	800M 	/data
+tank/oracle 	1.49G 	524M 	1.49G 	/data/oracle
+` },
               { "type": "text", "value": "Which statement is true?" }
             ],
             "options": [
@@ -1756,9 +2013,17 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
               "question": [
                 { "type": "text", "value": "The performance of your quad processor workstation running Oracle Solaris 11 is sluggish." },
                 { "type": "text", "value": "You suspect that a recently developed nightly cleanup job, a process that spawns two children, is still running." },
-                { "type": "command", "value": "$ pgrep -lf cleanup\n13491 bash cleanup-job /data\n13490 bash cleanup-job /home\n13489 bash do_cleanup" },
+                { "type": "command", "value": `$ pgrep -lf cleanup
+13491 bash cleanup-job /data
+13490 bash cleanup-job /home
+13489 bash do_cleanup
+` },
                 { "type": "text", "value": "You also confirm that these cleanup processes are consuming large amounts of CPU time:" },
-                { "type": "command", "value": "$ ps -o pid,ppeid,time,pcpu,args | grep cleanup\n13491 13489 13:40 25.0 bash cleanup-job /data\n13490 13489 13:41 25.0 bash cleanup-job /home\n13489 8143 13:41 25.0 bash do_cleanup" },
+                { "type": "command", "value": `$ ps —o pid,ppeid,time,pcpu,args | grep cleanup
+13491 13489 13:40 25.0 bash cleanup-job /data
+13490 13489 13:41 25.0 bash cleanup-job /home
+13489 8143 13:41 25.0 bash do cleanup
+` },
                 { "type": "text", "value": "Which two commands can you use to terminate the parent process and its children?" }
               ],
               "options": [
@@ -1772,8 +2037,19 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
               "id": 102,
               "question": [
                 { "type": "text", "value": "Examine these two commands and their output:" },
-                { "type": "command", "value": "$ grep ^oracle /etc/passwd\noracle:x:430:10::/export/home/oracle:/usr/bin/bash" },
-                { "type": "command", "value": "$ ls -al ~oracle\ntotal 14\ndrwxr-xr-x 2 oracle staff 6 Jan 16 15:46\n-rw-r--r-- 1 oracle staff 17 Jan 16 15:47 .bash_login\n-rw-r--r-- 1 oracle staff 19 Jan 16 15:47 .bash_profile\n-rw-r--r-- 1 oracle staff 13 Jan 16 15:47 .bashrc\n-rw-r--r-- 1 oracle staff 14 Jan 16 15:47 .profile" },
+                { "type": "command", "value": `$ grep ^oracle /etc/passwd
+oracle:x:430:10::/export/home/oracle:/usr/bin/bash
+${` `}
+$ ls -al ~oracle
+total 14
+drwxr-xr-x 	2	oracle 	staff 	 6 Jan 16 15:46
+drwxr-xr-x 	5	root 	root 	 5 Jan 16 15:08 	..
+-rw-r--r-- 	1	oracle 	staff 	17 Jan 16 15:47 	.bash login
+-rw-r--r--	1	oracle 	staff	19 Jan 16 15:47 	.bash_profile
+-rw-r--r-- 	1	oracle 	staff	13 Jan 16 15:47 	.bashre
+-rw-r--r-- 	1	oracle 	staff	14 Jan 16 15:47 	.profile
+` },
+                
                 { "type": "text", "value": "You wish to create an alias for a command that is available in each non-login shell.\nIn which file should you add the alias definition?" }
               ],
               "options": [
@@ -1817,7 +2093,9 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
     "id": 105,
     "question": [
       { "type": "text", "value": "Examine this remote login attempt by user1:" },
-      { "type": "command", "value": "user1@solaris:~$ ssh user2@os11\nEnter passphrase for key '/export/home/user1/.ssh/id_rsa':" },
+      { "type": "command", "value": `user1@solaris:~$ ssh user2@os11  
+Enter passphrase for key '/export/home/user1/.ssh/id_rsa':
+` },
       { "type": "text", "value": "Why is the passphrase requested?" }
     ],
     "options": [
@@ -1874,7 +2152,12 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
     "id": 109,
     "question": [
       { "type": "text", "value": "Examine this command and its output:" },
-      { "type": "command", "value": "$ zfs list -r /data\nNAME          USED   AVAIL   REFER   MOUNTPOINT\ntank          2.27G  2.57G   800M    /data\ntank/oracle  1.49G  524M    1.49G   /data/oracle" },
+      { "type": "command", "value": `$ zfs list -r /data  
+${` `}
+NAME           USED  AVAIL  REFER  MOUNTPOINT  
+tank           2.27G  2.57G  800M  /data  
+tank/oracle    1.49G  524M   1.49G /data/oracle 
+` },
       { "type": "text", "value": "Which statement is true?" }
     ],
     "options": [
@@ -1884,12 +2167,37 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
       { "type": "text", "value": "A ZFS quota has been set on the /data/oracle file system." }
     ],
     "answer": [{ "type": "text", "value": "A ZFS quota has been set on the /data/oracle file system." }]
+}, {
+  'id': 110,
+  question: [
+    {type: 'text', value: `Given the following output of the zpool status command:`},
+    {type: 'command', value: `pool: pool1  
+state: ONLINE  
+scan: none requested  
+config:  
+${` `}
+	NAME        STATE     READ WRITE CKSUM  
+	pool1       ONLINE      0     0     0  
+		raidz1-0  ONLINE      0     0     0  
+		c3t3d0  ONLINE      0     0     0  
+		c3t4d0  ONLINE      0     0     0  
+		c3t5d0  ONLINE      0     0     0  
+		c3t6d0  ONLINE      0     0     0  
+`},
+    {type: 'text', value: `Identify the correct statement regarding pool1's configuration.`}
+  ],"options": [
+      { "type": "text", "value": "Data will only be striped across the three disks in the raidz configuration." },
+      { "type": "text", "value": "This configuration is a bug in Solaris 11; it cannot be created by an administrator." },
+      { "type": "text", "value": "Data written to pool1 will be striped across four disk components." },
+      { "type": "text", "value": "The raidz1-0 and c3t6d0 components are submirrors of pool1." }
+    ]
 },  {
     "id": 111,
     "question": [
       { "type": "text", "value": "A user on the system has started a process, but it needs to be terminated." },
       { "type": "text", "value": "The process ID was determined as follows:" },
-      { "type": "command", "value": "pgrep userprogram\n15317" },
+      { "type": "command", "value": `pgrep userprogram
+15317` },
       { "type": "text", "value": "The user attempted to terminate the program as follows:" },
       { "type": "command", "value": "pkill 15317" },
       { "type": "text", "value": "This command runs without an error message, and the process continues to run.\nWhat is the issue?" }
@@ -1919,8 +2227,23 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
     "id": 113,
     "question": [
       { "type": "text", "value": "Examine these commands and their output:" },
-      { "type": "command", "value": "# pkg list unzip\npkg list: no packages matching 'unzip' installed" },
-      { "type": "command", "value": "# pkg list -af unzip\nNAME (PUBLISHER) VERSION IFO\ncompress/unzip 6.0-0.175.2.7.0.4.0 ---\ncompress/unzip 6.0-0.175.2.6.0.5.0 ---" },
+      { "type": "command", "value": `# pkg list unzip
+pkg list: no packages matching 'unzip' installed
+${` `}
+# pkg list -af unzip
+NAME (PUBLISHER)           VERSION                          IFO
+compress/unzip             6.0-0.175.2.7.0.4.0              ---
+compress/unzip             6.0-0.175.2.6.0.5.0              ---
+compress/unzip             6.0-0.175.2.3.0.4.0              ---
+compress/unzip             6.0-0.175.2.2.0.0.42.1           ---
+compress/unzip             6.0-0.175.1.0.0.24.0             ---
+compress/unzip             6.0-0.175.0.0.2.537              ---
+${` `}
+# pkg list entire
+NAME (PUBLISHER)           VERSION                          IFO
+entire                     0.5.11-0.175.1.21.0.4.1         i--
+` },
+   
       { "type": "text", "value": "Which command can you use to install the latest version of the unzip package that is compatible with the current image?" }
     ],
     "options": [
@@ -1935,7 +2258,23 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
     "id": 114,
     "question": [
       { "type": "text", "value": "Examine this command and its output:" },
-      { "type": "command", "value": "$ zpool status tank\npool: tank\nstate: ONLINE\nscan: none requested\nconfig:\nNAME STATE READ WRITE CKSUM\ntank ONLINE 0 0 0\nmirror-0 ONLINE 0 0 0\nc9t1d0 ONLINE 0 0 0\nc9t2d0 ONLINE 0 0 0\nmirror-1 ONLINE 0 0 0\nc9t3d0 ONLINE 0 0 0\nc9t4d0 ONLINE 0 0 0\nerrors: No known data errors" },
+      { "type": "command", "value": `$ zpool status tank
+  pool: tank
+  state: ONLINE
+  scan: none requested
+  config:
+  ${` `}
+    NAME        STATE     READ WRITE CKSUM
+    tank        ONLINE       0     0     0
+      mirror-0  ONLINE       0     0     0
+        c9t1d0  ONLINE       0     0     0
+        c9t2d0  ONLINE       0     0     0
+      mirror-1  ONLINE       0     0     0
+        c9t3d0  ONLINE       0     0     0
+        c9t4d0  ONLINE       0     0     0
+        ${` `}
+errors: No known data errors
+` },
       { "type": "text", "value": "Which two statements are true?" }
     ],
     "options": [
@@ -1964,7 +2303,14 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
     "id": 116,
     "question": [
       { "type": "text", "value": "Examine this command and its output:" },
-      { "type": "command", "value": "$ dladm show-ether -x net1\nLINK PTYPE STATE AUTO SPEED-DUPLEX PAUSE\nnet1 current up yes 1G-f bi\n-- capable -- yes 1G-fh,100M-fh,10M-fh bi\n-- adv -- yes 1G-fh,100M-fh,10M-fh bi\n-- peeradv -- yes 1G-fh,100M-fh,10M-fh none" },
+      { "type": "command", "value": `$ dladm show-ether -x net1
+        ${` `}
+LINK      PTYPE     STATE     AUTO     SPEED-DUPLEX       PAUSE
+net1      current   up        yes      1G-f              bi
+--        capable   --        yes      1G-fh,100M-fh,10M-fh    bi
+--        adv       --        yes      1G-fh,100M-fh,10M-fh    bi
+--        peeradv   --        yes      1G-fh,100M-fh,10M-fh    none
+` },
       { "type": "text", "value": "Which three statements are true about the net1 datalink?" }
     ],
     "options": [
@@ -1993,13 +2339,15 @@ net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
     "id": 118,
     "question": [
       { "type": "text", "value": "The default publisher on your system is:" },
-      { "type": "command", "value": "PUBLISHER TYPE STATUS URI\nsolaris origin online http://pkg.oracle.com/solaris/release" },
+      { "type": "command", "value": `PUBLISHER      TYPE    STATUS   URI
+solaris       origin   online   http://pkg.oracle.com/solaris/release
+` },
       { "type": "text", "value": "You want to update the Oracle Solaris 11 environment on your system, but you are not able to connect this system to the Internet to access the default Oracle repository.\nA repository has been created on your local network and is named http://server1.example.com." },
       { "type": "text", "value": "Which command would you choose to connect your system to the local repository?" }
     ],
     "options": [
       { "type": "command", "value": "pkg add-publisher to add the new publisher" },
-      { "type": "command", "value": "pkg set-publisher to set the stickiness on the http://server1.example.com publisher and unset stickiness for http://pkg.oracle.com/solaris/release" },
+      { "type": "command", "value": `pkg set-publisher to set the stickiness on the http://server1.example.com publisher and unset stickiness for http://pkg.oracle.com/solaris/release` },
       { "type": "command", "value": "pkg set-publisher to set the origin for the publisher" },
       { "type": "command", "value": "pkg publisher to specify the new publisher" }
     ]
