@@ -17,6 +17,12 @@ const HeroSection = () => {
         // { name: 'React', description: 'Build strategic funnels that will convert', href: '/course/solaris', icon: CursorArrowRaysIcon },
     ];
 
+    const exams = [
+        { name: 'Solaris', description: 'Get a better understanding of your traffic', href: '/exam/solaris-1z0-821', icon: CursorArrowRaysIcon },
+        { name: 'Linux', description: 'Speak directly to your customers', href: '/exam/solaris-1z0-821', icon: CursorArrowRaysIcon },
+        { name: 'Shell Scripting', description: 'Speak directly to your customers', href: '/exam/solaris-1z0-821/shell', icon: CursorArrowRaysIcon },
+        { name: 'Ansible', description: 'Your customers’ data will be safe and secure', href: '/exam/solaris-1z0-821', icon: CursorArrowRaysIcon },
+    ];
 
     return (
         <section className=" py-24 sm:py-32 dark:bg-gray-800 dark:text-white">
@@ -36,7 +42,7 @@ const HeroSection = () => {
                             <DropDown icon={iso_icon} name='Administration' content={courses} />
                         </div>
                         <div className="flex flex-row  text-lg font-semibold border rounded ">
-                            <DropDown icon={dev_icon} name='Development' content={courses} />
+                            <DropDown icon={dev_icon} name='Exams' content={exams} />
                         </div>
                     </div>
                 </div>
