@@ -10,13 +10,13 @@ const list = [
       {type: 'text', value: `an IPS repository`}, 
       {type: 'text', value: `a depot location or source where Solaris packages can be installed from`}
     ],
-    answer: [{type: 'text', value: `an IPS repository`}]
+    answer: [{type: 'text', value: `a location where packages can be installed, for example, your Solaris instance`}]
   }, 
   {
     id: 2,
     question: [
       {type: 'text', value: `Examine this fault Management Resource Identifier (FMRI):`},
-      {type: 'command', value: `pkg://solarsa/compresss/zip03.0.5.11-0.175.1.0.0.24.0:20120904T170611Z`},
+      {type: 'command', value: `pkg://solaris/compresss/zip03.0.5.11-0.175.1.0.0.24.0:20120904T170611Z`},
       {type: 'text', value: `What is the version number of this package?`}
     ],
     options: [
@@ -26,7 +26,7 @@ const list = [
       {type: 'text', value: `0.175.1.0.0.24.0`},
       {type: 'text', value: `5.11-0`}
     ],
-    answer: [{type: 'text', value: `3.0`}]
+    answer: [{type: 'text', value: `0.175.1.0.0.24.0`}]
   },
   {
     id: 3,
@@ -80,7 +80,7 @@ net1/v4    static    inaccessible    192.168.180.136/24`},
       {type: 'text', value: "It detected another system on the network that uses the same IP address."},
       {type: 'text', value: "It was disabled by the system administrator."}
     ],
-    answer: [{type: 'text', value: "Its IP interface has failed."}]
+    answer: [{type: 'text', value: "The underlying datalink was deleted using the dladm command."}]
   },
   {
     id: 6,
@@ -110,8 +110,7 @@ net1/v4    static    inaccessible    192.168.180.136/24`},
       {type: 'text', value: "Slice 7 represents the entire disk and cannot be used as a slice for a file system."}
     ],
     answer: [
-      {type: 'text', value: "This disk contains an SMI disk label."},
-      {type: 'text', value: "Slice 7 represents the entire disk and cannot be used as a slice for a file system."}
+      {type: 'text', value: "The disk contains an EFI disk label."}
     ]
   },
   {
@@ -177,7 +176,7 @@ net3/v6a   static	ok    fdaa:92f:9b63:e2c4:5/64
       {type: 'text', value: "command 5 only"},
       {type: 'text', value: "commands 1, 2 and 3"}
     ],
-    answer: [{type: 'text', value: "command 5 only"}]
+    answer: [{type: 'text', value: "commands 4 and 5"}]
   },
   {
     id: 11,
@@ -208,7 +207,7 @@ net3/v6a   static	ok    fdaa:92f:9b63:e2c4:5/64
       {type: 'text', value: "It can only run from a non-global zone."}
     ],
     answer: [
-      {type: 'text', value: "It can be run by all users by default."},
+      {type: 'text', value: "It can only run from the global zone."},
       {type: 'text', value: "It can report on CPU, memory, networking, and resource control utilization."}
     ]
   },
@@ -321,8 +320,8 @@ user.warning    /var/adm/user.log`},
       {type: 'text', value: "The shutdown command can only bring the system to the single-user milestone. The init command must be used to shut the system down to run level 0."}
     ],
     answer: [
-      {type: 'text', value: "init does not terminate all services normally. The shutdown command performs a cleaner shutdown of all services."},
-      {type: 'text', value: "Only shutdown broadcasts a final shutdown warning to all logged-in users."}
+      {type: 'text', value: "Only shutdown broadcasts a final shutdown warning to all logged-in users."},
+      {type: 'text', value: "Only shutdown sends a shutdown message to any systems that are mounting resources from the system that is being shut down."}
     ]
   },
   {
@@ -344,10 +343,10 @@ user.warning    /var/adm/user.log`},
       {type: 'text', value: "View the Exhibit."},
       {type: 'command', value: `| ADDROBJ    | TYPE     | STATE | ADDR                        |
 |------------|----------|-------|-----------------------------|
-| 100/√4     | static   | ok    | 127.0.0.1/8                 |
+| 100/v4     | static   | ok    | 127.0.0.1/8                 |
 | net0/.b    | dhcp     | ok    | 10.0.2.15/24                |
 | net1/.b    | dhcp     | ok    | 10.0.3.15/24                |
-| 100/√6     | static   | ok    | ::1/128                     |
+| 100/v6     | static   | ok    | ::1/128                     |
 | net0/.a    | addrconf | ok    | fe80::a00:27ff:fec5:38b9/10 |
 | net1/.a    | addrconf | ok    | fe80::a00:27ff:fe2b:498a/10 |
 `},
@@ -360,7 +359,7 @@ user.warning    /var/adm/user.log`},
       {type: 'text', value: "The network was not configured during the installation of the OS."},
       {type: 'text', value: "The manual network configuration option was chosen during the installation of the OS."}
     ],
-    answer: [{type: 'text', value: "The DHCP network configuration option was chosen during the installation of the OS."}]
+    answer: [{type: 'text', value: "The automatic network configuration option was chosen during the installation of the OS."}]
   },     {
       id: 21,
       question: [
@@ -420,8 +419,8 @@ crontab: you are not authorized to use cron. sorry.
         {type: 'text', value: "The password for this account must be reset at the first login."}
       ],
       answer: [
-        {type: 'text', value: "The account is assigned the `root` role."},
-        {type: 'text', value: "A user can log in using this account only after the system boots for the first time."}
+        {type: 'text', value: "The password assigned to this account is only assigned to this user."},
+        {type: 'text', value: "The password for this account must be reset at the first login."}
       ]
     },
     {
