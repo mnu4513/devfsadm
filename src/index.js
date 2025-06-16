@@ -48,7 +48,8 @@ import HomeBlog from './components/blogs/HomeBlog';
 import BlogData from './components/blogs/BlogData';
 
 // Exams 
-import ExamPage from './components/exams/solaris/ExamPage';
+import SolarisExam from './components/exams/solaris/ExamPageSolaris';
+import MySQLExam from './components/exams/mysql/ExamPageMySQL';
 
 
 
@@ -139,8 +140,11 @@ const appRouter = createBrowserRouter([
         path: '/features',
         element: <Features />
       }, {
-        path: '/exam/solaris-1z0-821',
-        element: <ExamPage/>
+        path: '/exam/solaris-1Z0-821',
+        element: <SolarisExam/>
+      }, {
+        path: '/exam/mysql-1Z0-908', 
+        element: <MySQLExam/>
       }
     ]
   }
