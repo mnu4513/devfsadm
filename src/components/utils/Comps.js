@@ -95,20 +95,22 @@ export const TerminalOutput = ({ content }) => {
 export const Command = ({ content }) => {
   return (
     <div
-  className="font-mono px-4 rounded-md overflow-auto mb-2 bg-gray-700 dark:bg-white"
-  style={{
-    maxHeight: "400px",
-    whiteSpace: "pre-wrap", // Ensure text wraps properly
-    wordBreak: "break-word", // Break long unbroken strings to fit within the container
-  }}
->
-  {content.split("\n").map((line, index) => {
-    // Handle other lines (output or empty)
-    return <div key={index} className="text-gray-900">{line}</div>;
-  })}
-</div>
-);
+      className="font-mono px-4 py-2 rounded-md overflow-x-auto overflow-y-auto mb-2 bg-gray-700 dark:bg-white"
+      style={{
+        maxHeight: "400px",
+        whiteSpace: "pre",       // Keep original formatting + allow horizontal scroll
+        wordBreak: "normal",     // Don't break long strings unless needed
+      }}
+    >
+      {content.split("\n").map((line, index) => (
+        <div key={index} className="text-white dark:text-gray-900">
+          {line}
+        </div>
+      ))}
+    </div>
+  );
 };
+
 
 // Heading Component :- [Heading of Page]
 export const Heading = ({ text }) => (

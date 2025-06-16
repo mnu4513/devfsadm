@@ -1,4 +1,4 @@
-import questions from '../solaris/QuestionsSolaris'; // Ensure your list is imported from the correct path
+import questions from '../mysql/QuestionsMySQL'; // Ensure your list is imported from the correct path
 import { Heading, Line, Supersubheading } from '../../utils/Comps';
 import ExamCard from '../../utils/ExamCard';
 import DismissableAlert from '../../utils/DismissableAlert';
