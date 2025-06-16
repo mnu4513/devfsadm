@@ -574,7 +574,7 @@ entire    0.5.11-0.175.1.21.0.4.1    i--
               {type: "command", value: "pkginfo"},
               {type: "command", value: "pkg search"}
           ],
-          answer: [{"type": "command", "value": "pkg search"}]
+          answer: [{"type": "command", "value": "pkg contents"}]
       },
       {
           id: 32,
@@ -802,11 +802,11 @@ ocp    430    staff    10    OCP exam developer
           question: [
             {type: 'text', value: "Examine this command and its output:"},
             {type: 'command', value: `# zfs list -r tank
-NAME\t\t\t\t        USED\tAVAIL\tREFER\tMOUNTPOINT
-tank\t\t\t\t        4.00G  863M \t 32K \t/tank
-tank/backups\t\t\t    4.00G  863M \t 33K  \t/tank/backups
-tank/backups/full\t\t    3.00G  863M \t 3.00G  /tank/backups/full
-tank/backups/incremental \t1.00G  863M \t 1.00G  /tank/backups/incremental`},
+NAME                     USED AVAIL REFER MOUNTPOINT
+tank                     4.0G 863M  32K   /tank
+tank/backups             4.0G 863M  33K   /tank/backups
+tank/backups/full        3.0G 863M  3.0G  /tank/backups/full
+tank/backups/incremental 1.0G 863M  1.0G  /tank/backups/incremental`},
             {type: 'text', value: "Next you execute:"},
             {type: 'command', value: "# zfs destroy -r tank"},
             {type: 'text', value: "What is the result of executing this command?"}
@@ -824,10 +824,10 @@ tank/backups/incremental \t1.00G  863M \t 1.00G  /tank/backups/incremental`},
           question: [
             {type: 'text', value: "Examine this command and its output:"},
             {type: 'command', value: `$ zfs list -r -t all tank 
-| NAME                   | USED   | NVAIL  | REFER  | MOUNTPOINT     |
-| tank                   | 3.00G  | 1.84G  | 32K    | /tank          |
-| tank/database          | 3.00G  | 1.84G  | 2.00G  | /tank/database |
-| tank/database@yesterday| 1.00G  | -      | 2.00G  | -              |`},
+| NAME                   | USED  | NVAIL | REFER | MOUNTPOINT     |
+| tank                   | 3.00G | 1.84G | 32K   | /tank          |
+| tank/database          | 3.00G | 1.84G | 2.00G | /tank/database |
+| tank/database@yesterday| 1.00G | -     | 2.00G | -              |`},
             {type: 'text', value: "Which two conclusions can be drawn based on this output?"}
           ],
           options: [
@@ -846,12 +846,12 @@ tank/backups/incremental \t1.00G  863M \t 1.00G  /tank/backups/incremental`},
           question: [
             {type: 'text', value: "When issuing the zonestat 2 in 15 command, the following information is displayed:"},
             {type: 'command', value: `SUMMARY    Cpus/online: 1/1    PhygMem: 1023M    VirtMem: 2047M
-             ---CPU---    ---PhygMem---       ---VirtMem---       ---PhygMet---
-ZONE      USED    %PART   USED     %USED     USED      %USED      PEYTE    %PUSE
-[total]   0.09    9.33%   841M     82.1%     951M      46.4%      0        0.00%
-[system]  0.02    2.40%   319M     31.2%     577M      28.1%      -        -
-global    0.06    6.71%   465M     45.4%     325M      15.8%      0        0.00%
-dbzone    0.00    0.21%   56.1M    5.48%     48.7M     2.37%      0        0.00%`},
+           ---CPU---    ---PhygMem---  ---VirtMem--- ---PhygMet---
+ZONE      USED  %PART   USED   %USED   USED   %USED   PEYTE  %PUSE
+[total]   0.09  9.33%   841M   82.1%   951M   46.4%   0      0.00%
+[system]  0.02  2.40%   319M   31.2%   577M   28.1%   -      -
+global    0.06  6.71%   465M   45.4%   325M   15.8%   0      0.00%
+dbzone    0.00  0.21%   56.1M  5.48%   48.7M  2.37%   0      0.00%`},
             {type: 'text', value: "Which two options accurately describe the statistics contained in the output?"}
           ],
           options: [
@@ -890,8 +890,9 @@ CRYPT_DEFAULT=5`},
           id: 47,
           question: [
             {type: 'text', value: "The default publisher on your system is:"},
-            {type: 'command', value: `    PUBLISHER TYPE STATUS URL
-solaris origin online http://pkg.oracle.com/solaris/release`},
+            {type: 'command', value: `
+PUBLISHER  TYPE    STATUS  URL
+solaris    origin  online  http://pkg.oracle.com/solaris/release`},
             {type: 'text', value: "You want to update the Oracle Solaris 11 environment on your system, but you are not able to connect this system to the Internet to access the default Oracle repository."},
             {type: 'text', value: "A repository has been created on your local network and is named http://server1.example.com."},
             {type: 'text', value: "Which command would you choose to connect your system to the local repository?"}
@@ -929,12 +930,13 @@ tank/oracle 33K\t\t    4.84G\t33K\t      /data/oracle`},
           id: 49,
           question: [
             {type: 'text', value: "Review the boot environments displayed on your system:"},
-            {type: 'command', value: `| BE         | Active | Mountpoint | Space   | Policy | Created          |
-|------------|--------|------------|---------|--------|------------------|
-| oldBE      |   -    |     -      | 149.0K  | static | 2011-11-28 15:15 |
-| newBE      |   -    |     -      | 363.05M | static | 2011-11-28 14:47 |
-| solaris    |   -    |     -      | 100.68M | static | 2011-11-20 18:09 |
-| solaris-1  |   NR   |     /      | 19.07G  | static | 2012-01-22 07:23 |`},
+            {type: 'command', value: `
+| BE        |Active|Mountpoint|Space   |Policy | Created          |
+|-----------|------|----------|--------|-------|------------------|
+| oldBE     |  -   |    -     |149.0K  |static | 2011-11-28 15:15 |
+| newBE     |  -   |    -     |363.05M |static | 2011-11-28 14:47 |
+| solaris   |  -   |    -     |100.68M |static | 2011-11-20 18:09 |
+| solaris-1 |  NR  |    /     |19.07G  |static | 2012-01-22 07:23 |`},
             {type: 'text', value: "Which option describes the solaris-1 BE?"}
           ],
           options: [
@@ -1101,18 +1103,19 @@ R F /data/files -> /data/files3
               "id": 58,
               "question": [
                   {"type": "text", "value": "View the Exhibit to inspect the file system configuration on your server."},
-                  {"type": "command", value: `| NAME                     | USED  | AVAIL | REFER | MOUNTPOINT        |
-|--------------------------|-------|-------|-------|-------------------|
-| pool                     | 134K  | 3.91G | 32K   | /pool             |
-| pool1/data               | 31K   | 3.91G | 31K   | /data             |
-| remote                   | 124K  | 3.91G | 32K   | /remote           |
-| remote/backup            | 31K   | 3.91G | 31K   | /remote/backup    |
-| rpool                    | 11.6G | 4.02G | 34.5K | /rpool            |
-| rpool/ROOT               | 9.95G | 4.02G | 31K   | Legacy            |
-| rpool/ROOT/solaris       | 9.95G | 4.02G | 9.71G | /                 |
-| rpool/dump               | 630M  | 4.04G | 611M  |                   |
-| rpool/export             | 6.07M | 4.02G | 32K   | /export           |
-| rpool/export/home        | 6.04M | 4.02G | 32K   | /export/home      |
+                  {"type": "command", value: `
+| NAME                | USED  | AVAIL | REFER | MOUNTPOINT        |
+|---------------------|-------|-------|-------|-------------------|
+| pool                | 134K  | 3.91G | 32K   | /pool             |
+| pool1/data          | 31K   | 3.91G | 31K   | /data             |
+| remote              | 124K  | 3.91G | 32K   | /remote           |
+| remote/backup       | 31K   | 3.91G | 31K   | /remote/backup    |
+| rpool               | 11.6G | 4.02G | 34.5K | /rpool            |
+| rpool/ROOT          | 9.95G | 4.02G | 31K   | Legacy            |
+| rpool/ROOT/solaris  | 9.95G | 4.02G | 9.71G | /                 |
+| rpool/dump          | 630M  | 4.04G | 611M  |                   |
+| rpool/export        | 6.07M | 4.02G | 32K   | /export           |
+| rpool/export/home   | 6.04M | 4.02G | 32K   | /export/home      |
 `},
             
                   {"type": "text", "value": "Your department's backup policy is to perform a full backup to a remote system disk on Saturday."},
@@ -1438,17 +1441,18 @@ noaccess  60002 noaccess 60002 No Access User`},
       id: 73,
       question: [
         {type: 'text', value: "Examine this command and its output:"},
-        {type: 'command', value: `# ipadm
-NAME          CLASS/TYPE STATE    UNDER    ADDR
-lo0           loopback   ok       --       --
-lo0/v4        static     ok       --       127.0.0.1/8
-lo0/v6        static     ok       --       ::1/128
-net0          ip         ok       --       --
-net0/v4       static     ok       --       192.168.40.143/24
-net0/v6a      static     ok       --       fdaa:92f:9b63:e2c4::1/64
-net1          ip         down     --       --
-net1/v4       static     down     --       192.168.180.136/24
-net1/v6a      static     down     --       fd88:6068:bd1a:bef6::1/64`},
+        {type: 'command', value: `
+# ipadm
+NAME      CLASS/TYPE STATE  UNDER  ADDR
+lo0       loopback   ok     --     --
+lo0/v4    static     ok     --     127.0.0.1/8
+lo0/v6    static     ok     --     ::1/128
+net0      ip         ok     --     --
+net0/v4   static     ok     --     192.168.40.143/24
+net0/v6a  static     ok     --     fdaa:92f:9b63:e2c4::1/64
+net1      ip         down   --     --
+net1/v4   static     down   --     192.168.180.136/24
+net1/v6a  static     down   --     fd88:6068:bd1a:bef6::1/64`},
         {type: 'text', value: "Which command, or commands, should be used to bring the net1 interfaces online?"}
       ],
       options: [
@@ -1902,6 +1906,10 @@ uid-432(user3) gid-10i(user3) groups—-101 (user3)
               { "type": "command", "value": "zoneadm -z dbzone shutdown i0" },
               { "type": "command", "value": "zoneadm -z dbzone shutdown" },
               { "type": "command", "value": "zlogin dbzone shutdown -i 0" }
+            ],
+            "answer": [
+              { "type": "command", "value": "zoneadm -z dbzone shutdown" },
+              { "type": "command", "value": "zlogin dbzone shutdown -i 0" }
             ]
           },
           {
@@ -1914,6 +1922,9 @@ uid-432(user3) gid-10i(user3) groups—-101 (user3)
               { "type": "text", "value": "repository.db" },
               { "type": "text", "value": "service manifest" },
               { "type": "text", "value": "svc.startd" }
+            ],
+            "answer": [
+              { "type": "text", "value": "svc.configd" }
             ]
           },
           {
@@ -1928,6 +1939,10 @@ uid-432(user3) gid-10i(user3) groups—-101 (user3)
               { "type": "command", "value": "pkg update -nv '*'" },
               { "type": "command", "value": "pkg verify -u '*'" },
               { "type": "command", "value": "pkg search -u" }
+            ],
+            "answer": [
+              { "type": "command", "value": "pkg list -u" },
+              { "type": "command", "value": "pkg update -nv '*'" }
             ]
           },
           {
@@ -1946,6 +1961,10 @@ maintenance 	3:09:15 	svc:/network/rpc/bind:default
               { "type": "command", "value": "svcs -v bind" },
               { "type": "command", "value": "svcs -d bind" },
               { "type": "command", "value": "svcs -xv bind" }
+            ],
+            "answer": [
+              { "type": "command", "value": "svcs -D bind" },
+              { "type": "command", "value": "svcs -xv bind" }
             ]
           },
           {
@@ -1958,10 +1977,10 @@ maintenance 	3:09:15 	svc:/network/rpc/bind:default
 	scan: none requested
 	config:
 	${` `}
-		NAME 		STATE 	READ WRITE CKSUM
-		tank 		ONLINE	0 		0 	0
-			c9tldO 	ONLINE 	0 		0 	0
-			e$t2da0 ONLINE 	0 		0
+		NAME 		  STATE 	READ  WRITE   CKSUM
+		tank 		  ONLINE	0 		 0 	  0
+			c9tldO 	  ONLINE  	0 		 0 	  0
+			c9t2d0    ONLINE  	0 		 0
 ${` `}
 errors: No known data errors
 
@@ -1975,6 +1994,9 @@ errors: No known data errors
               { "type": "text", "value": "It returns an error." },
               { "type": "text", "value": "The 2-way mirrored tank storage pool is converted to a 4-way mirrored storage pool." },
               { "type": "text", "value": "The mirrored tank storage pool is expanded with a nonmirrored section." }
+            ], 
+            answer: [
+              {type: 'text', value: "The mirrored tank storage pool is expanded with a nonmirrored section."}
             ]
           },
           {
@@ -2006,6 +2028,9 @@ tank/oracle 	1.49G 	524M 	1.49G 	/data/oracle
               { "type": "text", "value": "A user quota has been set on the /data/oracle file system." },
               { "type": "text", "value": "A ZFS quota has been set on the /data/oracle file system." },
               { "type": "text", "value": "No quotas have been set on the /data/oracle file system." }
+            ], 
+            answer: [
+              {type: 'text', value: "A ZFS quota has been set on the /data/oracle file system."}
             ]
           },                       {
               "id": 101,
@@ -2030,7 +2055,11 @@ tank/oracle 	1.49G 	524M 	1.49G 	/data/oracle
                 { "type": "command", "value": "kill 13489" },
                 { "type": "command", "value": "kill 13489 13490 13491" },
                 { "type": "command", "value": "pkill -f cleanup" }
-              ]
+              ], 
+              answer: [
+              { "type": "command", "value": "kill 13489" },
+                { "type": "command", "value": "pkill -f cleanup" }
+            ]
             },
             {
               "id": 102,
@@ -2132,7 +2161,10 @@ Enter passphrase for key '/export/home/user1/.ssh/id_rsa':
       { "type": "command", "value": "prtconf" },
       { "type": "command", "value": "cat /etc/update" },
       { "type": "command", "value": "pkg info all" }
-    ]
+    ], 
+  answer: [
+  { "type": "command", "value": "pkg info entire" }
+]
   },
   {
     "id": 108,
@@ -2145,7 +2177,11 @@ Enter passphrase for key '/export/home/user1/.ssh/id_rsa':
       { "type": "text", "value": "Install a solaris10 branded zone directly from the Oracle Solaris 10 media." },
       { "type": "text", "value": "Use the V2V process to migrate an existing Solaris 8 or 9 non-global zone from a Solaris 10 system to a solaris10 branded zone." },
       { "type": "text", "value": "Migrate an existing 64-bit Solaris 10 system to a solaris10 branded non-global zone using the P2V process." }
-    ]
+    ], 
+  answer: [
+  { "type": "text", "value": "Use the V2V process to migrate an existing Solaris 10 non-global whole root zone from a Solaris 10 system to a solaris10 branded whole root zone." },
+  { "type": "text", "value": "Migrate an existing 64-bit Solaris 10 system to a solaris10 branded non-global zone using the P2V process." }
+]
   },
   {
     "id": 109,
@@ -2175,13 +2211,13 @@ state: ONLINE
 scan: none requested  
 config:  
 ${` `}
-	NAME        STATE     READ WRITE CKSUM  
-	pool1       ONLINE      0     0     0  
+	NAME          STATE     READ WRITE CKSUM  
+	pool1         ONLINE      0     0     0  
 		raidz1-0  ONLINE      0     0     0  
-		c3t3d0  ONLINE      0     0     0  
-		c3t4d0  ONLINE      0     0     0  
-		c3t5d0  ONLINE      0     0     0  
-		c3t6d0  ONLINE      0     0     0  
+		c3t3d0    ONLINE      0     0     0  
+		c3t4d0    ONLINE      0     0     0  
+		c3t5d0    ONLINE      0     0     0  
+		c3t6d0    ONLINE      0     0     0  
 `},
     {type: 'text', value: `Identify the correct statement regarding pool1's configuration.`}
   ],"options": [
@@ -2189,7 +2225,8 @@ ${` `}
       { "type": "text", "value": "This configuration is a bug in Solaris 11; it cannot be created by an administrator." },
       { "type": "text", "value": "Data written to pool1 will be striped across four disk components." },
       { "type": "text", "value": "The raidz1-0 and c3t6d0 components are submirrors of pool1." }
-    ]
+    ],
+    "answer": [{ "type": "text", "value": "Data written to pool1 will be striped across four disk components." }]
 },  {
     "id": 111,
     "question": [
@@ -2206,7 +2243,8 @@ ${` `}
       { "type": "text", "value": "You need to run the ps command to get more information." },
       { "type": "text", "value": "You need to switch to super user to kill the process." },
       { "type": "text", "value": "You need to run the prstat command to get more information." }
-    ]
+    ],
+    "answer": [{ "type": "text", "value": "You need to run the pkill command with the process name." }]
   },
   {
     "id": 112,
@@ -2296,7 +2334,9 @@ errors: No known data errors
       { "type": "text", "value": "They are defined by their manifest." },
       { "type": "text", "value": "They can specify a set of packages that constitute a single feature or tool." },
       { "type": "text", "value": "Installing a group package does not install any other packages." }
-    ]
+    ],
+    "answer": [{ "type": "text", "value": "They are defined by their manifest." },
+      { "type": "text", "value": "They can specify a set of packages that constitute a single feature or tool." }]
   },
   {
     "id": 116,
@@ -2304,11 +2344,11 @@ errors: No known data errors
       { "type": "text", "value": "Examine this command and its output:" },
       { "type": "command", "value": `$ dladm show-ether -x net1
         ${` `}
-LINK      PTYPE     STATE     AUTO     SPEED-DUPLEX       PAUSE
-net1      current   up        yes      1G-f              bi
---        capable   --        yes      1G-fh,100M-fh,10M-fh    bi
---        adv       --        yes      1G-fh,100M-fh,10M-fh    bi
---        peeradv   --        yes      1G-fh,100M-fh,10M-fh    none
+LINK   PTYPE     STATE  AUTO  SPEED-DUPLEX            PAUSE
+net1   current   up     yes   1G-f                    bi
+--     capable   --     yes   1G-fh,100M-fh,10M-fh    bi
+--     adv       --     yes   1G-fh,100M-fh,10M-fh    bi
+--     peeradv   --     yes   1G-fh,100M-fh,10M-fh    none
 ` },
       { "type": "text", "value": "Which three statements are true about the net1 datalink?" }
     ],
@@ -2317,6 +2357,11 @@ net1      current   up        yes      1G-f              bi
       { "type": "text", "value": "The current link state is the result of auto negotiation." },
       { "type": "text", "value": "It is capable of running in full or half duplex mode at three different link speeds." },
       { "type": "text", "value": "It advertises full or half duplex connections at all supported link speeds to its peer." },
+      { "type": "text", "value": "It has flow control enabled in both directions." }
+    ],
+    "answer": [
+      { "type": "text", "value": "The current link state is the result of auto negotiation." },
+      { "type": "text", "value": "It is capable of running in full or half duplex mode at three different link speeds." },
       { "type": "text", "value": "It has flow control enabled in both directions." }
     ]
   },
@@ -2332,27 +2377,11 @@ net1      current   up        yes      1G-f              bi
       { "type": "command", "value": "pkg contents openldap" },
       { "type": "command", "value": "pkg set-property signature-policy verify" },
       { "type": "command", "value": "pkginfo openldap" }
-    ]
+    ],
+    "answer": [{ "type": "command", "value": "pkg verify openldap" }]
   },
   {
     "id": 118,
-    "question": [
-      { "type": "text", "value": "The default publisher on your system is:" },
-      { "type": "command", "value": `PUBLISHER      TYPE    STATUS   URI
-solaris       origin   online   http://pkg.oracle.com/solaris/release
-` },
-      { "type": "text", "value": "You want to update the Oracle Solaris 11 environment on your system, but you are not able to connect this system to the Internet to access the default Oracle repository.\nA repository has been created on your local network and is named http://server1.example.com." },
-      { "type": "text", "value": "Which command would you choose to connect your system to the local repository?" }
-    ],
-    "options": [
-      { "type": "command", "value": "pkg add-publisher to add the new publisher" },
-      { "type": "command", "value": `pkg set-publisher to set the stickiness on the http://server1.example.com publisher and unset stickiness for http://pkg.oracle.com/solaris/release` },
-      { "type": "command", "value": "pkg set-publisher to set the origin for the publisher" },
-      { "type": "command", "value": "pkg publisher to specify the new publisher" }
-    ]
-  },
-  {
-    "id": 119,
     "question": [
       { "type": "text", "value": "How are operating system updates distributed in the Oracle Solaris 11 environment?" }
     ],
@@ -2361,7 +2390,8 @@ solaris       origin   online   http://pkg.oracle.com/solaris/release
       { "type": "text", "value": "Patches are downloaded from http://support.oracle.com either automatically or manually.\nAll software packages are then updated manually from the command line using the smpatch or patchadd commands." },
       { "type": "text", "value": "Software updates, published as packages to an OS image.\nAll software packages are then updated manually from the command line using the pkg command." },
       { "type": "text", "value": "Software updates are published as packages to a repository.\nAll software packages are then updated manually from the command line using the pkg command." }
-    ]
+    ],
+    "answer": [{ "type": "text", "value": "Software updates are published as packages to a repository.\nAll software packages are then updated manually from the command line using the pkg command." }]
   }          
 ];
 
