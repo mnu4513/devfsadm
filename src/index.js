@@ -50,6 +50,7 @@ import BlogData from './components/blogs/BlogData';
 // Exams 
 import SolarisExam from './components/exams/solaris/ExamPageSolaris';
 import MySQLExam from './components/exams/mysql/ExamPageMySQL';
+import OracleLinuxExam from './components/exams/oracleLinux/ExamPageOracleLinux';
 
 
 
@@ -145,6 +146,9 @@ const appRouter = createBrowserRouter([
       }, {
         path: '/exam/mysql-1Z0-908', 
         element: <MySQLExam/>
+      }, {
+        path: '/exam/Oracle-Linux',
+        element: <OracleLinuxExam/>
       }
     ]
   }

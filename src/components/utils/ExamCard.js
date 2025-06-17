@@ -3,7 +3,7 @@ import { Text, Line, Command, Supersubheading } from './Comps';
 
 const ExamCard = ({ question }) => {
   return (
-    <div className=" rounded shadow-sm bg-[#1e293b] p-4">
+    <div className=" rounded shadow-sm bg-[#1e293b] p-">
       {/* Displaying the question ID/Number */}
       <Supersubheading text={`🖊️ Question: ${question.id}`} />
 
