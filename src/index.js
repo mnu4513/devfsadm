@@ -147,7 +147,7 @@ const appRouter = createBrowserRouter([
         path: '/exam/mysql-1Z0-908', 
         element: <MySQLExam/>
       }, {
-        path: '/exam/Oracle-Linux',
+        path: '/exam/Oracle-Linux-1Z0-106',
         element: <OracleLinuxExam/>
       }
     ]

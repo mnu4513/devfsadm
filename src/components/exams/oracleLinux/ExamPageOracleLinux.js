@@ -12,8 +12,8 @@ export default function ExamPage() {
         <span className="block ml-1">The content is for educational and informational purposes only. We do not guarantee 100% correctness or exam clearance. We are not affiliated with Oracle.</span>
       </DismissableAlert>
       <Heading text="Oracle Linux 8 Exam Dumps" />
-      <Supersubheading text="( Oracle 1z0-821 Exam Dumps )" />
-      <Supersubheading text="( Oracle 1z0-821 Exam Questions )" />
+      <Supersubheading text="( Oracle Linux 8 Advanced System Administration 1Z0-106 Exam Dumps )" />
+      <Supersubheading text="( Oracle Linux 8 1Z0-106 Exam Questions )" />
       <Line />
       {
         questions?.map((item, index) => (

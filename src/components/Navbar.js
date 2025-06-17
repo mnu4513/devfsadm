@@ -23,9 +23,7 @@ const courses = [
 const exams = [
     { name: 'Solaris', description: 'Oracle Solaris 11 Administrator 1Z0-821', href: '/exam/solaris-1Z0-821', icon: CursorArrowRaysIcon },
     { name: 'MySQL', description: 'MySQL 8.0 Database Administrator 1Z0-908', href: '/exam/MySQL-1Z0-908', icon: CursorArrowRaysIcon},
-    { name: 'Linux', description: 'Speak directly to your customers', href: '/exam/solaris-1z0-821', icon: CursorArrowRaysIcon },
-    { name: 'Shell Scripting', description: 'Speak directly to your customers', href: '/exam/solaris-1z0-821/shell', icon: CursorArrowRaysIcon },
-    { name: 'Ansible', description: 'Your customers’ data will be safe and secure', href: '/exam/solaris-1z0-821', icon: CursorArrowRaysIcon },
+    { name: 'Oracle Linux', description: 'Oracle Linux 8 Administration 1Z0-106', href: '/exam/Oracle-Linux-1Z0-106', icon: CursorArrowRaysIcon }
 ];
 
 function classNames(...classes) {
