@@ -131,7 +131,7 @@ Component           Description
     { "type": "text", "value": "It concatenates all files found in the /etc/audit/rules.d directory into a single /etc/audit/audit.rules file." }
   ],
   "answer": [
-    { "type": "text", "value": "Files without a .rules extension are ignored by the augenrules command." },
+    { "type": "text", "value": "The augenrules --load command loads the old or newly built rules into the kernel." },
     { "type": "text", "value": "It concatenates all files found in the /etc/audit/rules.d directory into a single /etc/audit/audit.rules file." }
   ]
 }, {
@@ -162,7 +162,7 @@ Component           Description
   ],
   "answer": [
     { "type": "text", "value": "/lib64/security" },
-    { "type": "text", "value": "/etc/pam.d" }
+    { "type": "text", "value": "/lib/security" }
   ]
 }, {
   "id": 12,
@@ -178,7 +178,7 @@ Component           Description
   ],
   "answer": [
     { "type": "text", "value": "Boot parameters are defined as values for the GRUB_CMDLINE_LINUX directive in the /etc/default/grub file." },
-    { "type": "text", "value": "Parameters passed to the kernel from the GRUB 2 command-line interface are persistent and apply to all subsequent reboots." }
+    { "type": "text", "value": "Each kernel version's boot parameters are stored in independent configuration files in /boot/loader/entries." }
   ]
 }, {
   "id": 13,
@@ -470,8 +470,8 @@ ${` `}
     { "type": "text", "value": "Scripts run by the third job are delayed between 45 and 90 minutes." }
   ],
   "answer": [
-    { "type": "text", "value": "Scripts run by the second job are delayed between 31 and 70 minutes." },
-    { "type": "text", "value": "Jobs defined in this anacrontab file are randomly delayed by up to 51 minutes." }
+    { "type": "text", "value": "Jobs defined in this anacrontab file can be executed between 15:00 and 22:00." },
+    { "type": "text", "value": "Scripts run by the third job are delayed between 45 and 90 minutes." }
   ]
 }, {
   "id": 26,
@@ -486,7 +486,7 @@ ${` `}
     { "type": "text", "value": "If /etc/cron.allow exists, then only users listed in it are permitted to use the cron facility." }
   ],
   "answer": [
-    { "type": "text", "value": "If neither /etc/cron.allow nor /etc/cron.deny exists, then only root can use the cron facility." }
+    { "type": "text", "value": "If /etc/cron.allow exists, then only users listed in it are permitted to use the cron facility." }
   ]
 }, {
   "id": 27,
@@ -526,7 +526,7 @@ ${` `}
     { "type": "text", "value": "1, 2, 6" }
   ],
   "answer": [
-    { "type": "text", "value": "1, 2, 3, 6" }
+    { "type": "text", "value": "1, 2, 4, 5, 6" }
   ]
 }, {
   "id": 28,
@@ -558,7 +558,7 @@ ${` `}
     { "type": "text", "value": "It copies the ACL" }
   ],
   "answer": [
-    { "type": "text", "value": "It copies the ACL" }
+    { "type": "text", "value": "It copies the ACL of wklystatus.txt to monthlystatus.txt." }
   ]
 }, {
   "id": 30,
@@ -574,7 +574,7 @@ ${` `}
   ],
   "answer": [
     { "type": "text", "value": "exit" },
-    { "type": "text", "value": "include" }
+    { "type": "text", "value": "exclude" }
   ]
 }, {
   "id": 31,
@@ -722,7 +722,7 @@ Nov 9 20:32:24 server02 su[4581]: pam_unix(su:auth): authentication failure; log
     { "type": "text", "value": "Secure Boot is an optional feature intended to prevent execution of malware during the boot process." }
   ],
   "answer": [
-    { "type": "text", "value": "When shim is authenticated, the GRUB2 bootloader, signed by Oracle and Microsoft, is loaded after being authenticated by shim." },
+    { "type": "text", "value": "Secure Boot is an optional feature intended to prevent execution of malware during the boot process." },
     { "type": "text", "value": "A \"chain of trust\" is established, beginning with a first-stage bootloader, shim, which is signed by Oracle and Microsoft." }
   ]
 }, {
@@ -740,7 +740,7 @@ Nov 9 20:32:24 server02 su[4581]: pam_unix(su:auth): authentication failure; log
     { "type": "text", "value": "enforcing mode denies access based on SELinux policy rules." }
   ],
   "answer": [
-    { "type": "text", "value": "enforcing mode is enabled by setting SELINUX=enforcing in /etc/selinux/semanage.conf." },
+    { "type": "text", "value": "Enforcing mode is enabled by default." },
     { "type": "text", "value": "Actions denied by SELinux are written to /var/log/audit.log or /var/log/messages." },
     { "type": "text", "value": "enforcing mode denies access based on SELinux policy rules." }
   ]
@@ -948,7 +948,7 @@ ipv4.address 192.168.0.5/24 ipv4.gateway 192.168.0.254`},
   "answer": [
     { "type": "text", "value": "transparent compression to save disk space" },
     { "type": "text", "value": "can roll back to a prior, known good state" },
-    { "type": "text", "value": "automatic defragmentation" }
+    { "type": "text", "value": "Copy-on-write metadata" }
   ]
 }, {
   "id": 52,
@@ -962,7 +962,7 @@ ipv4.address 192.168.0.5/24 ipv4.gateway 192.168.0.254`},
     { "type": "text", "value": "table" }
   ],
   "answer": [
-    { "type": "text", "value": "table" }
+    { "type": "text", "value": "chain" }
   ]
 }, {
   "id": 53,
@@ -995,6 +995,7 @@ ipv4.address 192.168.0.5/24 ipv4.gateway 192.168.0.254`},
     { "type": "text", "value": "The command requires a repository tag." }
   ],
   "answer": [
+    { "type": "text", "value": "The command requires a registry location." },
     { "type": "text", "value": "The command will pull an image from a registry to a local machine when executed." }
   ]
 }, {
@@ -1012,7 +1013,7 @@ ipv4.address 192.168.0.5/24 ipv4.gateway 192.168.0.254`},
     { "type": "text", "value": "The command creates a service on port 80." }
   ],
   "answer": [
-    { "type": "text", "value": "The command creates a pod named nginx." },
+    { "type": "text", "value": "The command creates and guarantees the availability of a specified number of identical pods." },
     { "type": "text", "value": "The command creates a deployment named nginx." }
   ]
 }, {
@@ -1044,7 +1045,7 @@ ipv4.address 192.168.0.5/24 ipv4.gateway 192.168.0.254`},
   ],
   "answer": [
     { "type": "text", "value": "fdisk -l displays disk size information for all disks." },
-    { "type": "text", "value": "It can divide logical devices into one or more block disks called partitions." }
+    { "type": "text", "value": "It can partition disks larger than 2 TB by using a GPT partition table." }
   ]
 }, {
   "id": 58,
