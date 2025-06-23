@@ -151,7 +151,7 @@ const appRouter = createBrowserRouter([
         path: '/exam/Oracle-Linux-1Z0-106',
         element: <OracleLinuxExam/>
       }, {
-        path: '/exam/exadata',
+        path: '/exam/exadata-1Z0-902',
         element: <ExadataExam/>
       }
     ]
