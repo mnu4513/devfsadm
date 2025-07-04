@@ -90,6 +90,38 @@ SELECT d.department_name, ROUND(AVG(NULLIF(e.salary,0))) AS avgsal, MAX(e.salary
       { "type": "text", "value": "CURRENT_TIMESTAMP" }
     ]
 }, {
+    "id": 6,
+    "question": [
+      { "type": "text", "value": "Examine the description of the ORDERS table:" },
+     
+      { "type": "command", "value": `
+Name				Null?		Type
+------------------  ----------  --------------
+ORDER_ID						NUMBER(38)	
+ORDER_DATE						DATE`},
+      { "type": "text", "value": "Examine the description of the INVOICES table:" },
+      { "type": "command", "value": `
+Name				Null?		Type
+------------------  ----------  --------------
+INVOICE_ID						NUMBER(38)
+INVOICE_DATE					DATE`},
+      { "type": "text", "value": "Which three statements execute successfully?" }
+    ],
+    "options": [
+      { "type": "command", "value": "SELECT order_id, order_date FROM orders\nUNION ALL\nSELECT invoice_id, invoice_date FROM invoices ORDER BY order_id;" },
+      { "type": "command", "value": "SELECT order_id, order_date FROM orders\nINTERSECT\nSELECT invoice_id, invoice_date FROM invoices ORDER BY invoice_id;" },
+      { "type": "command", "value": "SELECT * FROM orders ORDER BY order_id\nINTERSECT\nSELECT * FROM invoices ORDER BY invoice_id;" },
+      { "type": "command", "value": "SELECT order_id invoice_id, order_date FROM orders\nMINUS\nSELECT invoice_id, invoice_date FROM invoices ORDER BY invoice_id;" },
+      { "type": "command", "value": "(SELECT * FROM orders\nUNION ALL\nSELECT * FROM invoices) ORDER BY order_id;" },
+      { "type": "command", "value": "SELECT * FROM orders\nMINUS\nSELECT * FROM invoices ORDER BY 1;" },
+      { "type": "command", "value": "SELECT * FROM orders ORDER BY order_id\nUNION\nSELECT * FROM invoices;" }
+    ],
+    "answer": [
+      { "type": "command", "value": "SELECT order_id, order_date FROM orders\nUNION ALL\nSELECT invoice_id, invoice_date FROM invoices ORDER BY order_id;" },
+      { "type": "command", "value": "(SELECT * FROM orders\nUNION ALL\nSELECT * FROM invoices) ORDER BY order_id;" },
+      { "type": "command", "value": "SELECT * FROM orders\nMINUS\nSELECT * FROM invoices ORDER BY 1;" }
+    ]
+}, {
     "id": 7,
     "question": [
       { "type": "text", "value": "Which three are true about the CREATE TABLE command?" }
@@ -329,6 +361,53 @@ CREATE TABLE ord_items (
       { "type": "text", "value": "UPDATE can be granted only on tables and views." }
     ]
 }, {
+    "id": 20,
+    "question": [
+      { "type": "text", "value": "Examine these statements executed in a single Oracle session:" },
+      { "type": "command", "value": `
+CREATE TABLE product (pcode NUMBER(2), pname VARCHAR2(20));
+${` `}
+INSERT INTO product VALUES (1, 'pen');
+${` `}
+INSERT INTO product VALUES (2, 'pencil');
+${` `}
+INSERT INTO product VALUES (3, 'fountain pen');
+${` `}
+SAVEPOINT a;
+${` `}
+UPDATE product SET pcode = 10 WHERE pcode = 1;
+${` `}
+COMMIT;
+${` `}
+DELETE FROM product WHERE pcode = 2;
+${` `}
+SAVEPOINT b;
+${` `}
+UPDATE product SET pcode = 30 WHERE pcode = 3;
+${` `}
+SAVEPOINT c;
+${` `}
+DELETE FROM product WHERE pcode = 10;
+${` `}
+ROLLBACK TO SAVEPOINT b;
+${` `}
+COMMIT;` },
+      { "type": "text", "value": "Which three statements are true?" }
+    ],
+    "options": [
+      { "type": "text", "value": "There is no row containing pen." },
+      { "type": "text", "value": "The code for pen is 10." },
+      { "type": "text", "value": "The code for fountain pen is 3." },
+      { "type": "text", "value": "There is no row containing pencil." },
+      { "type": "text", "value": "The code for pen is 1." },
+      { "type": "text", "value": "There is no row containing fountain pen." }
+    ],
+    "answer": [
+      { "type": "text", "value": "The code for pen is 10." },
+      { "type": "text", "value": "The code for fountain pen is 3." },
+      { "type": "text", "value": "There is no row containing pencil." }
+    ]
+}, {
     "id": 21,
     "question": [
       { "type": "text", "value": "Which three are true about the MERGE statement?" }
@@ -428,6 +507,32 @@ ALTER TABLE emp MODIFY CONSTRAINT emp_fkey ENABLE;` },
     "answer": [
       { "type": "text", "value": "All INSERT, UPDATE, and DELETE statements maintain entries in the index." },
       { "type": "text", "value": "You use ALTER INDEX to make an INVISIBLE index VISIBLE." }
+    ]
+}, {
+    "id": 26,
+    "question": [
+      { "type": "text", "value": "Examine the description of the EMPLOYEES table:" },
+      { "type": "command", "value": `
+Name			Null?			Type
+--------------  ---------   	------------
+EMP_NO			NOT NULL		NUMBER(4)
+LAST_NAME						VARCHAR2(10)	
+HIRE_DATE						DATE			
+SALARY							NUMBER(6,2)`},
+      { "type": "text", "value": "For each employee in department 90 you want to display:" },
+      { "type": "text", "value": "1. Their last name"},
+      { "type": "text", "value": "2. The number of complete weeks they have been employed"},
+      { "type": "text", "value": "The output must be sorted by the number of weeks, starting with the longest serving employee first." },
+      { "type": "text", "value": "Which statement will accomplish this?" }
+    ],
+    "options": [
+      { "type": "command", "value": "SELECT last_name, TRUNC((SYSDATE - hire_date) / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure;" },
+      { "type": "command", "value": "SELECT last_name, TRUNC((SYSDATE - hire_date) / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure DESC;" },
+      { "type": "command", "value": "SELECT last_name, ROUND((SYSDATE - hire_date) / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure DESC;" },
+      { "type": "command", "value": "SELECT last_name, ROUND((SYSDATE - hire_date) / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure;" }
+    ],
+    "answer": [
+      { "type": "command", "value": "SELECT last_name, TRUNC((SYSDATE - hire_date) / 7) AS tenure\nFROM employees\nWHERE department_id = 90\nORDER BY tenure DESC;" }
     ]
 }, {
     "id": 27,
