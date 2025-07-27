@@ -21,11 +21,13 @@ const courses = [
 ];
 
 const exams = [
-    { name: 'Solaris', description: 'Oracle Solaris 11 Administrator 1Z0-821', href: '/exam/solaris-1Z0-821', icon: CursorArrowRaysIcon },
-    { name: 'MySQL', description: 'MySQL 8.0 Database Administrator 1Z0-908', href: '/exam/MySQL-1Z0-908', icon: CursorArrowRaysIcon},
-    { name: 'Oracle Linux', description: 'Oracle Linux 8 Administration 1Z0-106', href: '/exam/Oracle-Linux-1Z0-106', icon: CursorArrowRaysIcon },
-    { name: 'Exadata', description: 'Oracle Exadata Database Machine X9M 1Z0-902', href: '/exam/exadata-1Z0-902', icon: CursorArrowRaysIcon },
-    { name: 'Oracle Database', description: 'Oracle Database Machine X9M 1Z0-902', href: '/exam/database', icon: CursorArrowRaysIcon }
+    { name: 'Solaris', description: 'Oracle Solaris 11 Administrator 1Z0-821', href: '/exam/solaris-1z0-821', icon: CursorArrowRaysIcon },
+    { name: 'MySQL', description: 'MySQL 8.0 Database Administrator 1Z0-908', href: '/exam/mysql-1z0-908', icon: CursorArrowRaysIcon},
+    { name: 'Oracle Linux', description: 'Oracle Linux 8 Administration 1Z0-106', href: '/exam/oracle-linux-1z0-106', icon: CursorArrowRaysIcon },
+    { name: 'Exadata', description: 'Oracle Exadata Database Machine X9M 1Z0-902', href: '/exam/exadata-1z0-902', icon: CursorArrowRaysIcon },
+    { name: 'Oracle Database', description: 'Oracle Database Machine X9M 1Z0-902', href: '/exam/database', icon: CursorArrowRaysIcon },
+    { name: 'Oracle VM', description: 'Exam 1Z0-590: Oracle VM 3.0 for x86 Essentials', href: '/exam/oracle-vm-1z0-590', icon: CursorArrowRaysIcon }
+
 ];
 
 function classNames(...classes) {

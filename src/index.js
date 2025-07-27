@@ -53,6 +53,7 @@ import MySQLExam from './components/exams/mysql/ExamPageMySQL';
 import OracleLinuxExam from './components/exams/oracleLinux/ExamPageOracleLinux';
 import ExadataExam from './components/exams/exadata/ExamPageExadata';
 import OracleDatabase from './components/exams/OracleDatabase/ExamPageOracleDatabase';
+import OracleVM from './components/exams/OracleVM/ExamPageOracleVM';
 
 
 
@@ -143,20 +144,23 @@ const appRouter = createBrowserRouter([
         path: '/features',
         element: <Features />
       }, {
-        path: '/exam/solaris-1Z0-821',
+        path: '/exam/solaris-1z0-821',
         element: <SolarisExam/>
       }, {
-        path: '/exam/mysql-1Z0-908', 
+        path: '/exam/mysql-1z0-908', 
         element: <MySQLExam/>
       }, {
-        path: '/exam/Oracle-Linux-1Z0-106',
+        path: '/exam/oracle-linux-1z0-106',
         element: <OracleLinuxExam/>
       }, {
-        path: '/exam/exadata-1Z0-902',
+        path: '/exam/exadata-1z0-902',
         element: <ExadataExam/>
       }, {
         path: '/exam/oracle-database',
         element: <OracleDatabase/>
+      }, {
+        path: '/exam/oracle-vm-1z0-590',
+        element: <OracleVM/>
       }
     ]
   }
