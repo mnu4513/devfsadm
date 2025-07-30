@@ -6,7 +6,7 @@ import DismissableAlert from '../../utils/DismissableAlert';
 
 export default function ExamPage() {
   return (
-    <div className="mx-4 my-4 lg:max-w-4xl lg:mx-auto">
+    <div className="mx-4 my-4 lg:max-w-4xl lg:mx-auto text-black dark:text-gray-50">
       <DismissableAlert type="danger">
         <strong className="font-bold">Disclaimer:</strong>
         <span className="block ml-1">The content is for educational and informational purposes only. We do not guarantee 100% correctness or exam clearance. We are not affiliated with Oracle.</span>
