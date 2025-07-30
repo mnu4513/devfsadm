@@ -801,20 +801,20 @@ SALARY 			NOT NULL 	NUMBER
 COMMISSION 					NUMBER` }
   ],
   "options": [
-    { "type": "text", "value": "SELECT * FROM employees WHERE salary + NULLIF(commission, 0) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE COALESCE(salary, commission) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE NVL2(salary + commission, salary + commission, salary) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE NVL(salary + commission, 0) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE salary + NVL(commission, 0) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE salary + NVL2(commission, commission, 0) >= 20000;" }
+    { "type": "command", "value": "SELECT * FROM employees WHERE salary + NULLIF(commission, 0) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE COALESCE(salary, commission) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE NVL2(salary + commission, salary + commission, salary) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE NVL(salary + commission, 0) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE salary + NVL(commission, 0) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE salary + NVL2(commission, commission, 0) >= 20000;" }
   ],
   "answer": [
-    { "type": "text", "value": "SELECT * FROM employees WHERE NVL(salary + commission, 0) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE salary + NVL(commission, 0) >= 20000;" },
-    { "type": "text", "value": "SELECT * FROM employees WHERE salary + NVL2(commission, commission, 0) >= 20000;" }
+    { "type": "command", "value": "SELECT * FROM employees WHERE NVL(salary + commission, 0) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE salary + NVL(commission, 0) >= 20000;" },
+    { "type": "command", "value": "SELECT * FROM employees WHERE salary + NVL2(commission, commission, 0) >= 20000;" }
   ]
 }, {
-  "id": 14,
+  "id": 41,
   "question": [
     { "type": "text", "value": "Which three statements are true about inner and outer joins?" }
   ],
@@ -832,22 +832,22 @@ COMMISSION 					NUMBER` }
     { "type": "text", "value": "A full outer join returns matched and unmatched rows." }
   ]
 }, {
-  "id": 15,
+  "id": 42,
   "question": [
     { "type": "text", "value": "Which statement executes successfully?" }
   ],
   "options": [
-    { "type": "text", "value": "SELECT TO_CHAR (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_NUMBER (TO_DATE (INTERVAL '800' SECOND)) FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_DATE (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_NUMBER (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_DATE (TO_NUMBER (INTERVAL '800' SECOND)) FROM DUAL;" }
+    { "type": "command", "value": "SELECT TO_CHAR (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_NUMBER (TO_DATE (INTERVAL '800' SECOND)) FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_DATE (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_NUMBER (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_DATE (TO_NUMBER (INTERVAL '800' SECOND)) FROM DUAL;" }
   ],
   "answer": [
-    { "type": "text", "value": "SELECT TO_CHAR (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" }
+    { "type": "command", "value": "SELECT TO_CHAR (INTERVAL '800' SECOND, 'HH24:MM') FROM DUAL;" }
   ]
 }, {
-  "id": 16,
+  "id": 43,
   "question": [
     { "type": "text", "value": "Which two statements are true about conditional INSERT ALL?" }
   ],
@@ -863,10 +863,10 @@ COMMISSION 					NUMBER` }
     { "type": "text", "value": "A single WHEN condition can be used for multiple INTO clauses." }
   ]
 }, {
-  "id": 17,
+  "id": 44,
   "question": [
     { "type": "text", "value": "Examine the description of the PROMOTIONS table:" }, 
-    { "type": "text", "value": `
+    { "type": "command", "value": `
 Name 			Null? 		Type
 ------------	----------	------------
 PROMO_ID 		NOT NULL 	NUMBER (6)
@@ -877,18 +877,18 @@ PROMO_COST NOT 	NULL 		NUMBER (10,2)` },
     { "type": "text", "value": "Which two queries can be used?" }
   ],
   "options": [
-    { "type": "text", "value": "SELECT DISTINCT promo_category || ' has ' || promo_cost AS COSTS FROM promotions ORDER BY 1;" },
-    { "type": "text", "value": "SELECT DISTINCT promo_category, promo_cost FROM promotions ORDER BY 1;" },
-    { "type": "text", "value": "SELECT promo_category, DISTINCT promo_cost FROM promotions ORDER BY 2;" },
-    { "type": "text", "value": "SELECT DISTINCT promo_cost ||' in ' || DISTINCT promo_category FROM promotions ORDER BY 1;" },
-    { "type": "text", "value": "SELECT promo_cost, promo_category FROM promotions ORDER BY by 1;" }
+    { "type": "command", "value": "SELECT DISTINCT promo_category || ' has ' || promo_cost AS COSTS FROM promotions ORDER BY 1;" },
+    { "type": "command", "value": "SELECT DISTINCT promo_category, promo_cost FROM promotions ORDER BY 1;" },
+    { "type": "command", "value": "SELECT promo_category, DISTINCT promo_cost FROM promotions ORDER BY 2;" },
+    { "type": "command", "value": "SELECT DISTINCT promo_cost ||' in ' || DISTINCT promo_category FROM promotions ORDER BY 1;" },
+    { "type": "command", "value": "SELECT promo_cost, promo_category FROM promotions ORDER BY by 1;" }
   ],
   "answer": [
-    { "type": "text", "value": "SELECT DISTINCT promo_category || ' has ' || promo_cost AS COSTS FROM promotions ORDER BY 1;" },
-    { "type": "text", "value": "SELECT DISTINCT promo_category, promo_cost FROM promotions ORDER BY 1;" }
+    { "type": "command", "value": "SELECT DISTINCT promo_category || ' has ' || promo_cost AS COSTS FROM promotions ORDER BY 1;" },
+    { "type": "command", "value": "SELECT DISTINCT promo_category, promo_cost FROM promotions ORDER BY 1;" }
   ]
 }, {
-  "id": 18,
+  "id": 45,
   "question": [
     { "type": "text", "value": "Which two are true about the data dictionary?" }
   ],
@@ -904,7 +904,7 @@ PROMO_COST NOT 	NULL 		NUMBER (10,2)` },
     { "type": "text", "value": "The SYS user owns all base tables and user-accessible views in the data dictionary." }
   ]
 }, {
-  "id": 19,
+  "id": 46,
   "question": [
     { "type": "text", "value": "Examine this list of requirements for a sequence:" }, 
     { "type": "command", "value": `1. Name: EMP_SEQ
@@ -915,35 +915,36 @@ PROMO_COST NOT 	NULL 		NUMBER (10,2)` },
     { "type": "text", "value": "Which two statements will satisfy these requirements?" }
   ],
   "options": [
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq;" },
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 CACHE;" },
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq NOCACHE;" },
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 CYCLE;" },
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 NOCACHE;" },
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq START WITH 1 CACHE;" }
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq;" },
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 CACHE;" },
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq NOCACHE;" },
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 CYCLE;" },
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 NOCACHE;" },
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq START WITH 1 CACHE;" }
   ],
   "answer": [
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq NOCACHE;" },
-    { "type": "text", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 NOCACHE;" }
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq NOCACHE;" },
+    { "type": "command", "value": "CREATE SEQUENCE emp_seq START WITH 1 INCREMENT BY 1 NOCACHE;" }
   ]
 }, {
-  "id": 20,
+  "id": 47,
   "question": [
     { "type": "text", "value": "Examine the data in the PRODUCTS table:" }, 
-    { "type": "text", "value": `PROD_ID 	PROD_NAME 	PROD_LIST 	CATEGORY_ID
+    { "type": "command", "value": `PROD_ID 	PROD_NAME 	PROD_LIST 	CATEGORY_ID
 101 		Plate 		10 			1
 102 		Cup 		20 			1
 103 		Saucer 		20 			1
 104 		Knife 		30 			1
 105 		Fork 		30 			1` },
+{ "type": "text", "value": "Examine these queries:" },
     { "type": "command", "value": `1. SELECT prod_name, prod_list
 FROM products
 WHERE prod_list NOT IN (10, 20) AND category_id = 1;
-
+${' '}
 2. SELECT prod_name, prod_list
 FROM products
 WHERE prod_list <> ANY (10, 20) AND category_id = 1;
-
+${' '}
 3. SELECT prod_name, prod_list
 FROM products
 WHERE prod_list <> ALL (10, 20) AND category_id = 1;` },
@@ -959,7 +960,7 @@ WHERE prod_list <> ALL (10, 20) AND category_id = 1;` },
     { "type": "text", "value": "1 and 3" }
   ]
 }, {
-  "id": 21,
+  "id": 48,
   "question": [
     { "type": "text", "value": "Examine the description of the BOOKS table:" }, 
     { "type": "command", "value": `Name 			Null? 			Type
@@ -975,20 +976,36 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
     { "type": "text", "value": "Which two queries can be used?" }, 
   ],
   "options": [
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price < 500 OR > 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date DESC;" },
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price < 500 OR price > 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date DESC;" },
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price IN (500, 1000)) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date ASC;" },
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price BETWEEN 500 AND 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date;" },
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price NOT BETWEEN 500 AND 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date" }
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price < 500 OR > 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date DESC;" },
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price < 500 OR price > 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date DESC;" },
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price IN (500, 1000)) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date ASC;" },
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price BETWEEN 500 AND 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date;" },
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price NOT BETWEEN 500 AND 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date" }
   ],
   "answer": [
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price < 500 OR price > 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date DESC;" },
-    { "type": "text", "value": "SELECT book_title FROM books WHERE (price NOT BETWEEN 500 AND 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date" }
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price < 500 OR price > 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date DESC;" },
+    { "type": "command", "value": "SELECT book_title FROM books WHERE (price NOT BETWEEN 500 AND 1000) AND (purchase_date < '17-JAN-2007') ORDER BY purchase_date" }
   ]
 }, {
-  "id": 22,
+  "id": 49,
   "question": [
-    { "type": "text", "value": "Examine the description of the EMPLOYEES table:\n\nName \t\t\tNull? \t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID \tNOT NULL \t\tNUMBER (4)\nLAST_NAME \t\tNOT NULL \t\tVARCHAR2 (100)\nSALARY \t\t\tNOT NULL \t\tNUMBER (6,2)\nDEPARTMENT_ID \tNOT NULL \t\tNUMBER (4)\n\nExamine this query:\n\n1 SELECT e.last_name,\n2 e.salary,\n3 a.avg_sal\n4 FROM employees e\n5 WHERE e.salary > (SELECT AVG(a.salary) AS avg_sal\n6 FROM employees a\n7 WHERE a.department_id = e.department_id)\n8 ORDER BY e.last_name;\n\nWhich line produces an error?" }
+    { "type": "text", "value": "Examine the description of the EMPLOYEES table:" }, 
+    { "type": "command", "value": `Name 			Null? 			Type
+------------	------------	------------------
+EMPLOYEE_ID 	NOT NULL 		NUMBER (4)
+LAST_NAME 		NOT NULL 		VARCHAR2 (100)
+SALARY 			NOT NULL 		NUMBER (6,2)
+DEPARTMENT_ID 	NOT NULL 		NUMBER (4)` },
+    { "type": "text", "value": "Examine this query:" },
+    { "type": "command", "value": `1 SELECT e.last_name,
+2 e.salary,
+3 a.avg_sal
+4 FROM employees e
+5 WHERE e.salary > (SELECT AVG(a.salary) AS avg_sal
+6 FROM employees a
+7 WHERE a.department_id = e.department_id)
+8 ORDER BY e.last_name;` },
+    { "type": "text", "value": "Which line produces an error?" },
   ],
   "options": [
     { "type": "text", "value": "Line 8" },
@@ -1000,32 +1017,46 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
     { "type": "text", "value": "Line 3" }
   ]
 }, {
-  "id": 23,
+  "id": 50,
   "question": [
-    { "type": "text", "value": "The SYSDATE function displays the current Oracle Server date as:\n\n21-MAY-19\n\nYou wish to display the date as:\n\nMONDAY, 21 MAY, 2019\n\nWhich statement will do this?" }
+    { "type": "text", "value": "The SYSDATE function displays the current Oracle Server date as:" }, 
+    { "type": "command", "value": "21-MAY-19" }, 
+    { "type": "text", "value": "You wish to display the date as:" }, 
+    { "type": "command", "value": "MONDAY, 21 MAY, 2019" }, 
+    { "type": "text", "value": "Which statement will do this?" }
   ],
   "options": [
-    { "type": "text", "value": "SELECT TO_CHAR(SYSDATE, 'FMDAY, DD MONTH, YYYY') FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_DATE(SYSDATE, 'FMDAY, DD MONTH, YYYY') FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_CHAR(SYSDATE, 'FMDAY, DDTH MONTH, YYYY') FROM DUAL;" },
-    { "type": "text", "value": "SELECT TO_CHAR(SYSDATE, 'FMDD, DAY MONTH, YYYY') FROM DUAL;" }
+    { "type": "command", "value": "SELECT TO_CHAR(SYSDATE, 'FMDAY, DD MONTH, YYYY') FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_DATE(SYSDATE, 'FMDAY, DD MONTH, YYYY') FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_CHAR(SYSDATE, 'FMDAY, DDTH MONTH, YYYY') FROM DUAL;" },
+    { "type": "command", "value": "SELECT TO_CHAR(SYSDATE, 'FMDD, DAY MONTH, YYYY') FROM DUAL;" }
   ],
   "answer": [
-    { "type": "text", "value": "SELECT TO_CHAR(SYSDATE, 'FMDAY, DD MONTH, YYYY') FROM DUAL;" }
+    { "type": "command", "value": "SELECT TO_CHAR(SYSDATE, 'FMDAY, DD MONTH, YYYY') FROM DUAL;" }
   ]
 }, {
-  "id": 24,
+  "id": 51,
   "question": [
-    { "type": "text", "value": "Examine this query:\n\nSELECT INTERVAL '100' MONTH DURATION FROM DUAL;\n\nWhat will be the output?" }
+    { "type": "text", "value": "Examine this query:" }, 
+    { "type": "command", "value": "aSELECT INTERVAL '100' MONTH DURATION FROM DUAL;" },
+    { "type": "text", "value": "What will be the output?" },
   ],
   "options": [
-    { "type": "text", "value": "an error" },
-    { "type": "text", "value": "DURATION\n   --------\n   +100" },
-    { "type": "text", "value": "DURATION\n   --------\n   +08-04" },
-    { "type": "text", "value": "DURATION\n   --------\n   +08" }
+    { "type": "command", "value": `an error` },
+    { "type": "command", "value": `DURATION
+--------
++100` },
+    { "type": "command", "value": `DURATION
+--------
++08-04` },
+    { "type": "command", "value": `DURATION
+--------
++08` }
   ],
   "answer": [
-    { "type": "text", "value": "DURATION\n   --------\n   +08-04" }
+    { "type": "command", "value": `DURATION
+--------
++08-04` }
   ]
 }, {
   "id": 25,
@@ -1063,7 +1094,7 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
 }, {
   "id": 27,
   "question": [
-    { "type": "text", "value": "Examine the description of the EMPLOYEES table:\n\nName \t\t\tNull? \t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID \tNOT NULL \tNUMBER\nEMP_NAME \t\t\t\t\tVARCHAR2 (10)\nDEPT_ID \t\t\t\t\tNUMBER (2)\nSALARY \t\t\t\t\tNUMBER (8,2)\nJOIN_DATE \t\t\t\tDATE\n\nNLS_DATE_FORMAT is set to DD-MON-YY.\n\nWhich query requires explicit data type conversion?" }
+    { "type": "command", "value": "Examine the description of the EMPLOYEES table:\n\nName \t\t\tNull? \t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID \tNOT NULL \tNUMBER\nEMP_NAME \t\t\t\t\tVARCHAR2 (10)\nDEPT_ID \t\t\t\t\tNUMBER (2)\nSALARY \t\t\t\t\tNUMBER (8,2)\nJOIN_DATE \t\t\t\tDATE\n\nNLS_DATE_FORMAT is set to DD-MON-YY.\n\nWhich query requires explicit data type conversion?" }
   ],
   "options": [
     { "type": "text", "value": "SELECT join_date + '20' FROM employees;" },
@@ -1161,7 +1192,7 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
   "id": 22,
   "question": [
     { "type": "text", "value": "You must determine if any customers' details have been entered more than once using a different CUSTNO, by listing all duplicate names. Which two methods can you use to get the required result?" },
-    { "type": "text", "value": "Examine the description of the CUSTOMERS table:\n\nName\t\t\tNull?\t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID\tNOT NULL\t\tNUMBER (3)\nCUSTNAME\t\tNOT NULL\t\tVARCHAR2 (25)\nCUSTADDRESS\t\t\t\tVARCHAR2 (35)\nCUST_CREDIT_LIMIT\t\t\t\tNUMBER (5)\n\nCUSTNO is the PRIMARY KEY." }
+    { "type": "command", "value": "Examine the description of the CUSTOMERS table:\n\nName\t\t\tNull?\t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID\tNOT NULL\t\tNUMBER (3)\nCUSTNAME\t\tNOT NULL\t\tVARCHAR2 (25)\nCUSTADDRESS\t\t\t\tVARCHAR2 (35)\nCUST_CREDIT_LIMIT\t\t\t\tNUMBER (5)\n\nCUSTNO is the PRIMARY KEY." }
   ],
   "options": [
     { "type": "text", "value": "RIGHT OUTER JOIN with self join" },
@@ -1196,7 +1227,7 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
   "id": 24,
   "question": [
     { "type": "text", "value": "Which two statements will insert a row into the EMPLOYEES table?" },
-    { "type": "text", "value": "Examine the description of the EMPLOYEES table:\n\nName\t\t\tNull?\t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID\tNOT NULL\t\tNUMBER(6)\nFIRST_NAME\t\tNOT NULL\t\tVARCHAR2 (20)\nLAST_NAME\t\t\t\tVARCHAR2(25)\nSALARY\t\t\t\t\tNUMBER (8,2)\nHIREDATE\t\t\t\tDATE\nDEPARTMENT_ID\t\t\t\tNUMBER (4)" }
+    { "type": "command", "value": "Examine the description of the EMPLOYEES table:\n\nName\t\t\tNull?\t\t\tType\n------------\t------------\t------------------\nEMPLOYEE_ID\tNOT NULL\t\tNUMBER(6)\nFIRST_NAME\t\tNOT NULL\t\tVARCHAR2 (20)\nLAST_NAME\t\t\t\tVARCHAR2(25)\nSALARY\t\t\t\t\tNUMBER (8,2)\nHIREDATE\t\t\t\tDATE\nDEPARTMENT_ID\t\t\t\tNUMBER (4)" }
   ],
   "options": [
     { "type": "text", "value": "INSERT INTO employees (employee_id, first_name, last_name, salary, hiredate) VALUES ((SELECT 101, 'John', 'Smith', 12000, SYSDATE FROM dual) );" },
@@ -1266,7 +1297,7 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
       "value": "Examine this statement:"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT * FROM employees e\nWHERE EXISTS\n(SELECT 'dummy'\nFROM emp_history\nWHERE employee_id = e.employee_id);"
     },
     {
@@ -1314,7 +1345,7 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
       "value": "Examine the description PRODUCTS table:"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "Name       \t\tNull?       \t\tType\n------------\t------------\t------------------\nPROD_ID     \t\t\t\tCHAR (2)\nPROD_NAME   \t\t\t\tCHAR (4)\nEXP_DATE    \t\t\t\tTIMESTAMP (6)"
     },
     {
@@ -1322,7 +1353,7 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
       "value": "Examine the description of the NEW_PRODUCTS table:"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "Name       \t\tNull?       \t\tType\n------------\t------------\t------------------\nPROD_ID     \t\t\t\tCHAR (4)\nPROD_NAME   \t\t\t\tVARCHAR2 (10)\nEXP_DATE    \t\t\t\tDATE"
     },
     {
@@ -1332,33 +1363,33 @@ AUTHOR_NAME 					VARCHAR2 (30)` },
   ],
   "options": [
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT prod_id FROM products\nUNION ALL\nSELECT prod_id, prod_name FROM new_products;"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT prod_id, prod_name FROM products\nINTERSECT\nSELECT 100, prod_name FROM new_products;"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT * FROM products\nMINUS\nSELECT prod_id FROM new_products;"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT prod_id, exp_date FROM products\nUNION ALL\nSELECT prod_id, NULL FROM new_products;"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT * FROM products\nUNION\nSELECT * FROM new_products;"
     }
   ],
   "answer": [
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT prod_id, prod_name FROM products\nINTERSECT\nSELECT 100, prod_name FROM new_products;"
     },
     {
-      "type": "code",
+      "type": "command",
       "value": "SELECT prod_id, exp_date FROM products\nUNION ALL\nSELECT prod_id, NULL FROM new_products;"
     }
   ]
