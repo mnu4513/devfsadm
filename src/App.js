@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={{ theme: theme, setTheme: setTheme }} >
-      <div className={`${theme.value} dark:bg-gray-800 dark:text-white`}>
+      <div className={`${theme.value} text-gray-700 dark:bg-gray-800 dark:text-white`}>
         <Navbar />
         <Outlet />
         <Footer />
