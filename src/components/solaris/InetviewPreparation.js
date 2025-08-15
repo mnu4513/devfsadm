@@ -1,10 +1,17 @@
 import React from 'react';
 import { Heading, Line, Subheading, Text } from '../utils/Comps';
+import DismissableAlert from '../utils/DismissableAlert';
 
 
 const InetviewPreparation = () => {
   return (
     <div className='mx-4 my-4 lg:max-w-4xl lg:mx-auto'>
+      <DismissableAlert type="info">
+        <strong className="font-bold">Notice:</strong>
+        <span className="block ml-1">The interview questions and answers provided on this page are for learning and practice purposes only. </span>
+   <span className="block ml-1">They may not cover all real-world scenarios, and actual interview content can vary. </span>
+   <span className="block ml-1">  Always refer to official product documentation for accurate and up-to-date technical information.</span>
+      </DismissableAlert>
       <Heading text={`Solaris 11 Interview Questions`}/>
       <Line/>
       <Subheading text={`Solaris System Administration Interview Questions`}/>
